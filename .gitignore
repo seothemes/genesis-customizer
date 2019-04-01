@@ -1,3 +1,6 @@
+!/vendor/aristath/kirki/vendor
+
+
 /logs/
 /node_modules/
 /composer.lock
