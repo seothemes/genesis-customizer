@@ -1,0 +1,25 @@
+////
+/// Breadcrumb component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+.breadcrumb {
+	margin: 0 0 $gutter;
+	width: 100%;
+	column-span: all;
+
+	.hero-section & {
+		background: transparent;
+		padding: 0;
+		margin: $gutter 0 0;
+	}
+
+	// Link wrapper.
+	&-link-wrap {}
+
+	// Breadcrumb separator.
+	&-separator {}
+}

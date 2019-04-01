@@ -1,0 +1,78 @@
+////
+/// Custom mixins.
+///
+/// @group  Tools
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+////
+/// Hover focus mixin
+///
+/// @group  Tools
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+@mixin hover-focus {
+
+	&:hover,
+	&:focus,
+	&:active {
+
+		@content;
+	}
+}
+
+////
+/// Border mixin
+///
+/// @group  Tools
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+@mixin border( $values ) {
+
+	@include _directional-property(border, null, $values);
+}
+
+////
+/// Transition mixin
+///
+/// @group  Tools
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+@mixin transition() {
+	transition: $base--transition;
+}
+
+////
+/// Overlay mixin
+///
+/// @group  Tools
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+@mixin overlay($default_color: '') {
+	position: relative;
+	
+	> div {
+		position: relative;
+	}
+
+	&:before {
+		content: '';
+		display: block;
+
+		@if ($default_color != '') {
+			background-color: rgba($color--heading, 0.95);
+		}
+
+		@include position(absolute, 0 0 0 0);
+		@include size(100%);
+	}
+}

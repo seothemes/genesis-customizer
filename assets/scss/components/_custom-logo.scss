@@ -1,0 +1,12 @@
+// Custom logo.
+.custom-logo {
+	width: 100%;
+
+	&-link {
+		display: block;
+
+		.menu & {
+			padding: 0;
+		}
+	}
+}

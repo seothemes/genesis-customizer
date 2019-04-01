@@ -1,0 +1,32 @@
+////
+/// Column classes.
+///
+/// @group  Utilities
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+.full-width {
+	width: 100%;
+}
+
+@include mq(m) {
+
+	.one-half,
+	.one-third,
+	.one-fourth,
+	.one-sixth,
+	.two-thirds,
+	.two-fourths,
+	.two-sixths,
+	.three-fourths,
+	.three-sixths,
+	.four-sixths,
+	.five-sixths {
+		float: left;
+	}
+
+	.first {
+		clear: both;
+	}
+}

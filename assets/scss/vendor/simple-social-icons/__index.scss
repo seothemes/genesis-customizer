@@ -1,0 +1,69 @@
+// Abstracts
+@import "../../../../node_modules/bourbon/core/bourbon";
+@import "../../settings/_index";
+@import "../../tools/_index";
+
+.simple-social-icons svg[class^="social-"],
+.simple-social-icons svg[class*=" social-"] {
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	stroke-width: 0;
+	stroke: currentColor;
+	fill: currentColor;
+}
+
+.simple-social-icons {
+	overflow: hidden;
+}
+
+.simple-social-icons ul {
+	margin: 0;
+	padding: 0;
+}
+
+.simple-social-icons ul li {
+	background: none;
+	border: none;
+	float: left;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.simple-social-icons ul li a {
+	border: none;
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	height: 1em;
+	line-height: 1em;
+	text-align: center;
+	text-decoration: none;
+	text-transform: none;
+	width: 1em;
+}
+
+.simple-social-icons ul.aligncenter {
+	text-align: center;
+}
+
+.simple-social-icons ul.aligncenter li {
+	display: inline-block;
+	float: none;
+}
+
+.simple-social-icons .screen-reader-text {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}

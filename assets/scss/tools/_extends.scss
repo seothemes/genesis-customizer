@@ -1,0 +1,16 @@
+////
+/// Custom extends.
+///
+/// @group  Tools
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+// Front page widget.
+%front-page-widget {
+	padding: $spacing--xl 0;
+
+	@include mq(m) {
+		padding: $spacing--xl 0 $spacing--xl - $gutter;
+	}
+}

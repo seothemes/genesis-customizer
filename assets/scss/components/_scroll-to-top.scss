@@ -1,0 +1,10 @@
+.scroll-to-top-icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+	transform: rotate(180deg);
+	position: fixed;
+	bottom: $spacing--l;
+	right: $spacing--xl;
+}

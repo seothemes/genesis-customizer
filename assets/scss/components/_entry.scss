@@ -1,0 +1,105 @@
+////
+/// Entry component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+.entry {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+
+	.archive & {
+
+		> * {
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.archive .content.masonry & {
+
+		@include mq(m) {
+			width: 100%;
+			margin-left: 0;
+			break-inside: avoid;
+		}
+	}
+
+	// Entry header.
+	&-header {
+	}
+
+	// Entry title.
+	&-title {
+		width: 100%;
+	}
+
+	// Entry title link.
+	&-title-link {}
+
+	// Entry time.
+	&-time {
+	}
+
+	// Entry author.
+	&-author {
+	}
+
+	// Entry author link.
+	&-author-link {
+	}
+
+	// Entry author name.
+	&-author-name {
+	}
+
+	// Entry comments link
+	&-comments-link {
+	}
+
+	// Entry meta.
+	&-meta {
+		width: 100%;
+	}
+
+	// Entry image link.
+	&-image-link {
+		display: block;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	// Entry content.
+	&-content {
+		width: 100%;
+	}
+
+	// Entry footer.
+	&-footer {
+	}
+
+	// Entry categories.
+	&-categories {
+	}
+
+	// Entry tags.
+	&-tags {
+	}
+
+	// Comments.
+	&-comments {
+
+		.author-box ~ &,
+		.after-entry ~ & {
+			margin-top: 0;
+		}
+	}
+}

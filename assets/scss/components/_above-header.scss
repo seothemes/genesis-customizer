@@ -1,0 +1,16 @@
+.above-header {
+	padding: $spacing--s 0 ;
+	z-index: 3;
+	position: relative;
+	transition: background-color $base--transition-duration $base--transition-timing-function;
+	align-items: center;
+	display: flex;
+
+	.widget {
+		margin-bottom: 0;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+}

@@ -1,0 +1,57 @@
+////
+/// Title area component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+.title-area {
+	line-height: $line-height--heading;
+	position: relative;
+
+	@include mq(0, m) {
+
+		.has-logo-left-mobile & {
+			margin-right: auto;
+			margin-left: 0;
+		}
+
+		.has-logo-above-mobile &,
+		.has-logo-below-mobile & {
+			text-align: center;
+		}
+
+		.has-logo-right-mobile & {
+			text-align: right;
+			margin-right: 0;
+			margin-left: auto;
+		}
+	}
+
+	@include mq(m) {
+
+		.has-logo-above & {
+			width: auto;
+			text-align: center;
+
+			@include padding(null 2em);
+		}
+
+		.has-logo-center & {
+			text-align: center;
+
+			@include padding(null 2em);
+		}
+
+		.has-logo-right & {
+			text-align: right;
+		}
+
+		.has-logo-side & {
+			align-self: flex-start;
+			text-align: center;
+		}
+	}
+}
+

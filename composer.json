@@ -1,0 +1,47 @@
+{
+  "name": "genesiscustomizer/plugin",
+  "description": "Core functionality plugin for Genesis Customizer.",
+  "type": "wordpress-plugin",
+  "license": "GPL-3.0-or-later",
+  "authors": [
+    {
+      "name": "seothemes",
+      "email": "seothemeswp@gmail.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.4.0",
+    "aristath/kirki": "dev-develop",
+    "richtabor/merlin-wp": "dev-master",
+    "tgmpa/tgm-plugin-activation": "dev-master",
+    "yahnis-elsts/plugin-update-checker": "dev-master"
+  },
+  "require-dev": {
+    "php": "^5.6|^7",
+    "brain/monkey": "^2.2",
+    "phpunit/phpunit": "~5.7.9",
+    "wp-phpunit/wp-phpunit": "^5.1"
+  },
+  "autoload": {
+    "classmap": [
+      "src/classes"
+    ],
+    "files": [
+      "vendor/richtabor/merlin-wp/class-merlin.php",
+      "vendor/aristath/kirki/kirki.php",
+      "src/autoload.php"
+    ]
+  },
+  "config": {
+    "preferred-install": {
+      "*": "dist"
+    },
+    "sort-packages": true
+  },
+  "scripts": {
+    "d": "composer dump --no-dev",
+    "test-unit": "composer dump && \"vendor/bin/phpunit\" --testsuite unit --color=always",
+    "test-integration": "composer dump && \"vendor/bin/phpunit\" --testsuite integration --configuration tests/phpunit/integration/phpunit.xml.dist --color=always"
+  }
+}

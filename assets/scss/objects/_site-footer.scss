@@ -1,0 +1,13 @@
+////
+/// Site footer object.
+///
+/// @group  Objects
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+.site-footer {
+	margin-top: auto;
+
+	@include overlay();
+}

@@ -1,0 +1,68 @@
+@mixin has-sticky-header {
+
+	.site-header {
+		position: absolute;
+		top: 0;
+	}
+
+	&.has-sticky-nav-secondary {
+
+		.shrink {
+
+			.nav-secondary {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.has-sticky-header-mobile {
+
+	@include mq(0, m) {
+
+		@include has-sticky-header;
+	}
+}
+
+.has-sticky-header-desktop {
+
+	@include mq(m) {
+
+		@include has-sticky-header;
+	}
+}
+
+.has-sticky-header {
+
+	@include has-sticky-header;
+}
+
+.sticky-logo-link .sticky-logo {
+	display: none;
+
+	.has-sticky-header .shrink & {
+		display: block;
+	}
+
+	@include mq(0, m) {
+
+		.has-sticky-header-mobile .shrink & {
+			display: block;
+		}
+	}
+
+	@include mq(m) {
+
+		.has-sticky-header-desktop .shrink & {
+			display: block;
+		}
+	}
+}
+
+.has-sticky-logo .shrink {
+
+	.custom-logo,
+	.transparent-logo {
+		display: none;
+	}
+}

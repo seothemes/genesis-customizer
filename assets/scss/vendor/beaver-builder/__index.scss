@@ -1,0 +1,19 @@
+// Abstracts
+@import "../../../../node_modules/bourbon/core/bourbon";
+@import "../../settings/_index";
+@import "../../tools/_index";
+
+.site-header {
+
+	.fl-builder-edit & {
+		z-index: 999999;
+	}
+
+	@include mq(m) {
+
+		.fl-builder-edit.admin-bar.has-sticky-header &,
+		.fl-builder-edit.admin-bar.has-sticky-header-desktop & {
+			top: 45px !important;
+		}
+	}
+}

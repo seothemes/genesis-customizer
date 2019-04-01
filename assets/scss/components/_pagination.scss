@@ -1,0 +1,69 @@
+////
+/// Pagination component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+.pagination {
+	width: 100%;
+	column-span: all;
+
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: flex-end; // Pagination ommission.
+		list-style-type: none;
+		margin: 0;
+	}
+
+	&.align-center,
+	&.align-full {
+
+		ul {
+			justify-content: center;
+		}
+	}
+
+	&.align-right {
+
+		ul {
+			justify-content: flex-end;
+		}
+	}
+
+	&.align-full {
+
+		.pagination-previous {
+			margin-left: 0;
+			margin-right: auto;
+		}
+
+		.pagination-next {
+			margin-left: auto;
+			margin-right: 0;
+		}
+	}
+
+	li {
+		margin-right: 1em;
+	}
+
+	a {
+		display: block;
+	}
+
+	// Active item.
+	.active {
+	}
+
+	// Previous item.
+	&-prev {
+	}
+
+	// Next item.
+	&-next {
+	}
+
+}

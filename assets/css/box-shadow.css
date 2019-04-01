@@ -1,0 +1,46 @@
+.customize-control-kirki-box-shadow .kirki-input-container {
+	margin-bottom: 12px;
+}
+
+.customize-control-kirki-box-shadow .preview-wrapper {
+	background: #fff;
+	height: 150px;
+	position: relative;
+	-webkit-transition: background-color 170ms;
+	transition: background-color 170ms;
+	border: 1px solid #ccc;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.customize-control-kirki-box-shadow .preview-object {
+	background: #f2f2f2;
+	color: #333;
+	padding: 10px;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: calc(50% - 25px);
+	left: calc(50% - 25px);
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.customize-control-kirki-box-shadow .preview-object .dashicons {
+	font-size: 30px;
+	width: 30px;
+	height: 30px;
+}
+
+.customize-control-kirki-box-shadow input[type="range"] {
+	width: 100%;
+}
+
+.customize-control-kirki-box-shadow .coordinates {
+	font-size: 9px;
+	margin-left: -5px;
+	margin-right: -5px;
+	margin-top: -5px;
+	display: block;
+	text-align: center;
+}

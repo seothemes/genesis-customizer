@@ -1,0 +1,21 @@
+////
+/// Search form component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+.search-form {
+
+	&-input {}
+
+	&-submit {
+		display: none;
+
+		.header-search & {
+			display: block;
+		}
+	}
+}
+

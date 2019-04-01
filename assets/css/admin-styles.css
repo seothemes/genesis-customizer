@@ -1,0 +1,21 @@
+
+.components-panel .edit-post-meta-boxes-area #poststuff h2.hndle {
+	color: #23282d;
+	font-size: 13px;
+}
+
+.components-panel .toggle-indicator {
+	background-image: url('../img/arrow.svg');
+	background-position: center;
+	background-repeat: no-repeat;
+	transform: rotate(180deg);
+	display: block;
+}
+
+.components-panel .closed .toggle-indicator {
+	transform: none;
+}
+
+.components-panel .toggle-indicator:before {
+	content: '' !important;
+}

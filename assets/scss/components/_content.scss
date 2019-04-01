@@ -1,0 +1,57 @@
+////
+/// Content component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+.content {
+	width: 100%;
+	position: relative;
+
+	@include mq(m) {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.sidebar-content & {
+
+		@include mq(m) {
+			order: 1;
+		}
+	}
+
+	.center-content & {
+
+		@include margin(null auto);
+	}
+
+	.full-width-content & {
+
+		@include mq(m) {
+
+			@include margin(null auto);
+		}
+	}
+
+	&.masonry {
+		display: block;
+
+		@include mq(m) {
+
+			.has-2-columns & {
+				columns: 2;
+			}
+
+			.has-3-columns & {
+				columns: 3;
+			}
+
+			.has-4-columns & {
+				columns: 4;
+			}
+		}
+	}
+
+}

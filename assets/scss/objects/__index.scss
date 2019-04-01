@@ -1,0 +1,16 @@
+////
+/// Object imports.
+///
+/// The `objects/` folder contains everything that takes part in laying out
+/// the site or application. This folder could have stylesheets for the
+/// main parts of the site (header, footer, navigation, sidebar etc).
+///
+/// @group  Objects
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://seothemes.com/themes/genesis-starter-theme
+////
+
+@import "site-container";
+@import "site-header";
+@import "site-inner";
+@import "site-footer";

@@ -1,0 +1,49 @@
+////
+/// Site header object.
+///
+/// @group  Objects
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+.site-header {
+	position: relative;
+	z-index: 10;
+	transition: background-color $base--transition-duration $base--transition-timing-function;
+
+	@include mq(m) {
+
+		.has-logo-side & {
+			width: 30rem;
+		}
+
+		.has-logo-side.admin-bar & {
+			padding-top: 32px;
+		}
+
+		.has-logo-side &,
+		.has-logo-side.has-sticky-header &,
+		.has-logo-side.has-sticky-header-desktop & {
+
+			@include position(fixed, 0 null 0 0);
+
+			.wrap {
+				justify-content: center;
+				align-items: flex-start;
+			}
+		}
+	}
+
+	.wrap {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	input,
+	select,
+	textarea {
+		margin-bottom: 0;
+	}
+}

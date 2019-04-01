@@ -1,0 +1,27 @@
+////
+/// Author box component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+.author-box {
+	width: 100%;
+	column-span: all;
+
+	// Author box title.
+	&-title {}
+
+	// Author box content.
+	&-content {
+		padding-left: $spacing--xl + $spacing--m;
+
+		p {
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+	}
+}

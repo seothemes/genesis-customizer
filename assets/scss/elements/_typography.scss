@@ -1,0 +1,84 @@
+////
+/// Typography.
+///
+/// @group  Base
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+body {
+	height: 100%;
+	font-family: $base--font-family;
+}
+
+a {
+	text-decoration: none;
+
+	@include hover-focus {
+		text-decoration: underline;
+	}
+}
+
+p {
+	@include padding(0);
+	@include margin(null 0);
+}
+
+hr {
+	clear: both;
+	margin: 0 0 $spacing--m;
+	padding: $spacing--m 0 0;
+	border: 0;
+	border-bottom: $base--border;
+	border-collapse: collapse;
+}
+
+b,
+strong {
+	font-weight: $font-weight--bold;
+}
+
+blockquote,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	border-left-width: $base--border--width;
+	border-left-style: $base--border--style;
+
+	@include margin($spacing--m auto);
+	@include padding($spacing--m);
+
+	p {
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
+
+code,
+kbd,
+samp {
+	padding: 0.05em 0.5em;
+	border-radius: $base--border--radius;
+	font-family: $font-family--code;
+}
+
+pre {
+	overflow-x: scroll;
+	padding: $spacing--m;
+	border-radius: $base--border--radius;
+	font-family: $font-family--code;
+
+	code,
+	kbd,
+	samp {
+		padding: 0;
+		background-color: transparent;
+		font-size: initial;
+	}
+}

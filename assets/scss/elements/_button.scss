@@ -1,0 +1,54 @@
+////
+/// Button.
+///
+/// @group  Base
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+@mixin button {
+	display: inline-block;
+	width: auto;
+	white-space: normal;
+	text-decoration: none;
+	cursor: pointer;
+	font-weight: $font-weight--semibold;
+
+	@include hover-focus {
+		outline: none;
+		text-decoration: none;
+	}
+
+	&:disabled {
+
+		&,
+		&:hover,
+		&:focus {
+			opacity: 0.5;
+			background-color: map_get($colors, grey);
+			cursor: not-allowed;
+		}
+	}
+}
+
+#{$all-buttons} {
+
+	@include button;
+}
+
+.button {
+
+	&.small {
+		font-size: smaller;
+		padding: 1em 2em;
+	}
+
+	&.ghost {
+		background: rgba($color--white, 0.2);
+		color: $color--white;
+
+		@include hover-focus {
+			background: rgba($color--white, 0.4);
+		}
+	}
+}

@@ -1,0 +1,124 @@
+////
+/// Nav Primary component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+.nav {
+
+	&-primary {
+
+		@include mq(m) {
+			display: flex;
+
+			.has-logo-side & {
+				width: 100%;
+
+				.menu {
+					width: 100%;
+				}
+			}
+
+			.has-logo-above & {
+				width: 100%;
+				justify-content: center;
+			}
+
+			.has-logo-above &.flex-start-desktop {
+				justify-content: flex-start;
+			}
+
+			.has-logo-above &.flex-center-desktop {
+				justify-content: center;
+			}
+
+			.has-logo-above &.flex-end-desktop {
+				justify-content: flex-end;
+			}
+		}
+
+		@include mq(0, m) {
+			top: 100%;
+			left: 0;
+			width: 100vw;
+			display: none;
+			z-index: 4;
+
+			.has-mobile-menu-left &,
+			.has-mobile-menu-right &,
+			.has-mobile-menu-center & {
+				display: flex;
+				align-items: center;
+
+				@include position(fixed, 0 0 0 0);
+				@include size(100%);
+				@include padding(0 $spacing--l);
+			}
+
+			.has-mobile-menu-center & {
+				transform: scale(0);
+				opacity: 0;
+
+				&.visible {
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
+
+			.has-mobile-menu-right & {
+				transform: translateX(100vw);
+			}
+
+			.has-mobile-menu-left & {
+				transform: translateX(-100vw);
+
+				&.visible {
+					transform: translateX(0);
+				}
+			}
+
+			.has-mobile-menu-top & {
+				transition: none;
+				order: 4;
+			}
+		}
+
+		.no-js & {
+			display: flex;
+			position: relative;
+		}
+	}
+
+	&-secondary {
+		transition: background-color $base--transition-duration $base--transition-timing-function, opacity $base--transition-duration $base--transition-timing-function;
+
+		@include mq(0, m) {
+			display: none;
+		}
+
+		@include mq(m) {
+			z-index: 2;
+			width: 100%;
+			position: relative;
+			opacity: 1;
+			display: flex;
+			align-items: center;
+
+			.wrap {
+				height: 100%;
+				position: relative;
+			}
+
+			.menu {
+				justify-content: flex-start;
+				height: 100%;
+			}
+		}
+
+		.has-logo-side & {
+			height: auto;
+		}
+	}
+}

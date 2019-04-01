@@ -1,0 +1,8 @@
+.featured-image {
+
+	@include clearfix();
+
+	img {
+		margin-bottom: 0;
+	}
+}

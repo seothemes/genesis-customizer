@@ -1,0 +1,25 @@
+////
+/// Archive description component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+.archive {
+
+	// Archive description box.
+	&-description {
+		width: 100%;
+		column-span: all;
+
+		h1 {
+			margin-bottom: 0;
+		}
+	}
+
+	// Archive description title.
+	&-title {
+		margin-bottom: 0;
+	}
+}

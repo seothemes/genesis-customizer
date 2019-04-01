@@ -1,0 +1,32 @@
+////
+/// Gallery component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+
+	// Gallery item.
+	&-item {
+		width: calc(50% - 1em);
+		margin-left: 1em;
+		margin-bottom: 1em;
+
+		&:nth-of-type(2n + 1) {
+			margin-left: 0;
+		}
+
+		.gallery-columns-1 & {
+			width: 100%;
+			margin-left: 0;
+		}
+
+		img {
+			width: 100%;
+		}
+	}
+}

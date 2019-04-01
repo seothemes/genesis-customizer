@@ -1,0 +1,130 @@
+////
+/// Sub menu component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+.sub-menu {
+	display: none;
+	top: 100%;
+	width: 100%;
+	margin: 0 0 0 $spacing--s;
+	list-style-type: none;
+
+	@include mq(m) {
+		position: absolute;
+		z-index: 1;
+		margin: 0 0 0 -1em;
+		padding: 1em;
+
+		.has-logo-side & {
+			position: relative;
+			margin: 0 auto;
+		}
+	}
+
+	.no-js .menu-item-has-children:hover > &,
+	.no-js .menu-item-has-children:focus > & {
+		display: block;
+	}
+
+	// Sub menu menu item.
+	.menu-item {
+		width: 100%;
+
+		@include mq(0, m) {
+
+			.no-js & {
+				width: auto;
+				margin: 0 $spacing--m 0 0;
+			}
+		}
+
+		@include mq(m) {
+			width: auto;
+
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+		}
+
+		&-has-children {
+			position: relative;
+		}
+	}
+
+	// Sub sub menu.
+	& & {
+
+		@include mq(m) {
+			top: 0;
+			left: 100%;
+			margin-top: -1em;
+			white-space: nowrap;
+		}
+	}
+
+	// Sub menu toggle.
+	&-toggle {
+		display: flex;
+		justify-content: center;
+		margin: 0 0 0 1em;
+		padding: 0;
+		line-height: 0;
+		box-shadow: none;
+
+		@include size(2em);
+
+		@include hover-focus {
+			box-shadow: none;
+			outline: none;
+		}
+
+		@include mq(m) {
+			display: none;
+		}
+
+		&:focus {
+			outline: $base--border;
+		}
+
+		&-icon {
+			display: flex;
+		}
+
+		&-arrow {
+
+			&:before {
+				content: "";
+
+				@include triangle("down", 1rem, 0.5rem, currentColor);
+			}
+		}
+
+		&-plus {
+
+			&:before {
+				content: "+";
+			}
+		}
+
+		&.activated {
+
+			.sub-menu-toggle-arrow {
+
+				&:before {
+					transform: rotate(180deg);
+				}
+			}
+
+			.sub-menu-toggle-plus {
+
+				&:before {
+					content: '-';
+				}
+			}
+		}
+	}
+}

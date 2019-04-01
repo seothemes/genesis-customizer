@@ -1,0 +1,41 @@
+////
+/// Widget component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+.widget {
+
+	// Widget wrapper.
+	&-wrap {}
+
+	// Widget title.
+	&-title {}
+
+	// Featured content widget.
+	&.featured-content {
+
+		.entry {
+
+			@include clearfix;
+		}
+
+		.entry-image {
+			max-width: $spacing--xxl;
+		}
+
+		.entry-title {
+			margin-bottom: $spacing--xxs;
+			font-size: $base--font-size;
+		}
+	}
+
+	p {
+
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}

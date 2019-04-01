@@ -1,0 +1,17 @@
+
+.page-template-blocks,
+.page-template-beaver-builder {
+
+	.site-container {
+		background-color: $color--white;
+	}
+
+	.content {
+		margin: 0;
+		width: 100%;
+	}
+
+	.content > .entry {
+		padding: 0;
+	}
+}

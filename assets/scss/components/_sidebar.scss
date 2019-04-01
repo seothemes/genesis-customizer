@@ -1,0 +1,39 @@
+////
+/// Sidebar component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+.sidebar {
+
+	// Primary sidebar.
+	&-primary {
+
+		.sidebar-sidebar-content & {
+			order: -1;
+		}
+	}
+
+	// Secondary sidebar.
+	&-secondary {
+
+		.sidebar-sidebar-content & {
+			order: -2;
+		}
+
+		.sidebar-content-sidebar & {
+			order: -1;
+		}
+	}
+
+	ul {
+		margin-bottom: 0;
+	}
+
+	li {
+		margin-bottom: 0.382em;
+		list-style-type: none;
+	}
+}

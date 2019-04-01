@@ -1,0 +1,61 @@
+////
+/// Header right component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+.site-header {
+
+	.widget {
+		margin-bottom: 0;
+	}
+}
+
+.header-left {
+
+	@include mq(m) {
+		margin-right: auto;
+
+		.has-logo-side & {
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	@include mq(0, m) {
+
+		.has-logo-above-mobile &,
+		.has-logo-below-mobile & {
+			margin-right: auto;
+			flex: 1;
+		}
+	}
+}
+
+.header-right {
+	text-align: right;
+
+	@include mq(m) {
+		margin-left: auto;
+
+		.has-logo-side & {
+			text-align: center;
+			align-self: flex-end;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	@include mq(0, m) {
+
+		.has-logo-above-mobile &,
+		.has-logo-below-mobile & {
+			margin-left: auto;
+			flex: 1;
+		}
+	}
+}
+

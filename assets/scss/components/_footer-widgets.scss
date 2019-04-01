@@ -1,0 +1,16 @@
+////
+/// Entry component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+.footer-widgets {
+
+	@include overlay();
+
+	&-area {
+		width: 100%;
+	}
+}

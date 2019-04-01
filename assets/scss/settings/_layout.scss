@@ -1,0 +1,10 @@
+////
+/// Layout and width settings.
+///
+/// @group  Settings
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://seothemes.com/themes/genesis-starter-theme
+////
+
+$layout--width--sidebar: calc(30rem + #{$spacing--l} + #{$spacing--l});
+$layout--width--content: calc(100% - (#{$layout--width--sidebar} + #{$spacing--l}));

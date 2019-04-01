@@ -1,0 +1,43 @@
+////
+/// Visibility classes.
+///
+/// @group  Utilities
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+.hide {
+	display: none;
+
+	&-mobile {
+
+		@include mq(0, m) {
+			display: none;
+		}
+	}
+
+	&-desktop {
+
+		@include mq(m) {
+			display: none;
+		}
+	}
+}
+
+.show {
+	display: flex;
+
+	&-mobile {
+
+		@include mq(0, m) {
+			display: flex;
+		}
+	}
+
+	&-desktop {
+
+		@include mq(m) {
+			display: flex;
+		}
+	}
+}

@@ -1,0 +1,48 @@
+@mixin has-transparent-header {
+
+	.site-header {
+		position: absolute;
+	}
+
+	.transparent-logo-link {
+		display: block;
+	}
+
+	&.elementor-editor-active:hover {
+
+		.site-header {
+			display: none;
+		}
+	}
+
+	&.has-transparent-logo {
+
+		.custom-logo-link {
+			display: none;
+		}
+	}
+}
+
+.has-transparent-header-mobile {
+
+	@include mq(0, m) {
+
+		@include has-transparent-header;
+	}
+}
+
+.has-transparent-header-desktop {
+
+	@include mq(m) {
+
+		@include has-transparent-header;
+	}
+}
+
+.has-transparent-header {
+	@include has-transparent-header;
+}
+
+.transparent-logo-link .transparent-logo {
+	display: none;
+}

@@ -1,0 +1,50 @@
+{
+  "name": "genesis-customizer",
+  "version": "1.0.0",
+  "description": "Genesis Customizer plugin.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/genesis-customizer/genesis-customizer-plugin.git"
+  },
+  "author": "Lee Anthony",
+  "license": "GPL-3.0-or-later",
+  "main": "Gulpfile.js",
+  "bugs": {
+    "url": "https://github.com/genesis-customizer/genesis-customizer-plugin/issues"
+  },
+  "homepage": "https://github.com/genesis-customizer/genesis-customizer-plugin#readme",
+  "devDependencies": {
+    "bourbon": "^5.1.0",
+    "bourbon-bitters": "^1.2.1",
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-extract-media-queries": "^1.1.0",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass-json": "^1.0.1",
+    "gulp-src-ordered-globs": "^1.0.3",
+    "gulp-wait": "^0.0.2",
+    "gulp-wp-toolkit": "^2.3.2",
+    "gulp-zip": "^4.1.0",
+    "mqkit": "^1.0.3",
+    "prettier": "^1.13.4",
+    "prettier-stylelint": "^0.4.2",
+    "run-sequence": "^2.2.1",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-config-wordpress": "^13.1.0",
+    "stylelint-order": "^0.8.1"
+  },
+  "theme": {
+    "name": "Genesis Customizer",
+    "uri": "https://genesiscustomizer.com/genesis-customizer/",
+    "authoruri": "https://genesiscustomizer.com",
+    "licenseuri": "http://www.gnu.org/licenses/gpl-2.0.html",
+    "domainpath": "/languages",
+    "textdomain": "genesis-customizer",
+    "template": "genesis",
+    "tags": "one-column, two-columns, left-sidebar, right-sidebar, accessibility-ready, custom-logo, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready"
+  },
+  "scripts": {
+    "css": "gulp build:css | gulp extract"
+  }
+}

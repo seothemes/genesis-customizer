@@ -1,0 +1,17 @@
+////
+/// Avatar component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+.avatar {
+	float: left;
+	max-width: $spacing--xl;
+	margin-right: $spacing--m;
+
+	.alignleft & {
+		margin-right: 0;
+	}
+}

@@ -1,0 +1,114 @@
+////
+/// Alignment classes.
+///
+/// @group  Utilities
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/genesiscustomizer/plugin
+////
+
+.align {
+
+	&center,
+	&left,
+	&right {
+		display: block;
+		float: none;
+		margin: 0 auto $spacing--m;
+	}
+
+	&left {
+
+		@include mq(m) {
+			float: left;
+			margin: 0 $spacing--m $spacing--m 0;
+		}
+	}
+
+	&right {
+
+		@include mq(m) {
+			float: right;
+			margin: 0 0 $spacing--m $spacing--m;
+		}
+	}
+
+	&center {
+
+		@include clearfix;
+	}
+
+	.center-content &full,
+	.full-width-content &full {
+		margin-left: calc(-100vw / 2 + 100% / 2);
+		margin-right: calc(-100vw / 2 + 100% / 2);
+		max-width: 100vw;
+		width: 100vw;
+	}
+	.center-content &wide,
+	.full-width-content &wide {
+		margin-left: -20%;
+		margin-right: -20%;
+		max-width: 140%;
+		width: 140%;
+	}
+
+}
+
+.flex {
+	display: flex;
+
+	&-start {
+		margin-right: auto;
+
+		&-desktop {
+
+			@include mq(m) {
+				margin-right: auto;
+			}
+		}
+	}
+
+	&-center {
+		margin-left: auto;
+		margin-right: auto;
+
+		&-desktop {
+
+			@include mq(m) {
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+
+	&-end {
+		margin-left: auto;
+
+		&-desktop {
+
+			@include mq(m) {
+				margin-left: auto;
+			}
+		}
+	}
+}
+
+
+.justify {
+
+	&-start {
+		justify-content: flex-start;
+	}
+
+	&-center {
+		justify-content: center;
+	}
+
+	&-end {
+		justify-content: flex-end;
+	}
+
+	&-full {
+		justify-content: space-between;
+	}
+}

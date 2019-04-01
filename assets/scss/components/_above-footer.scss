@@ -1,0 +1,12 @@
+.above-footer {
+
+	@include overlay();
+
+	.wrap {
+		position: relative;
+	}
+
+	.widget {
+		margin-bottom: 0;
+	}
+}

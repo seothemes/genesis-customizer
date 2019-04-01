@@ -1,0 +1,17 @@
+// Abstracts
+@import "../../../../node_modules/bourbon/core/bourbon";
+@import "../../settings/_index";
+@import "../../tools/_index";
+
+.has-logo-side {
+
+	.elementor-element {
+		max-width: 100%;
+		left: 0 !important;
+	}
+}
+
+.elementor-button.elementor-size-sm {
+	font-size: smaller;
+	padding: 1em 2em;
+}
