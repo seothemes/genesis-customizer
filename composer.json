@@ -1,5 +1,5 @@
 {
-  "name": "genesiscustomizer/plugin",
+  "name": "seothemes/genesis-customizer-plugin",
   "description": "Core functionality plugin for Genesis Customizer.",
   "type": "wordpress-plugin",
   "license": "GPL-3.0-or-later",

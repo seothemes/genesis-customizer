@@ -34,9 +34,16 @@
 .scripts/ export-ignore
 .stylelintrc.json export-ignore
 composer.json export-ignore
+composer.lock export-ignore
 phpcs.xml.dist export-ignore
+phpunit.xml.dist export-ignore
 package-lock.json export-ignore
 package.json export-ignore
+yarn.lock export-ignore
+README.md export-ignore
+CHANGELOG.md export-ignore
+LICENSE.md export-ignore
+Gulpfile.js export-ignore
 
 /tests/ export-ignore
 
