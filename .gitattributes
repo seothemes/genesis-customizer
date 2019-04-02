@@ -57,6 +57,8 @@ Gulpfile.js export-ignore
 /vendor/aristath/kirki/*.txt export-ignore
 /vendor/aristath/kirki/*.xml export-ignore
 /vendor/aristath/kirki/*.dist export-ignore
+/vendor/aristath/kirki/*.yml export-ignore
+/vendor/aristath/kirki/*.json export-ignore
 /vendor/aristath/kirki/LICENSE export-ignore
 /vendor/aristath/kirki/package* export-ignore
 /vendor/aristath/kirki/Gruntfile.js export-ignore

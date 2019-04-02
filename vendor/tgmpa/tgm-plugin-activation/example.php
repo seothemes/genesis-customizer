@@ -85,26 +85,26 @@ function my_theme_register_required_plugins() {
 		// This presumes that the plugin code is based in the root of the GitHub repository
 		// and not in a subdirectory ('/src') of the repository.
 		array(
-			'name'      => 'Adminbar Link Comments to Pending',
-			'slug'      => 'adminbar-link-comments-to-pending',
-			'source'    => 'https://github.com/jrfnl/WP-adminbar-comments-to-pending/archive/master.zip',
+			'name'   => 'Adminbar Link Comments to Pending',
+			'slug'   => 'adminbar-link-comments-to-pending',
+			'source' => 'https://github.com/jrfnl/WP-adminbar-comments-to-pending/archive/master.zip',
 		),
 
 		// This is an example of how to include a plugin from the WordPress Plugin Repository.
 		array(
-			'name'      => 'BuddyPress',
-			'slug'      => 'buddypress',
-			'required'  => false,
+			'name'     => 'BuddyPress',
+			'slug'     => 'buddypress',
+			'required' => false,
 		),
 
 		// This is an example of the use of 'is_callable' functionality. A user could - for instance -
-		// have WPSEO installed *or* WPSEO Premium. The slug would in that last case be different, i.e.
+		// have Yoast SEO installed *or* Yoast SEO Premium. The slug would in that last case be different, i.e.
 		// 'wordpress-seo-premium'.
 		// By setting 'is_callable' to either a function from that plugin or a class method
 		// `array( 'class', 'method' )` similar to how you hook in to actions and filters, TGMPA can still
 		// recognize the plugin as being installed.
 		array(
-			'name'        => 'WordPress SEO by Yoast',
+			'name'        => 'Yoast SEO',
 			'slug'        => 'wordpress-seo',
 			'is_callable' => 'wpseo_init',
 		),
@@ -136,43 +136,43 @@ function my_theme_register_required_plugins() {
 		'strings'      => array(
 			'page_title'                      => __( 'Install Required Plugins', 'theme-slug' ),
 			'menu_title'                      => __( 'Install Plugins', 'theme-slug' ),
-			/* translators: %s: plugin name. * /
+			// translators: %s: plugin name.
 			'installing'                      => __( 'Installing Plugin: %s', 'theme-slug' ),
-			/* translators: %s: plugin name. * /
+			// translators: %s: plugin name.
 			'updating'                        => __( 'Updating Plugin: %s', 'theme-slug' ),
 			'oops'                            => __( 'Something went wrong with the plugin API.', 'theme-slug' ),
 			'notice_can_install_required'     => _n_noop(
-				/* translators: 1: plugin name(s). * /
+				// translators: 1: plugin name(s).
 				'This theme requires the following plugin: %1$s.',
 				'This theme requires the following plugins: %1$s.',
 				'theme-slug'
 			),
 			'notice_can_install_recommended'  => _n_noop(
-				/* translators: 1: plugin name(s). * /
+				// translators: 1: plugin name(s).
 				'This theme recommends the following plugin: %1$s.',
 				'This theme recommends the following plugins: %1$s.',
 				'theme-slug'
 			),
 			'notice_ask_to_update'            => _n_noop(
-				/* translators: 1: plugin name(s). * /
+				// translators: 1: plugin name(s).
 				'The following plugin needs to be updated to its latest version to ensure maximum compatibility with this theme: %1$s.',
 				'The following plugins need to be updated to their latest version to ensure maximum compatibility with this theme: %1$s.',
 				'theme-slug'
 			),
 			'notice_ask_to_update_maybe'      => _n_noop(
-				/* translators: 1: plugin name(s). * /
+				// translators: 1: plugin name(s).
 				'There is an update available for: %1$s.',
 				'There are updates available for the following plugins: %1$s.',
 				'theme-slug'
 			),
 			'notice_can_activate_required'    => _n_noop(
-				/* translators: 1: plugin name(s). * /
+				// translators: 1: plugin name(s).
 				'The following required plugin is currently inactive: %1$s.',
 				'The following required plugins are currently inactive: %1$s.',
 				'theme-slug'
 			),
 			'notice_can_activate_recommended' => _n_noop(
-				/* translators: 1: plugin name(s). * /
+				// translators: 1: plugin name(s).
 				'The following recommended plugin is currently inactive: %1$s.',
 				'The following recommended plugins are currently inactive: %1$s.',
 				'theme-slug'
@@ -195,11 +195,11 @@ function my_theme_register_required_plugins() {
 			'return'                          => __( 'Return to Required Plugins Installer', 'theme-slug' ),
 			'plugin_activated'                => __( 'Plugin activated successfully.', 'theme-slug' ),
 			'activated_successfully'          => __( 'The following plugin was activated successfully:', 'theme-slug' ),
-			/* translators: 1: plugin name. * /
+			// translators: 1: plugin name.
 			'plugin_already_active'           => __( 'No action taken. Plugin %1$s was already active.', 'theme-slug' ),
-			/* translators: 1: plugin name. * /
+			// translators: 1: plugin name.
 			'plugin_needs_higher_version'     => __( 'Plugin not activated. A higher version of %s is needed for this theme. Please update the plugin.', 'theme-slug' ),
-			/* translators: 1: dashboard link. * /
+			// translators: 1: dashboard link.
 			'complete'                        => __( 'All plugins installed and activated successfully. %1$s', 'theme-slug' ),
 			'dismiss'                         => __( 'Dismiss this notice', 'theme-slug' ),
 			'notice_cannot_install_activate'  => __( 'There are one or more required or recommended plugins to install, update or activate.', 'theme-slug' ),

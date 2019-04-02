@@ -12,9 +12,9 @@
   "minimum-stability": "dev",
   "require": {
     "php": ">=5.4.0",
-    "aristath/kirki": "dev-develop",
+    "aristath/kirki": "dev-master",
     "richtabor/merlin-wp": "dev-master",
-    "tgmpa/tgm-plugin-activation": "dev-master",
+    "tgmpa/tgm-plugin-activation": "dev-develop",
     "yahnis-elsts/plugin-update-checker": "dev-master"
   },
   "require-dev": {
@@ -41,15 +41,18 @@
     "sort-packages": true
   },
   "scripts": {
+    "cghooks": "vendor/bin/cghooks",
     "d": "composer dump --no-dev",
     "test-unit": "composer dump && \"vendor/bin/phpunit\" --testsuite unit --color=always",
-    "test-integration": "composer dump && \"vendor/bin/phpunit\" --testsuite integration --configuration tests/phpunit/integration/phpunit.xml.dist --color=always"
+    "test-integration": "composer dump && \"vendor/bin/phpunit\" --testsuite integration --configuration tests/phpunit/integration/phpunit.xml.dist --color=always",
+    "post-update-cmd": [
+      "rm -Rf vendor/aristath/kirki/.gitignore"
+    ]
   },
   "extra": {
     "hooks": {
       "pre-commit": [
-        "composer dump-autoload --no-dev",
-        "rm -Rf vendor/aristath/kirki/.gitignore"
+        "composer dump-autoload --no-dev"
       ]
     }
   }

@@ -24,3 +24,5 @@
 /vendor/symfony/
 /vendor/webmozart/
 /vendor/wp-phpunit/
+
+/vendor/aristath/kirki/.gitignore

@@ -2,6 +2,9 @@
 
 namespace GenesisCustomizer;
 
+// Load class.
+new \TGM_Plugin_Activation();
+
 add_action( 'tgmpa_register', __NAMESPACE__ . '\setup_tgmpa' );
 /**
  * Define recommended plugins.

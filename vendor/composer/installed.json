@@ -44,17 +44,17 @@
     },
     {
         "name": "aristath/kirki",
-        "version": "dev-develop",
-        "version_normalized": "dev-develop",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
         "source": {
             "type": "git",
             "url": "https://github.com/aristath/kirki.git",
-            "reference": "829b12c4c126350e268add5bf90cfcb125e00e25"
+            "reference": "e8972c03818ae775a34650ba9c42f4e97e7f372d"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/aristath/kirki/zipball/829b12c4c126350e268add5bf90cfcb125e00e25",
-            "reference": "829b12c4c126350e268add5bf90cfcb125e00e25",
+            "url": "https://api.github.com/repos/aristath/kirki/zipball/e8972c03818ae775a34650ba9c42f4e97e7f372d",
+            "reference": "e8972c03818ae775a34650ba9c42f4e97e7f372d",
             "shasum": ""
         },
         "require": {
@@ -69,7 +69,7 @@
             "phpunit/phpunit": "*",
             "wp-coding-standards/wpcs": "*"
         },
-        "time": "2019-03-28T22:40:54+00:00",
+        "time": "2019-03-31T17:38:34+00:00",
         "type": "library",
         "installation-source": "dist",
         "notification-url": "https://packagist.org/downloads/",
@@ -2236,23 +2236,28 @@
     },
     {
         "name": "tgmpa/tgm-plugin-activation",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
+        "version": "dev-develop",
+        "version_normalized": "dev-develop",
         "source": {
             "type": "git",
             "url": "https://github.com/TGMPA/TGM-Plugin-Activation.git",
-            "reference": "c626d0d91fc8ef24916e809c7b79eeafab1c1cac"
+            "reference": "f4c345bd851479508556bf5d652eb90348cf3c52"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/TGMPA/TGM-Plugin-Activation/zipball/c626d0d91fc8ef24916e809c7b79eeafab1c1cac",
-            "reference": "c626d0d91fc8ef24916e809c7b79eeafab1c1cac",
+            "url": "https://api.github.com/repos/TGMPA/TGM-Plugin-Activation/zipball/f4c345bd851479508556bf5d652eb90348cf3c52",
+            "reference": "f4c345bd851479508556bf5d652eb90348cf3c52",
             "shasum": ""
         },
         "require": {
             "php": ">=5.2"
         },
-        "time": "2016-05-19T15:46:51+00:00",
+        "require-dev": {
+            "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+            "phpcompatibility/phpcompatibility-wp": "^2.0",
+            "wp-coding-standards/wpcs": "^2.0"
+        },
+        "time": "2019-02-11T21:37:43+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
@@ -2262,7 +2267,7 @@
         },
         "notification-url": "https://packagist.org/downloads/",
         "license": [
-            "GPL-2.0+"
+            "GPL-2.0-or-later"
         ],
         "authors": [
             {
@@ -2396,18 +2401,18 @@
         "source": {
             "type": "git",
             "url": "https://github.com/YahnisElsts/plugin-update-checker.git",
-            "reference": "8499f5c42954975a4f1222d6ccedacfaa5fb1d77"
+            "reference": "006bb9394f027827a6cbcf61bb4d05d03eedcb83"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/YahnisElsts/plugin-update-checker/zipball/8499f5c42954975a4f1222d6ccedacfaa5fb1d77",
-            "reference": "8499f5c42954975a4f1222d6ccedacfaa5fb1d77",
+            "url": "https://api.github.com/repos/YahnisElsts/plugin-update-checker/zipball/006bb9394f027827a6cbcf61bb4d05d03eedcb83",
+            "reference": "006bb9394f027827a6cbcf61bb4d05d03eedcb83",
             "shasum": ""
         },
         "require": {
             "php": ">=5.2.0"
         },
-        "time": "2019-03-18T12:11:42+00:00",
+        "time": "2019-03-29T17:17:36+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
