@@ -13,10 +13,13 @@ add_action( 'genesis_setup', __NAMESPACE__ . '\kirki_setup' );
 function kirki_setup() {
 	add_filter( 'kirki_telemetry', '__return_false' );
 //	add_filter( 'kirki/dynamic_css/method', '__return_true' );
-	add_filter( 'kirki_output_inline_styles', '__return_false' );
 //	add_filter( 'kirki_gutenberg_' . _get_handle() . '_dynamic_css', function () {
 	//return file_get_contents( WP_CONTENT_DIR . '/uploads/kirki-css/styles.css' );
 //	} );
+
+	if ( ! is_customize_preview() ) {
+		add_filter( 'kirki_output_inline_styles', '__return_false' );
+	}
 }
 
 add_action( 'genesis_setup', __NAMESPACE__ . '\add_kirki_config' );

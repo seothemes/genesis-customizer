@@ -12,6 +12,7 @@
 /vendor/bin/
 /vendor/antecedent/
 /vendor/brain/
+/vendor/brainmaestro/
 /vendor/doctrine/
 /vendor/hamcrest/
 /vendor/mockery/

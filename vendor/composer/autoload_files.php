@@ -6,9 +6,16 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    '320cde22f66dd4f5d3fd621d3e88b98f' => $vendorDir . '/symfony/polyfill-ctype/bootstrap.php',
+    '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => $vendorDir . '/symfony/polyfill-mbstring/bootstrap.php',
+    '0d59ee240a4cd96ddbb4ff164fccea4d' => $vendorDir . '/symfony/polyfill-php73/bootstrap.php',
+    '6124b4c8570aa390c21fafd04a26c69f' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
+    '051bafe20e2674435a162870efa2d2a7' => $vendorDir . '/brain/monkey/inc/api.php',
+    '3f0c6f4bac8ae6c17da37dc6e8bc91b4' => $vendorDir . '/brainmaestro/composer-git-hooks/src/helpers.php',
     'a5f882d89ab791a139cd2d37e50cdd80' => $vendorDir . '/tgmpa/tgm-plugin-activation/class-tgm-plugin-activation.php',
+    '38fbb71d514eee25044aa9d94851ee76' => $vendorDir . '/wp-phpunit/wp-phpunit/__loaded.php',
     '89ff252b349d4d088742a09c25f5dd74' => $vendorDir . '/yahnis-elsts/plugin-update-checker/plugin-update-checker.php',
-    'd1cd334f5a619a1a0226b9e2410cce1d' => $vendorDir . '/richtabor/merlin-wp/class-merlin.php',
-    'df4fac3550f84a60488f54e592cab1e6' => $vendorDir . '/aristath/kirki/kirki.php',
-    '51651570b2c3e7669fd43489fdc7ea02' => $baseDir . '/src/autoload.php',
+    '9b71b75494f71f5ec7dc5d0f31b209d4' => $vendorDir . '/richtabor/merlin-wp/class-merlin.php',
+    '2f89764dbc11438eb31d88ac185ef3e9' => $vendorDir . '/aristath/kirki/kirki.php',
+    'eabdce8b0917c6831c867b24b6611ef0' => $baseDir . '/src/autoload.php',
 );
