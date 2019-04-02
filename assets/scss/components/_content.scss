@@ -34,24 +34,4 @@
 			@include margin(null auto);
 		}
 	}
-
-	&.masonry {
-		display: block;
-
-		@include mq(m) {
-
-			.has-2-columns & {
-				columns: 2;
-			}
-
-			.has-3-columns & {
-				columns: 3;
-			}
-
-			.has-4-columns & {
-				columns: 4;
-			}
-		}
-	}
-
 }

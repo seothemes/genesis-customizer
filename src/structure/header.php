@@ -13,13 +13,21 @@ add_filter( 'body_class', __NAMESPACE__ . '\header_body_classes', 100, 1 );
  * @return array
  */
 function header_body_classes( $classes ) {
-	$header_layout  = _get_value( 'header_primary_layout' );
-	$sticky_enabled = _get_value( 'header_sticky_enabled' );
+	$header_layout = _get_value( 'header_primary_layout' );
 
 	$classes[] = $header_layout;
-	$classes[] = $sticky_enabled ? $sticky_enabled : 'no-sticky-header';
 	$classes[] = _get_value( 'header_primary_mobile-layout' );
 	$classes[] = _get_value( 'menus_mobile_animation' );
+
+	if ( _is_single() ) {
+		$classes[] = 'single';
+		$classes   = array_diff( $classes, [ 'archive' ] );
+	}
+
+	if ( _is_archive() ) {
+		$classes[] = 'archive';
+		$classes   = array_diff( $classes, [ 'single' ] );
+	}
 
 	return $classes;
 }
@@ -59,7 +67,7 @@ function custom_logo() {
 	$transparent      = _get_value( 'header_transparent_different-logo' );
 	$transparent_logo = _get_value( 'header_transparent_logo' );
 
-	if ( $sticky && $sticky_logo ) {
+	if ( _is_pro_active() && $sticky && $sticky_logo ) {
 		$attr = [
 			'class' => 'sticky-logo',
 		];
@@ -77,7 +85,7 @@ function custom_logo() {
 		);
 	}
 
-	if ( $transparent && $transparent_logo ) {
+	if ( _is_pro_active() && $transparent && $transparent_logo ) {
 		$attr = [
 			'class' => 'transparent-logo',
 		];

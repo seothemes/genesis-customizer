@@ -36,15 +36,12 @@ return [
 		'type'     => 'custom',
 		'settings' => 'tip-1',
 		'default'  => sprintf(
-			'<hr><p><strong>%s</strong> %s <a href="javascript:wp.customize.section( %s ).focus();">%s</a> %s <a href="javascript:wp.customize.section( %s ).focus();">%s</a> %s</p><hr>',
+			'<hr><p><strong>%s</strong> %s <a href="javascript:wp.customize.section( %s ).focus();">%s</a> %s</p><hr>',
 			esc_html__( 'Tip: ', 'genesis-customizer' ),
-			esc_html__( 'These settings are for the default desktop colors only and will be overridden by ', 'genesis-customizer' ),
+			esc_html__( 'These settings are for the default desktop colors only and will be overridden by the ', 'genesis-customizer' ),
 			esc_attr( '"genesis-customizer_menus_mobile"' ),
 			esc_html__( 'Mobile Menu', 'genesis-customizer' ),
-			esc_html__( 'and', 'genesis-customizer' ),
-			esc_attr( '"genesis-customizer_header_transparent"' ),
-			esc_html__( 'Transparent Header', 'genesis-customizer' ),
-			esc_html__( 'settings.', 'genesis-customizer' )
+			esc_html__( 'settings on smaller screens.', 'genesis-customizer' )
 		),
 	],
 	[
@@ -72,12 +69,11 @@ return [
 		'default'  => '<hr>',
 	],
 	[
-		'type'      => 'select',
-		'settings'  => 'alignment',
-		'label'     => __( 'Align Menu', 'genesis-customizer' ),
-		'default'   => 'center',
-		'transport' => 'refresh',
-		'choices'   => [
+		'type'     => 'select',
+		'settings' => 'alignment',
+		'label'    => __( 'Align Menu', 'genesis-customizer' ),
+		'default'  => 'right',
+		'choices'  => [
 			'flex-start' => __( 'Left', 'genesis-customizer' ),
 			'center'     => __( 'Center', 'genesis-customizer' ),
 			'flex-end'   => __( 'Right', 'genesis-customizer' ),

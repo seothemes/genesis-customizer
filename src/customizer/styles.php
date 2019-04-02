@@ -34,10 +34,11 @@ function kirki_styles() {
 		.customize-control-kirki-box-shadow .preview-wrapper {
 			height: 150px;
 		    border: 1px solid #ddd;
+		    background: #fff !important;
 		}
 		.customize-control-kirki-box-shadow .preview-object {
-			background: #f2f2f2;
-			color: #333;
+			background: #f2f2f2 !important;
+			color: #333 !important;
 			padding: 10px;
 			width: 50px;
 			height: 50px;

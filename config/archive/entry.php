@@ -20,18 +20,18 @@ return [
 		'output'   => [
 			[
 				'choice'   => 'background',
-				'element'  => '.entry',
-				'property' => 'background-color'
+				'element'  => '.archive .entry',
+				'property' => 'background-color',
 			],
 			[
 				'choice'   => 'entry-title-link',
 				'element'  => '.entry-title-link',
-				'property' => 'color'
+				'property' => 'color',
 			],
 			[
 				'choice'   => 'entry-title-link-hover',
 				'element'  => '.entry-title-link:hover, .entry-title-link:focus',
-				'property' => 'color'
+				'property' => 'color',
 			],
 		],
 	],
@@ -98,7 +98,7 @@ return [
 		],
 		'output'   => [
 			[
-				'element'  => '.entry',
+				'element'  => '.archive .entry',
 				'property' => 'padding',
 				'units'    => 'px',
 			],
@@ -120,6 +120,11 @@ return [
 				'units'    => 'px',
 				'prefix'   => '-',
 			],
+			[
+				'element'       => '.entry-image-link.no-spacing',
+				'property'      => 'width',
+				'value_pattern' => 'calc(100% + (2 * $px))',
+			],
 		],
 	],
 	[
@@ -134,15 +139,7 @@ return [
 		],
 		'output'   => [
 			[
-				'element'  => [
-					'.archive-description',
-					'.entry',
-					'.breadcrumb',
-					'.author-box',
-					'.after-entry',
-					'.entry-comments',
-					'.comment-respond',
-				],
+				'element'  => '.archive .entry',
 				'property' => 'border-radius',
 				'units'    => 'px',
 			],
@@ -162,19 +159,13 @@ return [
 		'type'     => 'kirki-box-shadow',
 		'settings' => 'box-shadow',
 		'label'    => __( 'Entry Shadow', 'genesis-customizer' ),
-		'default'  => '0px 3px 6px 0px rgba(0,10,20,0.01)',
+		'default'  => '',
 		'output'   => [
 			[
 				'element'  => [
-					'.archive-description',
-					'.entry',
-					'.breadcrumb',
-					'.author-box',
-					'.after-entry',
-					'.entry-comments',
-					'.comment-respond',
+					'.archive .entry',
 				],
-				'property' => 'box-shadow'
+				'property' => 'box-shadow',
 			],
 		],
 	],

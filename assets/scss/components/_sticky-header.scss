@@ -37,8 +37,12 @@
 	@include has-sticky-header;
 }
 
-.sticky-logo-link .sticky-logo {
+.sticky-logo {
 	display: none;
+
+	&-link {
+		display: block;
+	}
 
 	.has-sticky-header .shrink & {
 		display: block;
@@ -59,7 +63,7 @@
 	}
 }
 
-.has-sticky-logo .shrink {
+.has-sticky-logo .site-header.shrink {
 
 	.custom-logo,
 	.transparent-logo {

@@ -34,14 +34,14 @@ return [
 			'text'       => __( 'Text', 'genesis-customizer' ),
 			'headings'   => __( 'Headings', 'genesis-customizer' ),
 			'links'      => __( 'Links', 'genesis-customizer' ),
-			'link-hover' => __( 'Links Hover', 'genesis-customizer' ),
+			'links-hover' => __( 'Links Hover', 'genesis-customizer' ),
 		],
 		'default'  => [
 			'background' => '',
 			'text'       => '',
 			'headings'   => '',
 			'links'      => '',
-			'link-hover' => '',
+			'links-hover' => '',
 		],
 		'output'   => [
 			[

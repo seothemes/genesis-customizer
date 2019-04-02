@@ -91,8 +91,14 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-3',
-		'default'  => '<hr>',
+		'settings' => 'tip-1763',
+		'default'  => sprintf(
+			'<hr><p><strong>%s</strong> %s <a href="javascript:wp.customize.section( %s ).focus();">%s</a></p><hr>',
+			esc_html__( 'Tip: ', 'genesis-customizer' ),
+			esc_html__( 'The site title and site description can be changed from the ', 'genesis-customizer' ),
+			esc_attr( '"title_tagline"' ),
+			esc_html__( 'Site Identity Section', 'genesis-customizer' )
+		),
 	],
 	[
 		'type'     => 'slider',

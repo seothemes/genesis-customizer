@@ -43,6 +43,28 @@
 	@include has-transparent-header;
 }
 
-.transparent-logo-link .transparent-logo {
+.transparent-logo {
 	display: none;
+
+	&-link {
+		display: block;
+	}
+
+	.has-transparent-header.has-transparent-logo & {
+		display: block;
+	}
+
+	@include mq(0, m) {
+
+		.has-transparent-header-mobile.has-transparent-logo & {
+			display: block;
+		}
+	}
+
+	@include mq(m) {
+
+		.has-transparent-header-desktop.has-transparent-logo & {
+			display: block;
+		}
+	}
 }

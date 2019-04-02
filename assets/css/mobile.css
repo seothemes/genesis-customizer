@@ -141,6 +141,10 @@
   display: none;
 }
 
+.has-transparent-header-mobile.has-transparent-logo .transparent-logo {
+  display: block;
+}
+
 .wp-block-columns {
   flex-wrap: wrap;
 }
@@ -164,7 +168,7 @@
   opacity: 1;
 }
 
-.has-sticky-header-mobile .shrink .sticky-logo-link .sticky-logo {
+.has-sticky-header-mobile .shrink .sticky-logo {
   display: block;
 }
 

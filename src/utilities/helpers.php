@@ -64,6 +64,17 @@ function _get_url() {
  *
  * @return string
  */
+function _get_upgrade_url() {
+	return esc_url( 'https://genesiscustomizer.com/pro' );
+}
+
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
+ * @return string
+ */
 function _get_name() {
 	return _get_data( 'Name' );
 }
@@ -241,7 +252,7 @@ function _get_color( $color = 'accent' ) {
 		'background'  => '#f5f8fa',
 		'white'       => '#ffffff',
 		'black'       => '#22292f',
-		'overlay'     => 'rgba(96,111,123,0.9)',
+		'overlay'     => 'rgba(52,144,220,0.95)',
 		'shadow'      => 'rgba(96,111,123,0.05)',
 		'transparent' => 'rgba(0,0,0,0)',
 	] );

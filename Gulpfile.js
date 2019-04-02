@@ -54,6 +54,10 @@ toolkit.extendConfig(
                 'assets/js/scroll-to-top.js',
                 'assets/js/header-search.js'
             ],
+            'isotope': [
+                'assets/js/isotope.pkgd.js',
+                'assets/js/isotope-init.js'
+            ]
         },
         css: {
             basefontsize: 10, // Used by postcss-pxtorem.
@@ -141,6 +145,9 @@ toolkit.extendTasks(gulp, {
     },
     'css': function () {
         run('build', 'extract', 'rename-mobile', 'rename-desktop','clean-up')
+    },
+    'js': function () {
+        run('build:js')
     },
 });
 

@@ -13,7 +13,8 @@ add_filter( 'theme_page_templates', __NAMESPACE__ . '\register_templates' );
  * @return array
  */
 function register_templates( $templates ) {
-	$custom['blocks.php'] = 'Blocks';
+	$custom['blocks.php']  = 'Blocks';
+	$custom['landing.php'] = 'Landing';
 
 	if ( _is_plugin_active( 'beaver-builder' ) ) {
 		$custom['beaver-builder.php'] = 'Beaver Builder';
@@ -34,10 +35,15 @@ add_filter( 'template_include', __NAMESPACE__ . '\include_templates' );
  * @return string
  */
 function include_templates( $template ) {
-	$template_name = get_post_meta( get_the_ID(), '_wp_page_template', true );
-	$template_path = _get_path() . 'assets/templates/' . $template_name;
+	$template_name    = get_post_meta( get_the_ID(), '_wp_page_template', true );
+	$template_path    = _get_path() . 'assets/templates/' . $template_name;
+	$custom_templates = [
+		'blocks.php',
+		'beaver-builder.php',
+		'landing.php',
+	];
 
-	if ( ! in_array( $template_name, [ 'blocks.php', 'beaver-builder.php' ] ) ) {
+	if ( ! in_array( $template_name, $custom_templates ) ) {
 		return $template;
 	}
 

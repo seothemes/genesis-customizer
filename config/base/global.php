@@ -74,6 +74,7 @@ return [
 					'.single .author-box',
 					'.masonry .pagination',
 					'.entry-comments',
+					'.after-entry',
 					'.entry-comments + .comment-respond',
 				],
 				'property' => 'margin-top',
@@ -85,7 +86,7 @@ return [
 					'.author-box',
 					'.archive .entry',
 					'.after-entry',
-					'.sidebar-primary .widget',
+					'.sidebar .widget',
 				],
 				'property' => 'margin-bottom',
 				'units'    => 'px',
@@ -202,6 +203,11 @@ return [
 				'value_pattern' => 'calc(((100% - ($px * 5)) / 6) * 5 + $ * 4)',
 				'media_query'   => _get_media_query(),
 			],
+			[
+				'element'       => '.gutter',
+				'property'      => 'width',
+				'value_pattern' => 'calc($px - 1px)',
+			],
 		],
 	],
 	[
@@ -298,6 +304,7 @@ return [
 				'element'  => [
 					'.archive-description',
 					'.entry',
+					'.sidebar .widget',
 					'.breadcrumb',
 					'.author-box',
 					'.after-entry',
@@ -322,7 +329,7 @@ return [
 		'default'     => '0.2',
 		'choices'     => [
 			'min'  => 0,
-			'max'  => 5,
+			'max'  => 1,
 			'step' => 0.01,
 		],
 		'output'      => [
@@ -355,7 +362,7 @@ return [
 		'default'     => '0',
 		'choices'     => [
 			'min'  => 0,
-			'max'  => 5,
+			'max'  => 1,
 			'step' => 0.01,
 		],
 		'output'      => [

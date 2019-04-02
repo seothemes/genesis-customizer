@@ -48,12 +48,24 @@ function _is_archive() {
  *
  * @since 1.0.0
  *
+ * @param string $module
+ *
+ * @return bool
+ */
+function _is_module_enabled( $module ) {
+	return genesis_get_option( $module, 'genesis-customizer-settings' );
+}
+
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
  * @return bool
  */
 function _is_pro_active() {
 	return _is_plugin_active( 'genesis-customizer-pro' );
 }
-
 
 /**
  * Description of expected behavior.

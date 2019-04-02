@@ -178,54 +178,6 @@ function register_footer_widgets() {
 	}
 }
 
-add_action( 'genesis_footer', __NAMESPACE__ . '\display_footer_widgets', 12 );
-/**
- * Display footer widgets widget areas.
- *
- * @var $widget_areas Number of footer widget areas.
- */
-function display_footer_widgets() {
-	if ( ! is_active_sidebar( 'footer-1' ) ) {
-		return;
-	}
-
-	$settings = _get_value( 'footer_footer-widgets_columns' );
-
-	if ( '0' === $settings ) {
-		return;
-	}
-
-	genesis_markup( [
-		'open'    => '<div %s>' . genesis_get_structural_wrap( 'footer-widgets', 'open' ),
-		'context' => 'footer-widgets',
-	] );
-
-	$widgets = explode( '-', $settings );
-	$count   = 1;
-	$width   = [
-		'12' => 'full-width',
-		'9'  => 'three-fourths',
-		'8'  => 'two-thirds',
-		'6'  => 'one-half',
-		'4'  => 'one-third',
-		'3'  => 'one-fourth',
-	];
-
-	foreach ( $widgets as $widget ) {
-		$first = $count === 1 ? ' first' : '';
-		genesis_widget_area( "footer-$count", [
-			'before' => sprintf( '<div class="footer-widgets-area footer-widgets-%s %s%s">', $count, $width[ $widget ], $first ),
-			'after'  => '</div>',
-		] );
-		$count ++;
-	}
-
-	genesis_markup( [
-		'close'   => genesis_get_structural_wrap( 'footer-widgets', 'close' ) . '</div>',
-		'context' => 'footer-widgets',
-	] );
-}
-
 add_action( 'genesis_setup', __NAMESPACE__ . '\register_footer_credits', 20 );
 /**
  * Description of expected behavior.

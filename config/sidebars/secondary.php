@@ -170,10 +170,10 @@ return [
 		'type'     => 'kirki-box-shadow',
 		'settings' => 'widget-box-shadow',
 		'label'    => __( 'Widget Shadow', 'genesis-customizer' ),
-		'default'  => '0px 3px 6px 0px rgba(0,10,20,0.01)',
+		'default'  => '0px 0px 0px 0px rgba(0,0,0,0)',
 		'output'   => [
 			[
-				'element'  => '.sidebar-secondary .widget',
+				'element'  => '.sidebar.sidebar-secondary .widget',
 				'property' => 'box-shadow',
 			],
 		],

@@ -4,6 +4,17 @@ namespace GenesisCustomizer;
 
 return [
 	[
+		'type'     => 'custom',
+		'settings' => 'tip-1',
+		'default'  => sprintf(
+			'<p><strong>%s</strong> %s <a href="javascript:wp.customize.section( %s ).focus();">%s</a></p><hr>',
+			esc_html__( 'Tip: ', 'genesis-customizer' ),
+			esc_html__( 'These settings apply to desktop screen sizes only. To customize the sub menu toggle buttons for mobile devices, navigate to the ', 'genesis-customizer' ),
+			esc_attr( '"genesis-customizer_menus_sub-menu-toggle"' ),
+			esc_html__( 'Sub Menu Toggle Section', 'genesis-customizer' )
+		),
+	],
+	[
 		'type'     => 'multicolor',
 		'settings' => 'colors',
 		'label'    => __( 'Colors', 'genesis-customizer' ),

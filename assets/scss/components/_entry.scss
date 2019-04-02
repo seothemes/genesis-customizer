@@ -22,15 +22,6 @@
 		}
 	}
 
-	.archive .content.masonry & {
-
-		@include mq(m) {
-			width: 100%;
-			margin-left: 0;
-			break-inside: avoid;
-		}
-	}
-
 	// Entry header.
 	&-header {
 	}

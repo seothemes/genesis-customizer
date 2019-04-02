@@ -767,7 +767,7 @@
         var transparentHeaderHeight = 0;
         var transparentHeader = false;
         var windowWidth = $(window).innerWidth();
-        var breakpoint = genesisMenuParams.headerBreakpoint;
+        var breakpoint = genesisMenuParams.breakpoint;
 
         // Transparent Header mobile.
         if (windowWidth <= breakpoint && $('body').hasClass('has-transparent-header-mobile')) {

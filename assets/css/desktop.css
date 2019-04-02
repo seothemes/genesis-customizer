@@ -238,6 +238,10 @@
   display: none;
 }
 
+.has-transparent-header-desktop.has-transparent-logo .transparent-logo {
+  display: block;
+}
+
 .content-sidebar-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -257,28 +261,6 @@
 .full-width-content .content {
   margin-left: auto;
   margin-right: auto;
-}
-
-.has-2-columns .content.masonry {
-  -webkit-columns: 2;
-  columns: 2;
-}
-
-.has-3-columns .content.masonry {
-  -webkit-columns: 3;
-  columns: 3;
-}
-
-.has-4-columns .content.masonry {
-  -webkit-columns: 4;
-  columns: 4;
-}
-
-.archive .content.masonry .entry {
-  break-inside: avoid;
-  margin-left: 0;
-  width: 100%;
-  -webkit-column-break-inside: avoid;
 }
 
 .wp-block-column {
@@ -302,7 +284,7 @@
   opacity: 1;
 }
 
-.has-sticky-header-desktop .shrink .sticky-logo-link .sticky-logo {
+.has-sticky-header-desktop .shrink .sticky-logo {
   display: block;
 }
 

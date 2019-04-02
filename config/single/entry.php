@@ -23,7 +23,7 @@ return [
 			],
 			[
 				'choice'   => 'entry-title',
-				'element'  => '.entry-title',
+				'element'  => '.single .entry-title',
 				'property' => 'color',
 			],
 		],
@@ -47,7 +47,7 @@ return [
 		],
 		'output'   => [
 			[
-				'element' => '.entry-title',
+				'element' => '.single .entry-title',
 			],
 		],
 	],

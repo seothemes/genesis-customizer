@@ -30,7 +30,7 @@ return [
 			esc_html__( 'More header layout options available in', 'genesis-customizer' ),
 			esc_html__( 'Genesis Customizer Pro', 'genesis-customizer' ),
 			esc_html__( '!', 'genesis-customizer' ),
-			esc_url( 'https://genesiscustomizer.com/pro' ),
+			_get_upgrade_url(),
 			esc_html__( 'Go Pro →', 'genesis-customizer' )
 		),
 		'active_callback' => function () {
@@ -61,15 +61,15 @@ return [
 		'type'     => 'custom',
 		'settings' => 'tip-2',
 		'default'  => sprintf(
-			'<hr><p><strong>%s</strong> %s <strong>%s</strong> %s <a href="javascript:wp.customize.section( %s ).focus();">%s</a> %s <a href="javascript:wp.customize.section( %s ).focus();">%s</a></p><hr>',
+			'<hr><p><strong>%s</strong> %s <strong>%s</strong> %s <a href="javascript:wp.customize.control( %s ).focus();">%s</a> %s <a href="javascript:wp.customize.control( %s ).focus();">%s</a></p><hr>',
 			esc_html__( 'Tip:', 'genesis-customizer' ),
 			esc_html__( 'Menu not aligning correctly? Try adjusting the', 'genesis-customizer' ),
 			esc_html__( 'Alignment', 'genesis-customizer' ),
 			esc_html__( 'in the', 'genesis-customizer' ),
-			esc_attr( '"genesis-customizer_menus_primary"' ),
+			esc_attr( '"genesis-customizer_menus_primary_alignment"' ),
 			esc_html__( 'Primary Menu Section', 'genesis-customizer' ),
 			esc_html__( 'or the', 'genesis-customizer' ),
-			esc_attr( '"genesis-customizer_menus_secondary"' ),
+			esc_attr( '"genesis-customizer_menus_secondary_alignment"' ),
 			esc_html__( 'Secondary Menu Section', 'genesis-customizer' )
 		),
 	],

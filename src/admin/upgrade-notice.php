@@ -25,7 +25,7 @@ function upgrade_notice() {
 		esc_html__( 'Thank you for using Genesis Customizer! Upgrade to', 'genesis-customizer' ),
 		esc_html__( 'Genesis Customizer Pro', 'genesis-customizer' ),
 		esc_html__( 'to access even more features!', 'genesis-customizer' ),
-		esc_attr__( 'https://genesiscustomizer.com/pro', 'genesis-customizer' ),
+		_get_upgrade_url(),
 		esc_html__( 'Go Pro →', 'genesis-customizer' ),
 		esc_html__( 'Dismiss this notice.', 'genesis-customizer' )
 	);

@@ -1,16 +1,4 @@
 <?php
-/**
- * Genesis Customizer.
- *
- * A template to force full-width layout, remove breadcrumbs, and remove the page title.
- *
- * Template Name: Blocks
- *
- * @package Genesis Sample
- * @author  StudioPress
- * @license GPL-2.0-or-later
- * @link    https://www.studiopress.com/
- */
 
 namespace GenesisCustomizer;
 

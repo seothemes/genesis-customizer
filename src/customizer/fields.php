@@ -19,12 +19,17 @@ function add_fields() {
 	foreach ( $configs as $config ) {
 		foreach ( glob( $config . '/*', GLOB_ONLYDIR ) as $panel ) {
 			foreach ( glob( $panel . '/*.php' ) as $section_path ) {
+				$module  = strpos( $section_path, 'pro/config' ) === false ? 0 : 1;
 				$panel   = basename( dirname( $section_path ) );
 				$section = basename( $section_path, '.php' );
 				$prefix  = $handle . '_' . $panel . '_' . $section;
 				$fields  = require_once $section_path;
 
 				if ( ! is_array( $fields ) ) {
+					continue;
+				}
+
+				if ( $module && ! apply_filters( $prefix . '_module', false ) ) {
 					continue;
 				}
 
