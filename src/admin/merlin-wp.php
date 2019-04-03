@@ -37,7 +37,7 @@ function merlin_config() {
 		'edd_remote_api_url'   => '',
 		'edd_item_name'        => '',
 		'edd_theme_slug'       => '',
-		'ready_big_button_url' => get_home_url(),
+		'ready_big_button_url' => admin_url( 'customize.php' ),
 	] );
 }
 
@@ -108,10 +108,10 @@ function merlin_strings() {
 		/* translators: Theme Author */
 		'ready%s'           => esc_html__( 'Your theme has been all set up. Enjoy your new theme by %s.', 'genesis-customizer' ),
 		'ready-action-link' => esc_html__( 'Extras', 'genesis-customizer' ),
-		'ready-big-button'  => esc_html__( 'View your website', 'genesis-customizer' ),
+		'ready-big-button'  => esc_html__( 'Start Customizing', 'genesis-customizer' ),
 		'ready-link-1'      => sprintf( '<a href="%1$s" target="_blank">%2$s</a>', admin_url(), esc_html__( 'Admin Dashboard', 'genesis-customizer' ) ),
 		'ready-link-2'      => sprintf( '<a href="%1$s" target="_blank">%2$s</a>', 'https://genesiscustomizer.com/support/', esc_html__( 'Get Theme Support', 'genesis-customizer' ) ),
-		'ready-link-3'      => sprintf( '<a href="%1$s">%2$s</a>', admin_url( 'customize.php' ), esc_html__( 'Start Customizing', 'genesis-customizer' ) ),
+		'ready-link-3'      => sprintf( '<a href="%1$s">%2$s</a>', get_home_url(), esc_html__( 'View your website', 'genesis-customizer' ) ),
 	] );
 }
 
