@@ -33,6 +33,7 @@
 .github/ export-ignore
 .scripts/ export-ignore
 .stylelintrc.json export-ignore
+style.css.map export-ignore
 composer.json export-ignore
 composer.lock export-ignore
 phpcs.xml.dist export-ignore
@@ -46,6 +47,9 @@ LICENSE.md export-ignore
 Gulpfile.js export-ignore
 
 /tests/ export-ignore
+/assets/scss/ export-ignore
+/assets/js/*.js export-ignore
+!/assets/js/min/*.js export-ignore
 
 /vendor/aristath/kirki/.github/ export-ignore
 /vendor/aristath/kirki/docs/ export-ignore

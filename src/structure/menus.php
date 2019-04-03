@@ -65,3 +65,18 @@ function menu_alignment( $atts ) {
 
 	return $atts;
 }
+
+add_action( 'genesis_footer', __NAMESPACE__ . '\add_footer_menu', 12 );
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function add_footer_menu() {
+	genesis_nav_menu( [
+		'theme_location' => 'footer',
+		'depth'          => 1,
+	] );
+}

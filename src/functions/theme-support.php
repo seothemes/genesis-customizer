@@ -54,10 +54,12 @@ function add_theme_supports() {
 	add_theme_support( 'genesis-menus', [
 		'primary'   => __( 'Primary Menu', 'genesis-customizer' ),
 		'secondary' => __( 'Secondary Menu', 'genesis-customizer' ),
+		'footer'    => __( 'Footer Menu', 'genesis-customizer' ),
 	] );
 	add_theme_support( 'genesis-structural-wraps', [
 		'header',
 		'menu-secondary',
+		'menu-footer',
 		'hero-section',
 		'footer-widgets',
 		'footer-credits',

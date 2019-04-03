@@ -74,7 +74,7 @@ function footer_credits_div() {
 	] );
 }
 
-add_action( 'genesis_footer', __NAMESPACE__ . '\display_footer_widgets', 12 );
+add_action( 'genesis_footer', __NAMESPACE__ . '\display_footer_widgets', 11 );
 /**
  * Display footer widgets widget areas.
  *

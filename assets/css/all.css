@@ -680,6 +680,11 @@ iframe {
   height: auto;
 }
 
+.nav-footer {
+  display: block;
+  position: relative;
+}
+
 .menu {
   font-size: 1.42222rem;
   font-weight: 600;
