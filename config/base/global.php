@@ -184,7 +184,7 @@ return [
 					'.four-sixths',
 				],
 				'property'      => 'width',
-				'value_pattern' => 'calc(((100% - ($px * 2)) / 3) * 2 + $)',
+				'value_pattern' => 'calc(((100% - ($px * 2)) / 3) * 2 + $px)',
 				'media_query'   => _get_media_query(),
 			],
 			[
@@ -192,7 +192,7 @@ return [
 					'.three-fourths',
 				],
 				'property'      => 'width',
-				'value_pattern' => 'calc(((100% - ($px * 3)) / 4) * 3 + $ * 2)',
+				'value_pattern' => 'calc(((100% - ($px * 3)) / 4) * 3 + $px * 2)',
 				'media_query'   => _get_media_query(),
 			],
 			[
@@ -200,7 +200,7 @@ return [
 					'.five-sixths',
 				],
 				'property'      => 'width',
-				'value_pattern' => 'calc(((100% - ($px * 5)) / 6) * 5 + $ * 4)',
+				'value_pattern' => 'calc(((100% - ($px * 5)) / 6) * 5 + $px * 4)',
 				'media_query'   => _get_media_query(),
 			],
 			[
