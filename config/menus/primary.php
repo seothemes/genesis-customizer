@@ -72,7 +72,7 @@ return [
 		'type'     => 'select',
 		'settings' => 'alignment',
 		'label'    => __( 'Align Menu', 'genesis-customizer' ),
-		'default'  => 'right',
+		'default'  => 'flex-end',
 		'choices'  => [
 			'flex-start' => __( 'Left', 'genesis-customizer' ),
 			'center'     => __( 'Center', 'genesis-customizer' ),

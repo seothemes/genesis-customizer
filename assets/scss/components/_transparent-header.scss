@@ -1,4 +1,4 @@
-@mixin has-transparent-header {
+.has-transparent-header {
 
 	.site-header {
 		position: absolute;
@@ -23,26 +23,6 @@
 	}
 }
 
-.has-transparent-header-mobile {
-
-	@include mq(0, m) {
-
-		@include has-transparent-header;
-	}
-}
-
-.has-transparent-header-desktop {
-
-	@include mq(m) {
-
-		@include has-transparent-header;
-	}
-}
-
-.has-transparent-header {
-	@include has-transparent-header;
-}
-
 .transparent-logo {
 	display: none;
 
@@ -52,19 +32,5 @@
 
 	.has-transparent-header.has-transparent-logo & {
 		display: block;
-	}
-
-	@include mq(0, m) {
-
-		.has-transparent-header-mobile.has-transparent-logo & {
-			display: block;
-		}
-	}
-
-	@include mq(m) {
-
-		.has-transparent-header-desktop.has-transparent-logo & {
-			display: block;
-		}
 	}
 }

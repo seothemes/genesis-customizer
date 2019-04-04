@@ -18,6 +18,11 @@ function kirki_scripts() {
 		        control.container.find( "img" ).addClass( "wp-ui-highlight" );
 		    });
 		});
+		wp.customize.control( "genesis-customizer_header_below-header_layout", function( control ) {
+		    control.deferred.embedded.done( function() {
+		        control.container.find( "img" ).addClass( "wp-ui-highlight" );
+		    });
+		});
 		wp.customize.control( "genesis-customizer_footer_above-footer_layout", function( control ) {
 		    control.deferred.embedded.done( function() {
 		        control.container.find( "img" ).addClass( "wp-ui-highlight" );

@@ -47,7 +47,6 @@ class ComposerStaticInit679f46a9d0e5f747d547b51edd715846
         'GenesisCustomizer\\Link_Section' => __DIR__ . '/../..' . '/src/classes/class-link-section.php',
         'GenesisCustomizer\\Mega_Menu_Admin' => __DIR__ . '/../..' . '/src/classes/class-mega-menu-admin.php',
         'GenesisCustomizer\\Menu_Fields_Walker' => __DIR__ . '/../..' . '/src/classes/class-menu-fields-walker.php',
-        'GenesisCustomizer\\Merlin_WP' => __DIR__ . '/../..' . '/src/classes/class-merlin-wp.php',
         'GenesisCustomizer\\Select_Control' => __DIR__ . '/../..' . '/src/classes/class-select-control.php',
         'GenesisCustomizer\\Typekit_Fonts' => __DIR__ . '/../..' . '/src/classes/class-typekit-fonts.php',
         'GenesisCustomizer\\WP_CLI_Commands' => __DIR__ . '/../..' . '/src/classes/class-wp-cli-commands.php',

@@ -29,7 +29,7 @@ function add_fields() {
 					continue;
 				}
 
-				if ( $module && ! apply_filters( $prefix . '_module', false ) ) {
+				if ( $module && ! apply_filters( $prefix . '_config', false ) ) {
 					continue;
 				}
 

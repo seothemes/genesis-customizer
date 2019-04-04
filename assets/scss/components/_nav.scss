@@ -9,42 +9,40 @@
 .nav {
 
 	&-primary {
+		display: flex;
+		z-index: 4;
+		top: 100%;
+		left: 0;
+		width: auto;
 
-		@include mq(m) {
-			display: flex;
+		.has-logo-side & {
+			width: 100%;
 
-			.has-logo-side & {
+			.menu {
 				width: 100%;
-
-				.menu {
-					width: 100%;
-				}
-			}
-
-			.has-logo-above & {
-				width: 100%;
-				justify-content: center;
-			}
-
-			.has-logo-above &.flex-start-desktop {
-				justify-content: flex-start;
-			}
-
-			.has-logo-above &.flex-center-desktop {
-				justify-content: center;
-			}
-
-			.has-logo-above &.flex-end-desktop {
-				justify-content: flex-end;
 			}
 		}
 
-		@include mq(0, m) {
-			top: 100%;
-			left: 0;
-			width: 100vw;
+		.has-logo-above & {
+			width: 100%;
+			justify-content: center;
+		}
+
+		.has-logo-above &.flex-start-desktop {
+			justify-content: flex-start;
+		}
+
+		.has-logo-above &.flex-center-desktop {
+			justify-content: center;
+		}
+
+		.has-logo-above &.flex-end-desktop {
+			justify-content: flex-end;
+		}
+
+		@include mq(0,m) {
 			display: none;
-			z-index: 4;
+			width: 100vw;
 
 			.has-mobile-menu-left &,
 			.has-mobile-menu-right &,
@@ -58,8 +56,8 @@
 			}
 
 			.has-mobile-menu-center & {
-				transform: scale(0);
 				opacity: 0;
+				transform: scale(0);
 
 				&.visible {
 					opacity: 1;
@@ -92,29 +90,26 @@
 	}
 
 	&-secondary {
-		transition: background-color $base--transition-duration $base--transition-timing-function, opacity $base--transition-duration $base--transition-timing-function;
+		display: flex;
+		position: relative;
+		z-index: 2;
+		width: 100%;
+		opacity: 1;
+		align-items: center;
 
 		@include mq(0, m) {
 			display: none;
+			transition: background-color $base--transition-duration $base--transition-timing-function, opacity $base--transition-duration $base--transition-timing-function;
 		}
 
-		@include mq(m) {
-			z-index: 2;
-			width: 100%;
+		.wrap {
 			position: relative;
-			opacity: 1;
-			display: flex;
-			align-items: center;
+			height: 100%;
+		}
 
-			.wrap {
-				height: 100%;
-				position: relative;
-			}
-
-			.menu {
-				justify-content: flex-start;
-				height: 100%;
-			}
+		.menu {
+			height: 100%;
+			justify-content: flex-start;
 		}
 
 		.has-logo-side & {
@@ -123,7 +118,7 @@
 	}
 
 	&-footer {
-		position: relative;
 		display: block;
+		position: relative;
 	}
 }

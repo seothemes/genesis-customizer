@@ -84,44 +84,10 @@ return [
 		'default'  => '<hr>',
 	],
 	[
-		'type'            => 'radio-buttonset',
-		'settings'        => 'position',
-		'label'           => esc_html__( 'Positioning', 'genesis-customizer' ),
-		'default'         => 'absolute',
-		'choices'         => [
-			'absolute' => esc_html__( 'Absolute', 'genesis-customizer' ),
-			'relative' => esc_html__( 'Relative', 'genesis-customizer' ),
-		],
-		'output'          => [
-			[
-				'element'     => '.nav-primary',
-				'property'    => 'position',
-				'media_query' => _get_media_query( 'max' ),
-			],
-		],
-		'active_callback' => [
-			[
-				'setting'  => _get_setting( 'animation' ),
-				'value'    => 'has-mobile-menu-left',
-				'operator' => '!==',
-			],
-			[
-				'setting'  => _get_setting( 'animation' ),
-				'value'    => 'has-mobile-menu-right',
-				'operator' => '!==',
-			],
-			[
-				'setting'  => _get_setting( 'animation' ),
-				'value'    => 'has-mobile-menu-center',
-				'operator' => '!==',
-			],
-		],
-	],
-	[
 		'type'            => 'custom',
 		'settings'        => 'tip-1',
 		'default'         => sprintf(
-			'<hr><p>%s <strong>%s</strong>%s </p><a href="%s" target="_blank" class="button-primary">%s</a>',
+			'<p>%s <strong>%s</strong>%s </p><a href="%s" target="_blank" class="button-primary">%s</a>',
 			esc_html__( 'More mobile menu options available in', 'genesis-customizer' ),
 			esc_html__( 'Genesis Customizer Pro', 'genesis-customizer' ),
 			esc_html__( '!', 'genesis-customizer' ),

@@ -31,18 +31,6 @@ function add_theme_supports() {
 		'flex-width'  => true,
 		'header-text' => '',
 	] );
-	add_theme_support( 'custom-header', [
-		'header-selector'  => 'section.hero-section',
-		'default_image'    => _get_url() . 'assets/img/hero-section.jpg',
-		'header-text'      => false,
-		'width'            => 1280,
-		'height'           => 720,
-		'flex-height'      => true,
-		'flex-width'       => true,
-		'uploads'          => true,
-		'video'            => false,
-		'wp-head-callback' => __NAMESPACE__ . '\custom_header',
-	] );
 	add_theme_support( 'genesis-accessibility', [
 		'404-page',
 		'drop-down-menu',

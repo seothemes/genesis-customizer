@@ -7,27 +7,21 @@ return [
 		'type'     => 'radio-image',
 		'settings' => 'layout',
 		'label'    => __( 'Desktop Layout', 'genesis-customizer' ),
+		'priority' => 1,
 		'default'  => 'has-logo-left',
-		'choices'  => apply_filters( 'genesis_customizer_header_layouts', [
+		'choices'  => [
 			'has-logo-left'  => _get_url() . 'assets/img/logo-left.gif',
 			'has-logo-above' => _get_url() . 'assets/img/logo-above.gif',
 			'has-logo-right' => _get_url() . 'assets/img/logo-right.gif',
-		] ),
-	],
-	[
-		'type'            => 'custom',
-		'settings'        => 'divider-0',
-		'default'         => '<hr>',
-		'active_callback' => function () {
-			return _is_pro_active();
-		},
+		],
 	],
 	[
 		'type'            => 'custom',
 		'settings'        => 'tip-1',
+		'priority'        => 2,
 		'default'         => sprintf(
-			'%s <strong>%s</strong>%s <br>&nbsp;<br><a href="%s" target="_blank" class="button-primary">%s</a><hr>',
-			esc_html__( 'More header layout options available in', 'genesis-customizer' ),
+			'%s <strong>%s</strong>%s <br>&nbsp;<br><a href="%s" target="_blank" class="button-primary">%s</a>',
+			esc_html__( 'Additional desktop and mobile header layouts available in', 'genesis-customizer' ),
 			esc_html__( 'Genesis Customizer Pro', 'genesis-customizer' ),
 			esc_html__( '!', 'genesis-customizer' ),
 			_get_upgrade_url(),
@@ -38,28 +32,9 @@ return [
 		},
 	],
 	[
-		'type'            => 'custom',
-		'settings'        => 'divider-1',
-		'default'         => '<hr>',
-		'active_callback' => function () {
-			return ! _is_pro_active();
-		},
-	],
-	[
-		'type'     => 'radio-image',
-		'settings' => 'mobile-layout',
-		'label'    => __( 'Mobile Layout', 'genesis-customizer' ),
-		'default'  => 'has-logo-left-mobile',
-		'choices'  => [
-			'has-logo-left-mobile'  => _get_url() . 'assets/img/mobile-layout-1.gif',
-			'has-logo-right-mobile' => _get_url() . 'assets/img/mobile-layout-3.gif',
-			'has-logo-above-mobile' => _get_url() . 'assets/img/mobile-layout-2.gif',
-			'has-logo-below-mobile' => _get_url() . 'assets/img/mobile-layout-4.gif',
-		],
-	],
-	[
 		'type'     => 'custom',
 		'settings' => 'tip-2',
+		'priority' => 4,
 		'default'  => sprintf(
 			'<hr><p><strong>%s</strong> %s <strong>%s</strong> %s <a href="javascript:wp.customize.control( %s ).focus();">%s</a> %s <a href="javascript:wp.customize.control( %s ).focus();">%s</a></p><hr>',
 			esc_html__( 'Tip:', 'genesis-customizer' ),
@@ -74,8 +49,15 @@ return [
 		),
 	],
 	[
+		'type'     => 'custom',
+		'settings' => 'divider-83398',
+		'default'  => '<hr>',
+		'priority' => 5,
+	],
+	[
 		'type'     => 'multicolor',
 		'settings' => 'colors',
+		'priority' => 5,
 		'label'    => __( 'Colors', 'genesis-customizer' ),
 		'choices'  => [
 			'background'    => __( 'Background', 'genesis-customizer' ),
@@ -106,79 +88,11 @@ return [
 		],
 	],
 	[
-		'type'     => 'custom',
-		'settings' => 'tip-3',
-		'default'  => sprintf(
-			'<hr><p><strong>%s</strong>%s<a href="javascript:wp.customize.section( %s ).focus();">%s</a></p><hr>',
-			esc_html__( 'Tip: ', 'genesis-customizer' ),
-			esc_html__( 'Transparent header colors override the Primary Header defaults. They can be customized from the ', 'genesis-customizer' ),
-			esc_attr( '"genesis-customizer_header_transparent"' ),
-			esc_html__( 'Transparent Header Section', 'genesis-customizer' )
-		),
-	],
-	[
-		'type'     => 'slider',
-		'settings' => 'width',
-		'label'    => __( 'Header Width', 'genesis-customizer' ),
-		'default'  => '300',
-		'choices'  => [
-			'min'  => 100,
-			'max'  => 600,
-			'step' => 1,
-		],
-		'output'   => [
-			[
-				'element'     => '.has-logo-side .site-header',
-				'property'    => 'width',
-				'units'       => 'px',
-				'media_query' => _get_media_query(),
-			],
-			[
-				'element'     => '.has-logo-side .site-container',
-				'property'    => 'padding-left',
-				'units'       => 'px',
-				'media_query' => _get_media_query(),
-			],
-		],
-		'required' => [
-			[
-				'setting'  => _get_setting( 'layout' ),
-				'value'    => 'has-logo-side',
-				'operator' => '===',
-			],
-		],
-	],
-	[
-		'type'     => 'slider',
-		'settings' => 'vertical-spacing',
-		'label'    => __( 'Vertical Spacing', 'genesis-customizer' ),
-		'default'  => _get_size( 'xl', '' ),
-		'choices'  => [
-			'min'  => 0,
-			'max'  => 300,
-			'step' => 1,
-		],
-		'output'   => [
-			[
-				'element'       => '.has-logo-side .primary-header',
-				'property'      => 'padding',
-				'value_pattern' => '$px 0',
-				'media_query'   => _get_media_query(),
-			],
-		],
-		'required' => [
-			[
-				'setting'  => _get_setting( 'layout' ),
-				'value'    => 'has-logo-side',
-				'operator' => '===',
-			],
-		],
-	],
-	[
 		'type'     => 'slider',
 		'settings' => 'wrap-width',
 		'label'    => __( 'Container Width', 'genesis-customizer' ),
 		'default'  => '1152',
+		'priority' => 4,
 		'choices'  => [
 			'min'  => 256,
 			'max'  => 1920,
@@ -194,8 +108,11 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-83398',
+		'settings' => 'divider-398',
 		'default'  => '<hr>',
+		'active_callback' => function () {
+			return ! _is_pro_active();
+		},
 	],
 	[
 		'type'     => 'dimensions',
@@ -226,7 +143,7 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-398',
+		'settings' => 'divider-675',
 		'default'  => '<hr>',
 	],
 	[

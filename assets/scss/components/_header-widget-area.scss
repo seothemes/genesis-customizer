@@ -19,9 +19,9 @@
 		margin-right: auto;
 
 		.has-logo-side & {
-			text-align: center;
-			margin-left: auto;
 			margin-right: auto;
+			margin-left: auto;
+			text-align: center;
 		}
 	}
 
@@ -42,10 +42,10 @@
 		margin-left: auto;
 
 		.has-logo-side & {
+			margin-right: auto;
+			margin-left: auto;
 			text-align: center;
 			align-self: flex-end;
-			margin-left: auto;
-			margin-right: auto;
 		}
 	}
 

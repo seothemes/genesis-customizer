@@ -1,17 +1,13 @@
 .mega-menu {
-	display: none;
-	flex-wrap: nowrap;
+	display: flex;
 	position: absolute;
-	width: 100%;
 	top: 100%;
-
-	&.visible {
-		display: flex;
-	}
+	width: 100%;
+	flex-wrap: nowrap;
 
 	.widget {
-		flex: 1;
 		padding-right: 2em;
+		flex: 1;
 
 		&:last-of-type {
 			padding-right: 0;
@@ -25,9 +21,9 @@
 	}
 
 	.menu-item {
-		padding: 0;
 		width: 100%;
 		margin-bottom: 1em;
+		padding: 0;
 	}
 
 }

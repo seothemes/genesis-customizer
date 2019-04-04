@@ -11,7 +11,6 @@ return array(
     'GenesisCustomizer\\Link_Section' => $baseDir . '/src/classes/class-link-section.php',
     'GenesisCustomizer\\Mega_Menu_Admin' => $baseDir . '/src/classes/class-mega-menu-admin.php',
     'GenesisCustomizer\\Menu_Fields_Walker' => $baseDir . '/src/classes/class-menu-fields-walker.php',
-    'GenesisCustomizer\\Merlin_WP' => $baseDir . '/src/classes/class-merlin-wp.php',
     'GenesisCustomizer\\Select_Control' => $baseDir . '/src/classes/class-select-control.php',
     'GenesisCustomizer\\Typekit_Fonts' => $baseDir . '/src/classes/class-typekit-fonts.php',
     'GenesisCustomizer\\WP_CLI_Commands' => $baseDir . '/src/classes/class-wp-cli-commands.php',

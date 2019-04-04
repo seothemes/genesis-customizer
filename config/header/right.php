@@ -4,33 +4,24 @@ namespace GenesisCustomizer;
 
 return [
 	[
-		'type'      => 'radio',
-		'settings'  => 'header-left',
-		'label'     => __( 'Enable Header Left', 'genesis-customizer' ),
-		'default'   => 'hide-mobile',
-		'transport' => 'refresh',
-		'choices'   => [
-			'show'         => __( 'Desktop and Mobile', 'genesis-customizer' ),
-			'hide-mobile'  => __( 'Desktop', 'genesis-customizer' ),
-			'hide-desktop' => __( 'Mobile', 'genesis-customizer' ),
-			'hide'         => __( 'None', 'genesis-customizer' ),
-		],
-	],
-	[
-		'type'     => 'custom',
-		'settings' => 'tip-1',
-		'default'  => sprintf(
-			'<hr><p><strong>%s</strong> %s <a href="javascript:wp.customize.section( %s ).focus();">%s</a></p><hr>',
-			esc_html__( 'Tip: ', 'genesis-customizer' ),
-			esc_html__( 'Edit the  ', 'genesis-customizer' ),
-			esc_attr( '"sidebar-widgets-header-left-widget"' ),
-			esc_html__( 'Header Left Widgets', 'genesis-customizer' )
+		'type'            => 'custom',
+		'settings'        => 'tip-1422',
+		'default'         => sprintf(
+			'<p>%s <strong>%s</strong>%s </p><a href="%s" target="_blank" class="button-primary">%s</a><br>&nbsp;<hr>',
+			esc_html__( 'Header Left widget also available in', 'genesis-customizer' ),
+			esc_html__( 'Genesis Customizer Pro', 'genesis-customizer' ),
+			esc_html__( '!', 'genesis-customizer' ),
+			_get_upgrade_url(),
+			esc_html__( 'Go Pro →', 'genesis-customizer' )
 		),
+		'active_callback' => function () {
+			return ! _is_pro_active();
+		},
 	],
 	[
 		'type'      => 'radio',
-		'settings'  => 'header-right',
-		'label'     => __( 'Enable Header Right', 'genesis-customizer' ),
+		'settings'  => 'enable',
+		'label'     => __( 'Enable on', 'genesis-customizer' ),
 		'default'   => 'hide-mobile',
 		'transport' => 'refresh',
 		'choices'   => [
@@ -42,7 +33,7 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'tip-2',
+		'settings' => 'tip-322',
 		'default'  => sprintf(
 			'<hr><p><strong>%s</strong> %s <a href="javascript:wp.customize.section( %s ).focus();">%s</a></p><hr>',
 			esc_html__( 'Tip: ', 'genesis-customizer' ),
@@ -66,12 +57,12 @@ return [
 		'output'   => [
 			[
 				'choice'   => 'widget-title',
-				'element'  => '.primary-header .widget-title',
+				'element'  => '.header-right .widget-title',
 				'property' => 'color',
 			],
 			[
 				'choice'   => 'widget-content',
-				'element'  => '.primary-header .widget',
+				'element'  => '.header-right .widget',
 				'property' => 'color',
 			],
 		],
@@ -93,12 +84,12 @@ return [
 		],
 		'output'   => [
 			[
-				'element'  => '.header-left, .header-right',
+				'element'  => '.header-right',
 				'property' => 'padding-top',
 				'units'    => 'px',
 			],
 			[
-				'element'  => '.header-left, .header-right',
+				'element'  => '.header-right',
 				'property' => 'padding-bottom',
 				'units'    => 'px',
 			],
@@ -116,12 +107,12 @@ return [
 		],
 		'output'   => [
 			[
-				'element'  => '.header-left, .header-right',
+				'element'  => '.header-right',
 				'property' => 'padding-left',
 				'units'    => 'px',
 			],
 			[
-				'element'  => '.header-left, .header-right',
+				'element'  => '.header-right',
 				'property' => 'padding-right',
 				'units'    => 'px',
 			],

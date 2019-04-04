@@ -13,6 +13,7 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_main_styles' );
 function enqueue_main_styles() {
 	$handle     = _get_handle();
 	$breakpoint = _get_value( 'general_breakpoints_global', _get_breakpoint() );
+	$mobile     = intval( $breakpoint );
 
 	wp_register_style(
 		$handle . '-all',
@@ -27,7 +28,7 @@ function enqueue_main_styles() {
 		_get_url() . 'assets/css/mobile.css',
 		[],
 		_get_asset_version( 'css/mobile.css' ),
-		'(max-width:' . $breakpoint . 'px)'
+		'(max-width:' . $mobile . 'px)'
 	);
 
 	wp_register_style(

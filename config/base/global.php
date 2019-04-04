@@ -12,7 +12,6 @@ $transition_elements = array_merge(
 		'.title-area',
 		'.primary-header',
 		'.nav-primary',
-		'.nav-secondary',
 		'.menu-toggle-icon:before',
 		'.menu-toggle-icon:after',
 		'.menu-overlay',
@@ -63,7 +62,8 @@ return [
 			],
 			[
 				'element'     => [
-					'.content',
+					'.full-width-content .content',
+					'.center-content .content',
 				],
 				'property'    => 'margin-bottom',
 				'units'       => 'px',

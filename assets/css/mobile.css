@@ -4,8 +4,8 @@
 }
 
 .has-logo-left-mobile .title-area {
-  margin-left: 0;
   margin-right: auto;
+  margin-left: 0;
 }
 
 .has-logo-above-mobile .title-area,
@@ -14,32 +14,29 @@
 }
 
 .has-logo-right-mobile .title-area {
-  margin-left: auto;
   margin-right: 0;
+  margin-left: auto;
   text-align: right;
 }
 
 .nav-primary {
   display: none;
-  left: 0;
-  top: 100%;
   width: 100vw;
-  z-index: 4;
 }
 
 .has-mobile-menu-left .nav-primary,
 .has-mobile-menu-right .nav-primary,
 .has-mobile-menu-center .nav-primary {
-  bottom: 0;
   display: flex;
-  height: 100%;
-  left: 0;
-  padding: 0 3.2rem;
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 100%;
   align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0 3.2rem;
 }
 
 .has-mobile-menu-center .nav-primary {
@@ -76,41 +73,28 @@
 
 .nav-secondary {
   display: none;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
 }
 
-.no-js .menu-item {
-  padding: 0;
+.menu {
   width: 100%;
+  margin: 0;
+}
+
+.menu-item {
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .menu-toggle {
   display: flex;
 }
 
-.menu-toggle-bar {
-  z-index: 5;
-  order: 1;
-}
-
-.has-logo-above-mobile .menu-toggle-bar,
-.has-logo-below-mobile .menu-toggle-bar {
-  display: flex;
-  margin: 0 -5vw;
-  max-width: 100vw;
-  position: relative;
-  width: 100vw;
-  order: 2;
-  justify-content: center;
-  align-items: center;
-}
-
-.has-logo-below-mobile .menu-toggle-bar {
-  order: -1;
-}
-
-.no-js .sub-menu .menu-item {
-  margin: 0 1.6rem 0 0;
-  width: auto;
+.menu-overlay {
+  display: block;
 }
 
 .has-logo-above-mobile .header-left,
@@ -125,51 +109,18 @@
   flex: 1;
 }
 
-.has-transparent-header-mobile .site-header {
-  position: absolute;
-}
-
-.has-transparent-header-mobile .transparent-logo-link {
-  display: block;
-}
-
-.has-transparent-header-mobile.elementor-editor-active:hover .site-header {
-  display: none;
-}
-
-.has-transparent-header-mobile.has-transparent-logo .custom-logo-link {
-  display: none;
-}
-
-.has-transparent-header-mobile.has-transparent-logo .transparent-logo {
-  display: block;
-}
-
 .wp-block-columns {
   flex-wrap: wrap;
 }
 
 .wp-block-column {
-  width: 100%;
   flex: none;
+  width: 100%;
 }
 
 .has-logo-above-mobile .header-search-toggle,
 .has-logo-below-mobile .header-search-toggle {
   position: absolute;
-}
-
-.has-sticky-header-mobile .site-header {
-  position: absolute;
-  top: 0;
-}
-
-.has-sticky-header-mobile.has-sticky-nav-secondary .shrink .nav-secondary {
-  opacity: 1;
-}
-
-.has-sticky-header-mobile .shrink .sticky-logo {
-  display: block;
 }
 
 .hide-mobile {

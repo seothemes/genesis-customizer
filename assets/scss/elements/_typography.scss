@@ -20,6 +20,7 @@ a {
 }
 
 p {
+
 	@include padding(0);
 	@include margin(null 0);
 }

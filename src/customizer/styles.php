@@ -107,15 +107,13 @@ function kirki_styles() {
 		}
 		#customize-control-genesis-customizer_footer_footer-widgets_columns img,
 		#customize-control-genesis-customizer_header_above-header_layout img,
+		#customize-control-genesis-customizer_header_below-header_layout img,
 		#customize-control-genesis-customizer_footer_above-footer_layout img,
 		#customize-control-genesis-customizer_header_primary_layout img {
 			width: 76px;
 		}
 		#customize-control-genesis-customizer_header_primary_mobile-layout img {
 			width: 60px;
-		}
-		.customize-control[style="display: none;"] + .customize-control-kirki-custom hr {
-    		opacity: 0;
 		}
 		#accordion-section-genesis-customizer_pro h3 {
 			cursor: pointer;

@@ -122,9 +122,10 @@ function _get_version() {
  * @return string
  */
 function _get_asset_version( $file ) {
-	$modified = filemtime( _get_path() . 'assets' . DIRECTORY_SEPARATOR . $file );
+	$cache_busting = _get_value( 'general_performance_cache-busting', false );
+	$modified      = filemtime( _get_path() . 'assets' . DIRECTORY_SEPARATOR . $file );
 
-	return defined( 'WP_DEBUG' ) && WP_DEBUG ? $modified : _get_version();
+	return defined( 'WP_DEBUG' ) && WP_DEBUG || $cache_busting ? $modified : _get_version();
 }
 
 /**
@@ -293,7 +294,7 @@ function _get_size( $size = 'm', $suffix = 'px' ) {
  * @param bool   $hover
  * @param bool   $array
  *
- * @return string
+ * @return array|string
  */
 function _get_elements( $element, $hover = false, $array = false ) {
 	$elements = apply_filters( 'genesis_customizer_elements', [

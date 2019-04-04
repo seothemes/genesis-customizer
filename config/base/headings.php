@@ -82,24 +82,29 @@ return [
 		),
 	],
 	[
-		'type'     => 'dimensions',
+		'type'            => 'custom',
+		'settings'        => 'tip-16723422',
+		'default'         => sprintf(
+			'<p>%s <strong>%s</strong>%s </p><a href="%s" target="_blank" class="button-primary">%s</a><br>&nbsp;<hr>',
+			esc_html__( 'Responsive font size settings (separate desktop and mobile sizes) available in', 'genesis-customizer' ),
+			esc_html__( 'Genesis Customizer Pro', 'genesis-customizer' ),
+			esc_html__( '!', 'genesis-customizer' ),
+			_get_upgrade_url(),
+			esc_html__( 'Go Pro →', 'genesis-customizer' )
+		),
+		'active_callback' => function () {
+			return ! _is_pro_active();
+		},
+	],
+	[
+		'type'     => 'dimension',
 		'settings' => 'h1',
 		'label'    => __( 'H1 Font Size', 'genesis-customizer' ),
-		'default'  => [
-			'Mobile'  => '36px',
-			'Desktop' => '36px',
-		],
+		'default'  => '36px',
 		'output'   => [
 			[
-				'choice'   => 'Mobile',
 				'element'  => 'h1',
 				'property' => 'font-size',
-			],
-			[
-				'choice'      => 'Desktop',
-				'element'     => 'h1',
-				'property'    => 'font-size',
-				'media_query' => _get_media_query(),
 			],
 		],
 	],
@@ -109,24 +114,14 @@ return [
 		'default'  => '<hr>',
 	],
 	[
-		'type'     => 'dimensions',
+		'type'     => 'dimension',
 		'settings' => 'h2',
 		'label'    => __( 'H2 Font Size', 'genesis-customizer' ),
-		'default'  => [
-			'Mobile'  => '28px',
-			'Desktop' => '28px',
-		],
+		'default'  => '28px',
 		'output'   => [
 			[
-				'choice'   => 'Mobile',
 				'element'  => 'h2',
 				'property' => 'font-size',
-			],
-			[
-				'choice'      => 'Desktop',
-				'element'     => 'h2',
-				'property'    => 'font-size',
-				'media_query' => _get_media_query(),
 			],
 		],
 	],
@@ -136,24 +131,14 @@ return [
 		'default'  => '<hr>',
 	],
 	[
-		'type'     => 'dimensions',
+		'type'     => 'dimension',
 		'settings' => 'h3',
 		'label'    => __( 'H3 Font Size', 'genesis-customizer' ),
-		'default'  => [
-			'Mobile'  => '24px',
-			'Desktop' => '24px',
-		],
+		'default'  => '24px',
 		'output'   => [
 			[
-				'choice'   => 'Mobile',
 				'element'  => 'h3',
 				'property' => 'font-size',
-			],
-			[
-				'choice'      => 'Desktop',
-				'element'     => 'h3',
-				'property'    => 'font-size',
-				'media_query' => _get_media_query(),
 			],
 		],
 	],
@@ -163,24 +148,14 @@ return [
 		'default'  => '<hr>',
 	],
 	[
-		'type'     => 'dimensions',
+		'type'     => 'dimension',
 		'settings' => 'h4',
 		'label'    => __( 'H4 Font Size', 'genesis-customizer' ),
-		'default'  => [
-			'Mobile'  => '22px',
-			'Desktop' => '22px',
-		],
+		'default'  => '22px',
 		'output'   => [
 			[
-				'choice'   => 'Mobile',
 				'element'  => 'h4',
 				'property' => 'font-size',
-			],
-			[
-				'choice'      => 'Desktop',
-				'element'     => 'h4',
-				'property'    => 'font-size',
-				'media_query' => _get_media_query(),
 			],
 		],
 	],
@@ -190,24 +165,14 @@ return [
 		'default'  => '<hr>',
 	],
 	[
-		'type'     => 'dimensions',
+		'type'     => 'dimension',
 		'settings' => 'h5',
 		'label'    => __( 'H5 Font Size', 'genesis-customizer' ),
-		'default'  => [
-			'Mobile'  => '20px',
-			'Desktop' => '20px',
-		],
+		'default'  => '20px',
 		'output'   => [
 			[
-				'choice'   => 'Mobile',
 				'element'  => 'h5,legend',
 				'property' => 'font-size',
-			],
-			[
-				'choice'      => 'Desktop',
-				'element'     => 'h5,legend',
-				'property'    => 'font-size',
-				'media_query' => _get_media_query(),
 			],
 		],
 	],
@@ -217,24 +182,14 @@ return [
 		'default'  => '<hr>',
 	],
 	[
-		'type'     => 'dimensions',
+		'type'     => 'dimension',
 		'settings' => 'h6',
 		'label'    => __( 'H6 Font Size', 'genesis-customizer' ),
-		'default'  => [
-			'Mobile'  => '18px',
-			'Desktop' => '18px',
-		],
+		'default'  => '18px',
 		'output'   => [
 			[
-				'choice'   => 'Mobile',
 				'element'  => 'h6',
 				'property' => 'font-size',
-			],
-			[
-				'choice'      => 'Desktop',
-				'element'     => 'h6',
-				'property'    => 'font-size',
-				'media_query' => _get_media_query(),
 			],
 		],
 	],

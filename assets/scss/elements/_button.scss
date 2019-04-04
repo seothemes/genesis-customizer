@@ -9,10 +9,10 @@
 @mixin button {
 	display: inline-block;
 	width: auto;
+	font-weight: $font-weight--semibold;
 	white-space: normal;
 	text-decoration: none;
 	cursor: pointer;
-	font-weight: $font-weight--semibold;
 
 	@include hover-focus {
 		outline: none;
@@ -39,13 +39,13 @@
 .button {
 
 	&.small {
-		font-size: smaller;
 		padding: 1em 2em;
+		font-size: smaller;
 	}
 
 	&.ghost {
-		background: rgba($color--white, 0.2);
 		color: $color--white;
+		background: rgba($color--white, 0.2);
 
 		@include hover-focus {
 			background: rgba($color--white, 0.4);

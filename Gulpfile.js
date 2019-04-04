@@ -50,7 +50,6 @@ toolkit.extendConfig(
                 'assets/js/responsive-menus.js',
                 'assets/js/split-nav.js',
                 'assets/js/sticky-header.js',
-                'assets/js/transparent-header.js',
                 'assets/js/scroll-to-top.js',
                 'assets/js/header-search.js'
             ],

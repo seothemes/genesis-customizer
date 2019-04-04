@@ -12,10 +12,10 @@
 
 	ul {
 		display: flex;
+		margin: 0;
+		list-style-type: none;
 		flex-wrap: wrap;
 		align-items: flex-end; // Pagination ommission.
-		list-style-type: none;
-		margin: 0;
 	}
 
 	&.align-center,
@@ -36,13 +36,13 @@
 	&.align-full {
 
 		.pagination-previous {
-			margin-left: 0;
 			margin-right: auto;
+			margin-left: 0;
 		}
 
 		.pagination-next {
-			margin-left: auto;
 			margin-right: 0;
+			margin-left: auto;
 		}
 	}
 

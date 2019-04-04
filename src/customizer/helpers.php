@@ -8,6 +8,7 @@ function _get_default_panels() {
 		'base'     => __( 'Base Styles', 'genesis-customizer' ),
 		'header'   => __( 'Header', 'genesis-customizer' ),
 		'menus'    => __( 'Menus', 'genesis-customizer' ),
+		'hero'     => __( 'Hero Section', 'genesis-customizer' ),
 		'content'  => __( 'Content Area', 'genesis-customizer' ),
 		'sidebars' => __( 'Sidebars', 'genesis-customizer' ),
 		'single'   => __( 'Single Post / Page', 'genesis-customizer' ),
@@ -31,9 +32,9 @@ function _get_default_sections() {
 			'tables'      => __( 'Tables', 'genesis-customizer' ),
 		],
 		'header'   => [
-			'primary'      => __( 'Primary Header', 'genesis-customizer' ),
-			'title-area'   => __( 'Title Area', 'genesis-customizer' ),
-			'widget-areas' => __( 'Widget Areas', 'genesis-customizer' ),
+			'primary'    => __( 'Primary Header', 'genesis-customizer' ),
+			'title-area' => __( 'Title Area', 'genesis-customizer' ),
+			'right'      => __( 'Header Right', 'genesis-customizer' ),
 		],
 		'menus'    => [
 			'primary'         => __( 'Primary Menu', 'genesis-customizer' ),
@@ -43,6 +44,9 @@ function _get_default_sections() {
 			'sub-menu'        => __( 'Sub Menu', 'genesis-customizer' ),
 			'sub-menu-toggle' => __( 'Sub Menu Toggle', 'genesis-customizer' ),
 			'footer'          => __( 'Footer', 'genesis-customizer' ),
+		],
+		'hero'        => [
+			'settings' => __( 'Settings', 'genesis-customizer' ),
 		],
 		'content'  => [
 			'main'           => __( 'Main Content', 'genesis-customizer' ),

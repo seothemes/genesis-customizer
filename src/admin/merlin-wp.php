@@ -2,6 +2,9 @@
 
 namespace GenesisCustomizer;
 
+// Load Merlin WP class.
+require_once _get_path() . 'vendor/richtabor/merlin-wp/class-merlin.php';
+
 add_action( 'after_setup_theme', __NAMESPACE__ . '\setup_merlin' );
 /**
  * Description of expected behavior.
@@ -11,7 +14,7 @@ add_action( 'after_setup_theme', __NAMESPACE__ . '\setup_merlin' );
  * @return void
  */
 function setup_merlin() {
-	new Merlin_WP( merlin_config(), merlin_strings() );
+	new \Merlin( merlin_config(), merlin_strings() );
 }
 
 /**
@@ -115,22 +118,6 @@ function merlin_strings() {
 	] );
 }
 
-add_filter( 'genesis_merlin_steps', __NAMESPACE__ . '\merlin_steps' );
-/**
- * Description of expected behavior.
- *
- * @since 1.0.0
- *
- * @param $steps
- *
- * @return mixed
- */
-function merlin_steps( $steps ) {
-	unset( $steps['child'] );
-
-	return $steps;
-}
-
 add_filter( 'merlin_import_files', __NAMESPACE__ . '\merlin_local_import_files' );
 /**
  * Description of expected behavior.
@@ -160,4 +147,32 @@ function merlin_local_import_files() {
 	];
 
 	return $demos;
+}
+
+add_filter( 'genesis_merlin_steps', __NAMESPACE__ . '\merlin_steps' );
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
+ * @param $steps
+ *
+ * @return mixed
+ */
+function merlin_steps( $steps ) {
+	unset( $steps['child'] );
+
+	return $steps;
+}
+
+add_action('get_template_part_merlin-wp/assets/images/spinner', __NAMESPACE__ . '\merlin_spinner' );
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function merlin_spinner() {
+	require_once _get_path() . 'vendor/richtabor/merlin-wp/assets/images/spinner.php';
 }

@@ -7,8 +7,8 @@
 ////
 
 .title-area {
-	line-height: $line-height--heading;
 	position: relative;
+	line-height: $line-height--heading;
 
 	@include mq(0, m) {
 
@@ -23,9 +23,9 @@
 		}
 
 		.has-logo-right-mobile & {
-			text-align: right;
 			margin-right: 0;
 			margin-left: auto;
+			text-align: right;
 		}
 	}
 
@@ -49,8 +49,8 @@
 		}
 
 		.has-logo-side & {
-			align-self: flex-start;
 			text-align: center;
+			align-self: flex-start;
 		}
 	}
 }

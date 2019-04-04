@@ -8,30 +8,30 @@
 
 .hero-section {
 	display: flex;
+	padding: $spacing--xxxl 0;
+	background-position: center;
+	background-size: cover;
+	text-align: center;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
-	padding: $spacing--xxxl 0;
-	text-align: center;
-	background-position: center;
-	background-size: cover;
 
 	@include overlay();
 
 	.wp-custom-header {
 		display: flex;
-		align-items: center;
-		justify-content: center;
 		overflow: hidden;
 		z-index: -1;
+		align-items: center;
+		justify-content: center;
 
 		@include size(100%);
 		@include position(absolute, 0 0 0 0);
 	}
 
 	.wrap {
-		justify-content: center;
 		position: relative;
+		justify-content: center;
 	}
 
 	h1 {
@@ -39,12 +39,12 @@
 		margin-bottom: 0;
 
 		&:after {
-			content: '';
 			display: none;
 			width: 1.618em;
 			height: 3px;
-			background-color: currentColor;
 			margin: 0.4em auto 0;
+			background-color: currentColor;
+			content: "";
 		}
 	}
 

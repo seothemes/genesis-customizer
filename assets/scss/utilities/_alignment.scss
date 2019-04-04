@@ -39,17 +39,18 @@
 
 	.center-content &full,
 	.full-width-content &full {
-		margin-left: calc(-100vw / 2 + 100% / 2);
-		margin-right: calc(-100vw / 2 + 100% / 2);
-		max-width: 100vw;
 		width: 100vw;
+		max-width: 100vw;
+		margin-right: calc(-100vw / 2 + 100% / 2);
+		margin-left: calc(-100vw / 2 + 100% / 2);
 	}
+
 	.center-content &wide,
 	.full-width-content &wide {
-		margin-left: -20%;
-		margin-right: -20%;
-		max-width: 140%;
 		width: 140%;
+		max-width: 140%;
+		margin-right: -20%;
+		margin-left: -20%;
 	}
 
 }
@@ -69,14 +70,14 @@
 	}
 
 	&-center {
-		margin-left: auto;
 		margin-right: auto;
+		margin-left: auto;
 
 		&-desktop {
 
 			@include mq(m) {
-				margin-left: auto;
 				margin-right: auto;
+				margin-left: auto;
 			}
 		}
 	}

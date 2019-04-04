@@ -20,6 +20,9 @@ add_action( 'genesis_setup', __NAMESPACE__ . '\register_widget_areas', 20 );
 /**
  * Description of expected behavior.
  *
+ * Pro widgets registered here for correct ordering. Can be enabled/disabled
+ * with module key.
+ *
  * @since 1.0.0
  *
  * @return void
@@ -29,25 +32,31 @@ function register_widget_areas() {
 		'above-header'        => [
 			'name'        => __( 'Above Header', 'genesis-customizer' ),
 			'description' => __( 'This is the Above Header widget area.', 'genesis-customizer' ),
-			'pro'         => true,
+			'module'      => 'extra-widgets',
 		],
 		'header-left-widget'  => [
 			'name'        => __( 'Header Left', 'genesis-customizer' ),
 			'description' => __( 'This is the Header Left widget area. It typically appears next to the site title or logo. This widget area is not suitable to display every type of widget, and works best with a custom menu, a search form, or possibly a text widget.', 'genesis-customizer' ),
+			'module'      => 'extra-widgets',
 		],
 		'header-right-widget' => [
 			'name'        => __( 'Header Right', 'genesis-customizer' ),
 			'description' => __( 'This is the Header Right widget area. It typically appears next to the site title or logo. This widget area is not suitable to display every type of widget, and works best with a custom menu, a search form, or possibly a text widget.', 'genesis-customizer' ),
 		],
+		'below-header'        => [
+			'name'        => __( 'Below Header', 'genesis-customizer' ),
+			'description' => __( 'This is the Below Header widget area.', 'genesis-customizer' ),
+			'module'      => 'extra-widgets',
+		],
 		'mobile-menu'         => [
 			'name'        => __( 'Mobile Menu', 'genesis-customizer' ),
 			'description' => __( 'This is the Mobile Menu widget area. It is displayed inside the responsive mobile menu on smaller screens.', 'genesis-customizer' ),
-			'pro'         => true,
+			'module'      => 'extra-widgets',
 		],
 		'mega-menu'           => [
 			'name'        => __( 'Mega Menu', 'genesis-customizer' ),
 			'description' => __( 'This is the Mega Menu widget area.', 'genesis-customizer' ),
-			'pro'         => true,
+			'module'      => 'mega-menu',
 		],
 		'after-entry'         => [
 			'name'        => __( 'After Entry', 'genesis-customizer' ),
@@ -57,19 +66,19 @@ function register_widget_areas() {
 			'name'        => __( 'Primary Sidebar', 'genesis-customizer' ),
 			'description' => __( 'This is the sidebar widget area if you are using a two column site layout option.', 'genesis-customizer' ),
 		],
-		'sidebar-alt'             => [
+		'sidebar-alt'         => [
 			'name'        => __( 'Secondary Sidebar', 'genesis-customizer' ),
 			'description' => __( 'This is the sidebar widget area if you are using a three column site layout option.', 'genesis-customizer' ),
 		],
 		'above-footer'        => [
 			'name'        => __( 'Above Footer', 'genesis-customizer' ),
 			'description' => __( 'This is the Above Footer widget area.', 'genesis-customizer' ),
-			'pro'         => true,
+			'module'      => 'extra-widgets',
 		],
 	] );
 
 	foreach ( $widget_areas as $id => $args ) {
-		if ( isset( $args['pro'] ) && true === $args['pro'] && ! _is_pro_active() ) {
+		if ( isset( $args['module'] ) && ! _is_module_enabled( $args['module'] ) ) {
 			continue;
 		}
 
@@ -90,7 +99,7 @@ add_action( 'genesis_before_title_area', __NAMESPACE__ . '\header_left', 5 );
  * @return void
  */
 function header_left() {
-	$enabled = _get_value( 'header_widget-areas_header-left' );
+	$enabled = _get_value( 'header_left_enable' );
 
 	if ( 'hide' === $enabled ) {
 		return;
@@ -111,7 +120,7 @@ add_action( 'genesis_after_title_area', __NAMESPACE__ . '\header_right', 15 );
  * @return void
  */
 function header_right() {
-	$enabled = _get_value( 'header_widget-areas_header-right' );
+	$enabled = _get_value( 'header_right_enable' );
 
 	if ( 'hide' === $enabled ) {
 		return;

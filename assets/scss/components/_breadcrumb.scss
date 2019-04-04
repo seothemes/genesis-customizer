@@ -7,14 +7,14 @@
 ////
 
 .breadcrumb {
-	margin: 0 0 $gutter;
 	width: 100%;
+	margin: 0 0 $gutter;
 	column-span: all;
 
 	.hero-section & {
-		background: transparent;
-		padding: 0;
 		margin: $gutter 0 0;
+		padding: 0;
+		background: transparent;
 	}
 
 	// Link wrapper.

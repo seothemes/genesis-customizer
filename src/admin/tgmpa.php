@@ -32,6 +32,11 @@ function add_tgmpa_plugins( $theme = 'default' ) {
 			'slug'     => 'simple-social-icons',
 			'required' => false,
 		],
+		[
+			'name'     => 'Genesis eNews Extended',
+			'slug'     => 'genesis-enews-extended',
+			'required' => false,
+		],
 	];
 
 	return apply_filters( 'genesis_customizer_tgmpa_plugins', $plugins[ $theme ] );

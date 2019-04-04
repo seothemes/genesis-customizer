@@ -1,27 +1,61 @@
 (function (document, $) {
 
+    if ($('body').hasClass('has-logo-side')) {
+        return;
+    }
+
     var genesisMenuParams = typeof genesis_responsive_menu === 'undefined' ? '' : genesis_responsive_menu;
 
-    /**
-     * Add shrink class to header on scroll.
-     */
     $(window).on("load resize scroll", function () {
-        var body = $('body');
-        var aboveHeader = $('.above-header');
-        var aboveHeaderHeight = aboveHeader.outerHeight();
-        var navSecondary = $('.nav-secondary');
-        var navSecondaryHeight = navSecondary.outerHeight();
-        var siteHeader = $('.site-header');
-        var siteHeaderHeight = siteHeader.outerHeight();
-        var scroll = $(window).scrollTop();
-        var navSecondaryScroll = scroll - aboveHeaderHeight;
-        var headerSearch = $('.header-search');
-        var headerSearchScroll = navSecondaryScroll;
-        var primaryHeaderHeight = $('.primary-header').outerHeight();
-        var windowWidth = $(window).innerWidth();
-        var breakpoint = genesisMenuParams.breakpoint;
+        var body = $('body'),
+            aboveHeader = $('.above-header'),
+            aboveHeaderHeight = aboveHeader.outerHeight(),
+            navSecondary = $('.nav-secondary'),
+            navSecondaryHeight = navSecondary.outerHeight(),
+            siteHeader = $('.site-header'),
+            siteHeaderHeight = siteHeader.outerHeight(),
+            scrollTop = $(window).scrollTop(),
+            navSecondaryScroll = scrollTop - aboveHeaderHeight,
+            headerSearch = $('.header-search'),
+            headerSearchScroll = navSecondaryScroll,
+            noShrinkHeight = $('.no-shrink').outerHeight(),
+            windowWidth = $(window).innerWidth(),
+            breakpoint = genesisMenuParams.breakpoint,
+            stickyEnabled = genesisMenuParams.sticky,
+            transparentEnabled = genesisMenuParams.transparent,
+            siteInner = $('.site-inner'),
+            stickyHeaderHeight = 0,
+            transparentHeaderHeight = 0,
+            heroSectionWrap = $('.hero-section > .wrap'),
+            adminBar = $('#wpadminbar').outerHeight(),
+            stickyGhostButton = $('.site-header .ghost'),
+            megaMenu = $('.mega-menu'),
+            megaMenuHeight = megaMenu.outerHeight(),
+            megaMenuScroll = scrollTop - megaMenuHeight;
 
-        if (!aboveHeader.is(':visible')) {
+        if (stickyEnabled === 'all' || windowWidth <= breakpoint && stickyEnabled === 'mobile' || windowWidth >= breakpoint && stickyEnabled === 'desktop') {
+            var hasStickyHeader = true;
+            body.addClass('has-sticky-header');
+
+        } else {
+            hasStickyHeader = false;
+            body.removeClass('has-sticky-header');
+        }
+
+        if (transparentEnabled === 'all' || windowWidth <= breakpoint && transparentEnabled === 'mobile' || windowWidth >= breakpoint && transparentEnabled === 'desktop') {
+            var hasTransparentHeader = true;
+            body.addClass('has-transparent-header');
+
+        } else {
+            hasTransparentHeader = false;
+            body.removeClass('has-transparent-header');
+        }
+
+        /**
+         * Site Header Shrink Class.
+         */
+
+        if (aboveHeader.length && !aboveHeader.is(':visible')) {
             aboveHeaderHeight = 0;
         }
 
@@ -33,29 +67,30 @@
             headerSearchScroll = navSecondaryHeight;
         }
 
-        if (!body.hasClass('has-logo-side')) {
-
-            if (aboveHeader.length) {
-                if (!body.hasClass('no-sticky-header') && scroll >= aboveHeaderHeight) {
-                    siteHeader.addClass('shrink');
-                    siteHeader.removeClass('no-shrink');
-                } else {
-                    siteHeader.addClass('no-shrink');
-                    siteHeader.removeClass('shrink');
-                }
+        if (aboveHeader.length) {
+            if (hasStickyHeader && scrollTop >= aboveHeaderHeight) {
+                siteHeader.addClass('shrink');
+                siteHeader.removeClass('no-shrink');
             } else {
-                if (!body.hasClass('no-sticky-header') && scroll >= primaryHeaderHeight) {
-                    siteHeader.addClass('shrink');
-                    siteHeader.removeClass('no-shrink');
-                } else {
-                    siteHeader.addClass('no-shrink');
-                    siteHeader.removeClass('shrink');
-                }
+                siteHeader.addClass('no-shrink');
+                siteHeader.removeClass('shrink');
+            }
+
+        } else {
+            if (hasStickyHeader && scrollTop > noShrinkHeight) {
+                siteHeader.addClass('shrink');
+                siteHeader.removeClass('no-shrink');
+            } else {
+                siteHeader.addClass('no-shrink');
+                siteHeader.removeClass('shrink');
             }
         }
 
-        // Has sticky nav secondary.
-        if (siteHeader.hasClass('shrink') || !aboveHeader.length) {
+        /**
+         * Nav Secondary.
+         */
+
+        if (hasStickyHeader && (siteHeader.hasClass('shrink') || !aboveHeader.length)) {
             navSecondary.css({
                 'transform': 'translateY(' + -Math.abs(navSecondaryScroll) + 'px)'
             });
@@ -64,6 +99,30 @@
                 'transform': 'none'
             });
         }
+
+        /**
+         * Mega menu position.
+         */
+
+        if (hasStickyHeader && scrollTop < navSecondaryHeight) {
+            megaMenu.css({
+                'transform': 'translateY(' + -Math.abs(navSecondaryScroll) + 'px)'
+            });
+
+        } else if (hasStickyHeader) {
+            megaMenu.css({
+                'transform': 'translateY(' + -Math.abs(navSecondaryHeight) + 'px)'
+            });
+
+        } else {
+            megaMenu.css({
+                'transform': 'none'
+            });
+        }
+
+        /**
+         * Header Search
+         */
 
         if (windowWidth >= breakpoint && siteHeader.hasClass('shrink')) {
             headerSearch.css({
@@ -75,89 +134,76 @@
             });
         }
 
-        // Has sticky above header.
-        if (!body.hasClass('no-sticky-header') && !body.hasClass('has-logo-side') && (body.hasClass('has-sticky-header') || body.hasClass('has-sticky-header-desktop') && windowWidth >= breakpoint || body.hasClass('has-sticky-header-mobile') && windowWidth <= breakpoint)) {
+        /**
+         * Site Header Position and Margin.
+         */
 
-            // Default.
-            if (scroll >= aboveHeaderHeight && aboveHeader.is(':visible')) {
-                siteHeader.css({
-                    'margin-top': '-' + aboveHeaderHeight + 'px',
-                    'position': 'fixed',
-                });
+        if (hasStickyHeader && scrollTop >= aboveHeaderHeight) {
+            siteHeader.css({
+                'position': 'fixed',
+            });
 
-            } else if (scroll >= aboveHeaderHeight) {
-                siteHeader.css({
-                    'margin-top': '-' + aboveHeaderHeight + 'px',
-                    'position': 'fixed',
-                });
+        } else if (hasStickyHeader || hasTransparentHeader) {
+            siteHeader.css({
+                'position': 'absolute',
+            });
 
-            } else if (!body.hasClass('no-transparent-header')) {
-                siteHeader.css({
-                    'margin-top': '0',
-                    'position': 'absolute',
-                });
-            } else {
-                siteHeader.css({
-                    'margin-top': '0px',
-                    'position': 'absolute',
-                });
-            }
-        }
-    });
-
-    /*
-	 * Fixed header.
-	 */
-    $(window).on("load resize", function () {
-        var body = $('body');
-        var siteHeader = $('.site-header');
-        var siteInner = $('.site-inner');
-        var stickyHeaderHeight = 0;
-        var stickyHeader = false;
-        var transparentHeader = false;
-        var windowWidth = $(window).innerWidth();
-        var breakpoint = genesisMenuParams.breakpoint;
-
-        // Sticky Header mobile.
-        if (windowWidth <= breakpoint && body.hasClass('has-sticky-header-mobile')) {
-            stickyHeader = true;
+        } else {
+            siteHeader.css({
+                'position': 'relative',
+            });
         }
 
-        // Has transparent header mobile.
-        if (windowWidth <= breakpoint && body.hasClass('has-transparent-header-mobile')) {
-            transparentHeader = true;
+        if (hasStickyHeader && scrollTop >= aboveHeaderHeight && aboveHeader.is(':visible')) {
+            siteHeader.css({
+                'margin-top': '-' + aboveHeaderHeight + 'px',
+            });
+
+        } else {
+            siteHeader.css({
+                'margin-top': '0px',
+            });
         }
 
-        // Sticky Header desktop.
-        if (windowWidth >= breakpoint && body.hasClass('has-sticky-header-desktop')) {
-            stickyHeader = true;
-        }
+        /**
+         * Site Inner Margin Top.
+         */
 
-        // Has transparent header desktop.
-        if (windowWidth >= breakpoint && body.hasClass('has-transparent-header-desktop')) {
-            transparentHeader = true;
-        }
-
-        // Sticky Header both.
-        if (body.hasClass('has-sticky-header')) {
-            stickyHeader = true;
-        }
-
-        // Has transparent header both
-        if (body.hasClass('has-transparent-header')) {
-            transparentHeader = true;
-        }
-
-        // Remove margin for side logo layout
-        if (body.hasClass('has-logo-side')) {
-            stickyHeader = false;
-        }
-
-        if (stickyHeader === true && transparentHeader === false) {
+        if (hasStickyHeader === true && hasTransparentHeader === false) {
             stickyHeaderHeight = siteHeader.outerHeight();
         }
 
         siteInner.css('margin-top', stickyHeaderHeight);
+
+        if (hasTransparentHeader === true) {
+            transparentHeaderHeight = siteHeader.outerHeight();
+            heroSectionWrap.css('margin-top', transparentHeaderHeight);
+        } else {
+            heroSectionWrap.css('margin-top', 0);
+        }
+
+        /**
+         * Admin bar site header spacing.
+         */
+
+        if (body.hasClass('admin-bar') && hasStickyHeader) {
+            siteHeader.css('top', adminBar);
+        } else {
+            siteHeader.css('top', 0);
+        }
+
+        /**
+         * Remove ghost button class.
+         */
+
+        if (hasStickyHeader) {
+            if (siteHeader.hasClass('shrink')) {
+                stickyGhostButton.removeClass('ghost');
+            } else {
+                stickyGhostButton.addClass('ghost');
+            }
+        }
+
     });
 
 })(document, jQuery);

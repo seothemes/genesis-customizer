@@ -1,9 +1,9 @@
 *,
 *:before,
 *:after {
+  color: #8795a1 !important;
   background: transparent !important;
   box-shadow: none !important;
-  color: #8795a1 !important;
   text-shadow: none !important;
 }
 
@@ -13,17 +13,17 @@ a:visited {
 }
 
 a[href]:after {
-  content: " (" attr(href) ")";
+  content: ' (' attr(href) ')';
 }
 
 abbr[title]:after {
-  content: " (" attr(title) ")";
+  content: ' (' attr(title) ')';
 }
 
-a[href^="javascript:"]:after,
-a[href^="#"]:after,
+a[href^='javascript:']:after,
+a[href^='#']:after,
 .site-title > a:after {
-  content: "";
+  content: '';
 }
 
 thead {
@@ -85,8 +85,8 @@ textarea,
 }
 
 .title-area {
-  text-align: center;
   width: 100%;
+  text-align: center;
 }
 
 .site-title > a {
@@ -96,9 +96,9 @@ textarea,
 }
 
 .site-inner {
-  padding-top: 0;
   position: relative;
   top: -4.8rem;
+  padding-top: 0;
 }
 
 .author-box {

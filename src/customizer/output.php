@@ -42,14 +42,17 @@ function enqueue_gradients() {
 
 	$css .= '.site-footer:before{' . build_gradients( $site_footer_angle, $site_footer_colors['left'], $site_footer_colors['right'] ) . '}';
 
-	if ( _is_pro_active() ) {
+	if ( _is_module_enabled( 'hero-section' ) ) {
 
 		// Hero.
 		$hero_colors = _get_value( 'hero_settings_gradient' );
 		$hero_angle  = _get_value( 'hero_settings_angle' );
 
 		$css .= '.hero-section:before{' . build_gradients( $hero_angle, $hero_colors['left'], $hero_colors['right'] ) . '}';
+	}
 
+	if ( _is_module_enabled( 'extra-widgets' ) ) {
+		
 		// Above Footer.
 		$above_footer_colors = _get_value( 'footer_above-footer_gradient' );
 		$above_footer_angle  = _get_value( 'footer_above-footer_angle' );

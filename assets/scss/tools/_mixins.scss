@@ -57,7 +57,7 @@
 /// @link   https://github.com/genesiscustomizer/plugin
 ////
 
-@mixin overlay($default_color: '') {
+@mixin overlay($default_color: "") {
 	position: relative;
 	
 	> div {
@@ -65,10 +65,10 @@
 	}
 
 	&:before {
-		content: '';
 		display: block;
+		content: "";
 
-		@if ($default_color != '') {
+		@if ($default_color != "") {
 			background-color: rgba($color--heading, 0.95);
 		}
 

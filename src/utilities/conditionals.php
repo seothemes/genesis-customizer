@@ -48,12 +48,28 @@ function _is_archive() {
  *
  * @since 1.0.0
  *
- * @param string $module
+ * @param mixed $modules
  *
  * @return bool
  */
-function _is_module_enabled( $module ) {
-	return genesis_get_option( $module, 'genesis-customizer-settings' );
+function _is_module_enabled( $modules ) {
+	if ( ! _is_pro_active() ) {
+		return false;
+	}
+
+	if ( is_string( $modules ) ) {
+		$modules = [ $modules ];
+	}
+
+	foreach ( $modules as $module ) {
+		$option = genesis_get_option( $module, 'genesis-customizer-settings' );
+
+		if ( ! $option ) {
+			return false;
+		}
+	}
+
+	return true;
 }
 
 /**
@@ -98,4 +114,62 @@ function _is_plugin_active( $plugin ) {
 	} else {
 		return false;
 	}
+}
+
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
+ * @return bool
+ */
+function _has_sticky_header() {
+	if ( ! _is_module_enabled( 'sticky-header' ) ) {
+		return false;
+	}
+
+	$layout = _get_value( 'header_primary_layout' );
+
+	if ( 'has-logo-side' === $layout ) {
+		return false;
+	}
+
+	return _get_value( 'header_sticky_enabled', '' );
+}
+
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
+ * @return bool
+ */
+function _has_transparent_header() {
+	if ( ! _is_module_enabled( [ 'hero-section', 'transparent-header' ] ) ) {
+		return false;
+	}
+
+	$exclude = [
+		'blocks.php',
+		'beaver-builder.php',
+		'elementor_header_footer',
+	];
+
+	if ( is_page_template( $exclude ) ) {
+		return false;
+	}
+
+	$layout = _get_value( 'header_primary_layout' );
+
+	if ( 'has-logo-side' === $layout ) {
+		return false;
+	}
+
+	$hero_settings = _get_value( 'hero_settings_enable' );
+
+	if ( ! hero_enabled( $hero_settings ) ) {
+		return false;
+	}
+
+	return _get_value( 'header_transparent_enabled', '' );
 }

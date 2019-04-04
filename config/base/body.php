@@ -39,11 +39,9 @@ return [
 		'label'    => __( 'Typography', 'genesis-customizer' ),
 		'default'  => [
 			'font-family'    => '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif',
-			'font-size'      => _get_size( 'm' ),
 			'variant'        => '400',
 			'line-height'    => '1.6',
 			'letter-spacing' => '',
-			'text-transform' => '',
 		],
 		'output'   => [
 			[
@@ -53,8 +51,43 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-5',
+		'settings' => 'divider-97',
 		'default'  => '<hr>',
+	],
+	[
+		'type'     => 'dimension',
+		'settings' => 'font-size',
+		'label'    => __( 'Font size', 'genesis-customizer' ),
+		'default'  => _get_size( 'm' ),
+		'output'   => [
+			[
+				'element'  => 'body',
+				'property' => 'font-size',
+			],
+		],
+	],
+	[
+		'type'            => 'custom',
+		'settings'        => 'tip-16723422',
+		'default'         => sprintf(
+			'<p>%s <strong>%s</strong>%s </p><a href="%s" target="_blank" class="button-primary">%s</a><br>&nbsp;<hr>',
+			esc_html__( 'Responsive font size settings (separate desktop and mobile sizes) available in', 'genesis-customizer' ),
+			esc_html__( 'Genesis Customizer Pro', 'genesis-customizer' ),
+			esc_html__( '!', 'genesis-customizer' ),
+			_get_upgrade_url(),
+			esc_html__( 'Go Pro →', 'genesis-customizer' )
+		),
+		'active_callback' => function () {
+			return ! _is_pro_active();
+		},
+	],
+	[
+		'type'     => 'custom',
+		'settings' => 'divider-197',
+		'default'  => '<hr>',
+		'active_callback' => function () {
+			return _is_pro_active();
+		},
 	],
 	[
 		'type'     => 'dimensions',

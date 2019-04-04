@@ -10,12 +10,12 @@
 
 	&-toggle {
 		position: relative;
-		box-shadow: none;
 		border: 0;
+		box-shadow: none;
 
 		&.left {
-			order: -1;
 			left: 0;
+			order: -1;
 
 			svg {
 				transform: rotate(90deg);
@@ -23,8 +23,8 @@
 		}
 
 		&.right {
-			order: 2;
 			right: 0;
+			order: 2;
 		}
 
 		@include mq(0, m) {
@@ -54,11 +54,19 @@
 	}
 
 	.search-form {
-		width: 100%;
 		display: flex;
+		width: 100%;
 
 		&-submit {
+			display: none;
 			margin-left: 0.618em;
+		}
+	}
+
+	.has-search-button {
+
+		.search-form-submit {
+			display: block;
 		}
 	}
 
@@ -67,9 +75,9 @@
 	}
 
 	&.full-screen {
+		display: flex;
 		z-index: 4;
 		opacity: 0;
-		display: flex;
 		transition: opacity $base--transition-duration $base--transition-timing-function;
 
 		@include size(0);
