@@ -269,7 +269,7 @@ msgstr ""
 msgid "Horizontal Spacing"
 msgstr ""
 
-#: config/base/buttons.php:171, config/base/forms.php:136, config/base/global.php:260, config/content/avatar.php:9, config/menus/menu-toggle.php:187
+#: config/base/buttons.php:171, config/base/forms.php:136, config/base/global.php:262, config/content/avatar.php:9, config/menus/menu-toggle.php:187
 msgid "Border Radius"
 msgstr ""
 
@@ -301,71 +301,71 @@ msgstr ""
 msgid "Controls the spacing between common page elements such as entries, breadcrumbs, widgets, comments etc."
 msgstr ""
 
-#: config/base/global.php:221
+#: config/base/global.php:223
 msgid "Wrap Max Width"
 msgstr ""
 
-#: config/base/global.php:222
+#: config/base/global.php:224
 msgid "Controls the maximum percentage of the screen that element wrappers can span."
 msgstr ""
 
-#: config/base/global.php:261
+#: config/base/global.php:263
 msgid "Controls the border radius for common page elements such as entries, breadcrumbs, widgets, comments etc."
 msgstr ""
 
-#: config/base/global.php:299, config/header/primary.php:152
+#: config/base/global.php:301, config/header/primary.php:152
 msgid "Drop Shadow"
 msgstr ""
 
-#: config/base/global.php:300
+#: config/base/global.php:302
 msgid "Controls the drop shadow for common page elements such as entries, breadcrumbs, widgets, comments etc."
 msgstr ""
 
-#: config/base/global.php:327
+#: config/base/global.php:329
 msgid "Transitions"
 msgstr ""
 
-#: config/base/global.php:328
+#: config/base/global.php:330
 msgid "Duration"
 msgstr ""
 
-#: config/base/global.php:361
+#: config/base/global.php:363
 msgid "Delay"
 msgstr ""
 
-#: config/base/global.php:379
+#: config/base/global.php:381
 msgid "Function"
 msgstr ""
 
-#: config/base/global.php:382
+#: config/base/global.php:384
 msgid "Ease"
 msgstr ""
 
-#: config/base/global.php:383
+#: config/base/global.php:385
 msgid "Ease in"
 msgstr ""
 
-#: config/base/global.php:384
+#: config/base/global.php:386
 msgid "Ease in out"
 msgstr ""
 
-#: config/base/global.php:385
+#: config/base/global.php:387
 msgid "Ease out"
 msgstr ""
 
-#: config/base/global.php:386
+#: config/base/global.php:388
 msgid "Linear"
 msgstr ""
 
-#: config/base/global.php:387
+#: config/base/global.php:389
 msgid "Step end"
 msgstr ""
 
-#: config/base/global.php:388
+#: config/base/global.php:390
 msgid "Step middle"
 msgstr ""
 
-#: config/base/global.php:389
+#: config/base/global.php:391
 msgid "Step start"
 msgstr ""
 
@@ -501,11 +501,11 @@ msgstr ""
 msgid "Controls the maximum width of the main content area. The main content area consists of the content and sidebars."
 msgstr ""
 
-#: config/content/main.php:33
+#: config/content/main.php:35
 msgid "Vertical Spacing Mobile"
 msgstr ""
 
-#: config/content/main.php:62
+#: config/content/main.php:64
 msgid "Vertical Spacing Desktop"
 msgstr ""
 
@@ -853,11 +853,11 @@ msgstr ""
 msgid "Sidebar Width"
 msgstr ""
 
-#: config/sidebars/primary.php:162, config/sidebars/secondary.php:149
+#: config/sidebars/primary.php:164, config/sidebars/secondary.php:150
 msgid "Widget Spacing"
 msgstr ""
 
-#: config/sidebars/primary.php:185, config/sidebars/secondary.php:172
+#: config/sidebars/primary.php:187, config/sidebars/secondary.php:173
 msgid "Widget Shadow"
 msgstr ""
 
@@ -931,10 +931,6 @@ msgstr ""
 
 #: src/admin/child-theme-compat.php:46
 msgid "for instructions on how to declare Genesis Customizer support in your theme."
-msgstr ""
-
-#: src/admin/hero-settings.php:84
-msgid "Overrides the default hero section value set in the Customizer."
 msgstr ""
 
 #: src/admin/merlin-wp.php:56
@@ -1075,7 +1071,7 @@ msgid "Let's install some essential WordPress plugins to get your site up to spe
 msgstr ""
 
 #: src/admin/merlin-wp.php:102
-msgid "The required WordPress plugins are all installed and up to date. Press \"Next\" to continue the setup wizard."
+msgid "The recommended WordPress plugins are all installed and up to date. Press \"Next\" to continue the setup wizard."
 msgstr ""
 
 #: src/admin/merlin-wp.php:103, src/admin/merlin-wp.php:107

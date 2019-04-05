@@ -1496,11 +1496,6 @@ iframe {
   justify-content: center;
 }
 
-.page-template-blocks .site-container,
-.page-template-beaver-builder .site-container {
-  background-color: #ffffff;
-}
-
 .page-template-blocks .content,
 .page-template-beaver-builder .content {
   width: 100%;

@@ -132,6 +132,7 @@ return [
 					'.content-sidebar-sidebar .content',
 					'.sidebar-sidebar-content .content',
 					'.sidebar-content-sidebar .content',
+					'.page-template-blocks .content',
 				],
 				'property'        => 'width',
 				'value_pattern'   => 'calc(100% - ( sidebarPrimarypx + $px ) - ( globalSpacingpx * 2 ))',

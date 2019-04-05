@@ -16,7 +16,9 @@ return [
 		],
 		'output'      => [
 			[
-				'element'  => '.content-sidebar-wrap',
+				'element'  => [
+					'.content-sidebar-wrap',
+				],
 				'property' => 'max-width',
 				'units'    => 'px',
 			],

@@ -18,7 +18,11 @@ return [
 		'output'   => [
 			[
 				'choice'   => 'background',
-				'element'  => '.single .entry',
+				'element'  => [
+					'.single .entry',
+					'.page-template-blocks .site-inner',
+					'.page-template-beaver-builder .site-inner',
+				],
 				'property' => 'background-color',
 			],
 			[
