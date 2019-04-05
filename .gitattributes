@@ -47,9 +47,7 @@ LICENSE.md export-ignore
 Gulpfile.js export-ignore
 
 /tests/ export-ignore
-/assets/scss/ export-ignore
-/assets/js/*.js export-ignore
-!/assets/js/min/*.js export-ignore
+/assets/scss/ export-ignores
 
 /vendor/aristath/kirki/.github/ export-ignore
 /vendor/aristath/kirki/docs/ export-ignore

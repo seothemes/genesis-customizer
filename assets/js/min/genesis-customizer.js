@@ -614,12 +614,14 @@
             siteInner = $('.site-inner'),
             stickyHeaderHeight = 0,
             transparentHeaderHeight = 0,
+            heroSection = $('.hero-section'),
             heroSectionWrap = $('.hero-section > .wrap'),
             adminBar = $('#wpadminbar').outerHeight(),
             stickyGhostButton = $('.site-header .ghost'),
             megaMenu = $('.mega-menu'),
             megaMenuHeight = megaMenu.outerHeight(),
-            megaMenuScroll = scrollTop - megaMenuHeight;
+            megaMenuScroll = scrollTop - megaMenuHeight,
+            belowHeader = $('.below-header');
 
         if (stickyEnabled === 'all' || windowWidth <= breakpoint && stickyEnabled === 'mobile' || windowWidth >= breakpoint && stickyEnabled === 'desktop') {
             var hasStickyHeader = true;
@@ -687,6 +689,10 @@
                 'transform': 'none'
             });
         }
+
+        /**
+         * Mega menu position.
+         */
 
         if (hasStickyHeader && scrollTop < navSecondaryHeight) {
             megaMenu.css({
@@ -759,11 +765,18 @@
 
         siteInner.css('margin-top', stickyHeaderHeight);
 
+
+        /**
+         * Hero Margin Top.
+         */
+
         if (hasTransparentHeader === true) {
             transparentHeaderHeight = siteHeader.outerHeight();
-            heroSectionWrap.css('margin-top', transparentHeaderHeight);
+            belowHeader.insertBefore(heroSectionWrap);
+            heroSection.css('padding-top', transparentHeaderHeight);
         } else {
-            heroSectionWrap.css('margin-top', 0);
+            belowHeader.insertBefore(heroSection);
+            heroSection.css('padding-top', 0);
         }
 
         /**

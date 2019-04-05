@@ -55,39 +55,38 @@ return [
 		'default'  => '<hr>',
 	],
 	[
-		'type'     => 'dimension',
+		'type'     => 'dimensions',
 		'settings' => 'font-size',
-		'label'    => __( 'Font size', 'genesis-customizer' ),
-		'default'  => _get_size( 'm' ),
-		'output'   => [
-			[
-				'element'  => 'body',
-				'property' => 'font-size',
+		'label'    => __( 'Font Size', 'genesis-customizer' ),
+		'default'  => [
+			'mobile'  => _get_size( 'm' ),
+			'desktop' => _get_size( 'm' ),
+		],
+		'choices'  => [
+			'labels' => [
+				'mobile'  => __( 'Mobile', 'genesis-customizer' ),
+				'desktop' => __( 'Desktop', 'genesis-customizer' ),
 			],
 		],
-	],
-	[
-		'type'            => 'custom',
-		'settings'        => 'tip-16723422',
-		'default'         => sprintf(
-			'<p>%s <strong>%s</strong>%s </p><a href="%s" target="_blank" class="button-primary">%s</a><br>&nbsp;<hr>',
-			esc_html__( 'Responsive font size settings (separate desktop and mobile sizes) available in', 'genesis-customizer' ),
-			esc_html__( 'Genesis Customizer Pro', 'genesis-customizer' ),
-			esc_html__( '!', 'genesis-customizer' ),
-			_get_upgrade_url(),
-			esc_html__( 'Go Pro →', 'genesis-customizer' )
-		),
-		'active_callback' => function () {
-			return ! _is_pro_active();
-		},
+		'output'   => [
+			[
+				'choice'      => 'mobile',
+				'property'    => 'font-size',
+				'element'     => 'body',
+				'media_query' => _get_media_query( 'max' ),
+			],
+			[
+				'choice'      => 'desktop',
+				'property'    => 'font-size',
+				'element'     => 'body',
+				'media_query' => _get_media_query(),
+			],
+		],
 	],
 	[
 		'type'     => 'custom',
 		'settings' => 'divider-197',
 		'default'  => '<hr>',
-		'active_callback' => function () {
-			return _is_pro_active();
-		},
 	],
 	[
 		'type'     => 'dimensions',

@@ -53,7 +53,15 @@ msgstr ""
 msgid "Title Typography"
 msgstr ""
 
-#: config/archive/description.php:69
+#: config/archive/description.php:70, config/base/body.php:101, config/base/headings.php:56
+msgid "Margin Top"
+msgstr ""
+
+#: config/archive/description.php:71, config/base/body.php:102, config/base/headings.php:57
+msgid "Margin Bottom"
+msgstr ""
+
+#: config/archive/description.php:95
 msgid "Archive Description Spacing"
 msgstr ""
 
@@ -149,7 +157,7 @@ msgstr ""
 msgid "Post Info"
 msgstr ""
 
-#: config/archive/post-meta.php:19, config/single/post-meta.php:19, src/customizer/helpers.php:63, src/customizer/helpers.php:69
+#: config/archive/post-meta.php:19, config/single/post-meta.php:19, src/customizer/helpers.php:67, src/customizer/helpers.php:73
 msgid "Post Meta"
 msgstr ""
 
@@ -165,7 +173,7 @@ msgstr ""
 msgid "Block"
 msgstr ""
 
-#: config/archive/read-more.php:14, config/header/right.php:31
+#: config/archive/read-more.php:14, config/base/lists.php:15, config/header/right.php:31
 msgid "None"
 msgstr ""
 
@@ -197,40 +205,24 @@ msgstr ""
 msgid "Border"
 msgstr ""
 
-#: config/base/blockquotes.php:46, config/base/body.php:39, config/base/buttons.php:82, config/base/forms.php:67, config/base/headings.php:32, config/base/links.php:39, config/content/breadcrumbs.php:53, config/footer/footer-credits.php:71, config/footer/footer-widgets.php:89, config/menus/footer.php:68, config/menus/primary.php:50, config/menus/secondary.php:68, config/menus/sub-menu.php:67, config/sidebars/primary.php:70, config/sidebars/secondary.php:70
+#: config/base/blockquotes.php:46, config/base/body.php:39, config/base/buttons.php:82, config/base/forms.php:67, config/base/headings.php:32, config/base/links.php:39, config/base/lists.php:71, config/content/breadcrumbs.php:53, config/footer/footer-credits.php:71, config/footer/footer-widgets.php:89, config/menus/footer.php:68, config/menus/primary.php:50, config/menus/secondary.php:68, config/menus/sub-menu.php:67, config/sidebars/primary.php:70, config/sidebars/secondary.php:70
 msgid "Typography"
 msgstr ""
 
 #: config/base/body.php:60
-msgid "Font size"
+msgid "Font Size"
 msgstr ""
 
-#: config/base/body.php:74, config/base/headings.php:89
-msgid "Responsive font size settings (separate desktop and mobile sizes) available in"
+#: config/base/body.php:67, config/header/right.php:30
+msgid "Mobile"
 msgstr ""
 
-#: config/base/body.php:75, config/base/headings.php:90, config/header/primary.php:25, config/header/right.php:12, config/menus/mobile.php:92, src/admin/upgrade-notice.php:26, src/customizer/extra.php:113, src/customizer/extra.php:263
-msgid "Genesis Customizer Pro"
+#: config/base/body.php:68, config/header/right.php:29
+msgid "Desktop"
 msgstr ""
 
-#: config/base/body.php:76, config/base/headings.php:91, config/header/primary.php:26, config/header/right.php:13, config/menus/mobile.php:93, src/customizer/extra.php:264
-msgid "!"
-msgstr ""
-
-#: config/base/body.php:78, config/base/headings.php:93, config/header/primary.php:28, config/header/right.php:15, config/menus/mobile.php:95, src/admin/upgrade-notice.php:29, src/customizer/extra.php:116, src/customizer/extra.php:266
-msgid "Go Pro →"
-msgstr ""
-
-#: config/base/body.php:95
+#: config/base/body.php:94
 msgid "Paragraphs"
-msgstr ""
-
-#: config/base/body.php:102, config/base/headings.php:56
-msgid "Margin Top"
-msgstr ""
-
-#: config/base/body.php:103, config/base/headings.php:57
-msgid "Margin Bottom"
 msgstr ""
 
 #: config/base/buttons.php:12, config/base/forms.php:14, config/base/links.php:12
@@ -293,7 +285,7 @@ msgstr ""
 msgid "Shadow Hover"
 msgstr ""
 
-#: config/base/code.php:39, src/customizer/helpers.php:29
+#: config/base/code.php:39, src/customizer/helpers.php:30
 msgid "Code"
 msgstr ""
 
@@ -301,11 +293,11 @@ msgstr ""
 msgid "Placeholder Text"
 msgstr ""
 
-#: config/base/global.php:28
+#: config/base/global.php:27
 msgid "Gutters"
 msgstr ""
 
-#: config/base/global.php:29
+#: config/base/global.php:28
 msgid "Controls the spacing between common page elements such as entries, breadcrumbs, widgets, comments etc."
 msgstr ""
 
@@ -389,32 +381,64 @@ msgstr ""
 msgid "Entry Section"
 msgstr ""
 
-#: config/base/headings.php:102
+#: config/base/headings.php:87
 msgid "H1 Font Size"
 msgstr ""
 
-#: config/base/headings.php:119
+#: config/base/headings.php:114
 msgid "H2 Font Size"
 msgstr ""
 
-#: config/base/headings.php:136
+#: config/base/headings.php:141
 msgid "H3 Font Size"
 msgstr ""
 
-#: config/base/headings.php:153
+#: config/base/headings.php:168
 msgid "H4 Font Size"
 msgstr ""
 
-#: config/base/headings.php:170
+#: config/base/headings.php:195
 msgid "H5 Font Size"
 msgstr ""
 
-#: config/base/headings.php:187
+#: config/base/headings.php:222
 msgid "H6 Font Size"
 msgstr ""
 
 #: config/base/links.php:57
 msgid "Typography Hover"
+msgstr ""
+
+#: config/base/lists.php:9
+msgid "Default type"
+msgstr ""
+
+#: config/base/lists.php:12
+msgid "Circle"
+msgstr ""
+
+#: config/base/lists.php:13
+msgid "Disc"
+msgstr ""
+
+#: config/base/lists.php:14
+msgid "Square"
+msgstr ""
+
+#: config/base/lists.php:27
+msgid "Default position"
+msgstr ""
+
+#: config/base/lists.php:30
+msgid "Inside"
+msgstr ""
+
+#: config/base/lists.php:31
+msgid "Outside"
+msgstr ""
+
+#: config/base/lists.php:48, config/footer/footer-widgets.php:171, config/single/featured-image.php:63
+msgid "Spacing Bottom"
 msgstr ""
 
 #: config/content/author-box.php:13
@@ -425,7 +449,7 @@ msgstr ""
 msgid "Title Bottom Spacing"
 msgstr ""
 
-#: config/content/breadcrumbs.php:13, config/footer/footer-credits.php:24, config/footer/footer-widgets.php:36, config/menus/mobile.php:13, config/sidebars/primary.php:13, config/sidebars/secondary.php:13, src/customizer/helpers.php:25
+#: config/content/breadcrumbs.php:13, config/footer/footer-credits.php:24, config/footer/footer-widgets.php:36, config/menus/mobile.php:13, config/sidebars/primary.php:13, config/sidebars/secondary.php:13, src/customizer/helpers.php:26
 msgid "Links"
 msgstr ""
 
@@ -509,7 +533,7 @@ msgstr ""
 msgid "Columns"
 msgstr ""
 
-#: config/footer/footer-widgets.php:35, src/customizer/helpers.php:24
+#: config/footer/footer-widgets.php:35, src/customizer/helpers.php:25
 msgid "Headings"
 msgstr ""
 
@@ -519,10 +543,6 @@ msgstr ""
 
 #: config/footer/footer-widgets.php:153, config/single/featured-image.php:45
 msgid "Spacing Top"
-msgstr ""
-
-#: config/footer/footer-widgets.php:171, config/single/featured-image.php:63
-msgid "Spacing Bottom"
 msgstr ""
 
 #: config/footer/site-footer.php:9
@@ -547,6 +567,18 @@ msgstr ""
 
 #: config/header/primary.php:24
 msgid "Additional desktop and mobile header layouts available in"
+msgstr ""
+
+#: config/header/primary.php:25, config/header/right.php:12, config/menus/mobile.php:92, src/admin/upgrade-notice.php:26, src/customizer/extra.php:113, src/customizer/extra.php:263
+msgid "Genesis Customizer Pro"
+msgstr ""
+
+#: config/header/primary.php:26, config/header/right.php:13, config/menus/mobile.php:93, src/customizer/extra.php:264
+msgid "!"
+msgstr ""
+
+#: config/header/primary.php:28, config/header/right.php:15, config/menus/mobile.php:95, src/admin/upgrade-notice.php:29, src/customizer/extra.php:116, src/customizer/extra.php:266
+msgid "Go Pro →"
 msgstr ""
 
 #: config/header/primary.php:40
@@ -599,14 +631,6 @@ msgstr ""
 
 #: config/header/right.php:28
 msgid "Desktop and Mobile"
-msgstr ""
-
-#: config/header/right.php:29
-msgid "Desktop"
-msgstr ""
-
-#: config/header/right.php:30
-msgid "Mobile"
 msgstr ""
 
 #: config/header/right.php:40
@@ -741,7 +765,7 @@ msgstr ""
 msgid "These settings are for the default desktop colors only and will be overridden by the "
 msgstr ""
 
-#: config/menus/primary.php:43, src/customizer/helpers.php:41, src/functions/widget-areas.php:52
+#: config/menus/primary.php:43, src/customizer/helpers.php:42, src/functions/widget-areas.php:52
 msgid "Mobile Menu"
 msgstr ""
 
@@ -845,7 +869,7 @@ msgstr ""
 msgid "says"
 msgstr ""
 
-#: config/single/comments.php:75, src/customizer/helpers.php:64
+#: config/single/comments.php:75, src/customizer/helpers.php:68
 msgid "Comments"
 msgstr ""
 
@@ -913,189 +937,189 @@ msgstr ""
 msgid "Overrides the default hero section value set in the Customizer."
 msgstr ""
 
-#: src/admin/merlin-wp.php:53
+#: src/admin/merlin-wp.php:56
 msgid "Theme Setup"
 msgstr ""
 
 #. translators: 1: Title Tag 2: Theme Name 3: Closing Title Tag
-#: src/admin/merlin-wp.php:56
+#: src/admin/merlin-wp.php:59
 msgid "%1$s%2$s Themes &lsaquo; Theme Setup: %3$s%4$s"
 msgstr ""
 
-#: src/admin/merlin-wp.php:57
+#: src/admin/merlin-wp.php:60
 msgid "Return to the dashboard"
 msgstr ""
 
-#: src/admin/merlin-wp.php:58
+#: src/admin/merlin-wp.php:61
 msgid "Disable this wizard"
 msgstr ""
 
-#: src/admin/merlin-wp.php:60
+#: src/admin/merlin-wp.php:63
 msgid "Skip"
 msgstr ""
 
-#: src/admin/merlin-wp.php:61
+#: src/admin/merlin-wp.php:64
 msgid "Next"
 msgstr ""
 
-#: src/admin/merlin-wp.php:62
+#: src/admin/merlin-wp.php:65
 msgid "Start"
 msgstr ""
 
-#: src/admin/merlin-wp.php:63
+#: src/admin/merlin-wp.php:66
 msgid "Cancel"
 msgstr ""
 
-#: src/admin/merlin-wp.php:64, src/admin/merlin-wp.php:65, src/admin/merlin-wp.php:66
+#: src/admin/merlin-wp.php:67, src/admin/merlin-wp.php:68, src/admin/merlin-wp.php:69
 msgid "Install"
 msgstr ""
 
-#: src/admin/merlin-wp.php:67
+#: src/admin/merlin-wp.php:70
 msgid "Import"
 msgstr ""
 
-#: src/admin/merlin-wp.php:68
+#: src/admin/merlin-wp.php:71
 msgid "Activate"
 msgstr ""
 
-#: src/admin/merlin-wp.php:69
+#: src/admin/merlin-wp.php:72
 msgid "Later"
 msgstr ""
 
 #. translators: Theme Name
-#: src/admin/merlin-wp.php:72
+#: src/admin/merlin-wp.php:75
 msgid "Activate %s"
 msgstr ""
 
 #. translators: Theme Name
-#: src/admin/merlin-wp.php:74
+#: src/admin/merlin-wp.php:77
 msgid "%s is Activated"
 msgstr ""
 
 #. translators: Theme Name
-#: src/admin/merlin-wp.php:76
+#: src/admin/merlin-wp.php:79
 msgid "Enter your license key to enable remote updates and theme support."
 msgstr ""
 
-#: src/admin/merlin-wp.php:77
+#: src/admin/merlin-wp.php:80
 msgid "License key"
 msgstr ""
 
-#: src/admin/merlin-wp.php:78
+#: src/admin/merlin-wp.php:81
 msgid "The theme is already registered, so you can go to the next step!"
 msgstr ""
 
-#: src/admin/merlin-wp.php:79
+#: src/admin/merlin-wp.php:82
 msgid "Your theme is activated! Remote updates and theme support are enabled."
 msgstr ""
 
-#: src/admin/merlin-wp.php:80
+#: src/admin/merlin-wp.php:83
 msgid "Need help?"
 msgstr ""
 
 #. translators: Theme Name
-#: src/admin/merlin-wp.php:83
+#: src/admin/merlin-wp.php:86
 msgid "Welcome to %s"
 msgstr ""
 
-#: src/admin/merlin-wp.php:84
+#: src/admin/merlin-wp.php:87
 msgid "Hi. Welcome back"
 msgstr ""
 
-#: src/admin/merlin-wp.php:85
+#: src/admin/merlin-wp.php:88
 msgid "This wizard will set up your theme, install plugins, and import content. It is optional & should take only a few minutes."
 msgstr ""
 
-#: src/admin/merlin-wp.php:86
+#: src/admin/merlin-wp.php:89
 msgid "You may have already run this theme setup wizard. If you would like to proceed anyway, click on the \"Start\" button below."
 msgstr ""
 
-#: src/admin/merlin-wp.php:88
+#: src/admin/merlin-wp.php:91
 msgid "Install Child Theme"
 msgstr ""
 
-#: src/admin/merlin-wp.php:89
+#: src/admin/merlin-wp.php:92
 msgid "Child theme active!"
 msgstr ""
 
-#: src/admin/merlin-wp.php:90
+#: src/admin/merlin-wp.php:93
 msgid "Let's build & activate a child theme so you may easily make theme changes."
 msgstr ""
 
-#: src/admin/merlin-wp.php:91
+#: src/admin/merlin-wp.php:94
 msgid "Your child theme has been installed successfully  and is now activated, if it wasn't already."
 msgstr ""
 
-#: src/admin/merlin-wp.php:92
+#: src/admin/merlin-wp.php:95
 msgid "Learn about child themes"
 msgstr ""
 
-#: src/admin/merlin-wp.php:93
+#: src/admin/merlin-wp.php:96
 msgid "Awesome. Your child theme has already been installed and is now activated."
 msgstr ""
 
-#: src/admin/merlin-wp.php:94
+#: src/admin/merlin-wp.php:97
 msgid "Awesome. Your child theme has been created and is now activated."
 msgstr ""
 
-#: src/admin/merlin-wp.php:96
+#: src/admin/merlin-wp.php:99
 msgid "Install Plugins"
 msgstr ""
 
-#: src/admin/merlin-wp.php:97
+#: src/admin/merlin-wp.php:100
 msgid "You're up to speed!"
 msgstr ""
 
-#: src/admin/merlin-wp.php:98
+#: src/admin/merlin-wp.php:101
 msgid "Let's install some essential WordPress plugins to get your site up to speed."
 msgstr ""
 
-#: src/admin/merlin-wp.php:99
+#: src/admin/merlin-wp.php:102
 msgid "The required WordPress plugins are all installed and up to date. Press \"Next\" to continue the setup wizard."
 msgstr ""
 
-#: src/admin/merlin-wp.php:100, src/admin/merlin-wp.php:104
+#: src/admin/merlin-wp.php:103, src/admin/merlin-wp.php:107
 msgid "Advanced"
 msgstr ""
 
-#: src/admin/merlin-wp.php:102
+#: src/admin/merlin-wp.php:105
 msgid "Import Content"
 msgstr ""
 
-#: src/admin/merlin-wp.php:103
+#: src/admin/merlin-wp.php:106
 msgid "Let's import content to your website, to help you get familiar with the theme."
 msgstr ""
 
-#: src/admin/merlin-wp.php:106
+#: src/admin/merlin-wp.php:109
 msgid "All done. Have fun!"
 msgstr ""
 
 #. translators: Theme Author
-#: src/admin/merlin-wp.php:109
+#: src/admin/merlin-wp.php:112
 msgid "Your theme has been all set up. Enjoy your new theme by %s."
 msgstr ""
 
-#: src/admin/merlin-wp.php:110
+#: src/admin/merlin-wp.php:113
 msgid "Extras"
 msgstr ""
 
-#: src/admin/merlin-wp.php:111
+#: src/admin/merlin-wp.php:114
 msgid "Start Customizing"
 msgstr ""
 
-#: src/admin/merlin-wp.php:112
+#: src/admin/merlin-wp.php:115
 msgid "Admin Dashboard"
 msgstr ""
 
-#: src/admin/merlin-wp.php:113
+#: src/admin/merlin-wp.php:116
 msgid "Get Theme Support"
 msgstr ""
 
-#: src/admin/merlin-wp.php:114
+#: src/admin/merlin-wp.php:117
 msgid "View your website"
 msgstr ""
 
-#: src/admin/merlin-wp.php:149, src/admin/merlin-wp.php:158
+#: src/admin/merlin-wp.php:136, src/admin/merlin-wp.php:145
 msgid "A special note for this import."
 msgstr ""
 
@@ -1204,146 +1228,154 @@ msgid "Menus"
 msgstr ""
 
 #: src/customizer/helpers.php:11
-msgid "Content Area"
+msgid "Hero Section"
 msgstr ""
 
 #: src/customizer/helpers.php:12
-msgid "Sidebars"
+msgid "Content Area"
 msgstr ""
 
 #: src/customizer/helpers.php:13
-msgid "Single Post / Page"
+msgid "Sidebars"
 msgstr ""
 
 #: src/customizer/helpers.php:14
+msgid "Single Post / Page"
+msgstr ""
+
+#: src/customizer/helpers.php:15
 msgid "Blog / Archive"
 msgstr ""
 
-#: src/customizer/helpers.php:15, src/customizer/helpers.php:45
+#: src/customizer/helpers.php:16, src/customizer/helpers.php:46
 msgid "Footer"
 msgstr ""
 
-#: src/customizer/helpers.php:22
+#: src/customizer/helpers.php:23
 msgid "Global"
 msgstr ""
 
-#: src/customizer/helpers.php:23
+#: src/customizer/helpers.php:24
 msgid "Body"
 msgstr ""
 
-#: src/customizer/helpers.php:26
+#: src/customizer/helpers.php:27
 msgid "Buttons"
 msgstr ""
 
-#: src/customizer/helpers.php:27
+#: src/customizer/helpers.php:28
 msgid "Forms / Inputs"
 msgstr ""
 
-#: src/customizer/helpers.php:28
+#: src/customizer/helpers.php:29
 msgid "Blockquotes"
 msgstr ""
 
-#: src/customizer/helpers.php:30
+#: src/customizer/helpers.php:31
 msgid "Lists"
 msgstr ""
 
-#: src/customizer/helpers.php:31
+#: src/customizer/helpers.php:32
 msgid "Tables"
 msgstr ""
 
-#: src/customizer/helpers.php:34
+#: src/customizer/helpers.php:35
 msgid "Primary Header"
 msgstr ""
 
-#: src/customizer/helpers.php:35
+#: src/customizer/helpers.php:36
 msgid "Title Area"
 msgstr ""
 
-#: src/customizer/helpers.php:36, src/functions/widget-areas.php:43
+#: src/customizer/helpers.php:37, src/functions/widget-areas.php:43
 msgid "Header Right"
 msgstr ""
 
-#: src/customizer/helpers.php:39, src/functions/theme-support.php:43
+#: src/customizer/helpers.php:40, src/functions/theme-support.php:43
 msgid "Primary Menu"
 msgstr ""
 
-#: src/customizer/helpers.php:40, src/functions/theme-support.php:44
+#: src/customizer/helpers.php:41, src/functions/theme-support.php:44
 msgid "Secondary Menu"
 msgstr ""
 
-#: src/customizer/helpers.php:42
+#: src/customizer/helpers.php:43
 msgid "Menu Toggle"
 msgstr ""
 
-#: src/customizer/helpers.php:43
+#: src/customizer/helpers.php:44
 msgid "Sub Menu"
 msgstr ""
 
-#: src/customizer/helpers.php:44
+#: src/customizer/helpers.php:45
 msgid "Sub Menu Toggle"
 msgstr ""
 
-#: src/customizer/helpers.php:48
-msgid "Main Content"
-msgstr ""
-
 #: src/customizer/helpers.php:49
-msgid "Breadcrumbs"
-msgstr ""
-
-#: src/customizer/helpers.php:50
-msgid "Author Box"
-msgstr ""
-
-#: src/customizer/helpers.php:51, src/customizer/helpers.php:62
-msgid "Featured Image"
+msgid "Settings"
 msgstr ""
 
 #: src/customizer/helpers.php:52
-msgid "Avatar"
+msgid "Main Content"
 msgstr ""
 
 #: src/customizer/helpers.php:53
+msgid "Breadcrumbs"
+msgstr ""
+
+#: src/customizer/helpers.php:54
+msgid "Author Box"
+msgstr ""
+
+#: src/customizer/helpers.php:55, src/customizer/helpers.php:66
+msgid "Featured Image"
+msgstr ""
+
+#: src/customizer/helpers.php:56
+msgid "Avatar"
+msgstr ""
+
+#: src/customizer/helpers.php:57
 msgid "Sidebar"
 msgstr ""
 
-#: src/customizer/helpers.php:56, src/functions/widget-areas.php:66
+#: src/customizer/helpers.php:60, src/functions/widget-areas.php:66
 msgid "Primary Sidebar"
 msgstr ""
 
-#: src/customizer/helpers.php:57, src/functions/widget-areas.php:70
+#: src/customizer/helpers.php:61, src/functions/widget-areas.php:70
 msgid "Secondary Sidebar"
 msgstr ""
 
-#: src/customizer/helpers.php:60, src/customizer/helpers.php:67
+#: src/customizer/helpers.php:64, src/customizer/helpers.php:71
 msgid "Entry"
 msgstr ""
 
-#: src/customizer/helpers.php:61, src/functions/widget-areas.php:62
+#: src/customizer/helpers.php:65, src/functions/widget-areas.php:62
 msgid "After Entry"
 msgstr ""
 
-#: src/customizer/helpers.php:68
+#: src/customizer/helpers.php:72
 msgid "Archive Description"
 msgstr ""
 
-#: src/customizer/helpers.php:70
+#: src/customizer/helpers.php:74
 msgid "Read More"
 msgstr ""
 
-#: src/customizer/helpers.php:71
+#: src/customizer/helpers.php:75
 msgid "Pagination"
 msgstr ""
 
-#: src/customizer/helpers.php:74
+#: src/customizer/helpers.php:78
 msgid "Site Footer"
 msgstr ""
 
-#: src/customizer/helpers.php:75
+#: src/customizer/helpers.php:79
 msgid "Footer Widgets"
 msgstr ""
 
-#: src/customizer/helpers.php:76, src/functions/widget-areas.php:204
+#: src/customizer/helpers.php:80, src/functions/widget-areas.php:183
 msgid "Footer Credits"
 msgstr ""
 
@@ -1423,18 +1455,18 @@ msgstr ""
 msgid "This is the Above Footer widget area."
 msgstr ""
 
-#: src/functions/widget-areas.php:184
+#: src/functions/widget-areas.php:163
 msgid "Footer "
 msgstr ""
 
-#: src/functions/widget-areas.php:185
+#: src/functions/widget-areas.php:164
 msgid "This is the Footer "
 msgstr ""
 
-#: src/functions/widget-areas.php:185
+#: src/functions/widget-areas.php:164
 msgid " widget area."
 msgstr ""
 
-#: src/functions/widget-areas.php:205
+#: src/functions/widget-areas.php:184
 msgid "This is the Footer Credits widget area."
 msgstr ""

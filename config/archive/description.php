@@ -59,8 +59,34 @@ return [
 		],
 	],
 	[
+		'type'     => 'dimensions',
+		'settings' => 'title-margin',
+		'default'  => [
+			'margin-top'    => '0',
+			'margin-bottom' => '0',
+		],
+		'choices'  => [
+			'labels' => [
+				'margin-top'    => __( 'Margin Top', 'genesis-customizer' ),
+				'margin-bottom' => __( 'Margin Bottom', 'genesis-customizer' ),
+			],
+		],
+		'output'   => [
+			[
+				'element'  => '.archive-title',
+				'choice'   => 'margin-top',
+				'property' => 'margin-top',
+			],
+			[
+				'element'  => '.archive-title',
+				'choice'   => 'margin-bottom',
+				'property' => 'margin-bottom',
+			],
+		],
+	],
+	[
 		'type'     => 'custom',
-		'settings' => 'divider-3387',
+		'settings' => 'divider-8398',
 		'default'  => '<hr>',
 	],
 	[

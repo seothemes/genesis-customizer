@@ -273,6 +273,8 @@ function _get_color( $color = 'accent' ) {
  */
 function _get_size( $size = 'm', $suffix = 'px' ) {
 	$spacing = apply_filters( 'genesis_customizer_spacing', [
+
+		// Scale.
 		'xxs' => '8',
 		'xs'  => '10',
 		's'   => '14',
@@ -280,6 +282,14 @@ function _get_size( $size = 'm', $suffix = 'px' ) {
 		'l'   => '18',
 		'xl'  => '32',
 		'xxl' => '48',
+
+		// Headings.
+		'h1' => '36',
+		'h2' => '28',
+		'h3' => '24',
+		'h4' => '22',
+		'h5' => '20',
+		'h6' => '18',
 	] );
 
 	return $spacing[ $size ] . $suffix;

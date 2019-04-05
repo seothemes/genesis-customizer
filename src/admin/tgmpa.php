@@ -11,9 +11,7 @@ add_action( 'tgmpa_register', __NAMESPACE__ . '\setup_tgmpa' );
  * @return void
  */
 function setup_tgmpa() {
-	$theme = 'default';
-
-	\tgmpa( add_tgmpa_plugins( $theme ), add_tgmpa_config() );
+	\tgmpa( add_tgmpa_plugins(), add_tgmpa_config() );
 }
 
 /**
@@ -21,12 +19,15 @@ function setup_tgmpa() {
  *
  * @since 1.0.0
  *
+ * @param $theme
  * @todo Add support for multiple plugin configs.
  *
  * @return array
  */
 function add_tgmpa_plugins( $theme = 'default' ) {
-	$plugins['default'] = [
+	$plugins['default'] = [];
+
+	$plugins['genesis-sample'] = [
 		[
 			'name'     => 'Simple Social Icons',
 			'slug'     => 'simple-social-icons',

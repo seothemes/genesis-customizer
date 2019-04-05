@@ -17,6 +17,7 @@
 	font-size: $base--font-size / $major-second;
 	font-weight: $font-weight--semibold;
 	list-style-type: none;
+	margin-bottom: 0;
 
 	@include overlay();
 

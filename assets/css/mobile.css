@@ -123,6 +123,10 @@
   position: absolute;
 }
 
+.mega-menu {
+  display: none !important;
+}
+
 .hide-mobile {
   display: none;
 }

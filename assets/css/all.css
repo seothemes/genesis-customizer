@@ -627,6 +627,10 @@ iframe {
   margin-bottom: 0;
 }
 
+.below-header {
+  width: 100%;
+}
+
 .primary-header {
   display: flex;
   position: relative;
@@ -743,6 +747,7 @@ iframe {
   font-size: 1.42222rem;
   font-weight: 600;
   list-style-type: none;
+  margin-bottom: 0;
   position: relative;
 }
 
@@ -1043,7 +1048,6 @@ iframe {
 
 .hero-section {
   display: flex;
-  padding: 12.8rem 0;
   background-position: center;
   background-size: cover;
   text-align: center;
@@ -1602,6 +1606,11 @@ iframe {
   top: 100%;
   width: 100%;
   flex-wrap: nowrap;
+  z-index: 10;
+}
+
+.mega-menu .wrap {
+  align-items: flex-start;
 }
 
 .mega-menu .widget {

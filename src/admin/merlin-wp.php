@@ -99,7 +99,7 @@ function merlin_strings() {
 		'plugins-header'         => esc_html__( 'Install Plugins', 'genesis-customizer' ),
 		'plugins-header-success' => esc_html__( 'You\'re up to speed!', 'genesis-customizer' ),
 		'plugins'                => esc_html__( 'Let\'s install some essential WordPress plugins to get your site up to speed.', 'genesis-customizer' ),
-		'plugins-success%s'      => esc_html__( 'The required WordPress plugins are all installed and up to date. Press "Next" to continue the setup wizard.', 'genesis-customizer' ),
+		'plugins-success%s'      => esc_html__( 'The recommended WordPress plugins are all installed and up to date. Press "Next" to continue the setup wizard.', 'genesis-customizer' ),
 		'plugins-action-link'    => esc_html__( 'Advanced', 'genesis-customizer' ),
 
 		'import-header'      => esc_html__( 'Import Content', 'genesis-customizer' ),

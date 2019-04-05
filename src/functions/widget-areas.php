@@ -90,27 +90,6 @@ function register_widget_areas() {
 	}
 }
 
-add_action( 'genesis_before_title_area', __NAMESPACE__ . '\header_left', 5 );
-/**
- * Description of expected behavior.
- *
- * @since 1.0.0
- *
- * @return void
- */
-function header_left() {
-	$enabled = _get_value( 'header_left_enable' );
-
-	if ( 'hide' === $enabled ) {
-		return;
-	}
-
-	genesis_widget_area( 'header-left-widget', [
-		'before' => '<div class="header-left widget-area ' . $enabled . '">',
-		'after'  => '</div>',
-	] );
-}
-
 add_action( 'genesis_after_title_area', __NAMESPACE__ . '\header_right', 15 );
 /**
  * Description of expected behavior.

@@ -63,9 +63,7 @@ function enqueue_scripts() {
 					'.nav-primary',
 					'.nav-secondary',
 				],
-				'others'  => [
-//					'.nav-footer',
-				],
+				'others'  => [],
 			],
 			'menuIconClass'    => '',
 			'subMenuIconClass' => '',

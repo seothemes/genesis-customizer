@@ -59,3 +59,43 @@ function modify_defaults( $wp_customize ) {
 		$wp_customize->remove_section( 'header_image' );
 	}
 }
+
+add_action( 'customize_controls_print_styles', __NAMESPACE__ . '\customizer_styles', 99 );
+/**
+ * Adds custom styles to Customizer screen.
+ *
+ * @since  1.0.0
+ *
+ * @return void
+ */
+function customizer_styles() {
+	wp_register_style(
+		_get_handle() . '-customizer',
+		_get_url() . 'assets/css/customizer.css',
+		[ 'dashicons' ],
+		_get_asset_version( 'css/customizer.css' ),
+		'all'
+	);
+
+	wp_enqueue_style( _get_handle() . '-customizer' );
+}
+
+add_action( 'customize_controls_print_scripts', __NAMESPACE__ . '\customizer_scripts', 999 );
+/**
+ * Adds custom inline scripts to Customizer screen.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function customizer_scripts() {
+	wp_register_script(
+		_get_handle() . '-customizer',
+		_get_url() . 'assets/js/customizer.js',
+		null,
+		_get_asset_version( 'js/customizer.js' ),
+		'all'
+	);
+
+	wp_enqueue_script( _get_handle() . '-customizer' );
+}

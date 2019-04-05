@@ -82,29 +82,24 @@ return [
 		),
 	],
 	[
-		'type'            => 'custom',
-		'settings'        => 'tip-16723422',
-		'default'         => sprintf(
-			'<p>%s <strong>%s</strong>%s </p><a href="%s" target="_blank" class="button-primary">%s</a><br>&nbsp;<hr>',
-			esc_html__( 'Responsive font size settings (separate desktop and mobile sizes) available in', 'genesis-customizer' ),
-			esc_html__( 'Genesis Customizer Pro', 'genesis-customizer' ),
-			esc_html__( '!', 'genesis-customizer' ),
-			_get_upgrade_url(),
-			esc_html__( 'Go Pro →', 'genesis-customizer' )
-		),
-		'active_callback' => function () {
-			return ! _is_pro_active();
-		},
-	],
-	[
-		'type'     => 'dimension',
+		'type'     => 'dimensions',
 		'settings' => 'h1',
 		'label'    => __( 'H1 Font Size', 'genesis-customizer' ),
-		'default'  => '36px',
+		'default'  => [
+			'Mobile'  => _get_size('h1'),
+			'Desktop' => _get_size('h1'),
+		],
 		'output'   => [
 			[
+				'choice'   => 'Mobile',
 				'element'  => 'h1',
 				'property' => 'font-size',
+			],
+			[
+				'choice'      => 'Desktop',
+				'element'     => 'h1',
+				'property'    => 'font-size',
+				'media_query' => _get_media_query(),
 			],
 		],
 	],
@@ -114,14 +109,24 @@ return [
 		'default'  => '<hr>',
 	],
 	[
-		'type'     => 'dimension',
+		'type'     => 'dimensions',
 		'settings' => 'h2',
 		'label'    => __( 'H2 Font Size', 'genesis-customizer' ),
-		'default'  => '28px',
+		'default'  => [
+			'Mobile'  => _get_size('h2'),
+			'Desktop' => _get_size('h2'),
+		],
 		'output'   => [
 			[
+				'choice'   => 'Mobile',
 				'element'  => 'h2',
 				'property' => 'font-size',
+			],
+			[
+				'choice'      => 'Desktop',
+				'element'     => 'h2',
+				'property'    => 'font-size',
+				'media_query' => _get_media_query(),
 			],
 		],
 	],
@@ -131,14 +136,24 @@ return [
 		'default'  => '<hr>',
 	],
 	[
-		'type'     => 'dimension',
+		'type'     => 'dimensions',
 		'settings' => 'h3',
 		'label'    => __( 'H3 Font Size', 'genesis-customizer' ),
-		'default'  => '24px',
+		'default'  => [
+			'Mobile'  => _get_size('h3'),
+			'Desktop' => _get_size('h3'),
+		],
 		'output'   => [
 			[
+				'choice'   => 'Mobile',
 				'element'  => 'h3',
 				'property' => 'font-size',
+			],
+			[
+				'choice'      => 'Desktop',
+				'element'     => 'h3',
+				'property'    => 'font-size',
+				'media_query' => _get_media_query(),
 			],
 		],
 	],
@@ -148,14 +163,24 @@ return [
 		'default'  => '<hr>',
 	],
 	[
-		'type'     => 'dimension',
+		'type'     => 'dimensions',
 		'settings' => 'h4',
 		'label'    => __( 'H4 Font Size', 'genesis-customizer' ),
-		'default'  => '22px',
+		'default'  => [
+			'Mobile'  => _get_size('h4'),
+			'Desktop' => _get_size('h4'),
+		],
 		'output'   => [
 			[
+				'choice'   => 'Mobile',
 				'element'  => 'h4',
 				'property' => 'font-size',
+			],
+			[
+				'choice'      => 'Desktop',
+				'element'     => 'h4',
+				'property'    => 'font-size',
+				'media_query' => _get_media_query(),
 			],
 		],
 	],
@@ -165,14 +190,24 @@ return [
 		'default'  => '<hr>',
 	],
 	[
-		'type'     => 'dimension',
+		'type'     => 'dimensions',
 		'settings' => 'h5',
 		'label'    => __( 'H5 Font Size', 'genesis-customizer' ),
-		'default'  => '20px',
+		'default'  => [
+			'Mobile'  => _get_size('h5'),
+			'Desktop' => _get_size('h5'),
+		],
 		'output'   => [
 			[
+				'choice'   => 'Mobile',
 				'element'  => 'h5,legend',
 				'property' => 'font-size',
+			],
+			[
+				'choice'      => 'Desktop',
+				'element'     => 'h5,legend',
+				'property'    => 'font-size',
+				'media_query' => _get_media_query(),
 			],
 		],
 	],
@@ -182,14 +217,24 @@ return [
 		'default'  => '<hr>',
 	],
 	[
-		'type'     => 'dimension',
+		'type'     => 'dimensions',
 		'settings' => 'h6',
 		'label'    => __( 'H6 Font Size', 'genesis-customizer' ),
-		'default'  => '18px',
+		'default'  => [
+			'Mobile'  => _get_size('h6'),
+			'Desktop' => _get_size('h6'),
+		],
 		'output'   => [
 			[
+				'choice'   => 'Mobile',
 				'element'  => 'h6',
 				'property' => 'font-size',
+			],
+			[
+				'choice'      => 'Desktop',
+				'element'     => 'h6',
+				'property'    => 'font-size',
+				'media_query' => _get_media_query(),
 			],
 		],
 	],

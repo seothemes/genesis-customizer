@@ -4,6 +4,15 @@
 	top: 100%;
 	width: 100%;
 	flex-wrap: nowrap;
+	z-index: 10;
+
+	@include mq(0, m) {
+		display: none !important;
+	}
+
+	.wrap {
+		align-items: flex-start;
+	}
 
 	.widget {
 		padding-right: 2em;
