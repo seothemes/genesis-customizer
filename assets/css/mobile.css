@@ -89,6 +89,10 @@
   justify-content: space-between;
 }
 
+.nav-footer .menu-item {
+  width: auto;
+}
+
 .menu-toggle {
   display: flex;
 }
@@ -133,4 +137,11 @@
 
 .show-mobile {
   display: flex;
+}
+
+.center-content .alignfull,
+.full-width-content .alignfull,
+.center-content .alignwide,
+.full-width-content .alignwide {
+  width: 100vw;
 }

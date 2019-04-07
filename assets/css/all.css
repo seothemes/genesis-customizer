@@ -1322,22 +1322,19 @@ iframe {
 }
 
 .wp-block-image {
-  margin-top: 1.6rem;
-  margin-bottom: 1.6rem;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .wp-block-image.alignleft {
-  margin-right: 1.6rem;
+  margin-right: 1em;
 }
 
 .wp-block-image.alignright {
-  margin-left: 1.6rem;
+  margin-left: 1em;
 }
 
-.wp-block-image.alignwide {
-  max-width: 120%;
-}
-
+.wp-block-image.alignwide,
 .wp-block-image.alignfull {
   max-width: none;
 }
@@ -1553,7 +1550,7 @@ iframe {
 .page-template-blocks .content,
 .page-template-beaver-builder .content {
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .page-template-blocks .content > .entry,
@@ -1733,22 +1730,6 @@ iframe {
   clear: both;
   content: '';
   display: block;
-}
-
-.center-content .alignfull,
-.full-width-content .alignfull {
-  width: 100vw;
-  max-width: 100vw;
-  margin-right: calc(-100vw / 2 + 100% / 2);
-  margin-left: calc(-100vw / 2 + 100% / 2);
-}
-
-.center-content .alignwide,
-.full-width-content .alignwide {
-  width: 140%;
-  max-width: 140%;
-  margin-right: -20%;
-  margin-left: -20%;
 }
 
 .flex {

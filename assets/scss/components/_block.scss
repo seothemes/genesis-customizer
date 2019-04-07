@@ -9,7 +9,8 @@
 .wp-block {
 
 	// Audio block.
-	&-audio {}
+	&-audio {
+	}
 
 	// Button block.
 	&-button {
@@ -23,13 +24,16 @@
 	// Categories block.
 	&-categories {
 
-		&-list {}
+		&-list {
+		}
 
-		&-dropdown {}
+		&-dropdown {
+		}
 	}
 
 	// Code block.
-	&-code {}
+	&-code {
+	}
 
 	// Columns block.
 	&-columns {
@@ -55,19 +59,26 @@
 	// Cover image block.
 	&-cover-image {
 
-		&.has-parallax {}
+		&.has-parallax {
+		}
 
-		&.has-background-dim {}
+		&.has-background-dim {
+		}
 
-		&-text {}
+		&-text {
+		}
 
-		&.has-left-content {}
+		&.has-left-content {
+		}
 
-		&.has-right-content {}
+		&.has-right-content {
+		}
 
-		&.has-left-content &-text {}
+		&.has-left-content &-text {
+		}
 
-		&.has-right-content &-text {}
+		&.has-right-content &-text {
+		}
 	}
 
 	// Embed block.
@@ -79,7 +90,8 @@
 	// File block.
 	&-file {
 
-		&__button {}
+		&__button {
+		}
 	}
 
 	// Gallery block.
@@ -87,17 +99,23 @@
 
 		@include margin($spacing--m null);
 
-		&.is-cropped {}
+		&.is-cropped {
+		}
 
-		&.columns-1 {}
+		&.columns-1 {
+		}
 
-		&.columns-2 {}
+		&.columns-2 {
+		}
 
-		&.columns-3 {}
+		&.columns-3 {
+		}
 
-		.blocks-gallery-item {}
+		.blocks-gallery-item {
+		}
 
-		&.is-cropped .blocks-gallery-item {}
+		&.is-cropped .blocks-gallery-item {
+		}
 
 		.blocks-gallery-item {
 
@@ -106,26 +124,24 @@
 			}
 		}
 
-		&.columns-1 .blocks-gallery-item {}
+		&.columns-1 .blocks-gallery-item {
+		}
 	}
 
 	// Image block.
 	&-image {
 
-		@include margin($spacing--m null);
+		@include margin(1em null);
 
 		&.alignleft {
-			margin-right: $spacing--m;
+			margin-right: 1em;
 		}
 
 		&.alignright {
-			margin-left: $spacing--m;
+			margin-left: 1em;
 		}
 
-		&.alignwide {
-			max-width: 120%;
-		}
-
+		&.alignwide,
 		&.alignfull {
 			max-width: none;
 		}
@@ -134,13 +150,16 @@
 	// Latest posts block.
 	&-latest-posts {
 
-		&.is-grid {}
+		&.is-grid {
+		}
 
-		&__post-date {}
+		&__post-date {
+		}
 	}
 
 	// Preformatted block.
-	&-preformatted {}
+	&-preformatted {
+	}
 
 	// Pullquote block.
 	&-pullquote {
@@ -166,17 +185,22 @@
 	}
 
 	// Quote block.
-	&-quote {}
+	&-quote {
+	}
 
 	// Separator block.
-	&-separator {}
+	&-separator {
+	}
 
 	// Subhead block.
-	&-subhead {}
+	&-subhead {
+	}
 
 	// Table block.
-	&-table {}
+	&-table {
+	}
 
 	// Verse block.
-	&-verse {}
+	&-verse {
+	}
 }

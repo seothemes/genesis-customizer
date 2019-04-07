@@ -269,7 +269,7 @@ msgstr ""
 msgid "Horizontal Spacing"
 msgstr ""
 
-#: config/base/buttons.php:189, config/base/forms.php:136, config/base/global.php:262, config/content/avatar.php:9, config/menus/menu-toggle.php:187
+#: config/base/buttons.php:189, config/base/forms.php:136, config/base/global.php:279, config/content/avatar.php:9, config/menus/menu-toggle.php:187
 msgid "Border Radius"
 msgstr ""
 
@@ -309,63 +309,63 @@ msgstr ""
 msgid "Controls the maximum percentage of the screen that element wrappers can span."
 msgstr ""
 
-#: config/base/global.php:263
+#: config/base/global.php:280
 msgid "Controls the border radius for common page elements such as entries, breadcrumbs, widgets, comments etc."
 msgstr ""
 
-#: config/base/global.php:301, config/header/primary.php:152
+#: config/base/global.php:318, config/header/primary.php:152
 msgid "Drop Shadow"
 msgstr ""
 
-#: config/base/global.php:302
+#: config/base/global.php:319
 msgid "Controls the drop shadow for common page elements such as entries, breadcrumbs, widgets, comments etc."
 msgstr ""
 
-#: config/base/global.php:329
+#: config/base/global.php:346
 msgid "Transitions"
 msgstr ""
 
-#: config/base/global.php:330
+#: config/base/global.php:347
 msgid "Duration"
 msgstr ""
 
-#: config/base/global.php:363
+#: config/base/global.php:380
 msgid "Delay"
 msgstr ""
 
-#: config/base/global.php:381
+#: config/base/global.php:398
 msgid "Function"
 msgstr ""
 
-#: config/base/global.php:384
+#: config/base/global.php:401
 msgid "Ease"
 msgstr ""
 
-#: config/base/global.php:385
+#: config/base/global.php:402
 msgid "Ease in"
 msgstr ""
 
-#: config/base/global.php:386
+#: config/base/global.php:403
 msgid "Ease in out"
 msgstr ""
 
-#: config/base/global.php:387
+#: config/base/global.php:404
 msgid "Ease out"
 msgstr ""
 
-#: config/base/global.php:388
+#: config/base/global.php:405
 msgid "Linear"
 msgstr ""
 
-#: config/base/global.php:389
+#: config/base/global.php:406
 msgid "Step end"
 msgstr ""
 
-#: config/base/global.php:390
+#: config/base/global.php:407
 msgid "Step middle"
 msgstr ""
 
-#: config/base/global.php:391
+#: config/base/global.php:408
 msgid "Step start"
 msgstr ""
 

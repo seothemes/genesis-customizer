@@ -190,6 +190,22 @@
   margin: 0 0 1.6rem 1.6rem;
 }
 
+.center-content .alignfull,
+.full-width-content .alignfull {
+  width: 100vw;
+  max-width: 100vw;
+  margin-right: calc(-100vw / 2 + 100% / 2);
+  margin-left: calc(-100vw / 2 + 100% / 2);
+}
+
+.center-content .alignwide,
+.full-width-content .alignwide {
+  width: 140%;
+  max-width: 140%;
+  margin-right: -20%;
+  margin-left: -20%;
+}
+
 .flex-start-desktop {
   margin-right: auto;
 }

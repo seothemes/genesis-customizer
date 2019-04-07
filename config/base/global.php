@@ -238,6 +238,23 @@ return [
 				'units'    => '%',
 			],
 			[
+				'element'     => '.page-template-blocks .content',
+				'property'    => 'width',
+				'units'       => '%',
+				'media_query' => _get_media_query( 'max' ),
+			],
+			[
+				'element'       => [
+					'.full-width-content .alignfull',
+					'.center-content .alignfull',
+					'.full-width-content .alignwide',
+					'.center-content .alignwide',
+				],
+				'property'      => 'margin-left',
+				'value_pattern' => 'calc((-100vw - -$vw) / 2)',
+				'media_query'   => _get_media_query( 'max' ),
+			],
+			[
 				'element'       => '.has-mobile-menu-top .nav-primary',
 				'property'      => 'margin-left',
 				'value_pattern' => 'calc((-100vw - -$vw) / 2)',
