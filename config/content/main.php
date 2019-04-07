@@ -18,6 +18,7 @@ return [
 			[
 				'element'  => [
 					'.content-sidebar-wrap',
+					'.page-template-blocks .content',
 				],
 				'property' => 'max-width',
 				'units'    => 'px',
