@@ -20,7 +20,10 @@ return [
 		'output'   => [
 			[
 				'choice'   => 'border',
-				'element'  => 'blockquote',
+				'element'  => [
+					'blockquote',
+					'.wp-block-quote:not(.is-large):not(.is-style-large)',
+				],
 				'property' => 'border-color',
 			],
 			[
@@ -58,8 +61,61 @@ return [
 				],
 			],
 			[
-				'element'       => '.editor-styles-wrapper .wp-block-pullquote blockquote .editor-rich-text p',
-				'context'       => [ 'editor' ],
+				'element' => '.editor-styles-wrapper .wp-block-pullquote blockquote .editor-rich-text p',
+				'context' => [ 'editor' ],
+			],
+		],
+	],
+	[
+		'type'     => 'dimensions',
+		'settings' => 'border-width',
+		'label'    => __( 'Border', 'genesis-customizer' ),
+		'default'  => [
+			'border-top-width'    => '',
+			'border-right-width'  => '',
+			'border-bottom-width' => '',
+			'border-left-width'   => '1px',
+		],
+		'choices'  => [
+			'labels' => [
+				'border-top-width'    => __( 'Border Top Width', 'genesis-customizer' ),
+				'border-right-width'  => __( 'Border Right Width', 'genesis-customizer' ),
+				'border-bottom-width' => __( 'Border Bottom Width', 'genesis-customizer' ),
+				'border-left-width'   => __( 'Border Left Width', 'genesis-customizer' ),
+			],
+		],
+		'output'   => [
+			[
+				'choice'   => 'border-top-width',
+				'property' => 'border-top-width',
+				'element'  => [
+					'blockquote',
+					'.wp-block-quote:not(.is-large):not(.is-style-large), blockquote',
+				],
+			],
+			[
+				'choice'   => 'border-right-width',
+				'property' => 'border-right-width',
+				'element'  => [
+					'blockquote',
+					'.wp-block-quote:not(.is-large):not(.is-style-large), blockquote',
+				],
+			],
+			[
+				'choice'   => 'border-bottom-width',
+				'property' => 'border-bottom-width',
+				'element'  => [
+					'blockquote',
+					'.wp-block-quote:not(.is-large):not(.is-style-large), blockquote',
+				],
+			],
+			[
+				'choice'   => 'border-left-width',
+				'property' => 'border-left-width',
+				'element'  => [
+					'blockquote',
+					'.wp-block-quote:not(.is-large):not(.is-style-large), blockquote',
+				],
 			],
 		],
 	],

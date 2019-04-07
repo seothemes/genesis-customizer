@@ -98,7 +98,7 @@ return [
 		'output'   => [
 			[
 				'element'     => '.sub-menu',
-				'property'    => 'width',
+				'property'    => 'min-width',
 				'units'       => 'px',
 				'media_query' => _get_media_query(),
 			],

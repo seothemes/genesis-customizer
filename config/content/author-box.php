@@ -76,7 +76,7 @@ return [
 		'type'     => 'slider',
 		'settings' => 'title-spacing',
 		'label'    => __( 'Title Bottom Spacing', 'genesis-customizer' ),
-		'default'  => _get_size( 'xxs', '' ),
+		'default'  => '0',
 		'choices'  => [
 			'min'  => 0,
 			'max'  => 100,

@@ -7,16 +7,16 @@ return [
 		'type'     => 'select',
 		'settings' => 'type',
 		'label'    => __( 'Default type', 'genesis-customizer' ),
-		'default'  => 'none',
+		'default'  => 'disc',
 		'choices'  => [
-			'circle' => __( 'Circle', 'genesis-customizer' ),
 			'disc'   => __( 'Disc', 'genesis-customizer' ),
+			'circle' => __( 'Circle', 'genesis-customizer' ),
 			'square' => __( 'Square', 'genesis-customizer' ),
 			'none'   => __( 'None', 'genesis-customizer' ),
 		],
 		'output'   => [
 			[
-				'element'  => 'li',
+				'element'  => '.entry-content li',
 				'property' => 'list-style-type',
 			],
 		],
@@ -32,7 +32,7 @@ return [
 		],
 		'output'   => [
 			[
-				'element'  => 'li',
+				'element'  => '.entry-content li',
 				'property' => 'list-style-position',
 			],
 		],
@@ -54,7 +54,7 @@ return [
 		],
 		'output'   => [
 			[
-				'element'  => 'li',
+				'element'  => '.entry-content li',
 				'property' => 'margin-bottom',
 				'units'    => 'px',
 			],
@@ -79,7 +79,7 @@ return [
 		],
 		'output'   => [
 			[
-				'element' => 'li',
+				'element' => '.entry-content li',
 			],
 		],
 	],

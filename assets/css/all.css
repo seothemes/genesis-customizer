@@ -1263,19 +1263,14 @@ iframe {
   width: 100%;
 }
 
-.author-box ~ .entry-comments,
-.after-entry ~ .entry-comments {
-  margin-top: 0;
+.entry-comments {
+  width: 100%;
 }
 
 .after-entry {
   width: 100%;
   -webkit-column-span: all;
   column-span: all;
-}
-
-.author-box + .after-entry {
-  margin-top: 0;
 }
 
 .wp-block-button__link {

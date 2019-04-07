@@ -26,3 +26,44 @@ function breadcrumb_args( $args ) {
 
 	return $args;
 }
+
+add_filter( 'genesis_404_entry_title', __NAMESPACE__ . '\error_404_entry_title', 10, 1 );
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
+ * @param $default
+ *
+ * @return void
+ */
+function error_404_entry_title( $default ) {
+	$custom = get_page_by_path( 'error-404', OBJECT );
+
+	if ( isset( $custom ) ) {
+		return $custom->post_title;
+	}
+
+	return $default;
+}
+
+
+add_filter( 'genesis_404_entry_content', __NAMESPACE__ . '\error_404_entry_content', 10, 1 );
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
+ * @param $default
+ *
+ * @return void
+ */
+function error_404_entry_content( $default ) {
+	$custom = get_page_by_path( 'error-404', OBJECT );
+
+	if ( isset( $custom ) ) {
+		return $custom->post_content;
+	}
+
+	return $default;
+}

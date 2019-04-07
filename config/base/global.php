@@ -73,11 +73,11 @@ return [
 			],
 			[
 				'element'  => [
-					'.single .author-box',
 					'.masonry .pagination',
 					'.entry-comments',
+					'.single .author-box',
 					'.after-entry',
-					'.entry-comments + .comment-respond',
+					'.comment-respond',
 				],
 				'property' => 'margin-top',
 				'units'    => 'px',
@@ -85,9 +85,8 @@ return [
 			[
 				'element'  => [
 					'.archive-description',
-					'.author-box',
+					'.archive .author-box',
 					'.archive .entry',
-					'.after-entry',
 					'.sidebar .widget',
 				],
 				'property' => 'margin-bottom',

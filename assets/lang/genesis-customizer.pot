@@ -173,7 +173,7 @@ msgstr ""
 msgid "Block"
 msgstr ""
 
-#: config/archive/read-more.php:14, config/base/lists.php:15, config/header/right.php:31, config/single/entry.php:136
+#: config/archive/read-more.php:14, config/base/lists.php:15, config/header/right.php:31
 msgid "None"
 msgstr ""
 
@@ -269,7 +269,7 @@ msgstr ""
 msgid "Horizontal Spacing"
 msgstr ""
 
-#: config/base/buttons.php:189, config/base/forms.php:136, config/base/global.php:279, config/content/avatar.php:9, config/menus/menu-toggle.php:187
+#: config/base/buttons.php:189, config/base/forms.php:136, config/base/global.php:278, config/content/avatar.php:9, config/menus/menu-toggle.php:187
 msgid "Border Radius"
 msgstr ""
 
@@ -301,71 +301,71 @@ msgstr ""
 msgid "Controls the spacing between common page elements such as entries, breadcrumbs, widgets, comments etc."
 msgstr ""
 
-#: config/base/global.php:223
+#: config/base/global.php:222
 msgid "Wrap Max Width"
 msgstr ""
 
-#: config/base/global.php:224
+#: config/base/global.php:223
 msgid "Controls the maximum percentage of the screen that element wrappers can span."
 msgstr ""
 
-#: config/base/global.php:280
+#: config/base/global.php:279
 msgid "Controls the border radius for common page elements such as entries, breadcrumbs, widgets, comments etc."
 msgstr ""
 
-#: config/base/global.php:318, config/header/primary.php:152
+#: config/base/global.php:317, config/header/primary.php:152
 msgid "Drop Shadow"
 msgstr ""
 
-#: config/base/global.php:319
+#: config/base/global.php:318
 msgid "Controls the drop shadow for common page elements such as entries, breadcrumbs, widgets, comments etc."
 msgstr ""
 
-#: config/base/global.php:346
+#: config/base/global.php:345
 msgid "Transitions"
 msgstr ""
 
-#: config/base/global.php:347
+#: config/base/global.php:346
 msgid "Duration"
 msgstr ""
 
-#: config/base/global.php:380
+#: config/base/global.php:379
 msgid "Delay"
 msgstr ""
 
-#: config/base/global.php:398
+#: config/base/global.php:397
 msgid "Function"
 msgstr ""
 
-#: config/base/global.php:401
+#: config/base/global.php:400
 msgid "Ease"
 msgstr ""
 
-#: config/base/global.php:402
+#: config/base/global.php:401
 msgid "Ease in"
 msgstr ""
 
-#: config/base/global.php:403
+#: config/base/global.php:402
 msgid "Ease in out"
 msgstr ""
 
-#: config/base/global.php:404
+#: config/base/global.php:403
 msgid "Ease out"
 msgstr ""
 
-#: config/base/global.php:405
+#: config/base/global.php:404
 msgid "Linear"
 msgstr ""
 
-#: config/base/global.php:406
+#: config/base/global.php:405
 msgid "Step end"
 msgstr ""
 
-#: config/base/global.php:407
+#: config/base/global.php:406
 msgid "Step middle"
 msgstr ""
 
-#: config/base/global.php:408
+#: config/base/global.php:407
 msgid "Step start"
 msgstr ""
 
@@ -413,15 +413,15 @@ msgstr ""
 msgid "Default type"
 msgstr ""
 
-#: config/base/lists.php:12, config/single/entry.php:133
+#: config/base/lists.php:12
 msgid "Circle"
 msgstr ""
 
-#: config/base/lists.php:13, config/single/entry.php:134
+#: config/base/lists.php:13
 msgid "Disc"
 msgstr ""
 
-#: config/base/lists.php:14, config/single/entry.php:135
+#: config/base/lists.php:14
 msgid "Square"
 msgstr ""
 
@@ -501,11 +501,11 @@ msgstr ""
 msgid "Controls the maximum width of the main content area. The main content area consists of the content and sidebars."
 msgstr ""
 
-#: config/content/main.php:35
+#: config/content/main.php:47
 msgid "Vertical Spacing Mobile"
 msgstr ""
 
-#: config/content/main.php:64
+#: config/content/main.php:76
 msgid "Vertical Spacing Desktop"
 msgstr ""
 
@@ -911,10 +911,6 @@ msgstr ""
 
 #: config/single/entry.php:12
 msgid "Entry Title"
-msgstr ""
-
-#: config/single/entry.php:130
-msgid "List style"
 msgstr ""
 
 #: config/single/featured-image.php:9

@@ -87,10 +87,6 @@
 
 	// Comments.
 	&-comments {
-
-		.author-box ~ &,
-		.after-entry ~ & {
-			margin-top: 0;
-		}
+		width: 100%;
 	}
 }
