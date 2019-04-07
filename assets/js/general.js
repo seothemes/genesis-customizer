@@ -1,5 +1,7 @@
 (function (document, $) {
 
+    var genesisMenuParams = typeof genesis_responsive_menu === 'undefined' ? '' : genesis_responsive_menu;
+
     /**
      * Hide/show mega menu.
      */
@@ -12,7 +14,7 @@
     megaMenu.removeClass('hide');
     megaMenu.fadeOut(0);
 
-    if ( navSecondary.length) {
+    if (navSecondary.length) {
         megaMenu.insertAfter(navSecondary);
     }
 
@@ -57,6 +59,45 @@
     if (menuItem.hasClass('ghost')) {
         menuItem.removeClass('ghost');
         menuItem.find('span').addClass('ghost');
+    }
+
+
+    /**
+     * Logo above header widgets alignment.
+     */
+    if ($('body').hasClass('has-logo-above')) {
+        $(window).on("load resize", function () {
+            var windowWidth = $(window).innerWidth(),
+                breakpoint = genesisMenuParams.breakpoint,
+                primaryHeaderHeight = $('.primary-header').outerHeight(),
+                navPrimaryHeight = $('.nav-primary').outerHeight(true),
+                headerLeft = $('.header-left'),
+                headerRight = $('.header-right');
+
+            if (windowWidth > breakpoint) {
+                headerLeft.css({
+                    'position': 'absolute',
+                    'left': '0',
+                    'bottom': ((primaryHeaderHeight - navPrimaryHeight) - (headerLeft.outerHeight() / 2)) + 'px',
+                });
+                headerRight.css({
+                    'position': 'absolute',
+                    'right': '0',
+                    'bottom': ((primaryHeaderHeight - navPrimaryHeight) - (headerRight.outerHeight() / 2)) + 'px',
+                });
+            } else {
+                headerLeft.css({
+                    'position': 'relative',
+                    'left': 'auto',
+                    'bottom': 'auto',
+                });
+                headerRight.css({
+                    'position': 'relative',
+                    'right': 'auto',
+                    'bottom': 'auto',
+                });
+            }
+        });
     }
 
 })(document, jQuery);

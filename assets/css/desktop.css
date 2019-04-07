@@ -106,7 +106,8 @@
   display: none;
 }
 
-.header-left {
+.has-logo-above .header-left,
+.has-logo-center .header-left {
   margin-right: auto;
 }
 
@@ -116,7 +117,8 @@
   text-align: center;
 }
 
-.header-right {
+.has-logo-above .header-right,
+.has-logo-center .header-right {
   margin-left: auto;
 }
 

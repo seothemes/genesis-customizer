@@ -177,3 +177,13 @@
 	color: #ddd;
 	font-size: 20px;
 }
+
+.customize-control-kirki-radio-buttonset .buttonset .switch-label {
+	line-height: 1.5;
+}
+
+.customize-control-kirki-radio-buttonset .buttonset .switch-input:checked + .switch-label {
+	background-color: #1e8cbe;
+	color: #fff;
+	text-shadow: 0 1px 3px #069;
+}

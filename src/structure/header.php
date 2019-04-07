@@ -121,7 +121,7 @@ function primary_header_open() {
 	] );
 }
 
-add_action( 'genesis_after_header_wrap', __NAMESPACE__ . '\primary_header_close', 0 );
+add_action( 'genesis_after_header_wrap', __NAMESPACE__ . '\primary_header_close', 5 );
 /**
  * Description of expected behavior.
  *

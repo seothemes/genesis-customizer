@@ -16,7 +16,11 @@
 .header-left {
 
 	@include mq(m) {
-		margin-right: auto;
+
+		.has-logo-above &,
+		.has-logo-center & {
+			margin-right: auto;
+		}
 
 		.has-logo-side & {
 			margin-right: auto;
@@ -39,7 +43,11 @@
 	text-align: right;
 
 	@include mq(m) {
-		margin-left: auto;
+
+		.has-logo-above &,
+		.has-logo-center & {
+			margin-left: auto;
+		}
 
 		.has-logo-side & {
 			margin-right: auto;

@@ -73,15 +73,15 @@ msgstr ""
 msgid "Entry Title Link Hover"
 msgstr ""
 
-#: config/archive/entry.php:46, config/single/entry.php:39
+#: config/archive/entry.php:46, config/single/entry.php:43
 msgid "Entry Title Typography"
 msgstr ""
 
-#: config/archive/entry.php:69, config/single/entry.php:62
+#: config/archive/entry.php:69, config/single/entry.php:66
 msgid "Entry Meta Typography"
 msgstr ""
 
-#: config/archive/entry.php:92, config/single/entry.php:85
+#: config/archive/entry.php:92, config/single/entry.php:89
 msgid "Entry Spacing"
 msgstr ""
 
