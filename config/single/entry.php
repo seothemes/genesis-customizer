@@ -119,4 +119,27 @@ return [
 			],
 		],
 	],
+	[
+		'type'     => 'custom',
+		'settings' => 'divider-30093',
+		'default'  => '<hr>',
+	],
+	[
+		'type'     => 'select',
+		'settings' => 'list-style',
+		'label'    => __( 'List style', 'genesis-customizer' ),
+		'default'  => 'disc',
+		'choices'  => [
+			'circle' => __( 'Circle', 'genesis-customizer' ),
+			'disc'   => __( 'Disc', 'genesis-customizer' ),
+			'square' => __( 'Square', 'genesis-customizer' ),
+			'none'   => __( 'None', 'genesis-customizer' ),
+		],
+		'output'   => [
+			[
+				'element'  => '.entry-content li',
+				'property' => 'list-style-type',
+			],
+		],
+	],
 ];

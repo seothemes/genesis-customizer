@@ -20,13 +20,12 @@ function build_gradients( $angle, $color_1, $color_2 ) {
 	return $styles;
 }
 
-add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_gradients', 999 );
 /**
  * Build & enqueue the complete CSS for headers.
  *
  * @return void
  */
-function enqueue_gradients() {
+function generate_gradient_css() {
 	$css = '';
 
 	// Buttons.
@@ -52,7 +51,7 @@ function enqueue_gradients() {
 	}
 
 	if ( _is_module_enabled( 'extra-widgets' ) ) {
-		
+
 		// Above Footer.
 		$above_footer_colors = _get_value( 'footer_above_gradient' );
 		$above_footer_angle  = _get_value( 'footer_above_angle' );
@@ -60,6 +59,56 @@ function enqueue_gradients() {
 		$css .= '.above-footer:before{' . build_gradients( $above_footer_angle, $above_footer_colors['left'], $above_footer_colors['right'] ) . '}';
 	}
 
-	// Print CSS.
-	wp_add_inline_style( _get_handle() . '-all', $css );
+	return $css;
+}
+
+add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\gradient_css_output' );
+/**
+ * Outputs Additional JS to site footer.
+ *
+ * @since  1.0.0
+ *
+ * @return void
+ */
+function gradient_css_output() {
+	$css    = generate_gradient_css();
+	$handle = _get_handle() . '-gradient';
+
+	if ( is_customize_preview() ) {
+		wp_register_style( $handle, false );
+		wp_enqueue_style( $handle );
+		wp_add_inline_style( $handle, $css );
+
+	} else {
+		wp_enqueue_style(
+			$handle,
+			admin_url( 'admin-ajax.php' ) . '?action=gradient_css&wpnonce=' . wp_create_nonce( 'gradient-css-nonce' ),
+			[],
+			_get_version(),
+			'all'
+		);
+	}
+}
+
+add_action( 'wp_ajax_gradient_css', __NAMESPACE__ . '\gradient_css' );
+add_action( 'wp_ajax_nopriv_gradient_css', __NAMESPACE__ . '\gradient_css' );
+/**
+ * Load the gradient CSS with ajax.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function gradient_css() {
+	$nonce = $_REQUEST['wpnonce'];
+
+	if ( ! wp_verify_nonce( $nonce, 'gradient-css-nonce' ) ) {
+		die( __( 'Invalid nonce.', 'genesis-customizer' ) );
+
+	} else {
+		header( "Content-type: text/css; charset: UTF-8" );
+		echo generate_gradient_css();
+	}
+
+	exit;
 }

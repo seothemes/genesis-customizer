@@ -4,26 +4,32 @@ namespace GenesisCustomizer;
 
 return [
 	[
-		'type'      => 'multicolor',
-		'settings'  => 'colors',
-		'label'     => __( 'Colors', 'genesis-customizer' ),
-		'choices'   => [
+		'type'     => 'multicolor',
+		'settings' => 'colors',
+		'label'    => __( 'Colors', 'genesis-customizer' ),
+		'choices'  => [
 			'text'         => __( 'Text', 'genesis-customizer' ),
 			'text-hover'   => __( 'Text Hover', 'genesis-customizer' ),
 			'border'       => __( 'Border', 'genesis-customizer' ),
 			'border-hover' => __( 'Border Hover', 'genesis-customizer' ),
 		],
-		'default'   => [
+		'default'  => [
 			'text'         => _get_color( 'white' ),
 			'text-hover'   => _get_color( 'white' ),
 			'border'       => '',
 			'border-hover' => '',
 		],
-		'output'    => [
+		'output'   => [
 			[
 				'choice'   => 'text',
 				'element'  => _get_elements( 'button' ),
 				'property' => 'color',
+			],
+			[
+				'choice'   => 'text',
+				'element'  => '.editor-styles-wrapper .wp-block-button__link',
+				'property' => 'color',
+				'context'  => [ 'editor' ],
 			],
 			[
 				'choice'   => 'text-hover',
@@ -48,16 +54,24 @@ return [
 		'label'     => __( 'Background Gradient', 'genesis-customizer' ),
 		'transport' => 'refresh',
 		'choices'   => [
-			'left'         => __( 'Left', 'genesis-customizer' ),
-			'right'        => __( 'Right', 'genesis-customizer' ),
-			'left-hover'   => __( 'Left Hover', 'genesis-customizer' ),
-			'right-hover'  => __( 'Right Hover', 'genesis-customizer' ),
+			'left'        => __( 'Left', 'genesis-customizer' ),
+			'right'       => __( 'Right', 'genesis-customizer' ),
+			'left-hover'  => __( 'Left Hover', 'genesis-customizer' ),
+			'right-hover' => __( 'Right Hover', 'genesis-customizer' ),
 		],
 		'default'   => [
-			'left'         => _get_color( 'text' ),
-			'right'        => _get_color( 'text' ),
-			'left-hover'   => _get_color( 'heading' ),
-			'right-hover'  => _get_color( 'heading' ),
+			'left'        => _get_color( 'text' ),
+			'right'       => _get_color( 'text' ),
+			'left-hover'  => _get_color( 'heading' ),
+			'right-hover' => _get_color( 'heading' ),
+		],
+		'output'    => [
+			[
+				'choice'   => 'left',
+				'element'  => '.editor-styles-wrapper .wp-block-button__link',
+				'property' => 'background-color',
+				'context'  => [ 'editor' ],
+			],
 		],
 	],
 	[
@@ -90,7 +104,11 @@ return [
 		],
 		'output'   => [
 			[
-				'element' => '.button, button, input[type="submit"]',
+				'element' => _get_elements( 'button' ),
+			],
+			[
+				'element' => '.editor-styles-wrapper .wp-block-button__link',
+				'context' => [ 'editor' ],
 			],
 		],
 	],
@@ -180,6 +198,12 @@ return [
 				'element'  => _get_elements( 'button' ),
 				'property' => 'border-radius',
 				'units'    => 'px',
+			],
+			[
+				'element'  => '.editor-styles-wrapper .wp-block-button__link',
+				'property' => 'border-radius',
+				'units'    => 'px',
+				'context'  => [ 'editor' ],
 			],
 		],
 	],

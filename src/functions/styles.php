@@ -44,7 +44,6 @@ function enqueue_main_styles() {
 	wp_enqueue_style( $handle . '-desktop' );
 }
 
-
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_vendor_styles' );
 /**
  * Description of expected behavior.

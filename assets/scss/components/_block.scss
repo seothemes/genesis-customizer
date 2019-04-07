@@ -14,7 +14,10 @@
 	// Button block.
 	&-button {
 
-		&__link {}
+		&__link {
+
+			@include button;
+		}
 	}
 
 	// Categories block.
@@ -43,12 +46,9 @@
 			width: 100%;
 		}
 
-		@include mq(m) {
-			margin-left: $gutter;
-
-			&:first-of-type {
-				margin-left: 0;
-			}
+		&:not(:first-child),
+		&:nth-child(2n) {
+			margin-left: 0;
 		}
 	}
 
@@ -151,6 +151,17 @@
 		&.aligncenter {
 
 			@include margin($spacing--l null);
+		}
+
+		&.is-style-solid-color {
+
+			blockquote {
+				max-width: 100%;
+			}
+		}
+
+		blockquote {
+			border-left: 0;
 		}
 	}
 

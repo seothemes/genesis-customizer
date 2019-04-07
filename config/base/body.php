@@ -22,6 +22,14 @@ return [
 				'property' => 'color',
 			],
 			[
+				'choice'   => 'text',
+				'element'  => [
+					'body .editor-styles-wrapper',
+				],
+				'property' => 'color',
+				'context'  => [ 'editor' ],
+			],
+			[
 				'choice'   => 'background',
 				'element'  => 'body',
 				'property' => 'background-color',
@@ -46,6 +54,13 @@ return [
 		'output'   => [
 			[
 				'element' => 'body',
+			],
+			[
+				'element' => [
+					'body .editor-styles-wrapper',
+					'body .editor-styles-wrapper .editor-post-title__input',
+				],
+				'context' => [ 'editor' ],
 			],
 		],
 	],

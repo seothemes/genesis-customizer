@@ -1,0 +1,7 @@
+.editor-styles-wrapper .wp-block-pullquote.is-style-solid-color blockquote {
+	max-width: 100%;
+}
+
+.wp-block-preformatted pre {
+	padding: 1em;
+}

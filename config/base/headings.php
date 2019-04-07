@@ -19,6 +19,20 @@ return [
 				'element'  => _get_elements( 'heading' ),
 				'property' => 'color',
 			],
+			[
+				'choice'   => 'text',
+				'element'  => [
+					'.editor-styles-wrapper h1',
+					'.editor-styles-wrapper h2',
+					'.editor-styles-wrapper h3',
+					'.editor-styles-wrapper h4',
+					'.editor-styles-wrapper h5',
+					'.editor-styles-wrapper h6',
+					'body .editor-styles-wrapper .editor-post-title__input',
+				],
+				'property' => 'color',
+				'context'  => [ 'editor' ],
+			],
 		],
 	],
 	[
@@ -41,6 +55,18 @@ return [
 		'output'   => [
 			[
 				'element' => _get_elements( 'heading' ),
+			],
+			[
+				'element' => [
+					'.editor-styles-wrapper h1',
+					'.editor-styles-wrapper h2',
+					'.editor-styles-wrapper h3',
+					'.editor-styles-wrapper h4',
+					'.editor-styles-wrapper h5',
+					'.editor-styles-wrapper h6',
+					'body .editor-styles-wrapper .editor-post-title__input',
+				],
+				'context' => [ 'editor' ],
 			],
 		],
 	],
@@ -86,8 +112,8 @@ return [
 		'settings' => 'h1',
 		'label'    => __( 'H1 Font Size', 'genesis-customizer' ),
 		'default'  => [
-			'Mobile'  => _get_size('h1'),
-			'Desktop' => _get_size('h1'),
+			'Mobile'  => _get_size( 'h1' ),
+			'Desktop' => _get_size( 'h1' ),
 		],
 		'output'   => [
 			[
@@ -113,8 +139,8 @@ return [
 		'settings' => 'h2',
 		'label'    => __( 'H2 Font Size', 'genesis-customizer' ),
 		'default'  => [
-			'Mobile'  => _get_size('h2'),
-			'Desktop' => _get_size('h2'),
+			'Mobile'  => _get_size( 'h2' ),
+			'Desktop' => _get_size( 'h2' ),
 		],
 		'output'   => [
 			[
@@ -140,8 +166,8 @@ return [
 		'settings' => 'h3',
 		'label'    => __( 'H3 Font Size', 'genesis-customizer' ),
 		'default'  => [
-			'Mobile'  => _get_size('h3'),
-			'Desktop' => _get_size('h3'),
+			'Mobile'  => _get_size( 'h3' ),
+			'Desktop' => _get_size( 'h3' ),
 		],
 		'output'   => [
 			[
@@ -167,8 +193,8 @@ return [
 		'settings' => 'h4',
 		'label'    => __( 'H4 Font Size', 'genesis-customizer' ),
 		'default'  => [
-			'Mobile'  => _get_size('h4'),
-			'Desktop' => _get_size('h4'),
+			'Mobile'  => _get_size( 'h4' ),
+			'Desktop' => _get_size( 'h4' ),
 		],
 		'output'   => [
 			[
@@ -194,8 +220,8 @@ return [
 		'settings' => 'h5',
 		'label'    => __( 'H5 Font Size', 'genesis-customizer' ),
 		'default'  => [
-			'Mobile'  => _get_size('h5'),
-			'Desktop' => _get_size('h5'),
+			'Mobile'  => _get_size( 'h5' ),
+			'Desktop' => _get_size( 'h5' ),
 		],
 		'output'   => [
 			[
@@ -221,8 +247,8 @@ return [
 		'settings' => 'h6',
 		'label'    => __( 'H6 Font Size', 'genesis-customizer' ),
 		'default'  => [
-			'Mobile'  => _get_size('h6'),
-			'Desktop' => _get_size('h6'),
+			'Mobile'  => _get_size( 'h6' ),
+			'Desktop' => _get_size( 'h6' ),
 		],
 		'output'   => [
 			[

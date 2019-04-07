@@ -1278,6 +1278,35 @@ iframe {
   margin-top: 0;
 }
 
+.wp-block-button__link {
+  display: inline-block;
+  width: auto;
+  font-weight: 600;
+  white-space: normal;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.wp-block-button__link:hover,
+.wp-block-button__link:focus,
+.wp-block-button__link:active {
+  outline: none;
+  text-decoration: none;
+}
+
+.wp-block-button__link:disabled,
+.wp-block-button__link:disabled:hover,
+.wp-block-button__link:disabled:focus {
+  opacity: 0.5;
+  background-color: #b8c2cc;
+  cursor: not-allowed;
+}
+
+.wp-block-column:not(:first-child),
+.wp-block-column:nth-child(2n) {
+  margin-left: 0;
+}
+
 .wp-block-embed {
   margin-top: 1.6rem;
   margin-bottom: 1.6rem;
@@ -1322,6 +1351,14 @@ iframe {
 .wp-block-pullquote.aligncenter {
   margin-top: 3.2rem;
   margin-bottom: 3.2rem;
+}
+
+.wp-block-pullquote.is-style-solid-color blockquote {
+  max-width: 100%;
+}
+
+.wp-block-pullquote blockquote {
+  border-left: 0;
 }
 
 .gallery {

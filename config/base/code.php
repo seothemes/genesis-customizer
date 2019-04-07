@@ -22,9 +22,21 @@ return [
 				'property' => 'color',
 			],
 			[
+				'choice'   => 'text',
+				'element'  => '.wp-block-code, .wp-block-preformatted pre',
+				'property' => 'color',
+				'context'  => [ 'editor' ],
+			],
+			[
 				'choice'   => 'background',
 				'element'  => 'pre, code, kbd, samp',
 				'property' => 'background-color',
+			],
+			[
+				'choice'   => 'background',
+				'element'  => '.wp-block-code, .wp-block-preformatted pre',
+				'property' => 'background-color',
+				'context'  => [ 'editor' ],
 			],
 		],
 	],

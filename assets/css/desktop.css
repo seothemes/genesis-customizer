@@ -150,14 +150,6 @@
   margin-left: auto;
 }
 
-.wp-block-column {
-  margin-left: 3rem;
-}
-
-.wp-block-column:first-of-type {
-  margin-left: 0;
-}
-
 .has-logo-side .header-search-toggle {
   display: none;
 }

@@ -15,23 +15,23 @@ return [
 		'default'  => [
 			'border'     => _get_color( 'text' ),
 			'text'       => '',
-			'background' => '',
+			'background' => _get_color( 'white' ),
 		],
 		'output'   => [
 			[
 				'choice'   => 'border',
 				'element'  => 'blockquote',
-				'property' => 'border-color'
+				'property' => 'border-color',
 			],
 			[
 				'choice'   => 'text',
 				'element'  => 'blockquote',
-				'property' => 'color'
+				'property' => 'color',
 			],
 			[
 				'choice'   => 'background',
 				'element'  => 'blockquote',
-				'property' => 'background-color'
+				'property' => 'background-color',
 			],
 		],
 	],
@@ -46,13 +46,20 @@ return [
 		'label'    => __( 'Typography', 'genesis-customizer' ),
 		'default'  => [
 			'font-family' => '',
-			'font-size'   => '',
+			'font-size'   => _get_size( 'l' ),
 			'variant'     => '',
 			'line-height' => '',
 		],
 		'output'   => [
 			[
-				'element' => 'blockquote',
+				'element' => [
+					'blockquote',
+					'.wp-block-pullquote.is-style-solid-color blockquote p',
+				],
+			],
+			[
+				'element'       => '.editor-styles-wrapper .wp-block-pullquote blockquote .editor-rich-text p',
+				'context'       => [ 'editor' ],
 			],
 		],
 	],

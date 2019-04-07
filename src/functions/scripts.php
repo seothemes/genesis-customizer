@@ -44,7 +44,6 @@ function enqueue_scripts() {
 	);
 	wp_enqueue_script( $handle );
 
-
 	$button = _get_value( 'menus_menu-toggle_text' );
 	$button = $button ? sprintf( '<span class="menu-toggle-text">%s</span>', $button ) : sprintf( '<span class="screen-reader-text">%s</span>', __( 'Toggle Menu', 'genesis-customizer' ) );
 
