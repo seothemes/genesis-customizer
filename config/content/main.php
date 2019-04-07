@@ -8,7 +8,7 @@ return [
 		'settings'    => 'content-sidebar-wrap-width',
 		'label'       => __( 'Content Area Width', 'genesis-customizer' ),
 		'description' => __( 'Controls the maximum width of the main content area. The main content area consists of the content and sidebars.', 'genesis-customizer' ),
-		'default'     => '1024',
+		'default'     => '1152',
 		'choices'     => [
 			'min'  => 512,
 			'max'  => 1920,
@@ -18,10 +18,21 @@ return [
 			[
 				'element'  => [
 					'.content-sidebar-wrap',
-					'.page-template-blocks .content',
+					'.full-width-content .content',
 				],
 				'property' => 'max-width',
 				'units'    => 'px',
+			],
+			[
+				'element'         => [
+					'.center-content .content',
+				],
+				'property'        => 'max-width',
+				'value_pattern'   => 'calc($px - sidebarPrimaryWidthpx - gutterWidthpx)',
+				'pattern_replace' => [
+					'sidebarPrimaryWidth' => 'genesis-customizer_sidebars_primary_width',
+					'gutterWidth'         => 'genesis-customizer_base_global_gutter',
+				],
 			],
 		],
 	],
