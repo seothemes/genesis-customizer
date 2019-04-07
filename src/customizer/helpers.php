@@ -43,9 +43,9 @@ function _get_default_sections() {
 			'menu-toggle'     => __( 'Menu Toggle', 'genesis-customizer' ),
 			'sub-menu'        => __( 'Sub Menu', 'genesis-customizer' ),
 			'sub-menu-toggle' => __( 'Sub Menu Toggle', 'genesis-customizer' ),
-			'footer'          => __( 'Footer', 'genesis-customizer' ),
+			'footer'          => __( 'Footer Menu', 'genesis-customizer' ),
 		],
-		'hero'        => [
+		'hero'     => [
 			'settings' => __( 'Settings', 'genesis-customizer' ),
 		],
 		'content'  => [
@@ -75,13 +75,9 @@ function _get_default_sections() {
 			'pagination'  => __( 'Pagination', 'genesis-customizer' ),
 		],
 		'footer'   => [
-			'site-footer'    => __( 'Site Footer', 'genesis-customizer' ),
-			'footer-widgets' => __( 'Footer Widgets', 'genesis-customizer' ),
-			'footer-credits' => __( 'Footer Credits', 'genesis-customizer' ),
+			'site-footer' => __( 'Site Footer', 'genesis-customizer' ),
+			'widgets'     => __( 'Footer Widgets', 'genesis-customizer' ),
+			'credits'     => __( 'Footer Credits', 'genesis-customizer' ),
 		],
 	];
-}
-
-function _get_default_fields() {
-
 }

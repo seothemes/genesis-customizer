@@ -52,13 +52,6 @@ return [
 				'property' => 'color',
 			],
 		],
-		'required' => [
-			[
-				'setting'  => _get_setting( 'enabled' ),
-				'value'    => true,
-				'operator' => '===',
-			],
-		],
 	],
 	[
 		'type'     => 'custom',
@@ -92,13 +85,6 @@ return [
 				'media_query' => _get_media_query(),
 			],
 		],
-		'required' => [
-			[
-				'setting'  => _get_setting( 'enabled' ),
-				'value'    => true,
-				'operator' => '===',
-			],
-		],
 	],
 	[
 		'type'     => 'custom',
@@ -122,13 +108,6 @@ return [
 				'property' => 'justify-content',
 			],
 		],
-		'required' => [
-			[
-				'setting'  => _get_setting( 'enabled' ),
-				'value'    => true,
-				'operator' => '===',
-			],
-		],
 	],
 	[
 		'type'     => 'select',
@@ -139,13 +118,6 @@ return [
 			'text'   => __( 'Text', 'genesis-customizer' ),
 			'widget' => __( 'Widget Area', 'genesis-customizer' ),
 		],
-		'required' => [
-			[
-				'setting'  => _get_setting( 'enabled' ),
-				'value'    => true,
-				'operator' => '===',
-			],
-		],
 	],
 	[
 		'type'     => 'textarea',
@@ -153,11 +125,6 @@ return [
 		'label'    => __( 'Text', 'genesis-customizer' ),
 		'default'  => '[footer_copyright] &middot; <a href="https://mydomain.com">My Custom Link</a> &middot; Built with <a href="https://genesiscustomizer.com" title="Genesis Customizer">Genesis Customizer</a>',
 		'required' => [
-			[
-				'setting'  => _get_setting( 'enabled' ),
-				'value'    => true,
-				'operator' => '===',
-			],
 			[
 				'setting'  => _get_setting( 'type' ),
 				'value'    => 'text',
@@ -178,8 +145,8 @@ return [
 	],
 	[
 		'type'     => 'slider',
-		'settings' => 'spacing',
-		'label'    => __( 'Spacing', 'genesis-customizer' ),
+		'settings' => 'spacing-top',
+		'label'    => __( 'Spacing Top', 'genesis-customizer' ),
 		'default'  => _get_size( 'xl', '' ),
 		'choices'  => [
 			'min'  => 0,
@@ -192,17 +159,23 @@ return [
 				'property' => 'padding-top',
 				'units'    => 'px',
 			],
+		],
+	],
+	[
+		'type'     => 'slider',
+		'settings' => 'spacing',
+		'label'    => __( 'Spacing Bottom', 'genesis-customizer' ),
+		'default'  => _get_size( 'xl', '' ),
+		'choices'  => [
+			'min'  => 0,
+			'max'  => 300,
+			'step' => 1,
+		],
+		'output'   => [
 			[
 				'element'  => '.footer-credits',
 				'property' => 'padding-bottom',
 				'units'    => 'px',
-			],
-		],
-		'required' => [
-			[
-				'setting'  => _get_setting( 'enabled' ),
-				'value'    => true,
-				'operator' => '===',
 			],
 		],
 	],

@@ -27,6 +27,8 @@ add_action( 'genesis_before', __NAMESPACE__ . '\reposition_menus' );
  * @return void
  */
 function reposition_menus() {
+
+	// Nav primary.
 	remove_action( 'genesis_after_header', 'genesis_do_nav' );
 
 	$header_layout = _get_value( 'header_primary_layout' );
@@ -41,8 +43,20 @@ function reposition_menus() {
 		add_action( 'genesis_after_title_area', 'genesis_do_nav' );
 	}
 
+	// Nav secondary.
 	remove_action( 'genesis_after_header', 'genesis_do_subnav' );
 	add_action( 'genesis_after_header_wrap', 'genesis_do_subnav' );
+
+	// Nav footer.
+	$value = _get_value( 'menus_footer_position' );
+	$position  = [
+		'above-footer'  => [ 'genesis_footer', 9 ],
+		'above-widgets' => [ 'genesis_footer', 10 ],
+		'above-credits' => [ 'genesis_footer', 12 ],
+		'below-credits' => [ 'genesis_footer', 14 ],
+	];
+
+	add_action( $position[$value][0], __NAMESPACE__ . '\add_footer_menu', $position[$value][1] );
 }
 
 add_filter( 'genesis_attr_nav-primary', __NAMESPACE__ . '\menu_alignment' );
@@ -66,7 +80,6 @@ function menu_alignment( $atts ) {
 	return $atts;
 }
 
-add_action( 'genesis_footer', __NAMESPACE__ . '\add_footer_menu', 12 );
 /**
  * Description of expected behavior.
  *

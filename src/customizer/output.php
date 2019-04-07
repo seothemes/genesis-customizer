@@ -54,8 +54,8 @@ function enqueue_gradients() {
 	if ( _is_module_enabled( 'extra-widgets' ) ) {
 		
 		// Above Footer.
-		$above_footer_colors = _get_value( 'footer_above-footer_gradient' );
-		$above_footer_angle  = _get_value( 'footer_above-footer_angle' );
+		$above_footer_colors = _get_value( 'footer_above_gradient' );
+		$above_footer_angle  = _get_value( 'footer_above_angle' );
 
 		$css .= '.above-footer:before{' . build_gradients( $above_footer_angle, $above_footer_colors['left'], $above_footer_colors['right'] ) . '}';
 	}

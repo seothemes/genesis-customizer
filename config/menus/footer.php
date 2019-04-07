@@ -4,6 +4,23 @@ namespace GenesisCustomizer;
 
 return [
 	[
+		'type'     => 'select',
+		'settings' => 'position',
+		'label'    => __( 'Position', 'genesis-customizer' ),
+		'default'  => 'above-credits',
+		'choices'  => [
+			'above-footer'  => __( 'Above Site Footer', 'genesis-customizer' ),
+			'above-widgets' => __( 'Above Footer Widgets', 'genesis-customizer' ),
+			'above-credits' => __( 'Above Footer Credits', 'genesis-customizer' ),
+			'below-credits' => __( 'Below Footer Credits', 'genesis-customizer' ),
+		],
+	],
+	[
+		'type'     => 'custom',
+		'settings' => 'divider-3983',
+		'default'  => '<hr>',
+	],
+	[
 		'type'     => 'custom',
 		'settings' => 'tip-1',
 		'default'  => sprintf(
@@ -25,7 +42,7 @@ return [
 			'link-hover' => __( 'Link Hover', 'genesis-customizer' ),
 		],
 		'default'  => [
-			'background' => _get_color( 'border' ),
+			'background' => '',
 			'border'     => '',
 			'link'       => '',
 			'link-hover' => '',
@@ -111,8 +128,8 @@ return [
 	],
 	[
 		'type'     => 'slider',
-		'settings' => 'spacing',
-		'label'    => __( 'Vertical Spacing', 'genesis-customizer' ),
+		'settings' => 'spacing-top',
+		'label'    => __( 'Spacing Top', 'genesis-customizer' ),
 		'default'  => _get_size( 'xl', '' ),
 		'choices'  => [
 			'min'  => 0,
@@ -121,9 +138,27 @@ return [
 		],
 		'output'   => [
 			[
-				'element'       => '.nav-footer',
-				'property'      => 'padding',
-				'value_pattern' => '$px 0',
+				'element'  => '.nav-footer',
+				'property' => 'padding-top',
+				'units'    => 'px',
+			],
+		],
+	],
+	[
+		'type'     => 'slider',
+		'settings' => 'spacing-bottom',
+		'label'    => __( 'Spacing Bottom', 'genesis-customizer' ),
+		'default'  => _get_size( 'xl', '' ),
+		'choices'  => [
+			'min'  => 0,
+			'max'  => 200,
+			'step' => 1,
+		],
+		'output'   => [
+			[
+				'element'  => '.nav-footer',
+				'property' => 'padding-bottom',
+				'units'    => 'px',
 			],
 		],
 	],
@@ -173,7 +208,7 @@ return [
 	[
 		'type'     => 'dimensions',
 		'settings' => 'border-width',
-		'label'    => __( 'Border', 'genesis-customizer' ),
+		'label'    => __( 'Border Width', 'genesis-customizer' ),
 		'default'  => [
 			'border-top-width'    => '',
 			'border-bottom-width' => '',

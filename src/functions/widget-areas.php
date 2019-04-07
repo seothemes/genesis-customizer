@@ -58,6 +58,11 @@ function register_widget_areas() {
 			'description' => __( 'This is the Mega Menu widget area.', 'genesis-customizer' ),
 			'module'      => 'mega-menu',
 		],
+		'above-content'        => [
+			'name'        => __( 'Above Content', 'genesis-customizer' ),
+			'description' => __( 'This is the Above Content widget area.', 'genesis-customizer' ),
+			'module'      => 'extra-widgets',
+		],
 		'after-entry'         => [
 			'name'        => __( 'After Entry', 'genesis-customizer' ),
 			'description' => __( 'Widgets in this widget area will display after single entries.', 'genesis-customizer' ),
@@ -69,6 +74,11 @@ function register_widget_areas() {
 		'sidebar-alt'         => [
 			'name'        => __( 'Secondary Sidebar', 'genesis-customizer' ),
 			'description' => __( 'This is the sidebar widget area if you are using a three column site layout option.', 'genesis-customizer' ),
+		],
+		'below-content'        => [
+			'name'        => __( 'Below Content', 'genesis-customizer' ),
+			'description' => __( 'This is the Below Content widget area.', 'genesis-customizer' ),
+			'module'      => 'extra-widgets',
 		],
 		'above-footer'        => [
 			'name'        => __( 'Above Footer', 'genesis-customizer' ),
@@ -90,60 +100,6 @@ function register_widget_areas() {
 	}
 }
 
-add_action( 'genesis_after_title_area', __NAMESPACE__ . '\header_right', 15 );
-/**
- * Description of expected behavior.
- *
- * @since 1.0.0
- *
- * @return void
- */
-function header_right() {
-	$enabled = _get_value( 'header_right_enable' );
-
-	if ( 'hide' === $enabled ) {
-		return;
-	}
-
-	genesis_widget_area( 'header-right-widget', [
-		'before' => '<div class="header-right widget-area ' . $enabled . '">',
-		'after'  => '</div>',
-	] );
-}
-
-add_action( 'genesis_after_entry', __NAMESPACE__ . '\after_entry', 9 );
-/**
- * Description of expected behavior.
- *
- * @since 1.0.0
- *
- * @return void
- */
-function after_entry() {
-	if ( ! is_single() ) {
-		return;
-	}
-
-	genesis_widget_area( 'after-entry', [
-		'before' => '<div class="after-entry widget-area">',
-		'after'  => '</div>',
-	] );
-}
-
-/**
- * Display the Footer Credits widget area.
- *
- * @since 1.1.0
- *
- * @return void
- */
-function display_footer_credits() {
-	genesis_widget_area( 'footer-credits', [
-		'before' => '',
-		'after'  => '',
-	] );
-}
-
 add_action( 'genesis_setup', __NAMESPACE__ . '\register_footer_widgets', 20 );
 /**
  * Description of expected behavior.
@@ -153,7 +109,7 @@ add_action( 'genesis_setup', __NAMESPACE__ . '\register_footer_widgets', 20 );
  * @return void
  */
 function register_footer_widgets() {
-	$setting = _get_value( 'footer_footer-widgets_columns' );
+	$setting = _get_value( 'footer_widgets_columns' );
 	$columns = count( explode( '-', $setting ) );
 	$count   = is_customize_preview() ? 4 : $columns;
 
@@ -175,7 +131,7 @@ add_action( 'genesis_setup', __NAMESPACE__ . '\register_footer_credits', 20 );
  * @return void
  */
 function register_footer_credits() {
-	$footer_credits = _get_value( 'footer_footer-credits_type' );
+	$footer_credits = _get_value( 'footer_credits_type' );
 
 	if ( 'widget' === $footer_credits || is_customize_preview() ) {
 		genesis_register_sidebar( [

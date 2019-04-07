@@ -30,18 +30,20 @@ return [
 		'settings' => 'colors',
 		'label'    => __( 'Colors', 'genesis-customizer' ),
 		'choices'  => [
-			'background' => __( 'Background', 'genesis-customizer' ),
-			'text'       => __( 'Text', 'genesis-customizer' ),
-			'headings'   => __( 'Headings', 'genesis-customizer' ),
-			'links'      => __( 'Links', 'genesis-customizer' ),
+			'background'  => __( 'Background', 'genesis-customizer' ),
+			'text'        => __( 'Text', 'genesis-customizer' ),
+			'headings'    => __( 'Headings', 'genesis-customizer' ),
+			'links'       => __( 'Links', 'genesis-customizer' ),
 			'links-hover' => __( 'Links Hover', 'genesis-customizer' ),
+			'border'      => __( 'Border', 'genesis-customizer' ),
 		],
 		'default'  => [
-			'background' => '',
-			'text'       => '',
-			'headings'   => '',
-			'links'      => '',
+			'background'  => '',
+			'text'        => '',
+			'headings'    => '',
+			'links'       => '',
 			'links-hover' => '',
+			'border'      => '',
 		],
 		'output'   => [
 			[
@@ -75,6 +77,11 @@ return [
 				'choice'   => 'links-hover',
 				'element'  => '.footer-widgets a:hover, .footer-widgets a:focus',
 				'property' => 'color',
+			],
+			[
+				'choice'   => 'border',
+				'element'  => '.footer-widgets',
+				'property' => 'border-color',
 			],
 		],
 	],
@@ -180,6 +187,38 @@ return [
 				'element'  => '.footer-widgets',
 				'property' => 'padding-bottom',
 				'units'    => 'px',
+			],
+		],
+	],
+	[
+		'type'     => 'custom',
+		'settings' => 'divider-8794',
+		'default'  => '<hr>',
+	],
+	[
+		'type'     => 'dimensions',
+		'settings' => 'border-width',
+		'label'    => __( 'Border Width', 'genesis-customizer' ),
+		'default'  => [
+			'border-top-width'    => '',
+			'border-bottom-width' => '',
+		],
+		'choices'  => [
+			'labels' => [
+				'border-top-width'    => __( 'Border Top Width', 'genesis-customizer' ),
+				'border-bottom-width' => __( 'Border Bottom Width', 'genesis-customizer' ),
+			],
+		],
+		'output'   => [
+			[
+				'choice'   => 'border-top-width',
+				'property' => 'border-top-width',
+				'element'  => '.footer-widgets',
+			],
+			[
+				'choice'   => 'border-bottom-width',
+				'property' => 'border-bottom-width',
+				'element'  => '.footer-widgets',
 			],
 		],
 	],

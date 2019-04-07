@@ -104,8 +104,8 @@ function go_pro_fields() {
 		'header_transparent',
 		'hero_settings',
 		'menus_mega',
-		'header_above-header',
-		'footer_above-footer',
+		'header_above',
+		'footer_above',
 	];
 	$message  = sprintf(
 		'<p>%s <strong>%s</strong>%s </p><a href="%s" target="_blank" class="button-primary">%s</a>',

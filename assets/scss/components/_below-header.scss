@@ -1,3 +1,5 @@
 .below-header {
 	width: 100%;
+
+	@include overlay();
 }

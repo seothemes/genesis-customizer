@@ -13,11 +13,25 @@ add_action( 'genesis_before', __NAMESPACE__ . '\footer_credits' );
 function footer_credits() {
 	remove_action( 'genesis_footer', 'genesis_do_footer' );
 
-	$footer_credits = _get_value( 'footer_footer-credits_enabled' );
+	$footer_credits = _get_value( 'footer_credits_enabled' );
 
 	if ( $footer_credits ) {
 		add_action( 'genesis_footer', __NAMESPACE__ . '\footer_credits_div', 13 );
 	}
+}
+
+/**
+ * Display the Footer Credits widget area.
+ *
+ * @since 1.1.0
+ *
+ * @return void
+ */
+function display_footer_credits() {
+	genesis_widget_area( 'footer-credits', [
+		'before' => '',
+		'after'  => '',
+	] );
 }
 
 /**
@@ -35,13 +49,13 @@ function footer_credits_div() {
 
 	genesis_structural_wrap( 'footer-credits', 'open' );
 
-	$type = _get_value( 'footer_footer-credits_type', 'text' );
+	$type = _get_value( 'footer_credits_type', 'text' );
 
 	if ( 'widget' === $type ) {
 		display_footer_credits();
 
 	} else {
-		$text = _get_value( 'footer_footer-credits_text' );
+		$text = _get_value( 'footer_credits_text' );
 
 		printf( '<p>%s</p>', do_shortcode( $text ) );
 	}
@@ -85,7 +99,7 @@ function display_footer_widgets() {
 		return;
 	}
 
-	$settings = _get_value( 'footer_footer-widgets_columns' );
+	$settings = _get_value( 'footer_widgets_columns' );
 
 	if ( '0' === $settings ) {
 		return;
@@ -121,3 +135,4 @@ function display_footer_widgets() {
 		'context' => 'footer-widgets',
 	] );
 }
+
