@@ -195,7 +195,7 @@
          * Admin bar site header spacing.
          */
 
-        if (body.hasClass('admin-bar') && hasStickyHeader) {
+        if (body.hasClass('admin-bar') && (hasStickyHeader || hasTransparentHeader)) {
             siteHeader.css('top', adminBar);
         } else {
             siteHeader.css('top', 0);

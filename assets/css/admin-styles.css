@@ -2,6 +2,17 @@
 .components-panel .edit-post-meta-boxes-area #poststuff h2.hndle {
 	color: #23282d;
 	font-size: 13px;
+	border-bottom: 0;
+}
+
+
+.components-panel .edit-post-meta-boxes-area #poststuff h2.hndle:focus:not(:disabled):not([aria-disabled=true]) {
+	outline-offset: -2px;
+	outline: 1px dotted #555d66;
+}
+
+.edit-post-meta-boxes-area .postbox>.inside {
+	border-bottom: 0;
 }
 
 .components-panel .toggle-indicator {

@@ -7,6 +7,17 @@ namespace GenesisCustomizer;
  *
  * @since 1.0.0
  *
+ * @return bool
+ */
+function _is_debug_mode() {
+	return defined( 'WP_DEBUG' ) && WP_DEBUG;
+}
+
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
  * @param $value
  *
  * @return void

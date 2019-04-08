@@ -2,7 +2,7 @@
 
 namespace GenesisCustomizer;
 
-add_action( 'genesis_before', __NAMESPACE__ . '\footer_credits' );
+add_action( 'genesis_meta', __NAMESPACE__ . '\footer_credits', 20 );
 /**
  * Description of expected behavior.
  *
@@ -136,3 +136,21 @@ function display_footer_widgets() {
 	] );
 }
 
+add_action( 'genesis_meta', __NAMESPACE__ . '\hide_site_footer' );
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function hide_site_footer() {
+	if ( _is_pro_active() && get_post_meta( get_the_ID(), 'footer_disabled', true ) ) {
+		remove_action( 'genesis_meta', __NAMESPACE__ . '\footer_credits', 20 );
+		remove_action( 'genesis_footer', __NAMESPACE__ . '\display_footer_widgets', 11 );
+		remove_action( 'genesis_footer', __NAMESPACE__ . '\above_footer', 11 );
+		remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );
+		remove_action( 'genesis_footer', 'genesis_do_footer' );
+		remove_action( 'genesis_footer', 'genesis_footer_markup_close', 15 );
+	}
+}

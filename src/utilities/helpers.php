@@ -9,7 +9,7 @@ namespace GenesisCustomizer;
  *
  * @param $header
  *
- * @return array|null
+ * @return array|string|null
  */
 function _get_data( $header = '' ) {
 	static $data = null;
@@ -125,7 +125,7 @@ function _get_asset_version( $file ) {
 	$cache_busting = _get_value( 'general_performance_cache-busting', false );
 	$modified      = filemtime( _get_path() . 'assets' . DIRECTORY_SEPARATOR . $file );
 
-	return defined( 'WP_DEBUG' ) && WP_DEBUG || $cache_busting ? $modified : _get_version();
+	return _is_debug_mode() || $cache_busting ? $modified : _get_version();
 }
 
 /**

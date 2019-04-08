@@ -60,13 +60,16 @@ remove_theme_support( 'genesis-menus' );
 remove_action( 'genesis_before_loop', 'genesis_do_breadcrumbs' );
 
 // Removes footer widgets.
-remove_action( 'genesis_footer', __NAMESPACE__ . '\display_footer_widgets', 12 );
+remove_action( 'genesis_footer', __NAMESPACE__ . '\display_footer_widgets', 11 );
 remove_action( 'genesis_footer', __NAMESPACE__ . '\above_footer', 11 );
 
 // Removes site footer elements.
 remove_action( 'genesis_footer', 'genesis_footer_markup_open', 5 );
 remove_action( 'genesis_footer', 'genesis_do_footer' );
 remove_action( 'genesis_footer', 'genesis_footer_markup_close', 15 );
+
+// Remove footer credits.
+remove_action( 'genesis_meta', __NAMESPACE__ . '\footer_credits', 20 );
 
 // Remove hero section.
 \remove_theme_support( 'hero-section' );

@@ -134,6 +134,12 @@ function _has_sticky_header() {
 		return false;
 	}
 
+	$disabled = get_post_meta( get_the_ID(), 'sticky_disabled', true );
+
+	if ( $disabled ) {
+		return false;
+	}
+
 	return _get_value( 'header_sticky_enabled', '' );
 }
 
@@ -149,16 +155,6 @@ function _has_transparent_header() {
 		return false;
 	}
 
-	$exclude = [
-		'blocks.php',
-		'beaver-builder.php',
-		'elementor_header_footer',
-	];
-
-	if ( is_page_template( $exclude ) ) {
-		return false;
-	}
-
 	$layout = _get_value( 'header_primary_layout' );
 
 	if ( 'has-logo-side' === $layout ) {
@@ -166,8 +162,15 @@ function _has_transparent_header() {
 	}
 
 	$hero_settings = _get_value( 'hero_settings_enable' );
+	$hero_disabled = get_post_meta( get_the_ID(), 'hero_disabled', true );
 
-	if ( ! hero_enabled( $hero_settings ) ) {
+	if ( ! hero_enabled( $hero_settings ) && ! $hero_disabled ) {
+		return false;
+	}
+
+	$disabled = get_post_meta( get_the_ID(), 'transparent_disabled', true );
+
+	if ( $disabled ) {
 		return false;
 	}
 

@@ -3,7 +3,7 @@
 namespace GenesisCustomizer;
 
 register_default_headers( [
-	'sunset' => [
+	'default' => [
 		'url'           => _get_url() . 'assets/img/hero-section.jpg',
 		'thumbnail_url' => _get_url() . 'assets/img/hero-section.jpg',
 		'description'   => __( 'Default image', 'genesis-customizer' ),
@@ -25,13 +25,12 @@ add_filter( 'theme_mod_header_image', __NAMESPACE__ . '\custom_header', 25 );
 function custom_header() {
 	$id      = '';
 	$url     = '';
-	$custom  = _get_value( 'header_hero-section_background' );
 	$default = get_theme_support( 'custom-header' )[0]['default_image'];
-	$default = isset( $custom['background-image'] ) ? $custom['background-image'] : $default;
+	$feature = _get_value( 'hero_settings_featured-image', true );
 
-	/// TODO: Add rules for every conditional in template-loader.php.
-	if ( class_exists( 'WooCommerce' ) && is_shop() ) {
-		$id = wc_get_page_id( 'shop' );
+	// TODO: Add rules for every conditional in template-loader.php.
+	if ( _is_plugin_active( 'woocommerce' ) && \is_shop() ) {
+		$id = \wc_get_page_id( 'shop' );
 
 	} elseif ( is_front_page() ) {
 		$id = get_option( 'page_on_front' );
@@ -52,42 +51,24 @@ function custom_header() {
 		$url = get_theme_mod( 'term-' . get_the_category()[0]->cat_ID, $default );
 
 	} elseif ( is_search() ) {
-		$url = get_theme_mod( 'search-image', $default );
+		$id = get_page_by_path( 'search' );
 
 	} elseif ( is_404() ) {
-		$url = get_theme_mod( '404-image', $default );
+		$id = get_page_by_path( 'error-404' );
 
 	} elseif ( is_singular() ) {
 		$id = get_the_id();
 	}
 
-	if ( is_object( $id ) ) {
+	if ( is_object( $id && $feature ) ) {
 		$url = wp_get_attachment_image_url( $id->ID, 'hero-section' );
 
-	} elseif ( $id ) {
+	} elseif ( $id && $feature ) {
 		$url = get_the_post_thumbnail_url( $id, 'hero-section' );
 
 	} elseif ( ! $url ) {
 		$url = $default;
 	}
 
-	$settings = get_post_meta( $id, '_hero_section', true );
-
-	if ( ! $url || 'site_default' === $settings ) {
-		$url = $default;
-
-	} elseif ( 'none' === $settings ) {
-		$url = false;
-	}
-
-	if ( $url ) {
-		$selector = get_theme_support( 'custom-header', 'header-selector' );
-		$value    = 'no_image' === $settings ? 'none' : 'url(%s)';
-
-		return $url;
-
-//		return printf( '<style type="text/css">' . esc_attr( $selector ) . '{background-image:' . $value . '}</style>' . "\n", esc_url( $url ) );
-	} else {
-		return '';
-	}
+	return $url;
 }

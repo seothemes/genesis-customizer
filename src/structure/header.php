@@ -198,3 +198,19 @@ function site_title_link( $title, $inside, $wrap ) {
 
 	return str_replace( $inside, $link, $title );
 }
+
+add_action('genesis_meta', __NAMESPACE__ . '\hide_site_header');
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function hide_site_header() {
+	if ( _is_pro_active() && get_post_meta( get_the_ID(), 'header_disabled', true ) ) {
+		remove_action( 'genesis_header', 'genesis_header_markup_open', 5 );
+		remove_action( 'genesis_header', 'genesis_do_header' );
+		remove_action( 'genesis_header', 'genesis_header_markup_close', 15 );
+	}
+}
