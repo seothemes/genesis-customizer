@@ -44,6 +44,7 @@ function _get_default_sections() {
 			'sub-menu'        => __( 'Sub Menu', 'genesis-customizer' ),
 			'sub-menu-toggle' => __( 'Sub Menu Toggle', 'genesis-customizer' ),
 			'footer'          => __( 'Footer Menu', 'genesis-customizer' ),
+			'footer-widgets'  => __( 'Footer Widgets Menu', 'genesis-customizer' ),
 		],
 		'hero'     => [
 			'settings' => __( 'Settings', 'genesis-customizer' ),

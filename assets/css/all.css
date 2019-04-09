@@ -294,6 +294,7 @@ ol,
 dl {
   margin: 0 0 1.6rem;
   padding: 0;
+  list-style-type: none;
   list-style-position: inside;
 }
 
@@ -1520,6 +1521,14 @@ iframe {
 
 .footer-widgets-area {
   width: 100%;
+}
+
+.footer-widgets .menu {
+  display: block;
+}
+
+.footer-widgets .menu-item {
+  margin: 0;
 }
 
 .footer-credits {
