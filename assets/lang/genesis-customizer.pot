@@ -209,7 +209,7 @@ msgstr ""
 msgid "Typography"
 msgstr ""
 
-#: config/base/blockquotes.php:81, config/footer/widgets.php:208, config/header/primary.php:127, config/menus/footer.php:218, config/menus/secondary.php:183
+#: config/base/blockquotes.php:81, config/footer/widgets.php:244, config/header/primary.php:127, config/menus/footer.php:218, config/menus/secondary.php:183
 msgid "Border Top Width"
 msgstr ""
 
@@ -217,7 +217,7 @@ msgstr ""
 msgid "Border Right Width"
 msgstr ""
 
-#: config/base/blockquotes.php:83, config/footer/widgets.php:209, config/header/primary.php:128, config/menus/footer.php:219, config/menus/secondary.php:184
+#: config/base/blockquotes.php:83, config/footer/widgets.php:245, config/header/primary.php:128, config/menus/footer.php:219, config/menus/secondary.php:184
 msgid "Border Bottom Width"
 msgstr ""
 
@@ -289,7 +289,7 @@ msgstr ""
 msgid "Border Radius"
 msgstr ""
 
-#: config/base/buttons.php:213, config/base/forms.php:154, config/footer/widgets.php:201, config/menus/footer.php:211, config/menus/menu-toggle.php:163
+#: config/base/buttons.php:213, config/base/forms.php:154, config/footer/widgets.php:237, config/menus/footer.php:211, config/menus/menu-toggle.php:163
 msgid "Border Width"
 msgstr ""
 
@@ -575,6 +575,14 @@ msgstr ""
 
 #: config/footer/widgets.php:142, config/header/primary.php:93
 msgid "Container Width"
+msgstr ""
+
+#: config/footer/widgets.php:196
+msgid "Widget Spacing Top"
+msgstr ""
+
+#: config/footer/widgets.php:214
+msgid "Widget Spacing Bottom"
 msgstr ""
 
 #: config/header/primary.php:9

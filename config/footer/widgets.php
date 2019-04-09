@@ -158,7 +158,7 @@ return [
 		'type'     => 'slider',
 		'settings' => 'spacing-top',
 		'label'    => __( 'Spacing Top', 'genesis-customizer' ),
-		'default'  => '60',
+		'default'  => _get_size( 'xxl', '' ),
 		'choices'  => [
 			'min'  => 0,
 			'max'  => 300,
@@ -176,7 +176,7 @@ return [
 		'type'     => 'slider',
 		'settings' => 'spacing-bottom',
 		'label'    => __( 'Spacing Bottom', 'genesis-customizer' ),
-		'default'  => '40',
+		'default'  => '0',
 		'choices'  => [
 			'min'  => 0,
 			'max'  => 300,
@@ -185,6 +185,42 @@ return [
 		'output'   => [
 			[
 				'element'  => '.footer-widgets',
+				'property' => 'padding-bottom',
+				'units'    => 'px',
+			],
+		],
+	],
+	[
+		'type'     => 'slider',
+		'settings' => 'widget-spacing-top',
+		'label'    => __( 'Widget Spacing Top', 'genesis-customizer' ),
+		'default'  => '0',
+		'choices'  => [
+			'min'  => 0,
+			'max'  => 300,
+			'step' => 10,
+		],
+		'output'   => [
+			[
+				'element'  => '.footer-widgets-area',
+				'property' => 'padding-top',
+				'units'    => 'px',
+			],
+		],
+	],
+	[
+		'type'     => 'slider',
+		'settings' => 'widget-spacing-bottom',
+		'label'    => __( 'Widget Spacing Bottom', 'genesis-customizer' ),
+		'default'  => _get_size( 'xl', '' ),
+		'choices'  => [
+			'min'  => 0,
+			'max'  => 300,
+			'step' => 10,
+		],
+		'output'   => [
+			[
+				'element'  => '.footer-widgets-area',
 				'property' => 'padding-bottom',
 				'units'    => 'px',
 			],

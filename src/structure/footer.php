@@ -30,7 +30,7 @@ function footer_credits() {
 function display_footer_credits() {
 	genesis_widget_area( 'footer-credits', [
 		'before' => '',
-		'after'  => '',
+		'after'  => scroll_to_top_link() . '</div></div>',
 	] );
 }
 
@@ -57,7 +57,29 @@ function footer_credits_div() {
 	} else {
 		$text = _get_value( 'footer_credits_text' );
 
-		printf( '<p>%s</p>', do_shortcode( $text ) );
+		printf( '<p>%s %s</p>', do_shortcode( $text ), scroll_to_top_link() );
+	}
+
+	genesis_structural_wrap( 'footer-credits', 'close' );
+
+	genesis_markup( [
+		'close'   => '</div>',
+		'context' => 'footer-credits',
+	] );
+}
+
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
+ * @return string
+ */
+function scroll_to_top_link() {
+	$output = '';
+
+	if ( ! _is_module_enabled( 'scroll-to-top' ) ) {
+		return $output;
 	}
 
 	$scroll_to_top = _get_value( 'footer_scroll-to-top_enabled' );
@@ -70,22 +92,17 @@ function footer_credits_div() {
 		$icon  = '<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><g><path fill="none" d="M0,0h24v24H0V0z"></path></g><g><path d="M7.41,8.59L12,13.17l4.59-4.58L18,10l-6,6l-6-6L7.41,8.59z"></path></g></svg>';
 
 		if ( $style === 'button' ) {
-			printf( $link, '-icon', $icon );
+			$output = sprintf( $link, '-icon', $icon );
 
 		} elseif ( $style === 'html' ) {
-			printf( $html );
+			$output = sprintf( $html );
 
 		} else {
-			printf( $link, '', $text );
+			$output = sprintf( $link, '', $text );
 		}
 	}
 
-	genesis_structural_wrap( 'footer-credits', 'close' );
-
-	genesis_markup( [
-		'close'   => '</div>',
-		'context' => 'footer-credits',
-	] );
+	return $output;
 }
 
 add_action( 'genesis_footer', __NAMESPACE__ . '\display_footer_widgets', 11 );

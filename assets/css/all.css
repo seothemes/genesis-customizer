@@ -1537,6 +1537,7 @@ iframe {
 
 .footer-credits p {
   margin-bottom: 0;
+  width: 100%;
 }
 
 .scroll-to-top-icon {

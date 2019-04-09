@@ -151,6 +151,10 @@
   margin-left: auto;
 }
 
+.scroll-to-top {
+  float: right;
+}
+
 .has-logo-side .header-search-toggle {
   display: none;
 }
