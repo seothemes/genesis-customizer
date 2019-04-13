@@ -313,8 +313,6 @@ function _get_elements( $element, $hover = false, $array = false ) {
 			'button',
 			'input[type="submit"]',
 			'.wp-block-button__link',
-			'.elementor-button',
-			'.elementor-button.elementor-size-sm',
 		],
 		'input'   => [
 			'input',

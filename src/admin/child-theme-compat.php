@@ -41,7 +41,7 @@ function child_theme_notice() {
 			'<div class="notice notice-warning"><p><strong>%s</strong> %s <a href="%s" target="_blank">%s</a> %s </p></div>',
 			_get_name(),
 			__( ' is not supported by the active child theme and may not work as expected. Please install a compatible child theme or refer to the', 'genesis-customizer' ),
-			esc_attr__( 'https://genesiscustomizer.com/blog' ),
+			esc_attr__( 'https://docs.seothemes.com/article/199-adding-theme-support-for-genesis-customizer' ),
 			__( 'adding theme support guide', 'genesis-customizer' ),
 			__( 'for instructions on how to declare Genesis Customizer support in your theme.', 'genesis-customizer' )
 		);

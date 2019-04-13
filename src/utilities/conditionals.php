@@ -161,13 +161,6 @@ function _has_transparent_header() {
 		return false;
 	}
 
-	$hero_settings = _get_value( 'hero_settings_enable' );
-	$hero_disabled = get_post_meta( get_the_ID(), 'hero_disabled', true );
-
-	if ( ! hero_enabled( $hero_settings ) && ! $hero_disabled ) {
-		return false;
-	}
-
 	$disabled = get_post_meta( get_the_ID(), 'transparent_disabled', true );
 
 	if ( $disabled ) {
