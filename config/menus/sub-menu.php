@@ -39,7 +39,7 @@ return [
 				'choice'      => 'link',
 				'element'     => [
 					'.sub-menu',
-					'.sub-menu a',
+					'.sub-menu .menu-item a',
 				],
 				'property'    => 'color',
 				'media_query' => _get_media_query(),
@@ -47,8 +47,8 @@ return [
 			[
 				'choice'      => 'link-hover',
 				'element'     => [
-					'.sub-menu a:hover',
-					'.sub-menu a:focus',
+					'.sub-menu .menu-item a:hover',
+					'.sub-menu .menu-item a:focus',
 					'.sub-menu .current-menu-item > a',
 				],
 				'property'    => 'color',
