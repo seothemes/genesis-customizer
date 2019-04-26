@@ -32,7 +32,8 @@
 	}
 
 	// Entry title link.
-	&-title-link {}
+	&-title-link {
+	}
 
 	// Entry time.
 	&-time {
@@ -71,6 +72,17 @@
 	// Entry content.
 	&-content {
 		width: 100%;
+
+		form {
+
+			ul {
+				margin-bottom: 0;
+			}
+
+			li {
+				list-style-type: none;
+			}
+		}
 	}
 
 	// Entry footer.

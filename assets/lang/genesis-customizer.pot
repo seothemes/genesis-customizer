@@ -1463,7 +1463,7 @@ msgstr ""
 msgid "Footer Credits"
 msgstr ""
 
-#: src/customizer/output.php:111
+#: src/customizer/output.php:116
 msgid "Invalid nonce."
 msgstr ""
 

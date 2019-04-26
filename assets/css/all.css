@@ -1293,6 +1293,14 @@ iframe {
   width: 100%;
 }
 
+.entry-content form ul {
+  margin-bottom: 0;
+}
+
+.entry-content form li {
+  list-style-type: none;
+}
+
 .entry-comments {
   width: 100%;
 }
