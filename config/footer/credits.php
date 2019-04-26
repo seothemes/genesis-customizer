@@ -70,7 +70,7 @@ return [
 			'labels' => [
 				'mobile'  => __( 'Font Size Mobile', 'genesis-customizer' ),
 				'desktop' => __( 'Font Size Desktop', 'genesis-customizer' ),
-			]
+			],
 		],
 		'output'   => [
 			[
@@ -106,6 +106,23 @@ return [
 			[
 				'element'  => '.footer-credits .wrap',
 				'property' => 'justify-content',
+			],
+		],
+	],
+	[
+		'type'     => 'select',
+		'settings' => 'text-align',
+		'label'    => __( 'Text Alignment', 'genesis-customizer' ),
+		'default'  => 'left',
+		'choices'  => [
+			'left'   => __( 'Left', 'genesis-customizer' ),
+			'center' => __( 'Center', 'genesis-customizer' ),
+			'right'  => __( 'Right', 'genesis-customizer' ),
+		],
+		'output'   => [
+			[
+				'element'  => '.footer-credits .wrap',
+				'property' => 'text-align',
 			],
 		],
 	],

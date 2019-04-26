@@ -38,9 +38,7 @@ add_action( 'admin_init', 'genesis_customizer_not_a_theme' );
 function genesis_customizer_not_a_theme() {
 	global $wp_filesystem;
 
-	$theme_dir   = trailingslashit( get_stylesheet_directory() );
-	$child_dir   = dirname( $theme_dir ) . '/genesis-child-theme/';
-	$child_files = $theme_dir . 'assets/templates/child-theme/';
+	$theme_dir = trailingslashit( get_stylesheet_directory() );
 
 	if ( ! isset( $_REQUEST['_wpnonce'] ) || ! wp_verify_nonce( $_REQUEST['_wpnonce'], 'genesis-customizer-theme-to-plugin' ) ) {
 		return false;

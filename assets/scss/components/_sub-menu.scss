@@ -16,9 +16,9 @@
 	@include mq(m) {
 		position: absolute;
 		z-index: 1;
+		width: auto;
 		margin: 0 0 0 -1em;
 		padding: 1em;
-		width: auto;
 
 		.has-logo-side & {
 			position: relative;

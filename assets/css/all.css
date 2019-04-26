@@ -244,7 +244,8 @@ hr {
 }
 
 b,
-strong {
+strong,
+.bold {
   font-weight: 700;
 }
 
@@ -832,6 +833,10 @@ iframe {
   width: 100%;
 }
 
+.menu-item.bold a {
+  font-weight: 700;
+}
+
 .menu a {
   display: block;
   text-decoration: none;
@@ -1317,11 +1322,6 @@ iframe {
   align-self: center;
 }
 
-.wp-block-image {
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-
 .wp-block-image.alignleft {
   margin-right: 1em;
 }
@@ -1333,6 +1333,8 @@ iframe {
 .wp-block-image.alignwide,
 .wp-block-image.alignfull {
   max-width: none;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
 .wp-block-pullquote {

@@ -25,7 +25,13 @@ function setup_tgmpa() {
  * @return array
  */
 function add_tgmpa_plugins( $theme = 'default' ) {
-	$plugins['default'] = [];
+	$plugins['default'] = [
+		[
+			'name'     => 'Simple Social Icons',
+			'slug'     => 'simple-social-icons',
+			'required' => false,
+		],
+	];
 
 	$plugins['genesis-sample'] = [
 		[

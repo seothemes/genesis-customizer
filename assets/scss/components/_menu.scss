@@ -10,14 +10,14 @@
 	display: flex;
 	position: relative;
 	width: auto;
+	margin-bottom: 0;
 	border: 0;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
 	font-size: $base--font-size / $major-second;
 	font-weight: $font-weight--semibold;
 	list-style-type: none;
-	margin-bottom: 0;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
 
 	@include overlay();
 
@@ -83,6 +83,10 @@
 
 		.sidebar & {
 			width: 100%;
+		}
+
+		&.bold a {
+			font-weight: $font-weight--bold;
 		}
 	}
 

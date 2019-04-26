@@ -61,7 +61,10 @@ return [
 		],
 		'output'   => [
 			[
-				'element' => '.site-title',
+				'element' => [
+					'.site-title',
+					'.site-title a',
+				],
 			],
 		],
 	],

@@ -5,7 +5,7 @@ namespace GenesisCustomizer;
 // Load Merlin WP class.
 require_once _get_path() . 'vendor/richtabor/merlin-wp/class-merlin.php';
 
-add_action( 'after_setup_theme', __NAMESPACE__ . '\setup_merlin' );
+add_action( 'after_setup_theme', __NAMESPACE__ . '\setup_merlin', 15 );
 /**
  * Description of expected behavior.
  *
@@ -53,10 +53,10 @@ function merlin_config() {
  */
 function merlin_strings() {
 	return apply_filters( 'genesis_customizer_merlin_strings', [
-		'admin-menu'          => esc_html__( 'Theme Setup', 'genesis-customizer' ),
+		'admin-menu'          => esc_html__( 'Setup Wizard', 'genesis-customizer' ),
 
 		/* translators: 1: Title Tag 2: Theme Name 3: Closing Title Tag */
-		'title%s%s%s%s'       => esc_html__( '%1$s%2$s Themes &lsaquo; Theme Setup: %3$s%4$s', 'genesis-customizer' ),
+		'title%s%s%s%s'       => esc_html__( '%1$s%2$s Themes &lsaquo; Setup Wizard: %3$s%4$s', 'genesis-customizer' ),
 		'return-to-dashboard' => esc_html__( 'Return to the dashboard', 'genesis-customizer' ),
 		'ignore'              => esc_html__( 'Disable this wizard', 'genesis-customizer' ),
 
@@ -103,7 +103,7 @@ function merlin_strings() {
 		'plugins-action-link'    => esc_html__( 'Advanced', 'genesis-customizer' ),
 
 		'import-header'      => esc_html__( 'Import Content', 'genesis-customizer' ),
-		'import'             => esc_html__( 'Let\'s import content to your website, to help you get familiar with the theme.', 'genesis-customizer' ),
+		'import'             => esc_html__( 'Let\'s import content to your website, to help you get familiar with the theme. Select a theme demo from the dropdown list below:', 'genesis-customizer' ),
 		'import-action-link' => esc_html__( 'Advanced', 'genesis-customizer' ),
 
 		'ready-header'      => esc_html__( 'All done. Have fun!', 'genesis-customizer' ),
@@ -137,7 +137,17 @@ function merlin_local_import_files() {
 		'preview_url'                  => 'https://genesiscustomizer.com',
 	];
 
-	return $demos;
+	$demos[] = [
+		'import_file_name'             => 'Genesis Sample (Atomic Blocks)',
+		'local_import_file'            => _get_path() . 'assets/demo/genesis-sample/content.xml',
+		'local_import_widget_file'     => _get_path() . 'assets/demo/genesis-sample/widgets.wie',
+		'local_import_customizer_file' => _get_path() . 'assets/demo/genesis-sample/customizer.dat',
+		'import_preview_image_url'     => 'https://genesiscustomizer.test/wp-content/uploads/2019/03/mockup-1024x597.png',
+		'import_notice'                => __( 'A special note for this import.', 'genesis-customizer' ),
+		'preview_url'                  => 'https://genesiscustomizer.com',
+	];
+
+	return apply_filters( 'genesis_customizer_theme_demos', $demos );
 }
 
 add_filter( 'genesis_merlin_steps', __NAMESPACE__ . '\merlin_steps' );
@@ -156,7 +166,7 @@ function merlin_steps( $steps ) {
 	return $steps;
 }
 
-add_action('get_template_part_merlin-wp/assets/images/spinner', __NAMESPACE__ . '\merlin_spinner' );
+add_action( 'get_template_part_merlin-wp/assets/images/spinner', __NAMESPACE__ . '\merlin_spinner' );
 /**
  * Description of expected behavior.
  *
@@ -166,4 +176,54 @@ add_action('get_template_part_merlin-wp/assets/images/spinner', __NAMESPACE__ . 
  */
 function merlin_spinner() {
 	require_once _get_path() . 'vendor/richtabor/merlin-wp/assets/images/spinner.php';
+}
+
+add_filter( 'merlin_after_all_import', __NAMESPACE__ . '\after_demo_import' );
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function after_demo_import() {
+
+	// Assign menus to their locations.
+	$locations['primary'] = get_term_by( 'name', 'Header Menu', 'nav_menu' );
+	$locations['footer']  = get_term_by( 'name', 'Footer Menu', 'nav_menu' );
+
+	foreach ( $locations as $location => $menu ) {
+		if ( $menu ) {
+			$menus[ $location ] = $menu->term_id;
+		}
+	}
+
+	if ( isset( $menus ) && $menus ) {
+		set_theme_mod( 'nav_menu_locations', $menus );
+	}
+
+	// Assign front page and posts page (blog page).
+	$home = get_page_by_title( 'Home' );
+	$blog = get_page_by_title( 'Blog' );
+
+	if ( $home && $blog ) {
+		update_option( 'show_on_front', 'page' );
+		update_option( 'page_on_front', $home->ID );
+		update_option( 'page_for_posts', $blog->ID );
+	}
+
+	// Set the WooCommerce shop page.
+	$shop = get_page_by_title( 'Shop' );
+
+	if ( $shop ) {
+		update_option( 'woocommerce_shop_page_id', $shop->ID );
+	}
+
+	// Trash "Hello World" post.
+	wp_delete_post( 1 );
+
+	// Update permalink structure.
+	global $wp_rewrite;
+	$wp_rewrite->set_permalink_structure( '/%postname%/' );
+	$wp_rewrite->flush_rules();
 }

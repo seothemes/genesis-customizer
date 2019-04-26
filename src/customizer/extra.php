@@ -284,8 +284,17 @@ function add_misc_fields() {
 	\Kirki::add_field( $handle, [
 		'type'     => 'checkbox',
 		'section'  => 'title_tagline',
-		'settings' => $handle . '_title-tagline',
-		'label'    => __( 'Display site title and tagline?', 'genesis-customizer' ),
+		'settings' => $handle . '_title',
+		'label'    => __( 'Display site title?', 'genesis-customizer' ),
+		'priority' => 20,
+		'default'  => true,
+	] );
+
+	\Kirki::add_field( $handle, [
+		'type'     => 'checkbox',
+		'section'  => 'title_tagline',
+		'settings' => $handle . '_tagline',
+		'label'    => __( 'Display tagline?', 'genesis-customizer' ),
 		'priority' => 20,
 		'default'  => true,
 	] );

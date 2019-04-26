@@ -1,18 +1,18 @@
 {
   "name": "genesis-customizer",
-  "version": "1.0.0",
+  "version": "0.2.3",
   "description": "Genesis Customizer plugin.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/genesis-customizer/genesis-customizer-plugin.git"
+    "url": "git+https://github.com/seothemes/genesis-customizer-plugin.git"
   },
   "author": "Lee Anthony",
   "license": "GPL-3.0-or-later",
   "main": "Gulpfile.js",
   "bugs": {
-    "url": "https://github.com/genesis-customizer/genesis-customizer-plugin/issues"
+    "url": "https://github.com/seothemes/genesis-customizer-plugin/issues"
   },
-  "homepage": "https://github.com/genesis-customizer/genesis-customizer-plugin#readme",
+  "homepage": "https://github.com/seothemes/genesis-customizer-plugin#readme",
   "devDependencies": {
     "bourbon": "^5.1.0",
     "bourbon-bitters": "^1.2.1",
@@ -39,7 +39,7 @@
     "uri": "https://genesiscustomizer.com/genesis-customizer/",
     "authoruri": "https://genesiscustomizer.com",
     "licenseuri": "http://www.gnu.org/licenses/gpl-2.0.html",
-    "domainpath": "/languages",
+    "domainpath": "/assets/lang",
     "textdomain": "genesis-customizer",
     "template": "genesis",
     "tags": "one-column, two-columns, left-sidebar, right-sidebar, accessibility-ready, custom-logo, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready"

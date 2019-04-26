@@ -127,6 +127,15 @@ return [
 				'property'    => 'font-size',
 				'media_query' => _get_media_query(),
 			],
+			[
+				'choice'   => 'Desktop',
+				'element'  => [
+					'.editor-styles-wrapper h1',
+					'body .editor-styles-wrapper .editor-post-title__input',
+				],
+				'property' => 'font-size',
+				'context'  => [ 'editor' ],
+			],
 		],
 	],
 	[

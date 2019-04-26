@@ -32,8 +32,7 @@ function header_body_classes( $classes ) {
 	return $classes;
 }
 
-add_filter( 'genesis_attr_site-title', __NAMESPACE__ . '\display_title_tagline' );
-add_filter( 'genesis_attr_site-description', __NAMESPACE__ . '\display_title_tagline' );
+add_filter( 'genesis_attr_site-title', __NAMESPACE__ . '\display_site_title' );
 /**
  * Description of expected behavior.
  *
@@ -41,8 +40,26 @@ add_filter( 'genesis_attr_site-description', __NAMESPACE__ . '\display_title_tag
  *
  * @return void
  */
-function display_title_tagline( $atts ) {
-	$display = _get_value( 'title-tagline' );
+function display_site_title( $atts ) {
+	$display = _get_value( 'title' );
+
+	if ( ! $display ) {
+		$atts['class'] = $atts['class'] . ' screen-reader-text';
+	}
+
+	return $atts;
+}
+
+add_filter( 'genesis_attr_site-description', __NAMESPACE__ . '\display_site_tagline' );
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function display_site_tagline( $atts ) {
+	$display = _get_value( 'tagline' );
 
 	if ( ! $display ) {
 		$atts['class'] = $atts['class'] . ' screen-reader-text';
@@ -199,7 +216,7 @@ function site_title_link( $title, $inside, $wrap ) {
 	return str_replace( $inside, $link, $title );
 }
 
-add_action('genesis_meta', __NAMESPACE__ . '\hide_site_header');
+add_action( 'genesis_meta', __NAMESPACE__ . '\hide_site_header' );
 /**
  * Description of expected behavior.
  *
@@ -208,7 +225,7 @@ add_action('genesis_meta', __NAMESPACE__ . '\hide_site_header');
  * @return void
  */
 function hide_site_header() {
-	if ( _is_pro_active() && get_post_meta( get_the_ID(), 'header_disabled', true ) ) {
+	if ( get_post_meta( get_the_ID(), 'header_disabled', true ) ) {
 		remove_action( 'genesis_header', 'genesis_header_markup_open', 5 );
 		remove_action( 'genesis_header', 'genesis_do_header' );
 		remove_action( 'genesis_header', 'genesis_header_markup_close', 15 );

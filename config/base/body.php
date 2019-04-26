@@ -96,6 +96,15 @@ return [
 				'element'     => 'body',
 				'media_query' => _get_media_query(),
 			],
+			[
+				'choice'   => 'desktop',
+				'property' => 'font-size',
+				'element'  => [
+					'body .editor-styles-wrapper',
+					'body .editor-styles-wrapper .editor-post-title__input',
+				],
+				'context'  => [ 'editor' ],
+			],
 		],
 	],
 	[

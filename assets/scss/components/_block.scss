@@ -131,8 +131,6 @@
 	// Image block.
 	&-image {
 
-		@include margin(1em null);
-
 		&.alignleft {
 			margin-right: 1em;
 		}
@@ -144,6 +142,8 @@
 		&.alignwide,
 		&.alignfull {
 			max-width: none;
+
+			@include margin(1em null);
 		}
 	}
 

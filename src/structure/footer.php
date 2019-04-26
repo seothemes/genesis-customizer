@@ -162,7 +162,7 @@ add_action( 'genesis_meta', __NAMESPACE__ . '\hide_site_footer' );
  * @return void
  */
 function hide_site_footer() {
-	if ( _is_pro_active() && get_post_meta( get_the_ID(), 'footer_disabled', true ) ) {
+	if ( get_post_meta( get_the_ID(), 'footer_disabled', true ) ) {
 		remove_action( 'genesis_meta', __NAMESPACE__ . '\footer_credits', 20 );
 		remove_action( 'genesis_footer', __NAMESPACE__ . '\display_footer_widgets', 11 );
 		remove_action( 'genesis_footer', __NAMESPACE__ . '\above_footer', 11 );

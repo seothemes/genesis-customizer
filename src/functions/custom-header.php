@@ -23,10 +23,13 @@ add_filter( 'theme_mod_header_image', __NAMESPACE__ . '\custom_header', 25 );
  * @return string
  */
 function custom_header() {
-	$id      = '';
-	$url     = '';
-	$default = get_theme_support( 'custom-header' )[0]['default_image'];
-	$feature = _get_value( 'hero_settings_featured-image', true );
+	$id        = '';
+	$url       = '';
+	$default   = get_theme_support( 'custom-header' )[0]['default_image'];
+	$thememods = get_theme_mods();
+	$thememod  = isset( $thememods['header_image'] ) ? $thememods['header_image'] : '';
+	$default   = $thememod ? $thememod : $default;
+	$feature   = _get_value( 'hero_settings_featured-image', true );
 
 	// TODO: Add rules for every conditional in template-loader.php.
 	if ( _is_plugin_active( 'woocommerce' ) && \is_shop() ) {
@@ -60,15 +63,19 @@ function custom_header() {
 		$id = get_the_id();
 	}
 
-	if ( is_object( $id && $feature ) ) {
+	if ( ! $feature ) {
+		$url = $default;
+
+	} elseif ( is_object( $id && $feature ) ) {
 		$url = wp_get_attachment_image_url( $id->ID, 'hero-section' );
 
 	} elseif ( $id && $feature ) {
 		$url = get_the_post_thumbnail_url( $id, 'hero-section' );
+	}
 
-	} elseif ( ! $url ) {
+	if ( ! $url ) {
 		$url = $default;
 	}
 
-	return $url;
+	return esc_url_raw( set_url_scheme( $url ) );
 }

@@ -104,3 +104,17 @@ function single_post_meta() {
 
 	return do_shortcode( $text );
 }
+
+add_action( 'genesis_meta', __NAMESPACE__ . '\hide_page_title' );
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function hide_page_title() {
+	if ( get_post_meta( get_the_ID(), 'title_disabled', true ) ) {
+		remove_action( 'genesis_entry_header', 'genesis_do_post_title' );
+	}
+}
