@@ -36,11 +36,24 @@
 	@include button;
 }
 
+button,
 .button {
 
 	&.small {
 		padding: 1em 2em;
 		font-size: smaller;
+	}
+
+	&.big {
+		font-size: larger;
+	}
+
+	&.white {
+		background: $color--white;
+
+		@include hover-focus {
+			background: $color--white;
+		}
 	}
 
 	&.ghost {

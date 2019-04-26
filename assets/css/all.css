@@ -295,8 +295,8 @@ ol,
 dl {
   margin: 0 0 1.6rem;
   padding: 0;
-  list-style-type: none;
   list-style-position: inside;
+  list-style-type: none;
 }
 
 ul ul,
@@ -386,16 +386,40 @@ button:disabled:focus,
   cursor: not-allowed;
 }
 
+button.small,
 .button.small {
   padding: 1em 2em;
   font-size: smaller;
 }
 
+button.big,
+.button.big {
+  font-size: larger;
+}
+
+button.white,
+.button.white {
+  background: #ffffff;
+}
+
+button.white:hover,
+button.white:focus,
+button.white:active,
+.button.white:hover,
+.button.white:focus,
+.button.white:active {
+  background: #ffffff;
+}
+
+button.ghost,
 .button.ghost {
   color: #ffffff;
   background: rgba(255, 255, 255, 0.2);
 }
 
+button.ghost:hover,
+button.ghost:focus,
+button.ghost:active,
 .button.ghost:hover,
 .button.ghost:focus,
 .button.ghost:active {
@@ -759,14 +783,14 @@ iframe {
   display: flex;
   position: relative;
   width: auto;
+  margin-bottom: 0;
   border: 0;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
   font-size: 1.42222rem;
   font-weight: 600;
   list-style-type: none;
-  margin-bottom: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 
@@ -1538,8 +1562,8 @@ iframe {
 }
 
 .footer-credits p {
-  margin-bottom: 0;
   width: 100%;
+  margin-bottom: 0;
 }
 
 .scroll-to-top-icon {
@@ -1656,10 +1680,10 @@ iframe {
 .mega-menu {
   display: flex;
   position: absolute;
+  z-index: 10;
   top: 100%;
   width: 100%;
   flex-wrap: nowrap;
-  z-index: 10;
 }
 
 .mega-menu .wrap {

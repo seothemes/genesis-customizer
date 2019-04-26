@@ -2,6 +2,8 @@
 
 namespace GenesisCustomizer;
 
+use Mexitek\PHPColors\Color;
+
 /**
  * Description of expected behavior.
  *
@@ -266,6 +268,24 @@ function _get_color( $color = 'accent' ) {
  *
  * @since 1.0.0
  *
+ * @param string $color_1
+ * @param string $color_2
+ *
+ * @return string
+ * @throws \Exception
+ */
+function _get_mixture( $color_1, $color_2 ) {
+	$color_1 = new Color( $color_1 );
+	$mixture = $color_1->mix( $color_2 );
+
+	return $mixture;
+}
+
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
  * @param string $size
  * @param string $suffix
  *
@@ -284,12 +304,12 @@ function _get_size( $size = 'm', $suffix = 'px' ) {
 		'xxl' => '48',
 
 		// Headings.
-		'h1' => '36',
-		'h2' => '28',
-		'h3' => '24',
-		'h4' => '22',
-		'h5' => '20',
-		'h6' => '18',
+		'h1'  => '36',
+		'h2'  => '28',
+		'h3'  => '24',
+		'h4'  => '22',
+		'h5'  => '20',
+		'h6'  => '18',
 	] );
 
 	return $spacing[ $size ] . $suffix;

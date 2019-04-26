@@ -277,11 +277,11 @@ msgstr ""
 msgid "Typography Desktop"
 msgstr ""
 
-#: config/base/buttons.php:143, config/base/forms.php:90, config/header/right.php:78, config/header/title-area.php:127
+#: config/base/buttons.php:143, config/base/forms.php:90, config/header/right.php:78, config/header/title-area.php:130
 msgid "Vertical Spacing"
 msgstr ""
 
-#: config/base/buttons.php:166, config/base/forms.php:113, config/header/right.php:101, config/header/title-area.php:150
+#: config/base/buttons.php:166, config/base/forms.php:113, config/header/right.php:101, config/header/title-area.php:153
 msgid "Horizontal Spacing"
 msgstr ""
 
@@ -385,7 +385,7 @@ msgstr ""
 msgid "Step start"
 msgstr ""
 
-#: config/base/headings.php:104, config/header/right.php:39, config/header/title-area.php:43, config/header/title-area.php:97, config/menus/footer.php:28, config/menus/primary.php:40, config/menus/secondary.php:11, config/menus/sub-menu-toggle.php:11, config/menus/sub-menu.php:11, src/customizer/extra.php:318
+#: config/base/headings.php:104, config/header/right.php:39, config/header/title-area.php:43, config/header/title-area.php:100, config/menus/footer.php:28, config/menus/primary.php:40, config/menus/secondary.php:11, config/menus/sub-menu-toggle.php:11, config/menus/sub-menu.php:11, src/customizer/extra.php:318
 msgid "Tip: "
 msgstr ""
 
@@ -685,7 +685,7 @@ msgstr ""
 msgid "Looking for the Custom Logo settings? Change them in the "
 msgstr ""
 
-#: config/header/title-area.php:46, config/header/title-area.php:100
+#: config/header/title-area.php:46, config/header/title-area.php:103
 msgid "Site Identity Section"
 msgstr ""
 
@@ -693,15 +693,15 @@ msgstr ""
 msgid "Site Title Typography"
 msgstr ""
 
-#: config/header/title-area.php:76
+#: config/header/title-area.php:79
 msgid "Site Description Typography"
 msgstr ""
 
-#: config/header/title-area.php:98
+#: config/header/title-area.php:101
 msgid "The site title and site description can be changed from the "
 msgstr ""
 
-#: config/header/title-area.php:106
+#: config/header/title-area.php:109
 msgid "Site Title Bottom Spacing"
 msgstr ""
 
@@ -1463,7 +1463,7 @@ msgstr ""
 msgid "Footer Credits"
 msgstr ""
 
-#: src/customizer/output.php:106
+#: src/customizer/output.php:111
 msgid "Invalid nonce."
 msgstr ""
 

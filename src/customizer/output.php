@@ -5,10 +5,10 @@ namespace GenesisCustomizer;
 /**
  * Build a background-gradient style for CSS
  *
- * @param $color_1      hex color value
- * @param $color_2      hex color value
+ * @param string $color_1 Hex color value
+ * @param string $color_2 Hex color value
  *
- * @return string       CSS definition
+ * @return string CSS definition
  */
 function build_gradients( $angle, $color_1, $color_2 ) {
 	$styles = 'background:' . $color_1 . ';';
@@ -23,7 +23,11 @@ function build_gradients( $angle, $color_1, $color_2 ) {
 /**
  * Build & enqueue the complete CSS for headers.
  *
- * @return void
+ * @since 1.0.0
+ *
+ * @throws \Exception
+ *
+ * @return string
  */
 function generate_gradient_css() {
 	$css = '';
@@ -34,6 +38,10 @@ function generate_gradient_css() {
 
 	$css .= _get_elements( 'button' ) . '{' . build_gradients( $button_angle, $button_colors['left'], $button_colors['right'] ) . '}';
 	$css .= _get_elements( 'button', 'hover' ) . '{' . build_gradients( $button_angle, $button_colors['left-hover'], $button_colors['right-hover'] ) . '}';
+
+	// White button text.
+	$css .= sprintf( '.button.white,button.white{color:#%s}', _get_mixture( $button_colors['left'], $button_colors['right'] ) );
+	$css .= sprintf( '.button.white:hover,.button.white:focus,button.white:hover,button.white:focus{color:#%s}', _get_mixture( $button_colors['left-hover'], $button_colors['right-hover'] ) );
 
 	// Site Footer.
 	$site_footer_colors = _get_value( 'footer_site-footer_gradient' );
@@ -68,6 +76,7 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\gradient_css_output' );
  *
  * @since  1.0.0
  *
+ * @throws \Exception
  * @return void
  */
 function gradient_css_output() {
@@ -97,6 +106,7 @@ add_action( 'wp_ajax_nopriv_gradient_css', __NAMESPACE__ . '\gradient_css' );
  *
  * @since 1.0.0
  *
+ * @throws \Exception
  * @return void
  */
 function gradient_css() {

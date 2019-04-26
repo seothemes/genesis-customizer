@@ -50,6 +50,7 @@ class ComposerStaticInit679f46a9d0e5f747d547b51edd715846
         'GenesisCustomizer\\Select_Control' => __DIR__ . '/../..' . '/src/classes/class-select-control.php',
         'GenesisCustomizer\\Typekit_Fonts' => __DIR__ . '/../..' . '/src/classes/class-typekit-fonts.php',
         'GenesisCustomizer\\WP_CLI_Commands' => __DIR__ . '/../..' . '/src/classes/class-wp-cli-commands.php',
+        'Mexitek\\PHPColors\\Color' => __DIR__ . '/..' . '/mexitek/phpcolors/src/Mexitek/PHPColors/Color.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

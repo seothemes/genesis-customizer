@@ -13,6 +13,7 @@
   "require": {
     "php": ">=5.4.0",
     "aristath/kirki": "dev-master",
+    "mexitek/phpcolors": "dev-master",
     "richtabor/merlin-wp": "dev-master",
     "tgmpa/tgm-plugin-activation": "dev-develop",
     "yahnis-elsts/plugin-update-checker": "dev-master"
