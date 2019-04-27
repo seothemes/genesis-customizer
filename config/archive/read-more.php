@@ -31,7 +31,7 @@ return [
 		'default'  => __( 'Read more', 'genesis-customizer' ),
 		'required' => [
 			[
-				'setting'  => _get_setting( 'enabled' ),
+				'setting'  => _get_setting( 'display' ),
 				'value'    => 'hide',
 				'operator' => '!==',
 			],

@@ -43,7 +43,7 @@ return [
 				'property'        => 'width',
 				'value_pattern'   => 'calc(100% - sidebarPrimarypx - $px)',
 				'pattern_replace' => [
-					'sidebarPrimary' => 'genesis-customizer_sidebars_primary_width',
+					'sidebarPrimary' => 'genesis-customizer[sidebars_primary_width]',
 				],
 				'media_query'     => _get_media_query(),
 			],
@@ -57,8 +57,8 @@ return [
 				'property'        => 'width',
 				'value_pattern'   => 'calc(100% - ( sidebarPrimarypx + sidebarSecondarypx ) - ( $px * 2 ))',
 				'pattern_replace' => [
-					'sidebarPrimary'   => 'genesis-customizer_sidebars_primary_width',
-					'sidebarSecondary' => 'genesis-customizer_sidebars_secondary_width',
+					'sidebarPrimary'   => 'genesis-customizer[sidebars_primary_width]',
+					'sidebarSecondary' => 'genesis-customizer[sidebars_secondary_width]',
 				],
 				'media_query'     => _get_media_query(),
 			],

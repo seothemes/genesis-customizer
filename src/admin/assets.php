@@ -32,6 +32,6 @@ add_filter( 'pand_dismiss_notice_js_url', __NAMESPACE__ . '\dismiss_notice_js_ur
  *
  * @return string
  */
-function dismiss_notice_js_url($js_url, $composer_path) {
+function dismiss_notice_js_url( $js_url, $composer_path ) {
 	return get_stylesheet_directory_uri() . $composer_path;
 }

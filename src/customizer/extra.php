@@ -140,7 +140,7 @@ function add_misc_fields() {
 	\Kirki::add_field( $handle, [
 		'type'     => 'custom',
 		'section'  => 'title_tagline',
-		'settings' => $handle . '_logo_divider-1',
+		'settings' => 'logo_divider-1',
 		'priority' => 8,
 		'default'  => '<hr>',
 	] );
@@ -148,7 +148,7 @@ function add_misc_fields() {
 	\Kirki::add_field( $handle, [
 		'type'            => 'slider',
 		'section'         => 'title_tagline',
-		'settings'        => $handle . '_logo_width',
+		'settings'        => 'logo_width',
 		'label'           => __( 'Logo Width', 'genesis-customizer' ),
 		'transport'       => 'auto',
 		'priority'        => 8,
@@ -175,7 +175,7 @@ function add_misc_fields() {
 		\Kirki::add_field( $handle, [
 			'type'      => 'slider',
 			'section'   => 'title_tagline',
-			'settings'  => $handle . '_logo_width_mobile',
+			'settings'  => 'logo_width_mobile',
 			'label'     => __( 'Logo Width Mobile', 'genesis-customizer' ),
 			'transport' => 'auto',
 			'priority'  => 8,
@@ -198,7 +198,7 @@ function add_misc_fields() {
 		\Kirki::add_field( $handle, [
 			'type'      => 'slider',
 			'section'   => 'title_tagline',
-			'settings'  => $handle . '_logo_width_desktop',
+			'settings'  => 'logo_width_desktop',
 			'label'     => __( 'Logo Width Desktop', 'genesis-customizer' ),
 			'transport' => 'auto',
 			'priority'  => 8,
@@ -222,7 +222,7 @@ function add_misc_fields() {
 	\Kirki::add_field( $handle, [
 		'type'      => 'slider',
 		'section'   => 'title_tagline',
-		'settings'  => $handle . '_logo_spacing',
+		'settings'  => 'logo_spacing',
 		'label'     => __( 'Logo Spacing', 'genesis-customizer' ),
 		'transport' => 'auto',
 		'priority'  => 8,
@@ -244,7 +244,7 @@ function add_misc_fields() {
 	\Kirki::add_field( $handle, [
 		'type'            => 'custom',
 		'section'         => 'title_tagline',
-		'settings'        => $handle . '_logo_divider-232972',
+		'settings'        => 'logo_divider-232972',
 		'priority'        => 8,
 		'default'         => '<hr>',
 		'active_callback' => function () {
@@ -254,7 +254,7 @@ function add_misc_fields() {
 
 	\Kirki::add_field( $handle, [
 		'type'            => 'custom',
-		'settings'        => $handle . '_tip-1422',
+		'settings'        => 'tip-1422',
 		'section'         => 'title_tagline',
 		'priority'        => 8,
 		'default'         => sprintf(
@@ -273,7 +273,7 @@ function add_misc_fields() {
 	\Kirki::add_field( $handle, [
 		'type'            => 'custom',
 		'section'         => 'title_tagline',
-		'settings'        => $handle . '_logo_divider-23252',
+		'settings'        => 'logo_divider-23252',
 		'priority'        => 8,
 		'default'         => '<hr>',
 		'active_callback' => function () {
@@ -284,7 +284,7 @@ function add_misc_fields() {
 	\Kirki::add_field( $handle, [
 		'type'     => 'checkbox',
 		'section'  => 'title_tagline',
-		'settings' => $handle . '_title',
+		'settings' => 'title',
 		'label'    => __( 'Display site title?', 'genesis-customizer' ),
 		'priority' => 20,
 		'default'  => true,
@@ -293,7 +293,7 @@ function add_misc_fields() {
 	\Kirki::add_field( $handle, [
 		'type'     => 'checkbox',
 		'section'  => 'title_tagline',
-		'settings' => $handle . '_tagline',
+		'settings' => 'tagline',
 		'label'    => __( 'Display tagline?', 'genesis-customizer' ),
 		'priority' => 20,
 		'default'  => true,
@@ -302,7 +302,7 @@ function add_misc_fields() {
 	\Kirki::add_field( $handle, [
 		'type'     => 'custom',
 		'section'  => 'title_tagline',
-		'settings' => $handle . '_logo_divider-2986',
+		'settings' => 'logo_divider-2986',
 		'priority' => 21,
 		'default'  => '<hr>',
 	] );
@@ -311,7 +311,7 @@ function add_misc_fields() {
 		\Kirki::add_field( $handle, [
 			'type'     => 'custom',
 			'section'  => 'title_tagline',
-			'settings' => $handle . '_tip-3983480',
+			'settings' => 'tip-3983480',
 			'priority' => 7,
 			'default'  => sprintf(
 				'<p><strong>%s</strong> %s <a href="javascript:wp.customize.control( %s ).focus();">%s</a></p><hr>',

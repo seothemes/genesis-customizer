@@ -41,10 +41,10 @@ return [
 			esc_html__( 'Menu not aligning correctly? Try adjusting the', 'genesis-customizer' ),
 			esc_html__( 'Alignment', 'genesis-customizer' ),
 			esc_html__( 'in the', 'genesis-customizer' ),
-			esc_attr( '"genesis-customizer_menus_primary_alignment"' ),
+			esc_attr( '"genesis-customizer[menus_primary_alignment]"' ),
 			esc_html__( 'Primary Menu Section', 'genesis-customizer' ),
 			esc_html__( 'or the', 'genesis-customizer' ),
-			esc_attr( '"genesis-customizer_menus_secondary_alignment"' ),
+			esc_attr( '"genesis-customizer[menus_secondary_alignment]"' ),
 			esc_html__( 'Secondary Menu Section', 'genesis-customizer' )
 		),
 	],

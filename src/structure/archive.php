@@ -55,7 +55,7 @@ function read_more_text() {
 	$display = _get_value( 'archive_read-more_display' );
 
 	if ( 'none' === $display ) {
-		return;
+		return '';
 	}
 
 	$style    = _get_value( 'archive_read-more_style' );

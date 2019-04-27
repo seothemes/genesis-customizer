@@ -112,17 +112,17 @@
 	width: 29px !important;
 }
 
-#customize-control-genesis-customizer_footer_widgets_columns img,
-#customize-control-genesis-customizer_header_above_layout img,
-#customize-control-genesis-customizer_header_below_layout img,
-#customize-control-genesis-customizer_content_above_layout img,
-#customize-control-genesis-customizer_content_below_layout img,
-#customize-control-genesis-customizer_footer_above_layout img,
-#customize-control-genesis-customizer_header_primary_layout img {
+#customize-control-genesis-customizer-footer_widgets_columns img,
+#customize-control-genesis-customizer-header_above_layout img,
+#customize-control-genesis-customizer-header_below_layout img,
+#customize-control-genesis-customizer-content_above_layout img,
+#customize-control-genesis-customizer-content_below_layout img,
+#customize-control-genesis-customizer-footer_above_layout img,
+#customize-control-genesis-customizer-header_primary_layout img {
 	width: 76px;
 }
 
-#customize-control-genesis-customizer_header_primary_mobile-layout img {
+#customize-control-genesis-customizer-header_primary_mobile-layout img {
 	width: 60px;
 }
 

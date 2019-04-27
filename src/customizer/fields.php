@@ -34,7 +34,7 @@ function add_fields() {
 				}
 
 				foreach ( $fields as $field ) {
-					\Kirki::add_field( $handle, apply_filters( 'genesis_customizer_field', $field, $prefix ) );
+					\Kirki::add_field( $handle, apply_filters( 'genesis_customizer_field', $field, $panel, $section, $prefix ) );
 				}
 			}
 		}
@@ -43,20 +43,24 @@ function add_fields() {
 	return $fields;
 }
 
-add_filter( 'genesis_customizer_field', __NAMESPACE__ . '\format_field', 10, 2 );
+add_filter( 'genesis_customizer_field', __NAMESPACE__ . '\format_field', 10, 4 );
 /**
  * Description of expected behavior.
  *
  * @since 1.0.0
  *
  * @param $field
+ * @param $panel
+ * @param $section
  * @param $prefix
  *
  * @return array
  */
-function format_field( $field, $prefix ) {
-	$field['section']  = $prefix;
-	$field['settings'] = $prefix . '_' . $field['settings'];
+function format_field( $field, $panel, $section, $prefix ) {
+	$field['section']     = $prefix;
+	$field['settings']    = $panel . '_' . $section . '_' . $field['settings'];
+	$field['option_type'] = 'option';
+	$field['option_name'] = _get_handle();
 
 	// Allow for element arrays.
 	if ( isset( $field['output'] ) && $field['output'] ) {

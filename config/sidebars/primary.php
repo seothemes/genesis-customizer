@@ -137,7 +137,7 @@ return [
 				'property'        => 'width',
 				'value_pattern'   => 'calc(100% - $px - globalSpacingpx)',
 				'pattern_replace' => [
-					'globalSpacing' => 'genesis-customizer_base_global_gutter',
+					'globalSpacing' => 'genesis-customizer[base_global_gutter]',
 				],
 				'media_query'     => _get_media_query(),
 			],
@@ -151,8 +151,8 @@ return [
 				'property'        => 'width',
 				'value_pattern'   => 'calc(100% - ( $px + sidebarSecondarypx ) - ( globalSpacingpx * 2 ))',
 				'pattern_replace' => [
-					'sidebarSecondary' => 'genesis-customizer_sidebars_secondary_width',
-					'globalSpacing'    => 'genesis-customizer_base_global_gutter',
+					'sidebarSecondary' => 'genesis-customizer[sidebars_secondary_width]',
+					'globalSpacing'    => 'genesis-customizer[base_global_gutter]',
 				],
 				'media_query'     => _get_media_query(),
 			],

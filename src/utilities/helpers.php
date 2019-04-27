@@ -184,6 +184,7 @@ function _get_setting( $setting ) {
  */
 function _get_default( $field ) {
 	$default = '';
+	$field   = _get_handle() . "[$field]";
 
 	if ( isset( \Kirki::$fields[ $field ] ) && isset( \Kirki::$fields[ $field ]['default'] ) ) {
 		$default = \Kirki::$fields[ $field ]['default'];
@@ -203,15 +204,12 @@ function _get_default( $field ) {
  * @return mixed
  */
 function _get_value( $field, $default = null ) {
-
-	// Prefix the field with plugin handle.
-	$field = _get_handle() . '_' . $field;
-
 	if ( null === $default ) {
 		$default = _get_default( $field );
 	}
 
-	$value = get_theme_mod( $field, $default );
+	$option = get_option( _get_handle() );
+	$value  = isset( $option[ $field ] ) ? $option[ $field ] : $default;
 
 	return apply_filters( 'kirki_values_get_value', $value, $field );
 }

@@ -137,8 +137,8 @@ return [
 				'property'        => 'width',
 				'value_pattern'   => 'calc(100% - ( sidebarPrimarypx + $px ) - ( globalSpacingpx * 2 ))',
 				'pattern_replace' => [
-					'sidebarPrimary' => 'genesis-customizer_sidebars_primary_width',
-					'globalSpacing'  => 'genesis-customizer_base_global_gutter',
+					'sidebarPrimary' => 'genesis-customizer[sidebars_primary_width]',
+					'globalSpacing'  => 'genesis-customizer[base_global_gutter]',
 				],
 				'media_query'     => _get_media_query(),
 			],

@@ -33,11 +33,14 @@ add_action( 'genesis_setup', __NAMESPACE__ . '\add_kirki_config' );
  * @return void
  */
 function add_kirki_config() {
-	\Kirki::add_config( _get_handle(), [
+	$handle = _get_handle();
+
+	\Kirki::add_config( $handle, [
 		'capability'        => 'edit_theme_options',
+		'option_type'       => 'option',
+		'option_name'       => $handle,
 		'gutenberg_support' => true,
 		'disable_output'    => false,
-		'remove_loader'     => true,
 	] );
 }
 

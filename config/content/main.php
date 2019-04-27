@@ -30,8 +30,8 @@ return [
 				'property'        => 'max-width',
 				'value_pattern'   => 'calc($px - sidebarPrimaryWidthpx - gutterWidthpx)',
 				'pattern_replace' => [
-					'sidebarPrimaryWidth' => 'genesis-customizer_sidebars_primary_width',
-					'gutterWidth'         => 'genesis-customizer_base_global_gutter',
+					'sidebarPrimaryWidth' => 'genesis-customizer[sidebars_primary_width]',
+					'gutterWidth'         => 'genesis-customizer[base_global_gutter]',
 				],
 			],
 		],

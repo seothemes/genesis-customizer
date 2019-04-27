@@ -38,7 +38,7 @@ add_filter( 'genesis_attr_site-title', __NAMESPACE__ . '\display_site_title' );
  *
  * @since 1.0.0
  *
- * @return void
+ * @return array
  */
 function display_site_title( $atts ) {
 	$display = _get_value( 'title' );
@@ -56,7 +56,7 @@ add_filter( 'genesis_attr_site-description', __NAMESPACE__ . '\display_site_tagl
  *
  * @since 1.0.0
  *
- * @return void
+ * @return array
  */
 function display_site_tagline( $atts ) {
 	$display = _get_value( 'tagline' );
