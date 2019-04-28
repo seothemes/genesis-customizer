@@ -39,7 +39,7 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-18739',
+		'settings' => 'divider',
 		'default'  => '<hr>',
 	],
 	[
@@ -62,7 +62,7 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-9848942',
+		'settings' => 'divider',
 		'default'  => '<hr>',
 	],
 	[

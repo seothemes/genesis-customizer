@@ -151,9 +151,23 @@ function _get_breakpoint() {
  * @return mixed
  */
 function _get_media_query( $query = 'min' ) {
-	$breakpoint = _get_value( 'general_breakpoints_global', _get_breakpoint() );
+	$breakpoint = _get_option( 'breakpoint', _get_breakpoint() );
 
 	return sprintf( "@media (%s-width:%spx)", $query, $breakpoint );
+}
+
+/**
+ * Wrapper function for get_option.
+ *
+ * @since 1.0.0
+ *
+ * @param $option
+ * @param $default
+ *
+ * @return mixed
+ */
+function _get_option( $option, $default = false ) {
+	return get_option( _get_handle() . '-' . $option, $default );
 }
 
 /**
@@ -243,22 +257,35 @@ function _get_image_sizes( $additional = [ 'full' ] ) {
  */
 function _get_color( $color = 'accent' ) {
 	$colors = apply_filters( 'genesis_customizer_colors', [
-		'accent'      => '#3490dc',
-		'success'     => '#38c172',
-		'warning'     => '#ffed4a',
-		'error'       => '#e3342f',
-		'text'        => '#8795a1',
+		'black'       => '#22292f',
 		'heading'     => '#606f7b',
+		'text'        => '#8795a1',
 		'border'      => '#dae1e7',
 		'background'  => '#f5f8fa',
 		'white'       => '#ffffff',
-		'black'       => '#22292f',
+		'accent'      => '#3490dc',
 		'overlay'     => 'rgba(52,144,220,0.95)',
+		'success'     => '#38c172',
+		'warning'     => '#ffed4a',
+		'error'       => '#e3342f',
 		'shadow'      => 'rgba(96,111,123,0.05)',
 		'transparent' => 'rgba(0,0,0,0)',
 	] );
 
-	return $colors[ $color ];
+	if ( 'default' === $color ) {
+		return array_slice( $colors, 0, 11 );
+	}
+
+	foreach ( $colors as $name => $hex ) {
+		$option          = _get_handle() . '-color-' . $name;
+		$colors[ $name ] = get_option( $option, $hex );
+	}
+
+	if ( isset( $colors[ $color ] ) ) {
+		return $colors[ $color ];
+	}
+
+	return $colors;
 }
 
 /**

@@ -23,7 +23,7 @@
 }
 
 .customize-control-kirki-box-shadow .preview-wrapper {
-	height: 150px;
+	height: 130px;
 	border: 1px solid #ddd;
 	background: #fff !important;
 }
@@ -197,4 +197,8 @@ div.tooltip-wrapper .tooltip-content:after {
 	border-color: #5b9dd9;
 	box-shadow: 0 0 2px rgba(30,140,190,.8);
 	outline: 2px solid transparent;
+}
+
+.customize-control-kirki-box-shadow .preview-object .dashicons {
+	font-size: 24px;
 }

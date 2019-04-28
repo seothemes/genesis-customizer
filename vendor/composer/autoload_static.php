@@ -42,6 +42,9 @@ class ComposerStaticInit679f46a9d0e5f747d547b51edd715846
     );
 
     public static $classMap = array (
+        'EDD_SL_Plugin_Updater' => __DIR__ . '/../..' . '/src/classes/class-edd-sl-plugin-updater.php',
+        'GenesisCustomizer\\Admin_API' => __DIR__ . '/../..' . '/src/classes/class-admin-api.php',
+        'GenesisCustomizer\\Admin_Settings' => __DIR__ . '/../..' . '/src/classes/class-admin-settings.php',
         'GenesisCustomizer\\Box_Shadow_Control' => __DIR__ . '/../..' . '/src/classes/class-box-shadow-control.php',
         'GenesisCustomizer\\Hidden_Section' => __DIR__ . '/../..' . '/src/classes/class-hidden-section.php',
         'GenesisCustomizer\\Link_Section' => __DIR__ . '/../..' . '/src/classes/class-link-section.php',

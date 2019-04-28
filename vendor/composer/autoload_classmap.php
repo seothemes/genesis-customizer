@@ -6,6 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'EDD_SL_Plugin_Updater' => $baseDir . '/src/classes/class-edd-sl-plugin-updater.php',
+    'GenesisCustomizer\\Admin_API' => $baseDir . '/src/classes/class-admin-api.php',
+    'GenesisCustomizer\\Admin_Settings' => $baseDir . '/src/classes/class-admin-settings.php',
     'GenesisCustomizer\\Box_Shadow_Control' => $baseDir . '/src/classes/class-box-shadow-control.php',
     'GenesisCustomizer\\Hidden_Section' => $baseDir . '/src/classes/class-hidden-section.php',
     'GenesisCustomizer\\Link_Section' => $baseDir . '/src/classes/class-link-section.php',

@@ -50,7 +50,7 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-232',
+		'settings' => 'divider',
 		'default'  => '<hr>',
 	],
 	[
@@ -80,12 +80,12 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-1',
+		'settings' => 'divider',
 		'default'  => '<hr>',
 	],
 	[
 		'type'            => 'custom',
-		'settings'        => 'tip-1',
+		'settings'        => 'tip',
 		'default'         => sprintf(
 			'<p>%s <strong>%s</strong>%s </p><a href="%s" target="_blank" class="button-primary">%s</a>',
 			esc_html__( 'More mobile menu options available in', 'genesis-customizer' ),

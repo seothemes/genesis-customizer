@@ -34,7 +34,7 @@ wp.customize.control("genesis-customizer[header_primary_layout]", function (cont
     });
 });
 
-wp.customize.control("genesis-customizer[header_primary_mobile]-layout", function (control) {
+wp.customize.control("genesis-customizer[header_primary_mobile-layout]", function (control) {
     control.deferred.embedded.done(function () {
         control.container.find("img").addClass("wp-ui-highlight");
     });

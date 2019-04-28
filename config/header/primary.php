@@ -17,7 +17,7 @@ return [
 	],
 	[
 		'type'            => 'custom',
-		'settings'        => 'tip-1',
+		'settings'        => 'tip',
 		'priority'        => 2,
 		'default'         => sprintf(
 			'%s <strong>%s</strong>%s <br>&nbsp;<br><a href="%s" target="_blank" class="button-primary">%s</a>',
@@ -33,7 +33,7 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'tip-2',
+		'settings' => 'tip',
 		'priority' => 4,
 		'default'  => sprintf(
 			'<hr><p><strong>%s</strong> %s <strong>%s</strong> %s <a href="javascript:wp.customize.control( %s ).focus();">%s</a> %s <a href="javascript:wp.customize.control( %s ).focus();">%s</a></p><hr>',
@@ -50,7 +50,7 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-83398',
+		'settings' => 'divider',
 		'default'  => '<hr>',
 		'priority' => 5,
 	],
@@ -108,7 +108,7 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-398',
+		'settings' => 'divider',
 		'default'  => '<hr>',
 		'active_callback' => function () {
 			return ! _is_pro_active();
@@ -143,7 +143,7 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-675',
+		'settings' => 'divider',
 		'default'  => '<hr>',
 	],
 	[

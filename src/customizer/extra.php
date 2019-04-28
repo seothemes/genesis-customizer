@@ -97,8 +97,6 @@ function go_pro_fields() {
 		'code_css',
 		'code_js',
 		'footer_scroll-to-top',
-		'general_breakpoints',
-		'general_typekit',
 		'header_search',
 		'header_sticky',
 		'header_transparent',
@@ -254,7 +252,7 @@ function add_misc_fields() {
 
 	\Kirki::add_field( $handle, [
 		'type'            => 'custom',
-		'settings'        => 'tip-1422',
+		'settings'        => 'tip',
 		'section'         => 'title_tagline',
 		'priority'        => 8,
 		'default'         => sprintf(
@@ -311,7 +309,7 @@ function add_misc_fields() {
 		\Kirki::add_field( $handle, [
 			'type'     => 'custom',
 			'section'  => 'title_tagline',
-			'settings' => 'tip-3983480',
+			'settings' => 'tip',
 			'priority' => 7,
 			'default'  => sprintf(
 				'<p><strong>%s</strong> %s <a href="javascript:wp.customize.control( %s ).focus();">%s</a></p><hr>',

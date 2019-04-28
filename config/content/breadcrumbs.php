@@ -44,7 +44,7 @@ $fields = [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-0',
+		'settings' => 'divider',
 		'default'  => '<hr>',
 	],
 	[
@@ -77,7 +77,7 @@ $fields = [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-1',
+		'settings' => 'divider',
 		'default'  => '<hr>',
 	],
 	[
@@ -100,7 +100,7 @@ $fields = [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-2',
+		'settings' => 'divider',
 		'default'  => '<hr>',
 	],
 ];

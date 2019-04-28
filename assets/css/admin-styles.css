@@ -5,13 +5,12 @@
 	border-bottom: 0;
 }
 
-
 .components-panel .edit-post-meta-boxes-area #poststuff h2.hndle:focus:not(:disabled):not([aria-disabled=true]) {
 	outline-offset: -2px;
 	outline: 1px dotted #555d66;
 }
 
-.edit-post-meta-boxes-area .postbox>.inside {
+.edit-post-meta-boxes-area .postbox > .inside {
 	border-bottom: 0;
 }
 
@@ -29,4 +28,45 @@
 
 .components-panel .toggle-indicator:before {
 	content: '' !important;
+}
+
+#genesis-customizer-settings form h2 {
+	opacity: 0;
+	font-size: 0;
+}
+
+#genesis-customizer-settings th {
+	width: 150px;
+}
+
+a.button.tooltip-toggle {
+	border: none;
+	box-shadow: none;
+	background: #9ea3a8;
+	color: #fff;
+	height: 16px;
+	width: 16px;
+	padding: 0;
+	border-radius: 16px;
+	line-height: 16px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 10px;
+	font-weight: bold;
+	margin-left: 10px;
+	display: none;
+}
+
+a.button.tooltip-toggle:hover,
+a.button.tooltip-toggle:active,
+a.button.tooltip-toggle:focus {
+	color: #fff;
+	background-color: #0085ba;
+	transform: none;
+}
+
+.tooltip {
+	margin-top: 6px;
+	display: block;
 }

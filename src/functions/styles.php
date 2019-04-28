@@ -12,7 +12,7 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_main_styles' );
  */
 function enqueue_main_styles() {
 	$handle     = _get_handle();
-	$breakpoint = _get_value( 'general_breakpoints_global', _get_breakpoint() );
+	$breakpoint = _get_option( 'breakpoint', _get_breakpoint() );
 	$mobile     = intval( $breakpoint );
 
 	wp_register_style(

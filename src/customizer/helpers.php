@@ -4,7 +4,6 @@ namespace GenesisCustomizer;
 
 function _get_default_panels() {
 	return [
-		'general'  => __( 'General Settings', 'genesis-customizer' ),
 		'base'     => __( 'Base Styles', 'genesis-customizer' ),
 		'header'   => __( 'Header', 'genesis-customizer' ),
 		'menus'    => __( 'Menus', 'genesis-customizer' ),

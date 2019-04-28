@@ -23,7 +23,7 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-1',
+		'settings' => 'divider',
 		'default'  => '<hr>',
 	],
 	[

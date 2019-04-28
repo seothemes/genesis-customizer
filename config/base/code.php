@@ -42,7 +42,7 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-4',
+		'settings' => 'divider',
 		'default'  => '<hr>',
 	],
 	[

@@ -22,7 +22,7 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-1',
+		'settings' => 'divider',
 		'default'  => '<hr>',
 	],
 	[
@@ -87,7 +87,7 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-2',
+		'settings' => 'divider',
 		'default'  => '<hr>',
 	],
 	[
@@ -110,7 +110,7 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-3',
+		'settings' => 'divider',
 		'default'  => '<hr>',
 	],
 	[
@@ -133,7 +133,7 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-4',
+		'settings' => 'divider',
 		'default'  => '<hr>',
 	],
 	[
@@ -228,7 +228,7 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-8794',
+		'settings' => 'divider',
 		'default'  => '<hr>',
 	],
 	[

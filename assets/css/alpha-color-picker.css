@@ -1,0 +1,123 @@
+/**
+* Alpha Color Picker CSS
+*/
+
+.wp-picker-holder {
+	width: 276px;
+	position: relative;
+}
+
+.alpha-color-picker-wrap .wp-picker-input-wrap {
+	display: none;
+}
+
+.alpha-color-picker-wrap .wp-picker-active .wp-picker-input-wrap {
+	display: block;
+	margin-top: 6px;
+}
+
+.alpha-color-picker-wrap .wp-picker-container input[type=text].wp-color-picker {
+	width: 195px;
+}
+
+.wp-picker-container .wp-picker-open ~ .wp-picker-holder .alpha-color-picker-container {
+	display: block;
+}
+
+.alpha-color-picker-container {
+	display: none;
+	position: absolute;
+	top: 10px;
+	right: 28px;
+	height: calc(100% - 20px);
+}
+
+.alpha-color-picker-container .ui-widget-content,
+.alpha-color-picker-container .ui-widget-header,
+.alpha-color-picker-wrap .ui-state-focus {
+	background: transparent;
+	border: none;
+}
+
+.alpha-color-picker-wrap a.iris-square-value:focus {
+	-webkit-box-shadow: none;
+	box-shadow: none;
+}
+
+.alpha-color-picker-container .ui-slider {
+	position: relative;
+	z-index: 1;
+	height: calc(100% - 24px);
+	text-align: center;
+	margin: 24px auto 0;
+	width: 19px
+}
+
+.alpha-color-picker-container .ui-slider-handle,
+.alpha-color-picker-container .ui-widget-content .ui-state-default {
+	color: #777;
+	background: #FFF;
+	text-shadow: 0 1px 0 #FFF;
+	text-decoration: none;
+	position: absolute;
+	z-index: 2;
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	border: 1px solid #aaa;
+	border-radius: 4px;
+	left: -4px;
+	height: 24px;
+	width: 24px;
+	cursor: ns-resize;
+	font-size: 0;
+	padding: 0;
+	line-height: 24px;
+}
+
+.alpha-color-picker-container .ui-slider-handle.show-opacity {
+	font-size: 12px;
+}
+
+.alpha-color-picker-container .click-zone {
+	width: 19px;
+	height: 100%;
+	display: block;
+	position: absolute;
+	left: 10px;
+}
+
+.alpha-color-picker-container .max-click-zone {
+	right: 10px;
+	left: auto;
+}
+
+.alpha-color-picker-container .transparency {
+	height: 100%;
+	width: 19px;
+	background-color: #FFF;
+	background-image: url(../img/transparency-grid.png);
+	background-position: center;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.4) inset;
+	border-radius: 3px;
+	padding: 0;
+	position: absolute;
+	top: 0;
+}
+
+.alpha-color-picker-wrap .iris-strip {
+	width: 20px !important;
+}
+
+.alpha-color-picker-wrap .iris-square {
+	margin-right: 7px !important;
+}
+
+.alpha-color-picker-wrap .wp-picker-container .wp-color-result.button {
+	margin: 0;
+}
+
+@media (max-width: 782px) {
+
+	.alpha-color-picker-wrap .wp-picker-container input[type=text].wp-color-picker {
+		width: 173px;
+	}
+}

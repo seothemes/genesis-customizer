@@ -67,7 +67,7 @@ function enqueue_scripts() {
 			'menuIconClass'    => '',
 			'subMenuIconClass' => '',
 			'subMenuIcon'      => _get_value( 'menus_sub-menu-toggle_icon' ),
-			'breakpoint'       => _get_value( 'general_breakpoints_global', _get_breakpoint() ),
+			'breakpoint'       => _get_option( 'breakpoint', _get_breakpoint() ),
 			'gutter'           => _get_value( 'base_global_gutter' ),
 			'sticky'           => _has_sticky_header(),
 			'transparent'      => _has_transparent_header(),

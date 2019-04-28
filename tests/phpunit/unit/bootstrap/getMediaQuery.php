@@ -23,7 +23,7 @@ class Test_GetMediaQuery extends Test_Case {
 	public function test_should_return_formatted_media_query() {
 		Functions\expect( 'GenesisCustomizer\_get_value' )
 			->twice()
-			->with( 'general_breakpoints_global' )
+			->with( 'base_body_typography' )
 			->andReturn( 600 );
 
 		$this->assertSame( '@media (min-width:600px)', _get_media_query( 'min' ) );

@@ -23,7 +23,7 @@ function _is_debug_mode() {
  * @return void
  */
 function _debug( $value ) {
-	echo '<pre style="margin: 200px 100px 0;">';
+	echo '<pre style="margin:20px;padding:20px;">';
 	print_r( $value );
 	echo '</pre>';
 }

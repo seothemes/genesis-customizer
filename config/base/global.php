@@ -213,7 +213,7 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-393074',
+		'settings' => 'divider',
 		'default'  => '<hr>',
 	],
 	[
@@ -269,7 +269,7 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-3074',
+		'settings' => 'divider',
 		'default'  => '<hr>',
 	],
 	[
@@ -308,7 +308,7 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-4',
+		'settings' => 'divider',
 		'default'  => '<hr>',
 	],
 	[
@@ -336,7 +336,7 @@ return [
 	],
 	[
 		'type'     => 'custom',
-		'settings' => 'divider-34874',
+		'settings' => 'divider',
 		'default'  => '<hr>',
 	],
 	[
