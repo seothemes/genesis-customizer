@@ -8,7 +8,7 @@ add_action( 'customize_register', __NAMESPACE__ . '\custom_sections' );
  *
  * @since 1.0.0
  *
- * @param $wp_customize
+ * @param $wp_customize \WP_Customize_Manager
  *
  * @return void
  */

@@ -26,7 +26,6 @@ function settings_link( $links ) {
 	return $links;
 }
 
-
 add_action( 'genesis_admin_menu', __NAMESPACE__ . '\admin_settings' );
 /**
  * Description of expected behavior.
@@ -36,7 +35,5 @@ add_action( 'genesis_admin_menu', __NAMESPACE__ . '\admin_settings' );
  * @return void
  */
 function admin_settings() {
-	global $_genesis_customizer_settings;
-
-	$_genesis_customizer_settings = new Admin_Settings();
+	new Admin_Settings();
 }

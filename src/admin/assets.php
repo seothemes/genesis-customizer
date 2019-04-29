@@ -20,6 +20,30 @@ function admin_styles() {
 	wp_enqueue_style( __NAMESPACE__ . '\admin' );
 }
 
+add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\admin_scripts' );
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function admin_scripts() {
+	$page = get_current_screen();
+
+	if ( 'appearance_page_custom-typekit-fonts' !== $page->id ) {
+		return;
+	}
+
+	wp_register_script(
+		__NAMESPACE__ . '\admin',
+		_get_url() . 'assets/js/admin.js',
+		false,
+		_get_version()
+	);
+	wp_enqueue_script( __NAMESPACE__ . '\admin' );
+}
+
 
 add_filter( 'pand_dismiss_notice_js_url', __NAMESPACE__ . '\dismiss_notice_js_url', 10, 2 );
 /**

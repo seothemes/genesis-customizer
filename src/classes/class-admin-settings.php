@@ -110,14 +110,14 @@ class Admin_Settings {
 
 		// Admin JS.
 		wp_register_script(
-			_get_handle() . '-admin',
-			_get_url() . 'assets/js/admin.js',
+			_get_handle() . '-admin-settings',
+			_get_url() . 'assets/js/admin-settings.js',
 			[
 				_get_handle() . '-alpha',
 			],
 			_get_version()
 		);
-		wp_enqueue_script( _get_handle() . '-admin' );
+		wp_enqueue_script( _get_handle() . '-admin-settings' );
 	}
 
 	/**

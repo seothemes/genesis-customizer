@@ -11,6 +11,7 @@ add_action( 'genesis_setup', __NAMESPACE__ . '\add_fields', 15 );
  * @return array|mixed
  */
 function add_fields() {
+	$counter = 0;
 	$fields  = [];
 	$path    = _get_path();
 	$handle  = _get_handle();
@@ -19,7 +20,6 @@ function add_fields() {
 	foreach ( $configs as $config ) {
 		foreach ( glob( $config . '/*', GLOB_ONLYDIR ) as $panel ) {
 			foreach ( glob( $panel . '/*.php' ) as $section_path ) {
-				$counter = 0;
 				$module  = strpos( $section_path, 'pro/config' ) === false ? 0 : 1;
 				$panel   = basename( dirname( $section_path ) );
 				$section = basename( $section_path, '.php' );
@@ -35,7 +35,7 @@ function add_fields() {
 				}
 
 				foreach ( $fields as $field ) {
-					++ $counter;
+					$counter = $counter + 1;
 
 					\Kirki::add_field( $handle, apply_filters( 'genesis_customizer_field', $field, $panel, $section, $prefix, $counter ) );
 				}

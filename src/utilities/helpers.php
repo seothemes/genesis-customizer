@@ -166,8 +166,11 @@ function _get_media_query( $query = 'min' ) {
  *
  * @return mixed
  */
-function _get_option( $option, $default = false ) {
-	return get_option( _get_handle() . '-' . $option, $default );
+function _get_option( $option = '', $default = false ) {
+	$handle = _get_handle();
+	$option = $option ? $handle . '-' . $option : $handle;
+
+	return get_option( $option, $default );
 }
 
 /**

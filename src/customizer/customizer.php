@@ -2,6 +2,8 @@
 
 namespace GenesisCustomizer;
 
+use Kint\Kint;
+
 add_filter( 'kirki_control_types', __NAMESPACE__ . '\register_controls' );
 /**
  * Registers the control with Kirki.
@@ -42,7 +44,7 @@ add_action( 'customize_register', __NAMESPACE__ . '\modify_defaults', 100 );
  *
  * @since 1.0.0
  *
- * @param $wp_customize
+ * @param $wp_customize \WP_Customize_Manager
  *
  * @return void
  */
@@ -98,4 +100,36 @@ function customizer_scripts() {
 	);
 
 	wp_enqueue_script( _get_handle() . '-customizer' );
+}
+
+add_action( 'init', __NAMESPACE__ . '\add_default_values_to_db' );
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function add_default_values_to_db() {
+	$handle  = _get_handle();
+	$options = _get_option();
+
+	// Only run once.
+	if ( isset( $options['loaded'] ) && true === $options['loaded'] ) {
+		return;
+	}
+
+	$options['loaded'] = true;
+
+	$settings = \Kirki::$fields;
+
+	foreach ( $settings as $setting => $args ) {
+		$name = str_replace( [ $handle, '[', ']', ], '', $setting );
+
+		if ( ! isset( $options[ $name ] ) ) {
+			$options[ $name ] = _get_default( $name );
+		}
+	}
+
+	update_option( $handle, $options );
 }
