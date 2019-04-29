@@ -53,6 +53,7 @@ return [
 		'settings'  => 'gradient',
 		'label'     => __( 'Background Gradient', 'genesis-customizer' ),
 		'transport' => 'refresh',
+		'alpha'     => false,
 		'choices'   => [
 			'left'        => __( 'Left', 'genesis-customizer' ),
 			'right'       => __( 'Right', 'genesis-customizer' ),
