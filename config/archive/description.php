@@ -90,6 +90,28 @@ return [
 		'default'  => '<hr>',
 	],
 	[
+		'type'     => 'select',
+		'settings' => 'text-align',
+		'label'    => __( 'Text Alignment', 'genesis-customizer' ),
+		'default'  => 'left',
+		'choices'  => [
+			'left'   => __( 'Left', 'genesis-customizer' ),
+			'center' => __( 'Center', 'genesis-customizer' ),
+			'right'  => __( 'Right', 'genesis-customizer' ),
+		],
+		'output'   => [
+			[
+				'element'  => '.archive-description',
+				'property' => 'text-align',
+			],
+		],
+	],
+	[
+		'type'     => 'custom',
+		'settings' => 'divider',
+		'default'  => '<hr>',
+	],
+	[
 		'type'     => 'slider',
 		'settings' => 'spacing',
 		'label'    => __( 'Archive Description Spacing', 'genesis-customizer' ),

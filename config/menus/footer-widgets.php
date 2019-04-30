@@ -66,7 +66,7 @@ return [
 		'type'     => 'slider',
 		'settings' => 'menu-item-spacing-top',
 		'label'    => __( 'Menu Item Spacing Top', 'genesis-customizer' ),
-		'default'  => _get_size( 'm', '' ),
+		'default'  => '0',
 		'choices'  => [
 			'min'  => 0,
 			'max'  => 40,
@@ -84,7 +84,7 @@ return [
 		'type'     => 'slider',
 		'settings' => 'menu-item-spacing-bottom',
 		'label'    => __( 'Menu Item Spacing Bottom', 'genesis-customizer' ),
-		'default'  => '0',
+		'default'  => _get_size( 'm', '' ),
 		'choices'  => [
 			'min'  => 0,
 			'max'  => 40,

@@ -35,6 +35,17 @@ return [
 		'choices'  => _get_image_sizes(),
 	],
 	[
+		'type'     => 'select',
+		'settings' => 'alignment',
+		'label'    => __( 'Alignment', 'genesis-customizer' ),
+		'default'  => '',
+		'choices'  => [
+			''     => __( 'Default', 'genesis-customizer' ),
+			'wide' => __( 'Wide', 'genesis-customizer' ),
+			'full' => __( 'Full', 'genesis-customizer' ),
+		],
+	],
+	[
 		'type'     => 'custom',
 		'settings' => 'divider',
 		'default'  => '<hr>',

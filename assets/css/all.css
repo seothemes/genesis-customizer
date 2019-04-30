@@ -388,13 +388,12 @@ button:disabled:focus,
 
 button.small,
 .button.small {
-  padding: 1em 2em;
-  font-size: smaller;
+  font-size: small;
 }
 
 button.big,
 .button.big {
-  font-size: larger;
+  font-size: large;
 }
 
 button.white,
@@ -409,6 +408,20 @@ button.white:active,
 .button.white:focus,
 .button.white:active {
   background: #ffffff;
+}
+
+button.outline,
+.button.outline {
+  background: transparent;
+}
+
+button.outline:hover,
+button.outline:focus,
+button.outline:active,
+.button.outline:hover,
+.button.outline:focus,
+.button.outline:active {
+  background: transparent;
 }
 
 button.ghost,
@@ -1061,8 +1074,15 @@ iframe {
   margin-bottom: 0;
 }
 
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
 .header-right {
   text-align: right;
+  display: flex;
+  align-items: center;
 }
 
 .has-transparent-header .site-header {
@@ -1271,6 +1291,10 @@ iframe {
 
 .archive .entry > *:last-child {
   margin-bottom: 0;
+}
+
+.entry-header {
+  width: 100%;
 }
 
 .entry-title {
@@ -1562,7 +1586,9 @@ iframe {
 }
 
 .footer-widgets .menu-item {
+  display: inline-block;
   margin: 0;
+  width: 100%;
 }
 
 .footer-credits {

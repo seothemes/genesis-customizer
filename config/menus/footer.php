@@ -50,17 +50,17 @@ return [
 		'output'   => [
 			[
 				'choice'   => 'background',
-				'element'  => '.nav-footer',
+				'element'  => '.nav-footer, .footer-credits .menu',
 				'property' => 'background-color',
 			],
 			[
 				'choice'   => 'border',
-				'element'  => '.nav-footer',
+				'element'  => '.nav-footer, .footer-credits .menu',
 				'property' => 'border-color',
 			],
 			[
 				'choice'   => 'link',
-				'element'  => '.nav-footer a',
+				'element'  => '.nav-footer a, .footer-credits .menu-item a',
 				'property' => 'color',
 			],
 			[
@@ -69,6 +69,9 @@ return [
 					'.nav-footer a:hover',
 					'.nav-footer a:focus',
 					'.nav-footer .current-menu-item > a',
+					'.footer-credits .menu a:hover',
+					'.footer-credits .menu a:focus',
+					'.footer-credits .menu .current-menu-item > a',
 				],
 				'property' => 'color',
 			],
@@ -93,7 +96,7 @@ return [
 		],
 		'output'   => [
 			[
-				'element'     => '.nav-footer a',
+				'element'     => '.nav-footer a, .footer-credits .menu-item a',
 				'media_query' => _get_media_query(),
 			],
 		],
@@ -138,7 +141,7 @@ return [
 		],
 		'output'   => [
 			[
-				'element'  => '.nav-footer',
+				'element'  => '.nav-footer, .footer-credits .menu',
 				'property' => 'padding-top',
 				'units'    => 'px',
 			],
@@ -156,7 +159,7 @@ return [
 		],
 		'output'   => [
 			[
-				'element'  => '.nav-footer',
+				'element'  => '.nav-footer, .footer-credits .menu',
 				'property' => 'padding-bottom',
 				'units'    => 'px',
 			],
@@ -174,7 +177,7 @@ return [
 		],
 		'output'   => [
 			[
-				'element'       => '.nav-footer a',
+				'element'       => '.nav-footer a, .footer-credits .menu-item a',
 				'property'      => 'padding',
 				'value_pattern' => '$px 0',
 				'media_query'   => _get_media_query(),
@@ -193,7 +196,7 @@ return [
 		],
 		'output'   => [
 			[
-				'element'       => '.nav-footer .menu-item',
+				'element'       => '.nav-footer .menu-item, .footer-credits .menu-item',
 				'property'      => 'padding',
 				'value_pattern' => '0 $px',
 				'media_query'   => _get_media_query(),
@@ -223,12 +226,12 @@ return [
 			[
 				'choice'   => 'border-top-width',
 				'property' => 'border-top-width',
-				'element'  => '.nav-footer',
+				'element'  => '.nav-footer, .footer-credits .menu',
 			],
 			[
 				'choice'   => 'border-bottom-width',
 				'property' => 'border-bottom-width',
-				'element'  => '.nav-footer',
+				'element'  => '.nav-footer, .footer-credits .menu',
 			],
 		],
 	],

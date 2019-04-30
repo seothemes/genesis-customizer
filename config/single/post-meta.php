@@ -23,4 +23,44 @@ return [
 			'rows'    => '2',
 		],
 	],
+	[
+		'type'     => 'custom',
+		'settings' => 'divider',
+		'default'  => '<hr>',
+	],
+	[
+		'type'     => 'typography',
+		'settings' => 'typography',
+		'label'    => __( 'Typography', 'genesis-customizer' ),
+		'default'  => [
+			'font-family'    => '',
+			'font-size'      => '',
+			'variant'        => '',
+			'line-height'    => '',
+			'letter-spacing' => '',
+			'text-transform' => '',
+		],
+		'output'   => [
+			[
+				'element' => '.single .entry-meta',
+			],
+		],
+	],
+	[
+		'type'     => 'select',
+		'settings' => 'text-align',
+		'label'    => __( 'Text Alignment', 'genesis-customizer' ),
+		'default'  => 'left',
+		'choices'  => [
+			'left'   => __( 'Left', 'genesis-customizer' ),
+			'center' => __( 'Center', 'genesis-customizer' ),
+			'right'  => __( 'Right', 'genesis-customizer' ),
+		],
+		'output'   => [
+			[
+				'element'  => '.single .entry-meta',
+				'property' => 'text-align',
+			],
+		],
+	],
 ];

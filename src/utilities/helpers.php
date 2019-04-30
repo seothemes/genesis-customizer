@@ -2,8 +2,6 @@
 
 namespace GenesisCustomizer;
 
-use Mexitek\PHPColors\Color;
-
 /**
  * Description of expected behavior.
  *
@@ -187,7 +185,7 @@ function _get_setting( $setting ) {
 	$section = basename( $file, '.php' );
 	$panel   = basename( dirname( $file ) );
 
-	return _get_handle() . '_' . $panel . '_' . $section . '_' . $setting;
+	return _get_handle() . '[' . $panel . '_' . $section . '_' . $setting . ']';
 }
 
 /**
@@ -289,24 +287,6 @@ function _get_color( $color = 'accent' ) {
 	}
 
 	return $colors;
-}
-
-/**
- * Description of expected behavior.
- *
- * @since 1.0.0
- *
- * @param string $color_1
- * @param string $color_2
- *
- * @return string
- * @throws \Exception
- */
-function _get_mixture( $color_1, $color_2 ) {
-	$color_1 = new Color( $color_1 );
-	$mixture = $color_1->mix( $color_2 );
-
-	return $mixture;
 }
 
 /**

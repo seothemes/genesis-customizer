@@ -32,17 +32,6 @@ function build_gradients( $angle, $color_1, $color_2 ) {
 function generate_gradient_css() {
 	$css = '';
 
-	// Buttons.
-	$button_colors = _get_value( 'base_buttons_gradient' );
-	$button_angle  = _get_value( 'base_buttons_angle' );
-
-	$css .= _get_elements( 'button' ) . '{' . build_gradients( $button_angle, $button_colors['left'], $button_colors['right'] ) . '}';
-	$css .= _get_elements( 'button', 'hover' ) . '{' . build_gradients( $button_angle, $button_colors['left-hover'], $button_colors['right-hover'] ) . '}';
-
-	// White button text.
-	$css .= sprintf( '.button.white,button.white{color:#%s}', _get_mixture( $button_colors['left'], $button_colors['right'] ) );
-	$css .= sprintf( '.button.white:hover,.button.white:focus,button.white:hover,button.white:focus{color:#%s}', _get_mixture( $button_colors['left-hover'], $button_colors['right-hover'] ) );
-
 	// Site Footer.
 	$site_footer_colors = _get_value( 'footer_site-footer_gradient' );
 	$site_footer_angle  = _get_value( 'footer_site-footer_angle' );

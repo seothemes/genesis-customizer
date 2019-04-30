@@ -57,14 +57,15 @@ function _is_module_enabled( $modules ) {
 		return false;
 	}
 
+	$option = get_option( 'genesis-customizer-modules' );
+
 	if ( is_string( $modules ) ) {
 		$modules = [ $modules ];
 	}
 
 	foreach ( $modules as $module ) {
-		$option = genesis_get_option( $module, 'genesis-customizer-settings' );
 
-		if ( ! $option ) {
+		if ( ! in_array( $module, $option ) ) {
 			return false;
 		}
 	}
@@ -110,10 +111,9 @@ function _is_plugin_active( $plugin ) {
 
 	} else if ( defined( $plugins[ $plugin ] ) ) {
 		return true;
-
-	} else {
-		return false;
 	}
+
+	return false;
 }
 
 /**

@@ -68,6 +68,7 @@ function _get_default_sections() {
 			'comments'       => __( 'Comments', 'genesis-customizer' ),
 		],
 		'archive'  => [
+			'settings'    => __( 'Settings', 'genesis-customizer' ),
 			'entry'       => __( 'Entry', 'genesis-customizer' ),
 			'description' => __( 'Archive Description', 'genesis-customizer' ),
 			'post-meta'   => __( 'Post Meta', 'genesis-customizer' ),

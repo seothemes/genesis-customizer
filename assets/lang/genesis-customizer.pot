@@ -33,11 +33,11 @@ msgstr ""
 msgid "Would you like to move it now?"
 msgstr ""
 
-#: config/archive/description.php:9, config/archive/entry.php:9, config/archive/pagination.php:9, config/base/blockquotes.php:9, config/base/body.php:9, config/base/buttons.php:9, config/base/code.php:9, config/base/forms.php:9, config/base/headings.php:9, config/base/links.php:9, config/content/author-box.php:9, config/content/breadcrumbs.php:9, config/footer/credits.php:20, config/footer/widgets.php:31, config/header/primary.php:61, config/header/right.php:48, config/header/title-area.php:9, config/menus/footer.php:37, config/menus/menu-toggle.php:20, config/menus/mobile.php:9, config/menus/primary.php:9, config/menus/secondary.php:20, config/menus/sub-menu-toggle.php:20, config/menus/sub-menu.php:20, config/sidebars/primary.php:9, config/sidebars/secondary.php:9, config/single/after-entry.php:9, config/single/comments.php:9, config/single/entry.php:9, src/classes/class-admin-settings.php:183
+#: config/archive/description.php:9, config/archive/entry.php:9, config/archive/pagination.php:9, config/archive/post-meta.php:34, config/base/blockquotes.php:9, config/base/body.php:9, config/base/buttons.php:9, config/base/code.php:9, config/base/forms.php:9, config/base/headings.php:9, config/base/links.php:9, config/content/author-box.php:9, config/content/breadcrumbs.php:9, config/footer/credits.php:20, config/footer/widgets.php:31, config/header/primary.php:61, config/header/right.php:48, config/header/title-area.php:9, config/menus/footer.php:37, config/menus/menu-toggle.php:20, config/menus/mobile.php:9, config/menus/primary.php:9, config/menus/secondary.php:20, config/menus/sub-menu-toggle.php:20, config/menus/sub-menu.php:20, config/sidebars/primary.php:9, config/sidebars/secondary.php:9, config/single/after-entry.php:9, config/single/comments.php:9, config/single/entry.php:9, src/classes/class-admin-settings.php:183
 msgid "Colors"
 msgstr ""
 
-#: config/archive/description.php:11, config/archive/entry.php:11, config/archive/pagination.php:11, config/base/blockquotes.php:13, config/base/body.php:12, config/base/code.php:12, config/base/forms.php:12, config/content/author-box.php:11, config/content/breadcrumbs.php:11, config/footer/credits.php:22, config/footer/widgets.php:33, config/header/primary.php:63, config/menus/footer.php:39, config/menus/menu-toggle.php:22, config/menus/mobile.php:11, config/menus/secondary.php:22, config/menus/sub-menu-toggle.php:22, config/single/after-entry.php:11, config/single/comments.php:11, config/single/entry.php:11
+#: config/archive/description.php:11, config/archive/entry.php:11, config/archive/pagination.php:11, config/archive/post-meta.php:36, config/base/blockquotes.php:13, config/base/body.php:12, config/base/buttons.php:11, config/base/code.php:12, config/base/forms.php:12, config/content/author-box.php:11, config/content/breadcrumbs.php:11, config/footer/credits.php:22, config/footer/widgets.php:33, config/header/primary.php:63, config/menus/footer.php:39, config/menus/menu-toggle.php:22, config/menus/mobile.php:11, config/menus/secondary.php:22, config/menus/sub-menu-toggle.php:22, config/single/after-entry.php:11, config/single/comments.php:11, config/single/entry.php:11
 msgid "Background"
 msgstr ""
 
@@ -61,7 +61,23 @@ msgstr ""
 msgid "Margin Bottom"
 msgstr ""
 
-#: config/archive/description.php:95
+#: config/archive/description.php:95, config/footer/credits.php:132, config/single/entry.php:61
+msgid "Text Alignment"
+msgstr ""
+
+#: config/archive/description.php:98, config/footer/credits.php:119, config/footer/credits.php:135, config/menus/footer.php:116, config/menus/primary.php:77, config/menus/secondary.php:96, config/single/entry.php:64, config/single/entry.php:104
+msgid "Left"
+msgstr ""
+
+#: config/archive/description.php:99, config/footer/credits.php:118, config/footer/credits.php:136, config/menus/footer.php:118, config/menus/primary.php:78, config/menus/secondary.php:98, config/single/entry.php:65, config/single/entry.php:105
+msgid "Center"
+msgstr ""
+
+#: config/archive/description.php:100, config/footer/credits.php:120, config/footer/credits.php:137, config/menus/footer.php:117, config/menus/primary.php:79, config/menus/secondary.php:97, config/single/entry.php:66, config/single/entry.php:106
+msgid "Right"
+msgstr ""
+
+#: config/archive/description.php:117
 msgid "Archive Description Spacing"
 msgstr ""
 
@@ -77,19 +93,27 @@ msgstr ""
 msgid "Entry Title Typography"
 msgstr ""
 
-#: config/archive/entry.php:69, config/single/entry.php:66
-msgid "Entry Meta Typography"
+#: config/archive/entry.php:69
+msgid "Entry Content Typography"
 msgstr ""
 
-#: config/archive/entry.php:92, config/single/entry.php:89
+#: config/archive/entry.php:92, config/single/entry.php:123
 msgid "Entry Spacing"
 msgstr ""
 
 #: config/archive/entry.php:133
+msgid "Entry Title Spacing Top"
+msgstr ""
+
+#: config/archive/entry.php:151
+msgid "Entry Title Spacing Bottom"
+msgstr ""
+
+#: config/archive/entry.php:169
 msgid "Entry Border Radius"
 msgstr ""
 
-#: config/archive/entry.php:161
+#: config/archive/entry.php:197
 msgid "Entry Shadow"
 msgstr ""
 
@@ -117,7 +141,7 @@ msgstr ""
 msgid "Link Spacing"
 msgstr ""
 
-#: config/archive/pagination.php:101, config/footer/credits.php:97, config/header/primary.php:42, config/menus/footer.php:109, config/menus/secondary.php:92
+#: config/archive/pagination.php:101, config/footer/credits.php:114, config/header/primary.php:42, config/menus/footer.php:112, config/menus/secondary.php:92, config/single/featured-image.php:40
 msgid "Alignment"
 msgstr ""
 
@@ -161,6 +185,26 @@ msgstr ""
 msgid "Post Meta"
 msgstr ""
 
+#: config/archive/post-meta.php:37, config/archive/read-more.php:23, config/menus/footer.php:41, config/menus/primary.php:11, config/menus/secondary.php:24
+msgid "Link"
+msgstr ""
+
+#: config/archive/post-meta.php:38, config/menus/footer.php:42, config/menus/primary.php:12, config/menus/secondary.php:25
+msgid "Link Hover"
+msgstr ""
+
+#: config/archive/post-meta.php:71, config/single/entry.php:83
+msgid "Entry Meta Typography"
+msgstr ""
+
+#: config/archive/post-meta.php:94, config/footer/credits.php:183, config/footer/widgets.php:160, config/menus/footer.php:135, config/single/featured-image.php:56
+msgid "Spacing Top"
+msgstr ""
+
+#: config/archive/post-meta.php:112, config/base/lists.php:48, config/footer/credits.php:201, config/footer/widgets.php:178, config/menus/footer.php:153, config/single/featured-image.php:74
+msgid "Spacing Bottom"
+msgstr ""
+
 #: config/archive/read-more.php:9
 msgid "Display"
 msgstr ""
@@ -181,15 +225,11 @@ msgstr ""
 msgid "Style"
 msgstr ""
 
-#: config/archive/read-more.php:23, config/menus/footer.php:41, config/menus/primary.php:11, config/menus/secondary.php:24
-msgid "Link"
-msgstr ""
-
 #: config/archive/read-more.php:24
 msgid "Button"
 msgstr ""
 
-#: config/archive/read-more.php:30, config/base/blockquotes.php:12, config/base/body.php:11, config/base/buttons.php:11, config/base/code.php:11, config/base/forms.php:13, config/base/headings.php:11, config/base/links.php:11, config/content/breadcrumbs.php:12, config/footer/credits.php:23, config/footer/credits.php:135, config/footer/credits.php:142, config/footer/widgets.php:34, config/menus/menu-toggle.php:9, config/sidebars/primary.php:12, config/sidebars/secondary.php:12
+#: config/archive/read-more.php:30, config/base/blockquotes.php:12, config/base/body.php:11, config/base/buttons.php:13, config/base/code.php:11, config/base/forms.php:13, config/base/headings.php:11, config/base/links.php:11, config/content/breadcrumbs.php:12, config/footer/credits.php:23, config/footer/credits.php:152, config/footer/credits.php:159, config/footer/widgets.php:34, config/menus/menu-toggle.php:9, config/sidebars/primary.php:12, config/sidebars/secondary.php:12
 msgid "Text"
 msgstr ""
 
@@ -201,15 +241,15 @@ msgstr ""
 msgid "Show ellipses"
 msgstr ""
 
-#: config/base/blockquotes.php:11, config/base/blockquotes.php:72, config/base/buttons.php:13, config/base/forms.php:15, config/footer/widgets.php:38, config/header/primary.php:120, config/menus/footer.php:40, config/menus/menu-toggle.php:27, config/menus/secondary.php:23, config/menus/secondary.php:176, config/menus/sub-menu-toggle.php:26
+#: config/base/blockquotes.php:11, config/base/blockquotes.php:72, config/base/buttons.php:15, config/base/forms.php:15, config/footer/widgets.php:38, config/header/primary.php:120, config/menus/footer.php:40, config/menus/menu-toggle.php:27, config/menus/secondary.php:23, config/menus/secondary.php:176, config/menus/sub-menu-toggle.php:26
 msgid "Border"
 msgstr ""
 
-#: config/base/blockquotes.php:49, config/base/body.php:47, config/base/buttons.php:96, config/base/forms.php:67, config/base/headings.php:46, config/base/links.php:39, config/base/lists.php:71, config/content/breadcrumbs.php:53, config/footer/credits.php:64, config/footer/widgets.php:96, config/menus/footer.php:85, config/menus/primary.php:50, config/menus/secondary.php:68, config/menus/sub-menu.php:67, config/sidebars/primary.php:70, config/sidebars/secondary.php:70
+#: config/base/blockquotes.php:49, config/base/body.php:47, config/base/buttons.php:106, config/base/forms.php:67, config/base/headings.php:46, config/base/links.php:39, config/base/lists.php:71, config/content/breadcrumbs.php:53, config/footer/credits.php:64, config/footer/widgets.php:96, config/menus/footer.php:88, config/menus/mobile.php:60, config/menus/primary.php:50, config/menus/secondary.php:68, config/menus/sub-menu.php:67, config/sidebars/primary.php:70, config/sidebars/secondary.php:70
 msgid "Typography"
 msgstr ""
 
-#: config/base/blockquotes.php:81, config/footer/widgets.php:244, config/header/primary.php:127, config/menus/footer.php:218, config/menus/secondary.php:183
+#: config/base/blockquotes.php:81, config/footer/widgets.php:244, config/header/primary.php:127, config/menus/footer.php:221, config/menus/secondary.php:183
 msgid "Border Top Width"
 msgstr ""
 
@@ -217,7 +257,7 @@ msgstr ""
 msgid "Border Right Width"
 msgstr ""
 
-#: config/base/blockquotes.php:83, config/footer/widgets.php:245, config/header/primary.php:128, config/menus/footer.php:219, config/menus/secondary.php:184
+#: config/base/blockquotes.php:83, config/footer/widgets.php:245, config/header/primary.php:128, config/menus/footer.php:222, config/menus/secondary.php:184
 msgid "Border Bottom Width"
 msgstr ""
 
@@ -225,7 +265,7 @@ msgstr ""
 msgid "Border Left Width"
 msgstr ""
 
-#: config/base/body.php:75
+#: config/base/body.php:75, config/footer/credits.php:81
 msgid "Font Size"
 msgstr ""
 
@@ -241,63 +281,47 @@ msgstr ""
 msgid "Paragraphs"
 msgstr ""
 
-#: config/base/buttons.php:12, config/base/forms.php:14, config/base/links.php:12
+#: config/base/buttons.php:12
+msgid "Background Hover"
+msgstr ""
+
+#: config/base/buttons.php:14, config/base/forms.php:14, config/base/links.php:12
 msgid "Text Hover"
 msgstr ""
 
-#: config/base/buttons.php:14, config/base/forms.php:16
+#: config/base/buttons.php:16, config/base/forms.php:16
 msgid "Border Hover"
 msgstr ""
 
-#: config/base/buttons.php:54
-msgid "Background Gradient"
-msgstr ""
-
-#: config/base/buttons.php:57, config/footer/credits.php:102, config/footer/credits.php:118, config/menus/footer.php:113, config/menus/primary.php:77, config/menus/secondary.php:96
-msgid "Left"
-msgstr ""
-
-#: config/base/buttons.php:58, config/footer/credits.php:103, config/footer/credits.php:120, config/menus/footer.php:114, config/menus/primary.php:79, config/menus/secondary.php:97
-msgid "Right"
-msgstr ""
-
-#: config/base/buttons.php:59
-msgid "Left Hover"
-msgstr ""
-
-#: config/base/buttons.php:60
-msgid "Right Hover"
-msgstr ""
-
-#: config/base/buttons.php:80, config/footer/site-footer.php:23
+#: config/base/buttons.php:90, config/footer/site-footer.php:23
 msgid "Gradient Angle"
 msgstr ""
 
-#: config/base/buttons.php:123
+#: config/base/buttons.php:133
 msgid "Typography Desktop"
 msgstr ""
 
-#: config/base/buttons.php:143, config/base/forms.php:90, config/header/right.php:78, config/header/title-area.php:130
+#: config/base/buttons.php:153, config/base/forms.php:90, config/header/right.php:78, config/header/title-area.php:130
 msgid "Vertical Spacing"
 msgstr ""
 
-#: config/base/buttons.php:166, config/base/forms.php:113, config/header/title-area.php:153
+#: config/base/buttons.php:176, config/base/forms.php:113
 msgid "Horizontal Spacing"
 msgstr ""
 
-#: config/base/buttons.php:189, config/base/forms.php:136, config/base/global.php:278, config/content/avatar.php:9, config/menus/menu-toggle.php:187
+#: config/base/buttons.php:199, config/base/forms.php:136, config/base/global.php:278, config/content/avatar.php:9, config/menus/menu-toggle.php:187
 msgid "Border Radius"
 msgstr ""
 
-#: config/base/buttons.php:213, config/base/forms.php:154, config/footer/widgets.php:237, config/menus/footer.php:211, config/menus/menu-toggle.php:163
+#: config/base/buttons.php:223, config/base/forms.php:154, config/footer/widgets.php:237, config/menus/footer.php:214, config/menus/menu-toggle.php:163
 msgid "Border Width"
 msgstr ""
 
-#: config/base/buttons.php:242, config/base/forms.php:183
+#: config/base/buttons.php:252, config/base/forms.php:183
 msgid "Shadow"
 msgstr ""
 
-#: config/base/buttons.php:259, config/base/forms.php:200
+#: config/base/buttons.php:269, config/base/forms.php:200
 msgid "Shadow Hover"
 msgstr ""
 
@@ -453,10 +477,6 @@ msgstr ""
 msgid "Outside"
 msgstr ""
 
-#: config/base/lists.php:48, config/footer/credits.php:184, config/footer/widgets.php:178, config/menus/footer.php:150, config/single/featured-image.php:63
-msgid "Spacing Bottom"
-msgstr ""
-
 #: config/content/author-box.php:13
 msgid "Content"
 msgstr ""
@@ -473,11 +493,11 @@ msgstr ""
 msgid "Links Hover"
 msgstr ""
 
-#: config/content/breadcrumbs.php:60, config/footer/credits.php:71
+#: config/content/breadcrumbs.php:60, config/footer/credits.php:88
 msgid "Font Size Mobile"
 msgstr ""
 
-#: config/content/breadcrumbs.php:61, config/footer/credits.php:72
+#: config/content/breadcrumbs.php:61, config/footer/credits.php:89
 msgid "Font Size Desktop"
 msgstr ""
 
@@ -525,32 +545,20 @@ msgstr ""
 msgid "Vertical Spacing Desktop"
 msgstr ""
 
-#: config/footer/credits.php:9, config/footer/credits.php:155
+#: config/footer/credits.php:9, config/footer/credits.php:172
 msgid "Display Footer Credits section"
 msgstr ""
 
-#: config/footer/credits.php:100, config/menus/footer.php:112, config/menus/secondary.php:95
+#: config/footer/credits.php:117, config/menus/footer.php:115, config/menus/secondary.php:95
 msgid "Full Width"
 msgstr ""
 
-#: config/footer/credits.php:101, config/footer/credits.php:119, config/menus/footer.php:115, config/menus/primary.php:78, config/menus/secondary.php:98
-msgid "Center"
-msgstr ""
-
-#: config/footer/credits.php:115
-msgid "Text Alignment"
-msgstr ""
-
-#: config/footer/credits.php:132
+#: config/footer/credits.php:149
 msgid "Type"
 msgstr ""
 
-#: config/footer/credits.php:136
+#: config/footer/credits.php:153
 msgid "Widget Area"
-msgstr ""
-
-#: config/footer/credits.php:166, config/footer/widgets.php:160, config/menus/footer.php:132, config/single/featured-image.php:45
-msgid "Spacing Top"
 msgstr ""
 
 #: config/footer/site-footer.php:9
@@ -597,15 +605,15 @@ msgstr ""
 msgid "Additional desktop and mobile header layouts available in"
 msgstr ""
 
-#: config/header/primary.php:25, config/header/right.php:12, config/menus/mobile.php:92, src/admin/upgrade-notice.php:26, src/customizer/extra.php:111, src/customizer/extra.php:261
+#: config/header/primary.php:25, config/header/right.php:12, config/menus/mobile.php:117, src/admin/upgrade-notice.php:26, src/customizer/extra.php:111, src/customizer/extra.php:261
 msgid "Genesis Customizer Pro"
 msgstr ""
 
-#: config/header/primary.php:26, config/header/right.php:13, config/menus/mobile.php:93, src/customizer/extra.php:262
+#: config/header/primary.php:26, config/header/right.php:13, config/menus/mobile.php:118, src/customizer/extra.php:262
 msgid "!"
 msgstr ""
 
-#: config/header/primary.php:28, config/header/right.php:15, config/menus/mobile.php:95, src/admin/upgrade-notice.php:29, src/customizer/extra.php:114, src/customizer/extra.php:264
+#: config/header/primary.php:28, config/header/right.php:15, config/menus/mobile.php:120, src/admin/upgrade-notice.php:29, src/customizer/extra.php:114, src/customizer/extra.php:264
 msgid "Go Pro →"
 msgstr ""
 
@@ -673,11 +681,11 @@ msgstr ""
 msgid "Widget Content"
 msgstr ""
 
-#: config/header/right.php:101
+#: config/header/right.php:101, config/header/title-area.php:153
 msgid "Spacing Left"
 msgstr ""
 
-#: config/header/right.php:119
+#: config/header/right.php:119, config/header/title-area.php:171
 msgid "Spacing Right"
 msgstr ""
 
@@ -781,15 +789,11 @@ msgstr ""
 msgid "Menu Locations Screen"
 msgstr ""
 
-#: config/menus/footer.php:42, config/menus/primary.php:12, config/menus/secondary.php:25
-msgid "Link Hover"
-msgstr ""
-
-#: config/menus/footer.php:168, config/menus/mobile.php:59, config/menus/primary.php:90, config/menus/secondary.php:133
+#: config/menus/footer.php:171, config/menus/mobile.php:84, config/menus/primary.php:90, config/menus/secondary.php:133
 msgid "Menu Item Vertical Spacing"
 msgstr ""
 
-#: config/menus/footer.php:187, config/menus/primary.php:109, config/menus/secondary.php:152
+#: config/menus/footer.php:190, config/menus/primary.php:109, config/menus/secondary.php:152
 msgid "Menu Item Horizontal Spacing"
 msgstr ""
 
@@ -845,7 +849,7 @@ msgstr ""
 msgid "Overlay"
 msgstr ""
 
-#: config/menus/mobile.php:91
+#: config/menus/mobile.php:116
 msgid "More mobile menu options available in"
 msgstr ""
 
@@ -981,6 +985,10 @@ msgstr ""
 msgid "Entry Title"
 msgstr ""
 
+#: config/single/entry.php:101
+msgid "Entry Meta Text Alignment"
+msgstr ""
+
 #: config/single/featured-image.php:9
 msgid "Display on"
 msgstr ""
@@ -1003,6 +1011,18 @@ msgstr ""
 
 #: config/single/featured-image.php:33
 msgid "Size"
+msgstr ""
+
+#: config/single/featured-image.php:43
+msgid "Default"
+msgstr ""
+
+#: config/single/featured-image.php:44
+msgid "Wide"
+msgstr ""
+
+#: config/single/featured-image.php:45
+msgid "Full"
 msgstr ""
 
 #: src/admin/admin-settings.php:22
@@ -1276,7 +1296,7 @@ msgid "Load the child theme stylesheet at a later priority to override plugin st
 msgstr ""
 
 #: src/classes/class-admin-settings.php:184
-msgid "Set the default colors for the Genesis Customizer color palette."
+msgid "Sets the color palette defaults for color control Customizer settings."
 msgstr ""
 
 #: src/classes/class-admin-settings.php:275
@@ -1315,8 +1335,12 @@ msgstr ""
 msgid "Toggle Header"
 msgstr ""
 
-#: src/customizer/customizer.php:55
+#: src/customizer/customizer.php:57
 msgid "Default Background"
+msgstr ""
+
+#: src/customizer/customizer.php:169
+msgid "System"
 msgstr ""
 
 #: src/customizer/extra.php:26
@@ -1539,7 +1563,7 @@ msgstr ""
 msgid "Footer Credits"
 msgstr ""
 
-#: src/customizer/output.php:116
+#: src/customizer/output.php:105
 msgid "Invalid nonce."
 msgstr ""
 

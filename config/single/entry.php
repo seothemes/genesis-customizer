@@ -56,25 +56,19 @@ return [
 		],
 	],
 	[
-		'type'     => 'custom',
-		'settings' => 'divider',
-		'default'  => '<hr>',
-	],
-	[
-		'type'     => 'typography',
-		'settings' => 'entry-meta-typography',
-		'label'    => __( 'Entry Meta Typography', 'genesis-customizer' ),
-		'default'  => [
-			'font-family'    => '',
-			'font-size'      => '',
-			'variant'        => '',
-			'line-height'    => '',
-			'letter-spacing' => '',
-			'text-transform' => '',
+		'type'     => 'select',
+		'settings' => 'text-align',
+		'label'    => __( 'Text Alignment', 'genesis-customizer' ),
+		'default'  => 'left',
+		'choices'  => [
+			'left'   => __( 'Left', 'genesis-customizer' ),
+			'center' => __( 'Center', 'genesis-customizer' ),
+			'right'  => __( 'Right', 'genesis-customizer' ),
 		],
 		'output'   => [
 			[
-				'element' => '.single .entry-meta',
+				'element'  => '.single .entry-title',
+				'property' => 'text-align',
 			],
 		],
 	],

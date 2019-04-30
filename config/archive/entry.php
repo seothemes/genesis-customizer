@@ -65,8 +65,8 @@ return [
 	],
 	[
 		'type'     => 'typography',
-		'settings' => 'entry-meta-typography',
-		'label'    => __( 'Entry Meta Typography', 'genesis-customizer' ),
+		'settings' => 'entry-content-typography',
+		'label'    => __( 'Entry Content Typography', 'genesis-customizer' ),
 		'default'  => [
 			'font-family'    => '',
 			'font-size'      => '',
@@ -77,7 +77,7 @@ return [
 		],
 		'output'   => [
 			[
-				'element' => '.archive .entry-meta',
+				'element' => '.archive .entry-content',
 			],
 		],
 	],
@@ -124,6 +124,42 @@ return [
 				'element'       => '.entry-image-link.no-spacing',
 				'property'      => 'width',
 				'value_pattern' => 'calc(100% + (2 * $px))',
+			],
+		],
+	],
+	[
+		'type'     => 'slider',
+		'settings' => 'entry-title-spacing-top',
+		'label'    => __( 'Entry Title Spacing Top', 'genesis-customizer' ),
+		'default'  => '0',
+		'choices'  => [
+			'min'  => 0,
+			'max'  => 100,
+			'step' => 1,
+		],
+		'output'   => [
+			[
+				'element'  => '.archive .entry-title',
+				'property' => 'margin-top',
+				'units'    => 'px',
+			],
+		],
+	],
+	[
+		'type'     => 'slider',
+		'settings' => 'entry-title-spacing-bottom',
+		'label'    => __( 'Entry Title Spacing Bottom', 'genesis-customizer' ),
+		'default'  => _get_size( 'm', '' ),
+		'choices'  => [
+			'min'  => 0,
+			'max'  => 100,
+			'step' => 1,
+		],
+		'output'   => [
+			[
+				'element'  => '.archive .entry-title',
+				'property' => 'margin-bottom',
+				'units'    => 'px',
 			],
 		],
 	],

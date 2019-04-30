@@ -40,12 +40,11 @@ button,
 .button {
 
 	&.small {
-		padding: 1em 2em;
-		font-size: smaller;
+		font-size: small;
 	}
 
 	&.big {
-		font-size: larger;
+		font-size: large;
 	}
 
 	&.white {
@@ -53,6 +52,14 @@ button,
 
 		@include hover-focus {
 			background: $color--white;
+		}
+	}
+
+	&.outline {
+		background: transparent;
+
+		@include hover-focus {
+			background: transparent;
 		}
 	}
 

@@ -133,3 +133,76 @@ function add_default_values_to_db() {
 
 	update_option( $handle, $options );
 }
+
+add_filter( 'genesis_customizer_field', __NAMESPACE__ . '\add_font_choices', 10, 2 );
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
+ * @param $field
+ *
+ * @return mixed
+ */
+function add_font_choices( $field ) {
+	if ( $field['type'] === 'typography' ) {
+		$field['choices'] = [
+			'fonts' => apply_filters( 'genesis_customizer_font_choices', [] ),
+		];
+	}
+
+	return $field;
+}
+
+add_filter( 'genesis_customizer_font_choices', __NAMESPACE__ . '\add_font_group', 20 );
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
+ * @param $custom
+ *
+ * @return mixed
+ */
+function add_font_group( $custom ) {
+	$custom['families']['system'] = [
+		'text'     => esc_attr__( 'System', 'genesis-customizer' ),
+		'children' => [
+			[
+				'id'   => 'Helvetica, Arial, sans-serif',
+				'text' => 'Helvetica',
+			],
+			[
+				'id'   => 'Verdana, sans-serif',
+				'text' => 'Verdana',
+			],
+			[
+				'id'   => 'Arial, Helvetica, sans-serif',
+				'text' => 'Arial',
+			],
+			[
+				'id'   => 'Times, Georgia, serif',
+				'text' => 'Times',
+			],
+			[
+				'id'   => 'Georgia, Times, serif',
+				'text' => 'Georgia',
+			],
+			[
+				'id'   => 'Courier, monospace',
+				'text' => 'Courier',
+			],
+		],
+	];
+
+	$custom['variants'] = [
+		'Helvetica, Arial, sans-serif' => [ '200', '300', '400', '600', '700' ],
+		'Verdana, sans-serif'          => [ '200', '300', '400', '600', '700' ],
+		'Arial, Helvetica, sans-serif' => [ '200', '300', '400', '600', '700' ],
+		'Times, Georgia, serif'        => [ '200', '300', '400', '600', '700' ],
+		'Georgia, Times, serif'        => [ '200', '300', '400', '600', '700' ],
+		'Courier, monospace'           => [ '200', '300', '400', '600', '700' ],
+	];
+
+	return $custom;
+}

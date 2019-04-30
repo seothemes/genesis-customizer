@@ -149,8 +149,8 @@ return [
 	],
 	[
 		'type'     => 'slider',
-		'settings' => 'horizontal-spacing',
-		'label'    => __( 'Horizontal Spacing', 'genesis-customizer' ),
+		'settings' => 'spacing-left',
+		'label'    => __( 'Spacing Left', 'genesis-customizer' ),
 		'default'  => '0',
 		'choices'  => [
 			'min'  => 0,
@@ -163,6 +163,19 @@ return [
 				'property' => 'margin-left',
 				'units'    => 'px',
 			],
+		],
+	],
+	[
+		'type'     => 'slider',
+		'settings' => 'spacing-right',
+		'label'    => __( 'Spacing Right', 'genesis-customizer' ),
+		'default'  => '0',
+		'choices'  => [
+			'min'  => 0,
+			'max'  => 200,
+			'step' => 1,
+		],
+		'output'   => [
 			[
 				'element'  => '.title-area',
 				'property' => 'margin-right',

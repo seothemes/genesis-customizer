@@ -51,12 +51,34 @@ function display_featured_image() {
 
 	if ( ! empty( $img ) ) {
 		genesis_markup( [
-			'open'    => '<div %s>',
-			'close'   => '</div>',
+			'open'    => '<figure %s>',
+			'close'   => '</figure>',
 			'content' => wp_make_content_images_responsive( $img ),
 			'context' => 'featured-image',
 		] );
 	}
+}
+
+add_filter( 'genesis_attr_featured-image', __NAMESPACE__ . '\featured_image_alignment' );
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
+ * @param $attr
+ *
+ * @return mixed
+ */
+function featured_image_alignment( $attr ) {
+	$setting = _get_value( 'single_featured-image_alignment' );
+
+	if ( '' === $setting) {
+		return $attr;
+	}
+
+	$attr['class'] = $attr['class'] . ' wp-block-image align' . $setting;
+
+	return $attr;
 }
 
 /**

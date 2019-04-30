@@ -42,8 +42,33 @@ return [
 				'element'     => [
 					'.menu-primary a:hover',
 					'.menu-primary a:focus',
+					'.menu-primary .current-menu-item > a',
 				],
 				'property'    => 'color',
+				'media_query' => _get_media_query( 'max' ),
+			],
+		],
+	],
+	[
+		'type'     => 'custom',
+		'settings' => 'divider',
+		'default'  => '<hr>',
+	],
+	[
+		'type'     => 'typography',
+		'settings' => 'typography',
+		'label'    => __( 'Typography', 'genesis-customizer' ),
+		'default'  => [
+			'font-family'    => '',
+			'font-size'      => '',
+			'variant'        => '',
+			'line-height'    => '',
+			'letter-spacing' => '',
+			'text-transform' => '',
+		],
+		'output'   => [
+			[
+				'element'     => '.menu-primary a',
 				'media_query' => _get_media_query( 'max' ),
 			],
 		],

@@ -181,7 +181,7 @@ class Admin_Settings {
 
 		$settings['colors'] = [
 			'title'       => __( 'Colors', 'genesis-customizer' ),
-			'description' => __( 'Set the default colors for the Genesis Customizer color palette.', 'genesis-customizer' ),
+			'description' => __( 'Sets the color palette defaults for color control Customizer settings.', 'genesis-customizer' ),
 			'priority'    => 5,
 			'fields'      => $colors,
 		];

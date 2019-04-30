@@ -17,5 +17,4 @@ return array(
     'GenesisCustomizer\\Select_Control' => $baseDir . '/src/classes/class-select-control.php',
     'GenesisCustomizer\\Typekit_Fonts' => $baseDir . '/src/classes/class-typekit-fonts.php',
     'GenesisCustomizer\\WP_CLI_Commands' => $baseDir . '/src/classes/class-wp-cli-commands.php',
-    'Mexitek\\PHPColors\\Color' => $vendorDir . '/mexitek/phpcolors/src/Mexitek/PHPColors/Color.php',
 );
