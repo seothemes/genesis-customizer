@@ -132,6 +132,23 @@ return [
 		],
 	],
 	[
+		'type'     => 'radio-buttonset',
+		'settings' => 'title-text-align',
+		'label'    => __( 'Title Text Alignment', 'genesis-customizer' ),
+		'default'  => 'left',
+		'choices'  => [
+			'left'   => _get_svg( 'alignleft' ),
+			'center' => _get_svg( 'aligncenter' ),
+			'right'  => _get_svg( 'alignright' ),
+		],
+		'output'   => [
+			[
+				'element'  => '.footer-widgets .widget-title',
+				'property' => 'text-align',
+			],
+		],
+	],
+	[
 		'type'     => 'custom',
 		'settings' => 'divider',
 		'default'  => '<hr>',

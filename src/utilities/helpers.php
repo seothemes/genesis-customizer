@@ -376,4 +376,3 @@ function _get_elements( $element, $hover = false, $array = false ) {
 		return implode( ',', $elements[ $element ] );
 	}
 }
-

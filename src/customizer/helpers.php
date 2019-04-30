@@ -57,8 +57,9 @@ function _get_default_sections() {
 			'sidebar'        => __( 'Sidebar', 'genesis-customizer' ),
 		],
 		'sidebars' => [
-			'primary'   => __( 'Primary Sidebar', 'genesis-customizer' ),
-			'secondary' => __( 'Secondary Sidebar', 'genesis-customizer' ),
+			'primary'          => __( 'Primary Sidebar', 'genesis-customizer' ),
+			'secondary'        => __( 'Secondary Sidebar', 'genesis-customizer' ),
+			'featured-content' => __( 'Featured Content', 'genesis-customizer' ),
 		],
 		'single'   => [
 			'entry'          => __( 'Entry', 'genesis-customizer' ),

@@ -56,14 +56,14 @@ return [
 		],
 	],
 	[
-		'type'     => 'select',
+		'type'     => 'radio-buttonset',
 		'settings' => 'text-align',
 		'label'    => __( 'Text Alignment', 'genesis-customizer' ),
 		'default'  => 'left',
 		'choices'  => [
-			'left'   => __( 'Left', 'genesis-customizer' ),
-			'center' => __( 'Center', 'genesis-customizer' ),
-			'right'  => __( 'Right', 'genesis-customizer' ),
+			'left'   => _get_svg( 'alignleft' ),
+			'center' => _get_svg( 'aligncenter' ),
+			'right'  => _get_svg( 'alignright' ),
 		],
 		'output'   => [
 			[

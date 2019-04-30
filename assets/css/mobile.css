@@ -122,6 +122,10 @@
   width: 100%;
 }
 
+.gallery-item:nth-of-type(2n + 1) {
+  margin-left: 0;
+}
+
 .has-logo-above-mobile .header-search-toggle,
 .has-logo-below-mobile .header-search-toggle {
   position: absolute;

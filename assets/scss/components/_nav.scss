@@ -96,6 +96,7 @@
 		width: 100%;
 		opacity: 1;
 		align-items: center;
+		margin: 0 auto;
 
 		@include mq(0, m) {
 			display: none;

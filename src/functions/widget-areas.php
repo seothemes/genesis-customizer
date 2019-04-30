@@ -85,6 +85,11 @@ function register_widget_areas() {
 			'description' => __( 'This is the Above Footer widget area.', 'genesis-customizer' ),
 			'module'      => 'extra-widgets',
 		],
+		'below-footer'        => [
+			'name'        => __( 'Below Footer', 'genesis-customizer' ),
+			'description' => __( 'This is the Below Footer widget area.', 'genesis-customizer' ),
+			'module'      => 'extra-widgets',
+		],
 	] );
 
 	foreach ( $widget_areas as $id => $args ) {

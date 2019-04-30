@@ -102,7 +102,7 @@ return [
 			],
 			[
 				'choice'   => 'border',
-				'element'  => '.menu-toggle',
+				'element'  => '.menu-toggle, .menu-toggle-bar',
 				'property' => 'border-color',
 			],
 			[
@@ -175,6 +175,30 @@ return [
 			],
 			[
 				'element'       => '.menu-toggle',
+				'property'      => 'border-style',
+				'value_pattern' => 'solid',
+				'exclude'       => [ '0' ],
+			],
+		],
+	],
+	[
+		'type'     => 'slider',
+		'settings' => 'bar-border-width',
+		'label'    => __( 'Menu Toggle Bar Border Width', 'genesis-customizer' ),
+		'default'  => '0',
+		'choices'  => [
+			'min'  => 0,
+			'max'  => 10,
+			'step' => 1,
+		],
+		'output'   => [
+			[
+				'element'  => '.menu-toggle-bar',
+				'property' => 'border-width',
+				'units'    => 'px',
+			],
+			[
+				'element'       => '.menu-toggle-bar',
 				'property'      => 'border-style',
 				'value_pattern' => 'solid',
 				'exclude'       => [ '0' ],

@@ -771,6 +771,7 @@ iframe {
   width: 100%;
   opacity: 1;
   align-items: center;
+  margin: 0 auto;
 }
 
 .nav-secondary .wrap {
@@ -1423,10 +1424,6 @@ iframe {
   margin-left: 1em;
 }
 
-.gallery-item:nth-of-type(2n + 1) {
-  margin-left: 0;
-}
-
 .gallery-columns-1 .gallery-item {
   width: 100%;
   margin-left: 0;
@@ -1514,10 +1511,6 @@ iframe {
   clear: both;
   content: '';
   display: block;
-}
-
-.widget.featured-content .entry-image {
-  max-width: 8rem;
 }
 
 .widget.featured-content .entry-title {

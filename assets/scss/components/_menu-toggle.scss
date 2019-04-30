@@ -37,6 +37,10 @@
 			order: 2;
 			justify-content: center;
 			align-items: center;
+
+			@include mq(m) {
+				display: none;
+			}
 		}
 
 		.has-logo-below-mobile & {

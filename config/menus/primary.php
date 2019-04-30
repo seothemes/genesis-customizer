@@ -10,10 +10,12 @@ return [
 		'choices'  => [
 			'link'       => __( 'Link', 'genesis-customizer' ),
 			'link-hover' => __( 'Link Hover', 'genesis-customizer' ),
+			'border'     => __( 'Border', 'genesis-customizer' ),
 		],
 		'default'  => [
 			'link'       => _get_color( 'text' ),
 			'link-hover' => _get_color( 'accent' ),
+			'border'     => '',
 		],
 		'output'   => [
 			[
@@ -29,6 +31,11 @@ return [
 					'.menu-primary .current-menu-item > a',
 				],
 				'property' => 'color',
+			],
+			[
+				'choice'   => 'border',
+				'element'  => '.nav-primary',
+				'property' => 'border-color',
 			],
 		],
 	],
@@ -91,7 +98,7 @@ return [
 		'default'  => '10',
 		'choices'  => [
 			'min'  => 0,
-			'max'  => 20,
+			'max'  => 100,
 			'step' => 1,
 		],
 		'output'   => [
@@ -110,7 +117,7 @@ return [
 		'default'  => '10',
 		'choices'  => [
 			'min'  => 0,
-			'max'  => 20,
+			'max'  => 100,
 			'step' => 1,
 		],
 		'output'   => [
@@ -119,6 +126,38 @@ return [
 				'property'      => 'padding',
 				'value_pattern' => '0 $px',
 				'media_query'   => _get_media_query(),
+			],
+		],
+	],
+	[
+		'type'     => 'custom',
+		'settings' => 'divider',
+		'default'  => '<hr>',
+	],
+	[
+		'type'     => 'dimensions',
+		'settings' => 'border-width',
+		'label'    => __( 'Border Width', 'genesis-customizer' ),
+		'default'  => [
+			'border-top-width'    => '',
+			'border-bottom-width' => '',
+		],
+		'choices'  => [
+			'labels' => [
+				'border-top-width'    => __( 'Border Top Width', 'genesis-customizer' ),
+				'border-bottom-width' => __( 'Border Bottom Width', 'genesis-customizer' ),
+			],
+		],
+		'output'   => [
+			[
+				'choice'   => 'border-top-width',
+				'property' => 'border-top-width',
+				'element'  => '.nav-primary',
+			],
+			[
+				'choice'   => 'border-bottom-width',
+				'property' => 'border-bottom-width',
+				'element'  => '.nav-primary',
 			],
 		],
 	],

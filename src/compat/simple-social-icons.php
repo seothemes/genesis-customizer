@@ -3,7 +3,7 @@
 namespace GenesisCustomizer;
 
 // Remove Simple Social Icons default stylesheet.
-add_action( 'simple_social_default_stylesheet', '__return_false' );
+//add_action( 'simple_social_default_stylesheet', '__return_false' );
 
 add_filter( 'simple_social_default_styles', __NAMESPACE__ . '\simple_social_icons_defaults' );
 /**

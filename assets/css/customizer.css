@@ -118,6 +118,7 @@
 #customize-control-genesis-customizer-content_above_layout img,
 #customize-control-genesis-customizer-content_below_layout img,
 #customize-control-genesis-customizer-footer_above_layout img,
+#customize-control-genesis-customizer-footer_below_layout img,
 #customize-control-genesis-customizer-header_primary_layout img {
 	width: 76px;
 }
@@ -201,4 +202,26 @@ div.tooltip-wrapper .tooltip-content:after {
 
 .customize-control-kirki-box-shadow .preview-object .dashicons {
 	font-size: 24px;
+}
+
+.customize-control-kirki-radio-buttonset .buttonset {
+	border: 1px solid #ddd;
+}
+
+.customize-control-kirki-radio-buttonset .buttonset .switch-label {
+	background: #dddddd;
+}
+
+.customize-control-kirki-radio-buttonset .buttonset .switch-input:checked + .switch-label {
+	background-color: #ffffff;
+	text-shadow: none;
+}
+
+.customize-control-kirki-radio-buttonset svg {
+	width: 12px;
+	height: 12px;
+	display: block;
+	margin: 0 auto;
+	-webkit-font-smoothing: antialiased;
+	fill: #555d66;
 }

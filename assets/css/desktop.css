@@ -75,6 +75,11 @@
   align-self: flex-start;
 }
 
+.has-logo-above-mobile .menu-toggle-bar,
+.has-logo-below-mobile .menu-toggle-bar {
+  display: none;
+}
+
 .sub-menu {
   position: absolute;
   z-index: 1;

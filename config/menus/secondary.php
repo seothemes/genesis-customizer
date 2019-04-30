@@ -111,6 +111,24 @@ return [
 	],
 	[
 		'type'     => 'slider',
+		'settings' => 'width',
+		'label'    => __( 'Width', 'genesis-customizer' ),
+		'default'  => '100',
+		'choices'  => [
+			'min'  => 0,
+			'max'  => 100,
+			'step' => 1,
+		],
+		'output'   => [
+			[
+				'element'  => '.nav-secondary',
+				'property' => 'max-width',
+				'units'    => '%',
+			],
+		],
+	],
+	[
+		'type'     => 'slider',
 		'settings' => 'height',
 		'label'    => __( 'Height', 'genesis-customizer' ),
 		'default'  => '55',
@@ -134,7 +152,7 @@ return [
 		'default'  => '10',
 		'choices'  => [
 			'min'  => 0,
-			'max'  => 20,
+			'max'  => 100,
 			'step' => 1,
 		],
 		'output'   => [
@@ -153,7 +171,7 @@ return [
 		'default'  => '10',
 		'choices'  => [
 			'min'  => 0,
-			'max'  => 20,
+			'max'  => 100,
 			'step' => 1,
 		],
 		'output'   => [

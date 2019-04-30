@@ -13,11 +13,27 @@ add_filter( 'body_class', __NAMESPACE__ . '\header_body_classes', 100, 1 );
  * @return array
  */
 function header_body_classes( $classes ) {
-	$header_layout = _get_value( 'header_primary_layout' );
+	$header_layout    = _get_value( 'header_primary_layout' );
+	$mobile_layout    = _get_value( 'header_primary_mobile-layout' );
+	$mobile_animation = _get_value( 'menus_mobile_animation' );
+
+	if ( ! _is_pro_active() ) {
+		if ( 'has-logo-left' === $header_layout ) {
+			$mobile_layout = 'has-logo-left-mobile';
+		}
+
+		if ( 'has-logo-above' === $header_layout ) {
+			$mobile_layout = 'has-logo-above-mobile';
+		}
+
+		if ( 'has-logo-right' === $header_layout ) {
+			$mobile_layout = 'has-logo-right-mobile';
+		}
+	}
 
 	$classes[] = $header_layout;
-	$classes[] = _get_value( 'header_primary_mobile-layout' );
-	$classes[] = _get_value( 'menus_mobile_animation' );
+	$classes[] = $mobile_layout;
+	$classes[] = $mobile_animation;
 
 	if ( _is_single() ) {
 		$classes[] = 'single';

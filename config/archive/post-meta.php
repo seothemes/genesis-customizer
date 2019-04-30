@@ -33,7 +33,7 @@ return [
 		'settings' => 'colors',
 		'label'    => __( 'Colors', 'genesis-customizer' ),
 		'choices'  => [
-			'text'                   => __( 'Background', 'genesis-customizer' ),
+			'text'       => __( 'Text', 'genesis-customizer' ),
 			'link'       => __( 'Link', 'genesis-customizer' ),
 			'link-hover' => __( 'Link Hover', 'genesis-customizer' ),
 		],
