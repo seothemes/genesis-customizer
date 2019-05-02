@@ -45,7 +45,7 @@ function demo_import_plugin_page( $defaults ) {
 		'page_title'  => esc_html__( 'Demo Import', 'genesis-customizer' ),
 		'menu_title'  => esc_html__( 'Demo Import', 'genesis-customizer' ),
 		'capability'  => 'import',
-		'menu_slug'   => 'genesis-customizer-setup',
+		'menu_slug'   => 'genesis-customizer-demo-import',
 	];
 
 	return $custom;
