@@ -26,7 +26,7 @@ function custom_sections( $wp_customize ) {
 				'title'      => __( 'Upgrade to Genesis Customizer Pro', 'genesis-customizer' ),
 				'priority'   => 0,
 				'type'       => 'genesis-customizer-link',
-				'button_url' => 'https://genesiscustomizer.com/',
+				'button_url' => _get_upgrade_url(),
 			]
 		)
 	);
@@ -43,7 +43,6 @@ function custom_sections( $wp_customize ) {
 			]
 		)
 	);
-
 }
 
 add_action( 'genesis_setup', __NAMESPACE__ . '\go_pro', 15 );
@@ -74,52 +73,6 @@ function go_pro() {
 			'section'  => $handle . '_pro',
 			'settings' => $handle . '_pro',
 			'type'     => 'hidden',
-		] );
-	}
-}
-
-//add_action( 'genesis_setup', __NAMESPACE__ . '\go_pro_fields', 15 );
-/**
- * Description of expected behavior.
- *
- * @since 1.0.0
- *
- * @return void
- */
-function go_pro_fields() {
-	if ( _is_pro_active() ) {
-		return;
-	}
-
-	$handle   = _get_handle() . '_';
-	$sections = [
-		'archive_blog-layout',
-		'code_css',
-		'code_js',
-		'footer_scroll-to-top',
-		'header_search',
-		'header_sticky',
-		'header_transparent',
-		'hero_settings',
-		'menus_mega',
-		'header_above',
-		'footer_above',
-	];
-	$message  = sprintf(
-		'<p>%s <strong>%s</strong>%s </p><a href="%s" target="_blank" class="button-primary">%s</a>',
-		esc_html__( 'This feature is available in', 'genesis-customizer' ),
-		esc_html__( 'Genesis Customizer Pro', 'genesis-customizer' ),
-		esc_html__( '. Upgrade now for instant access!', 'genesis-customizer' ),
-		esc_url( 'https://genesiscustomizer.com/pro' ),
-		esc_html__( 'Go Pro →', 'genesis-customizer' )
-	);
-
-	foreach ( $sections as $section ) {
-		\Kirki::add_field( $handle, [
-			'section'  => $handle . $section,
-			'settings' => $handle . $section . '-pro',
-			'type'     => 'custom',
-			'default'  => $message,
 		] );
 	}
 }

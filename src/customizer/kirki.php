@@ -2,7 +2,7 @@
 
 namespace GenesisCustomizer;
 
-add_action( 'genesis_setup', __NAMESPACE__ . '\kirki_setup' );
+add_action( 'genesis_setup', __NAMESPACE__ . '\kirki_setup', 12 );
 /**
  * Description of expected behavior.
  *
@@ -11,7 +11,7 @@ add_action( 'genesis_setup', __NAMESPACE__ . '\kirki_setup' );
  * @return void
  */
 function kirki_setup() {
-	add_filter( 'kirki_telemetry', '__return_false' );
+//	add_filter( 'kirki_telemetry', '__return_false' );
 	add_filter( 'kirki/dynamic_css/method', '__return_true' );
 	add_filter( 'kirki_gutenberg_' . _get_handle() . '_dynamic_css', function () {
 		return home_url( '?action=kirki-styles' );
@@ -22,7 +22,7 @@ function kirki_setup() {
 	}
 }
 
-add_action( 'genesis_setup', __NAMESPACE__ . '\add_kirki_config' );
+add_action( 'genesis_setup', __NAMESPACE__ . '\add_kirki_config', 11 );
 /**
  * Adds the theme's Kirki config.
  *

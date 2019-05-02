@@ -11,11 +11,7 @@
   ],
   "minimum-stability": "dev",
   "require": {
-    "php": ">=5.4.0",
-    "aristath/kirki": "dev-master",
-    "richtabor/merlin-wp": "dev-master",
-    "tgmpa/tgm-plugin-activation": "dev-develop",
-    "yahnis-elsts/plugin-update-checker": "dev-master"
+    "php": ">=5.4.0"
   },
   "require-dev": {
     "php": "^5.6|^7",
@@ -28,8 +24,6 @@
       "src/classes"
     ],
     "files": [
-      "vendor/richtabor/merlin-wp/class-merlin.php",
-      "vendor/aristath/kirki/kirki.php",
       "src/autoload.php"
     ]
   },

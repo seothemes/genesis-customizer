@@ -2,7 +2,25 @@
 
 namespace GenesisCustomizer;
 
-add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\admin_styles' );
+add_filter( 'admin_body_class', __NAMESPACE__ . '\admin_body_class' );
+/**
+ * Adds one or more classes to the body tag in the dashboard.
+ *
+ * @since 1.0.0
+ *
+ * @param string $classes Current body classes.
+ *
+ * @return string
+ */
+function admin_body_class( $classes ) {
+	if ( ! _is_pro_active() ) {
+		$classes .= 'pro-not-active';
+	}
+
+	return $classes;
+}
+
+add_action( 'admin_print_styles', __NAMESPACE__ . '\admin_styles' );
 /**
  * Description of expected behavior.
  *

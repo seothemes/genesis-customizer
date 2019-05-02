@@ -59,12 +59,15 @@ function _is_module_enabled( $modules ) {
 
 	$option = get_option( 'genesis-customizer-modules' );
 
-	if ( is_string( $modules ) ) {
+	if ( ! is_array( $modules ) ) {
 		$modules = [ $modules ];
 	}
 
-	foreach ( $modules as $module ) {
+	if ( ! is_array( $option ) ) {
+		$option = [ $option ];
+	}
 
+	foreach ( $modules as $module ) {
 		if ( ! in_array( $module, $option ) ) {
 			return false;
 		}
@@ -101,6 +104,8 @@ function _is_plugin_active( $plugin ) {
 		'woocommerce'            => 'WooCommerce',
 		'elementor'              => 'Elementor\Plugin',
 		'simple-social-icons'    => 'Simple_Social_Icons_Widget',
+		'kirki'                  => 'Kirki',
+		'one-click-demo-import'  => ''
 	];
 
 	if ( class_exists( $plugins[ $plugin ] ) ) {

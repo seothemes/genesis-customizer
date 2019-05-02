@@ -1180,6 +1180,16 @@ iframe {
   margin-bottom: 0;
 }
 
+.hero-section p:empty {
+  display: none;
+}
+
+.hero-inner {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
 .wp-custom-header img {
   min-width: 100%;
   min-height: 100%;

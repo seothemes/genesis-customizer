@@ -50,7 +50,17 @@
 	p {
 		margin-top: 1em;
 		margin-bottom: 0;
+
+		&:empty {
+			display: none;
+		}
 	}
+}
+
+.hero-inner {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
 }
 
 .wp-custom-header {

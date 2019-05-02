@@ -50,4 +50,28 @@ return [
 			],
 		],
 	],
+	[
+		'type'     => 'custom',
+		'settings' => 'divider',
+		'default'  => '<hr>',
+	],
+	[
+		'type'     => 'slider',
+		'settings' => 'wrap-width',
+		'label'    => __( 'Container Width', 'genesis-customizer' ),
+		'default'  => '1152',
+		'priority' => 4,
+		'choices'  => [
+			'min'  => 256,
+			'max'  => 1920,
+			'step' => 32,
+		],
+		'output'   => [
+			[
+				'element'  => '.site-footer .wrap',
+				'property' => 'max-width',
+				'units'    => 'px',
+			],
+		],
+	],
 ];

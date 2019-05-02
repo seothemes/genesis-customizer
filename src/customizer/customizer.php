@@ -2,8 +2,6 @@
 
 namespace GenesisCustomizer;
 
-use Kint\Kint;
-
 add_filter( 'kirki_control_types', __NAMESPACE__ . '\register_controls' );
 /**
  * Registers the control with Kirki.

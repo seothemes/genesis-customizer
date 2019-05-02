@@ -11,6 +11,10 @@ add_action( 'genesis_setup', __NAMESPACE__ . '\autoload', 5 );
  * @return void
  */
 function autoload() {
+	if ( ! defined( 'KIRKI_VERSION' ) || ! function_exists( 'genesis' ) ) {
+		return;
+	}
+
 	$files = [
 		'utilities/*',
 		'functions/*',
@@ -28,7 +32,7 @@ function autoload() {
 	}
 }
 
-add_action( 'after_setup_theme', __NAMESPACE__ . '\autoload_admin_files' );
+add_action( 'genesis_setup', __NAMESPACE__ . '\autoload_admin_files', 6 );
 /**
  * Description of expected behavior.
  *
@@ -37,13 +41,8 @@ add_action( 'after_setup_theme', __NAMESPACE__ . '\autoload_admin_files' );
  * @return void
  */
 function autoload_admin_files() {
-	$files = [
-		'utilities/*',
-		'admin/*',
-	];
-
-	foreach ( $files as $file ) {
-		$files = glob( __DIR__ . DIRECTORY_SEPARATOR . $file . '.php' );
+	if ( is_admin() && defined( 'KIRKI_VERSION' ) && function_exists( 'genesis' ) ) {
+		$files = glob( __DIR__ . DIRECTORY_SEPARATOR . 'admin/*.php' );
 
 		foreach ( $files as $file_name ) {
 			require_once $file_name;

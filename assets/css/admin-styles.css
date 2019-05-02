@@ -70,3 +70,35 @@ a.button.tooltip-toggle:focus {
 	margin-top: 6px;
 	display: block;
 }
+
+.about-wrap h1 {
+	margin-bottom: 0.618em;
+	display: flex;
+	align-items: center;
+}
+
+.about-wrap h1:before {
+	margin-right: 0.2em;
+}
+
+.pro-not-active div[data-categories*="pro"] .button-primary {
+	display: none;
+}
+
+.pro-not-active div[data-categories*="pro"] h4:after {
+	content: 'PRO';
+	background: #9ea3a8;
+	color: #fff;
+	padding: 2px 4px;
+	font-size: xx-small;
+	border-radius: 2px;
+	line-height: 1.3;
+	margin-left: 5px;
+}
+
+.pro-not-active div[data-categories*="pro"] h4 {
+	display: inline-flex;
+	flex-wrap: wrap;
+	align-items: center;
+	align-content: center;
+}
