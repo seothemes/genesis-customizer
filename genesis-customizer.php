@@ -3,7 +3,7 @@
  * Genesis Customizer
  *
  * Plugin Name: Genesis Customizer
- * Version:     0.2.7
+ * Version:     0.3.0
  * Text Domain: genesis-customizer
  * Plugin URI:  https://genesiscustomizer.com/
  * Description: Core functionality plugin for the Genesis Customizer theme.
@@ -21,4 +21,4 @@
  * @license   GPL-3.0-or-later
  */
 
-require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/src/autoload.php';

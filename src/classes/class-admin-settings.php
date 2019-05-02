@@ -139,6 +139,13 @@ class Admin_Settings {
 					'default'     => '896',
 				],
 				[
+					'id'          => 'dependencies',
+					'label'       => __( 'Hide Dependencies', 'genesis-customizer' ),
+					'description' => sprintf( '%s <a href="%s">%s</a>.', __( 'When checked, plugin dependencies will be hidden from the admin ', 'genesis-customizer' ), admin_url( 'plugins.php' ), __( 'plugin page', 'genesis-customizer' ) ),
+					'type'        => 'checkbox',
+					'default'     => true,
+				],
+				[
 					'id'          => 'child-theme-css',
 					'label'       => __( 'Load child theme CSS', 'genesis-customizer' ),
 					'description' => __( 'Load the child theme style.css file on the front end of the site.', 'genesis-customizer' ),

@@ -2,7 +2,34 @@
 
 namespace GenesisCustomizer;
 
-add_action( 'genesis_setup', __NAMESPACE__ . '\autoload', 5 );
+spl_autoload_register( __NAMESPACE__ . '\autoload_classes' );
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
+ * @param $class_name
+ *
+ * @return null|string
+ */
+function autoload_classes( $class_name ) {
+	if ( 0 !== strpos( $class_name, __NAMESPACE__ ) ) {
+		return null;
+	}
+
+	$search  = [ __NAMESPACE__, '\\', '_' ];
+	$replace = [ '', '', '-', ];
+	$file    = strtolower( str_replace( $search, $replace, $class_name ) );
+	$class   = _get_path() . 'src/classes/class-' . $file . '.php';
+
+	if ( file_exists( $class ) ) {
+		require $class;
+	}
+
+	return $class;
+}
+
+add_action( 'genesis_setup', __NAMESPACE__ . '\autoload_files', 5 );
 /**
  * Description of expected behavior.
  *
@@ -10,7 +37,7 @@ add_action( 'genesis_setup', __NAMESPACE__ . '\autoload', 5 );
  *
  * @return void
  */
-function autoload() {
+function autoload_files() {
 	if ( ! defined( 'KIRKI_VERSION' ) || ! function_exists( 'genesis' ) ) {
 		return;
 	}
