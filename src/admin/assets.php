@@ -14,7 +14,15 @@ add_filter( 'admin_body_class', __NAMESPACE__ . '\admin_body_class' );
  */
 function admin_body_class( $classes ) {
 	if ( ! _is_pro_active() ) {
-		$classes .= 'pro-not-active';
+		$classes .= ' pro-not-active';
+	}
+
+	if ( ! _is_plugin_active( 'elementor' ) ) {
+		$classes .= ' elementor-not-active';
+	}
+
+	if ( ! _is_plugin_active( 'beaver-builder' ) ) {
+		$classes .= ' bb-not-active';
 	}
 
 	return $classes;

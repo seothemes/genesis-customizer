@@ -141,7 +141,7 @@ class Admin_Settings {
 				[
 					'id'          => 'dependencies',
 					'label'       => __( 'Hide Dependencies', 'genesis-customizer' ),
-					'description' => sprintf( '%s <a href="%s">%s</a>.', __( 'When checked, plugin dependencies will be hidden from the admin ', 'genesis-customizer' ), admin_url( 'plugins.php' ), __( 'plugin page', 'genesis-customizer' ) ),
+					'description' => sprintf( '%s <a href="%s">%s</a>.', __( 'If checked, plugin dependencies will be hidden from the admin ', 'genesis-customizer' ), admin_url( 'plugins.php' ), __( 'plugin page', 'genesis-customizer' ) ),
 					'type'        => 'checkbox',
 					'default'     => true,
 				],
@@ -188,7 +188,7 @@ class Admin_Settings {
 
 		$settings['colors'] = [
 			'title'       => __( 'Colors', 'genesis-customizer' ),
-			'description' => __( 'Sets the color palette defaults for color control Customizer settings.', 'genesis-customizer' ),
+			'description' => __( 'Sets the color palette defaults for Customizer color settings.', 'genesis-customizer' ),
 			'priority'    => 5,
 			'fields'      => $colors,
 		];

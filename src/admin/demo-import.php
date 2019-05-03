@@ -5,6 +5,9 @@ namespace GenesisCustomizer;
 // Disable branding.
 add_filter( 'pt-ocdi/disable_pt_branding', '__return_true' );
 
+// Remove intro text.
+add_filter( 'pt-ocdi/plugin_intro_text', '__return_empty_string' );
+
 add_filter( 'network_admin_plugin_action_links_genesis-customizer/genesis-customizer.php', __NAMESPACE__ . '\change_plugin_dependency_text', 100 );
 add_filter( 'network_admin_plugin_action_links_one-click-demo-import/one-click-demo-import.php', __NAMESPACE__ . '\change_plugin_dependency_text', 100 );
 add_filter( 'network_admin_plugin_action_links_kirki/kirki.php', __NAMESPACE__ . '\change_plugin_dependency_text', 100 );
@@ -60,53 +63,25 @@ add_filter( 'pt-ocdi/import_files', __NAMESPACE__ . '\demo_import_files' );
  * @return array
  */
 function demo_import_files() {
-	$custom = [
-		[
-			'slug' => 'default',
-			'cats' => [ 'Free' ],
-		],
-		[
-			'slug' => 'business-pro',
-			'cats' => [ 'Pro', 'Elementor' ],
-		],
-		[
-			'slug' => 'contrast',
-			'cats' => [ 'Pro', 'Elementor' ],
-		],
-		[
-			'slug' => 'fitness',
-			'cats' => [ 'Pro', 'Elementor' ],
-		],
-		[
-			'slug' => 'foodie-pro',
-			'cats' => [ 'Free' ],
-		],
-		[
-			'slug' => 'genesis-sample',
-			'cats' => [ 'Free' ],
-		],
-		[
-			'slug' => 'ghost',
-			'cats' => [ 'Pro' ],
-		],
-		[
-			'slug' => 'landscaper',
-			'cats' => [ 'Pro' ],
-		],
-		[
-			'slug' => 'portfolio',
-			'cats' => [ 'Pro' ],
-		],
-	];
 	$assets = _get_path() . 'assets/demo';
+	$custom = [
+		'default'        => [ 'Free' ],
+		'foodie-pro'     => [ 'Free' ],
+		'genesis-sample' => [ 'Free' ],
+		'ghost'          => [ 'Pro' ],
+		'landscaper'     => [ 'Pro' ],
+		'portfolio'      => [ 'Pro' ],
+		'business-pro'   => [ 'Pro', 'Elementor' ],
+		'contrast'       => [ 'Pro', 'Elementor' ],
+		'fitness'        => [ 'Pro', 'Elementor' ],
+	];
 
-	foreach ( $custom as $id => $args ) {
-		$slug = $args['slug'];
+	foreach ( $custom as $slug => $categories ) {
 		$name = ucwords( str_replace( '-', ' ', $slug ) );
 
 		$demos[] = [
 			'import_file_name'             => $name,
-			'categories'                   => $args['cats'],
+			'categories'                   => $categories,
 			'local_import_file'            => "$assets/$slug/content.xml",
 			'local_import_widget_file'     => "$assets/$slug/widgets.wie",
 			'local_import_customizer_file' => "$assets/$slug/customizer.dat",
@@ -205,4 +180,26 @@ function hide_dependencies( $plugins ) {
 	}
 
 	return $plugins;
+}
+
+add_filter( 'gettext', __NAMESPACE__ . '\remove_admin_stuff', 20, 3 );
+/**
+ * Description of expected behavior.
+ *
+ * @since 1.0.0
+ *
+ * @param $translated_text
+ * @param $untranslated_text
+ * @param $domain
+ *
+ * @return string
+ */
+function remove_admin_stuff( $translated_text, $untranslated_text, $domain ) {
+	$custom_field_text = '%1$s%3$sThat\'s it, all done!%4$s%2$sThe demo import has finished. Please check your page and make sure that everything has imported correctly. If it did, you can deactivate the %3$sOne Click Demo Import%4$s plugin, because it has done its job.%5$s';
+
+	if ( is_admin() && $untranslated_text === $custom_field_text ) {
+		return __( '%1$s%3$sThat\'s it, all done!%4$s%2$sThe demo import has finished. Please check your page and make sure that everything has imported correctly. ', 'genesis-customizer' ) . sprintf( '<a href="%s" target="_blank">%s</a>', home_url(), __( 'View Site', 'genesis-customizer' ) );
+	}
+
+	return $translated_text;
 }

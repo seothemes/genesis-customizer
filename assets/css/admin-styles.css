@@ -81,24 +81,37 @@ a.button.tooltip-toggle:focus {
 	margin-right: 0.2em;
 }
 
+.ocdi__gl-header {
+	border: 1px solid #ddd;
+	box-shadow: 0 1px 1px -1px rgba(0,0,0,0.1);
+}
+
+.elementor-not-active div[data-categories*="elementor"] .button-primary,
+.bb-not-active div[data-categories*="beaver-builder"] .button-primary,
 .pro-not-active div[data-categories*="pro"] .button-primary {
 	display: none;
 }
 
-.pro-not-active div[data-categories*="pro"] h4:after {
-	content: 'PRO';
-	background: #9ea3a8;
-	color: #fff;
-	padding: 2px 4px;
-	font-size: xx-small;
-	border-radius: 2px;
-	line-height: 1.3;
-	margin-left: 5px;
+.elementor-not-active div[data-categories*="elementor"] h4,
+.bb-not-active div[data-categories*="beaver-builder"] h4,
+.pro-not-active div[data-categories*="pro"] h4 {
+	width: calc(100% - 100px);
 }
 
-.pro-not-active div[data-categories*="pro"] h4 {
-	display: inline-flex;
-	flex-wrap: wrap;
-	align-items: center;
-	align-content: center;
+.elementor-not-active div[data-categories*="elementor"] h4:after,
+.bb-not-active div[data-categories*="beaver-builder"] h4:after,
+.pro-not-active div[data-categories*="pro"] h4:after {
+	content: '(Requires Pro)';
+	font-size: xx-small;
+	font-weight: lighter;
+	margin-left: 0.5em;
+	color: #5e5e5e;
+}
+
+.elementor-not-active div[data-categories*="elementor"] h4:after {
+	content: '(Requires Elementor)';
+}
+
+.bb-not-active div[data-categories*="beaver-builder"] h4:after {
+	content: '(Req. Beaver Builder)';
 }
