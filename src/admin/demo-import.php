@@ -10,6 +10,8 @@ add_filter( 'pt-ocdi/plugin_intro_text', '__return_empty_string' );
 
 add_filter( 'network_admin_plugin_action_links_genesis-customizer/genesis-customizer.php', __NAMESPACE__ . '\change_plugin_dependency_text', 100 );
 add_filter( 'plugin_action_links_genesis-customizer/genesis-customizer.php', __NAMESPACE__ . '\change_plugin_dependency_text', 100 );
+add_filter( 'network_admin_plugin_action_links_one-click-demo-import/one-click-demo-import.php', __NAMESPACE__ . '\change_plugin_dependency_text', 100 );
+add_filter( 'plugin_action_links_one-click-demo-import/one-click-demo-import.php', __NAMESPACE__ . '\change_plugin_dependency_text', 100 );
 /**
  * Change plugin dependency text.
  *
