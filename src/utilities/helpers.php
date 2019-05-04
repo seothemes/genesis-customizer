@@ -3,7 +3,7 @@
 namespace GenesisCustomizer;
 
 /**
- * Description of expected behavior.
+ * Returns all plugin data.
  *
  * @since 1.0.0
  *
@@ -58,18 +58,18 @@ function _get_url() {
 }
 
 /**
- * Description of expected behavior.
+ * Returns the Pro upgrade link.
  *
  * @since 1.0.0
  *
  * @return string
  */
-function _get_upgrade_url() {
+function _get_upgrade_link() {
 	return esc_url( 'https://genesiscustomizer.com/pro' );
 }
 
 /**
- * Description of expected behavior.
+ * Returns the plugin name.
  *
  * @since 1.0.0
  *
@@ -80,7 +80,7 @@ function _get_name() {
 }
 
 /**
- * Description of expected behavior.
+ * Returns the plugin handle.
  *
  * @since 1.0.0
  *
@@ -91,7 +91,7 @@ function _get_handle() {
 }
 
 /**
- * Description of expected behavior.
+ * Returns the plugin author.
  *
  * @since 1.0.0
  *
@@ -102,7 +102,7 @@ function _get_author() {
 }
 
 /**
- * Description of expected behavior.
+ * Returns the plugin version.
  *
  * @since 1.0.0
  *
@@ -113,7 +113,7 @@ function _get_version() {
 }
 
 /**
- * Description of expected behavior.
+ * Returns the version of a given file.
  *
  * @since 1.0.0
  *
@@ -129,7 +129,7 @@ function _get_asset_version( $file ) {
 }
 
 /**
- * Description of expected behavior.
+ * Returns the default breakpoint.
  *
  * @since 1.0.0
  *
@@ -140,7 +140,7 @@ function _get_breakpoint() {
 }
 
 /**
- * Description of expected behavior.
+ * Returns a media query.
  *
  * @since 1.0.0
  *
@@ -172,7 +172,7 @@ function _get_option( $option = '', $default = false ) {
 }
 
 /**
- * Can only be called from config files.
+ * Returns setting value. Can only be called from config files.
  *
  * @since 1.0.0
  *
@@ -189,7 +189,7 @@ function _get_setting( $setting ) {
 }
 
 /**
- * Description of expected behavior.
+ * Return default value for Customizer option.
  *
  * @since 1.0.0
  *
@@ -209,7 +209,7 @@ function _get_default( $field ) {
 }
 
 /**
- * Description of expected behavior.
+ * Return value of Customizer option.
  *
  * @since 1.0.0
  *
@@ -230,7 +230,7 @@ function _get_value( $field, $default = null ) {
 }
 
 /**
- * Description of expected behavior.
+ * Returns array of all image sizes.
  *
  * @since 1.0.0
  *
@@ -248,7 +248,7 @@ function _get_image_sizes( $additional = [ 'full' ] ) {
 }
 
 /**
- * Description of expected behavior.
+ * Returns hex code for a color.
  *
  * @since 1.0.0
  *
@@ -290,7 +290,7 @@ function _get_color( $color = 'accent' ) {
 }
 
 /**
- * Description of expected behavior.
+ * Returns size value.
  *
  * @since 1.0.0
  *
@@ -324,7 +324,7 @@ function _get_size( $size = 'm', $suffix = 'px' ) {
 }
 
 /**
- * Description of expected behavior.
+ * Returns array of similar CSS selectors.
  *
  * @since 1.0.0
  *

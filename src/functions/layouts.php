@@ -4,7 +4,7 @@ namespace GenesisCustomizer;
 
 add_action( 'genesis_setup', __NAMESPACE__ . '\setup_layouts', 15 );
 /**
- * Description of expected behavior.
+ * Register custom page layouts.
  *
  * @since 1.0.0
  *
@@ -16,3 +16,21 @@ function setup_layouts() {
 		'img'   => _get_url() . 'assets/img/center-content.gif',
 	] );
 }
+
+add_action( 'genesis_before', __NAMESPACE__ . '\center_content' );
+/**
+ * Remove sidebars from center-content layout.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function center_content() {
+	if ( 'center-content' === genesis_site_layout() ) {
+		add_filter( 'genesis_site_layout', '__genesis_return_full_width_content' );
+	}
+}
+
+// Move Secondary Sidebar into content-sidebar-wrap.
+remove_action( 'genesis_after_content_sidebar_wrap', 'genesis_get_sidebar_alt' );
+add_action( 'genesis_after_content', 'genesis_get_sidebar_alt' );

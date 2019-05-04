@@ -10,8 +10,16 @@
     }
   ],
   "minimum-stability": "dev",
+  "repositories": [
+    {
+      "url": "https://github.com/proteusthemes/one-click-demo-import",
+      "type": "git"
+    }
+  ],
   "require": {
-    "php": ">=5.4.0"
+    "php": ">=5.4.0",
+    "aristath/kirki": "dev-master",
+    "yahnis-elsts/plugin-update-checker": "dev-master"
   },
   "require-dev": {
     "php": "^5.6|^7",
@@ -19,7 +27,15 @@
     "phpunit/phpunit": "~5.7.9",
     "wp-phpunit/wp-phpunit": "^5.1"
   },
-  "autoload": {},
+  "autoload": {
+    "classmap": [
+      "src/classes"
+    ],
+    "files": [
+      "vendor/aristath/kirki/kirki.php",
+      "src/autoload.php"
+    ]
+  },
   "config": {
     "preferred-install": {
       "*": "dist"

@@ -5,6 +5,8 @@ namespace GenesisCustomizer;
 /**
  * Build a background-gradient style for CSS
  *
+ * @since 1.0.0
+ *
  * @param string $color_1 Hex color value
  * @param string $color_2 Hex color value
  *

@@ -30,7 +30,7 @@ function admin_body_class( $classes ) {
 
 add_action( 'admin_print_styles', __NAMESPACE__ . '\admin_styles' );
 /**
- * Description of expected behavior.
+ * Load admin styles.
  *
  * @since 1.0.0
  *
@@ -48,7 +48,7 @@ function admin_styles() {
 
 add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\admin_scripts' );
 /**
- * Description of expected behavior.
+ * Load admin scripts.
  *
  * @since 1.0.0
  *
@@ -57,6 +57,7 @@ add_action( 'admin_enqueue_scripts', __NAMESPACE__ . '\admin_scripts' );
 function admin_scripts() {
 	$page = get_current_screen();
 
+	// Modify text of Custom Adobe Fonts plugin.
 	if ( 'appearance_page_custom-typekit-fonts' !== $page->id ) {
 		return;
 	}
@@ -70,10 +71,9 @@ function admin_scripts() {
 	wp_enqueue_script( __NAMESPACE__ . '\admin' );
 }
 
-
 add_filter( 'pand_dismiss_notice_js_url', __NAMESPACE__ . '\dismiss_notice_js_url', 10, 2 );
 /**
- * Description of expected behavior.
+ * Set URL of persist admin notices package.
  *
  * @since 1.0.0
  *

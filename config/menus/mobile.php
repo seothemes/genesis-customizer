@@ -116,7 +116,7 @@ return [
 			esc_html__( 'More mobile menu options available in', 'genesis-customizer' ),
 			esc_html__( 'Genesis Customizer Pro', 'genesis-customizer' ),
 			esc_html__( '!', 'genesis-customizer' ),
-			_get_upgrade_url(),
+			_get_upgrade_link(),
 			esc_html__( 'Go Pro →', 'genesis-customizer' )
 		),
 		'active_callback' => function () {

@@ -4,7 +4,7 @@ namespace GenesisCustomizer;
 
 add_action( 'genesis_meta', __NAMESPACE__ . '\archive_setup' );
 /**
- * Description of expected behavior.
+ * Add hooks on archives.
  *
  * @since 1.0.0
  *
@@ -28,7 +28,7 @@ function archive_setup() {
 }
 
 /**
- * Description of expected behavior.
+ * Add archive body class.
  *
  * @since 1.0.0
  *
@@ -45,7 +45,7 @@ function archive_body_classes( $classes ) {
 }
 
 /**
- * Description of expected behavior.
+ * Filter the read more text.
  *
  * @since 1.0.0
  *
@@ -73,7 +73,7 @@ function read_more_text() {
 }
 
 /**
- * Description of expected behavior.
+ * Add custom post info.
  *
  * @since 1.0.0
  *
@@ -86,7 +86,7 @@ function archive_post_info() {
 }
 
 /**
- * Description of expected behavior.
+ * Add custom post meta.
  *
  * @since 1.0.0
  *
@@ -99,7 +99,7 @@ function archive_post_meta() {
 }
 
 /**
- * Description of expected behavior.
+ * Set the pagination alignment.
  *
  * @since 1.0.0
  *
@@ -116,7 +116,7 @@ function pagination_alignment( $atts ) {
 }
 
 /**
- * Description of expected behavior.
+ * Modify pagination previous link text.
  *
  * @since 1.0.0
  *
@@ -127,7 +127,7 @@ function previous_link_text() {
 }
 
 /**
- * Description of expected behavior.
+ * Modify pagination next link text.
  *
  * @since 1.0.0
  *

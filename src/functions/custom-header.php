@@ -2,6 +2,7 @@
 
 namespace GenesisCustomizer;
 
+// Register default header image.
 register_default_headers( [
 	'default' => [
 		'url'           => _get_url() . 'assets/img/hero-section.jpg',

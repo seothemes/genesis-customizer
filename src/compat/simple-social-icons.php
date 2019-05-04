@@ -2,9 +2,6 @@
 
 namespace GenesisCustomizer;
 
-// Remove Simple Social Icons default stylesheet.
-//add_action( 'simple_social_default_stylesheet', '__return_false' );
-
 add_filter( 'simple_social_default_styles', __NAMESPACE__ . '\simple_social_icons_defaults' );
 /**
  * Set the Simple Social Icon defaults.
@@ -17,7 +14,7 @@ add_filter( 'simple_social_default_styles', __NAMESPACE__ . '\simple_social_icon
  */
 function simple_social_icons_defaults( $defaults ) {
 	$args = [
-		'alignment'              => 'alignright',
+		'alignment'              => 'alignleft',
 		'background_color'       => '',
 		'background_color_hover' => '',
 		'border_radius'          => 0,

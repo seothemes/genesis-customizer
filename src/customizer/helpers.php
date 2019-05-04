@@ -2,6 +2,13 @@
 
 namespace GenesisCustomizer;
 
+/**
+ * Returns array of default Customizer panels.
+ *
+ * @since 1.0.0
+ *
+ * @return array
+ */
 function _get_default_panels() {
 	return [
 		'base'     => __( 'Base Styles', 'genesis-customizer' ),
@@ -16,6 +23,13 @@ function _get_default_panels() {
 	];
 }
 
+/**
+ * Returns array of default Customizer panels and sections.
+ *
+ * @since 1.0.0
+ *
+ * @return array
+ */
 function _get_default_sections() {
 	return [
 		'base'     => [

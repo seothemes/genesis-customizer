@@ -4,7 +4,7 @@ namespace GenesisCustomizer;
 
 add_action( 'genesis_setup', __NAMESPACE__ . '\add_fields', 15 );
 /**
- * Description of expected behavior.
+ * Add fields defined in config to Customizer.
  *
  * @since 1.0.0
  *
@@ -16,6 +16,7 @@ function add_fields() {
 	$handle  = _get_handle();
 	$configs = apply_filters( 'genesis_customizer_config', [ $path . 'config' ] );
 
+	// Loop through config directories.
 	foreach ( $configs as $config ) {
 		foreach ( glob( $config . '/*', GLOB_ONLYDIR ) as $panel ) {
 			foreach ( glob( $panel . '/*.php' ) as $section_path ) {
@@ -48,7 +49,7 @@ function add_fields() {
 
 add_filter( 'genesis_customizer_field', __NAMESPACE__ . '\format_field', 10, 5 );
 /**
- * Description of expected behavior.
+ * Modify fields before adding them.
  *
  * @since 1.0.0
  *

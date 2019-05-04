@@ -4,7 +4,7 @@ namespace GenesisCustomizer;
 
 add_action( 'init', __NAMESPACE__ . '\add_textdomain' );
 /**
- * Description of expected behavior.
+ * Add plugin textdomain.
  *
  * @since 1.0.0
  *

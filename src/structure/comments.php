@@ -4,7 +4,7 @@ namespace GenesisCustomizer;
 
 add_filter( 'comment_author_says_text', __NAMESPACE__ . '\comment_author_says' );
 /**
- * Description of expected behavior.
+ * Filter the comment author says text.
  *
  * @since 1.0.0
  *
@@ -16,7 +16,7 @@ function comment_author_says() {
 
 add_filter( 'genesis_title_comments', __NAMESPACE__ . '\comments_title' );
 /**
- * Description of expected behavior.
+ * Filter the comments title.
  *
  * @since 1.0.0
  *
@@ -28,7 +28,7 @@ function comments_title() {
 
 add_filter( 'comment_form_defaults', __NAMESPACE__ . '\comment_title_reply' );
 /**
- * Description of expected behavior.
+ * Filter the comment reply title.
  *
  * @since 1.0.0
  *
@@ -44,7 +44,7 @@ function comment_title_reply( $defaults ) {
 
 add_filter( 'comment_form_defaults', __NAMESPACE__ . '\comment_submit_button' );
 /**
- * Description of expected behavior.
+ * Filter the submit button text.
  *
  * @since 1.0.0
  *

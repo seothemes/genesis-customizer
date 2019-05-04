@@ -4,7 +4,7 @@ namespace GenesisCustomizer;
 
 add_filter( 'theme_page_templates', __NAMESPACE__ . '\register_templates' );
 /**
- * Description of expected behavior.
+ * Add custom page templates to admin dropdown.
  *
  * @since 1.0.0
  *
@@ -16,6 +16,7 @@ function register_templates( $templates ) {
 	$custom['blocks.php']  = 'Blocks';
 	$custom['landing.php'] = 'Landing';
 
+	// Only add Beaver Builder template if plugin is active.
 	if ( _is_plugin_active( 'beaver-builder' ) ) {
 		$custom['beaver-builder.php'] = 'Beaver Builder';
 	}
@@ -23,10 +24,9 @@ function register_templates( $templates ) {
 	return array_merge( $custom, $templates );
 }
 
-
 add_filter( 'template_include', __NAMESPACE__ . '\include_templates' );
 /**
- * Description of expected behavior.
+ * Swap out template for custom if set.
  *
  * @since 1.0.0
  *

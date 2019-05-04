@@ -6,7 +6,7 @@ $handle = _get_handle();
 
 add_filter( "plugin_action_links_$handle/$handle.php", __NAMESPACE__ . '\settings_link' );
 /**
- * Description of expected behavior.
+ * Adds settings link on plugins page.
  *
  * @since 1.0.0
  *
@@ -18,7 +18,7 @@ function settings_link( $links ) {
 	if ( ! _is_pro_active() ) {
 		$links[] = sprintf(
 			'<a href="%s" target="_blank">%s</a>',
-			_get_upgrade_url(),
+			_get_upgrade_link(),
 			__( 'Go Pro', 'genesis-customizer' )
 		);
 	}
@@ -28,7 +28,7 @@ function settings_link( $links ) {
 
 add_action( 'genesis_admin_menu', __NAMESPACE__ . '\admin_settings' );
 /**
- * Description of expected behavior.
+ * Initialize admin settings class.
  *
  * @since 1.0.0
  *

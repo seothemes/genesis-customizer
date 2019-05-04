@@ -3,7 +3,7 @@
 namespace GenesisCustomizer;
 
 /**
- * Description of expected behavior.
+ * Checks if debug mode is enabled.
  *
  * @since 1.0.0
  *
@@ -14,7 +14,7 @@ function _is_debug_mode() {
 }
 
 /**
- * Description of expected behavior.
+ * Outputs nicely formatted debugging info.
  *
  * @since 1.0.0
  *
@@ -29,7 +29,7 @@ function _debug( $value ) {
 }
 
 /**
- * Description of expected behavior.
+ * Shorthand alias for _debug utility function.
  *
  * @since 1.0.0
  *

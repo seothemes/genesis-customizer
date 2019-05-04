@@ -4,7 +4,7 @@ namespace GenesisCustomizer;
 
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_main_styles' );
 /**
- * Description of expected behavior.
+ * Load main stylesheets.
  *
  * @since 1.0.0
  *
@@ -46,7 +46,7 @@ function enqueue_main_styles() {
 
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_vendor_styles' );
 /**
- * Description of expected behavior.
+ * Load vendor stylesheets conditionally.
  *
  * @since 1.0.0
  *
@@ -58,7 +58,7 @@ function enqueue_vendor_styles() {
 		'beaver-builder',
 		'woocommerce',
 		'elementor',
-		'simple-social-icons',
+		// 'simple-social-icons',
 	] );
 
 	foreach ( $plugins as $plugin ) {

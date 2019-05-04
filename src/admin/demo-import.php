@@ -9,11 +9,7 @@ add_filter( 'pt-ocdi/disable_pt_branding', '__return_true' );
 add_filter( 'pt-ocdi/plugin_intro_text', '__return_empty_string' );
 
 add_filter( 'network_admin_plugin_action_links_genesis-customizer/genesis-customizer.php', __NAMESPACE__ . '\change_plugin_dependency_text', 100 );
-add_filter( 'network_admin_plugin_action_links_one-click-demo-import/one-click-demo-import.php', __NAMESPACE__ . '\change_plugin_dependency_text', 100 );
-add_filter( 'network_admin_plugin_action_links_kirki/kirki.php', __NAMESPACE__ . '\change_plugin_dependency_text', 100 );
 add_filter( 'plugin_action_links_genesis-customizer/genesis-customizer.php', __NAMESPACE__ . '\change_plugin_dependency_text', 100 );
-add_filter( 'plugin_action_links_one-click-demo-import/one-click-demo-import.php', __NAMESPACE__ . '\change_plugin_dependency_text', 100 );
-add_filter( 'plugin_action_links_kirki/kirki.php', __NAMESPACE__ . '\change_plugin_dependency_text', 100 );
 /**
  * Change plugin dependency text.
  *
@@ -34,7 +30,7 @@ function change_plugin_dependency_text( $actions ) {
 
 add_filter( 'pt-ocdi/plugin_page_setup', __NAMESPACE__ . '\demo_import_plugin_page' );
 /**
- * Description of expected behavior.
+ * Modify the one click demo import plugin page settings.
  *
  * @since 1.0.0
  *
@@ -56,7 +52,7 @@ function demo_import_plugin_page( $defaults ) {
 
 add_filter( 'pt-ocdi/import_files', __NAMESPACE__ . '\demo_import_files' );
 /**
- * Description of expected behavior.
+ * Add theme demo config to one click demo import.
  *
  * @since 1.0.0
  *
@@ -102,9 +98,7 @@ add_filter( 'pt-ocdi/after_all_import_execution', __NAMESPACE__ . '\after_demo_i
  * upon theme activation, only if these pages don't already exist and only
  * if the site does not already display a static page on the homepage.
  *
- * @since  0.1.0
- *
- * @uses   business_slug_exists Helper function.
+ * @since  1.0.0
  *
  * @return void
  */
@@ -152,7 +146,7 @@ function after_demo_import() {
 
 add_filter( 'all_plugins', __NAMESPACE__ . '\hide_dependencies' );
 /**
- * Description of expected behavior.
+ * Hide dependencies from plugins list in admin.
  *
  * @since 1.0.0
  *
@@ -182,9 +176,9 @@ function hide_dependencies( $plugins ) {
 	return $plugins;
 }
 
-add_filter( 'gettext', __NAMESPACE__ . '\remove_admin_stuff', 20, 3 );
+add_filter( 'gettext', __NAMESPACE__ . '\modify_ocdi_strings', 20, 3 );
 /**
- * Description of expected behavior.
+ * Modify hardcoded strings in One Click Demo Import.
  *
  * @since 1.0.0
  *
@@ -194,7 +188,7 @@ add_filter( 'gettext', __NAMESPACE__ . '\remove_admin_stuff', 20, 3 );
  *
  * @return string
  */
-function remove_admin_stuff( $translated_text, $untranslated_text, $domain ) {
+function modify_ocdi_strings( $translated_text, $untranslated_text, $domain ) {
 	$custom_field_text = '%1$s%3$sThat\'s it, all done!%4$s%2$sThe demo import has finished. Please check your page and make sure that everything has imported correctly. If it did, you can deactivate the %3$sOne Click Demo Import%4$s plugin, because it has done its job.%5$s';
 
 	if ( is_admin() && $untranslated_text === $custom_field_text ) {

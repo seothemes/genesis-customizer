@@ -4,9 +4,16 @@ namespace GenesisCustomizer;
 
 add_action( 'genesis_before', __NAMESPACE__ . '\structural_wrap_hooks' );
 /**
- * Description of expected behavior.
+ * Add before and after structural wrap hook locations.
  *
- * @since 1.0.0
+ * This is a clever workaround that allows us to insert HTML between a container
+ * and its immediate descendant .wrap element. These hooks are used to display
+ * the Before Header widget area, the Secondary Nav and the Footer Widgets.
+ *
+ * @since  1.0.0
+ *
+ * @author Tim Jensen
+ * @link   https://timjensen.us/add-hooks-before-genesis-structural-wraps
  *
  * @return void
  */

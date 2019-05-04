@@ -4,7 +4,7 @@ namespace GenesisCustomizer;
 
 add_action( 'genesis_before', __NAMESPACE__ . '\single_setup', 15 );
 /**
- * Description of expected behavior.
+ * Add hooks to single pages.
  *
  * @since 1.0.0
  *
@@ -35,7 +35,7 @@ function single_setup() {
 }
 
 /**
- * Description of expected behavior.
+ * Conditionally display the featured image.
  *
  * @since 1.0.0
  *
@@ -61,7 +61,7 @@ function display_featured_image() {
 
 add_filter( 'genesis_attr_featured-image', __NAMESPACE__ . '\featured_image_alignment' );
 /**
- * Description of expected behavior.
+ * Apply featured image width settings.
  *
  * @since 1.0.0
  *
@@ -82,7 +82,7 @@ function featured_image_alignment( $attr ) {
 }
 
 /**
- * Description of expected behavior.
+ * Modify author box title text.
  *
  * @since 1.0.0
  *
@@ -102,7 +102,7 @@ function author_box_title( $title, $context ) {
 }
 
 /**
- * Description of expected behavior.
+ * Modify the post info.
  *
  * @since 1.0.0
  *
@@ -115,7 +115,7 @@ function single_post_info() {
 }
 
 /**
- * Description of expected behavior.
+ * Modify the post meta.
  *
  * @since 1.0.0
  *
@@ -129,7 +129,7 @@ function single_post_meta() {
 
 add_action( 'genesis_meta', __NAMESPACE__ . '\hide_page_title' );
 /**
- * Description of expected behavior.
+ * Hide page title if page setting is checked.
  *
  * @since 1.0.0
  *

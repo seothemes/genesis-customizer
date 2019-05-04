@@ -4,7 +4,7 @@ namespace GenesisCustomizer;
 
 add_filter( 'genesis_breadcrumb_args', __NAMESPACE__ . '\breadcrumb_args' );
 /**
- * Description of expected behavior.
+ * Modify breadcrumb labels.
  *
  * @since 1.0.0
  *
@@ -29,13 +29,13 @@ function breadcrumb_args( $args ) {
 
 add_filter( 'genesis_404_entry_title', __NAMESPACE__ . '\error_404_entry_title', 10, 1 );
 /**
- * Description of expected behavior.
+ * Set the custom 404 title.
  *
  * @since 1.0.0
  *
  * @param $default
  *
- * @return void
+ * @return string
  */
 function error_404_entry_title( $default ) {
 	$custom = get_page_by_path( 'error-404', OBJECT );
@@ -50,13 +50,13 @@ function error_404_entry_title( $default ) {
 
 add_filter( 'genesis_404_entry_content', __NAMESPACE__ . '\error_404_entry_content', 10, 1 );
 /**
- * Description of expected behavior.
+ * Set custom 404 page content.
  *
  * @since 1.0.0
  *
  * @param $default
  *
- * @return void
+ * @return string
  */
 function error_404_entry_content( $default ) {
 	$custom = get_page_by_path( 'error-404', OBJECT );

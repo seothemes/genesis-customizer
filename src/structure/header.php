@@ -4,7 +4,7 @@ namespace GenesisCustomizer;
 
 add_filter( 'body_class', __NAMESPACE__ . '\header_body_classes', 100, 1 );
 /**
- * Description of expected behavior.
+ * Add header specific body classes.
  *
  * @since 1.0.0
  *
@@ -50,7 +50,7 @@ function header_body_classes( $classes ) {
 
 add_filter( 'genesis_attr_site-title', __NAMESPACE__ . '\display_site_title' );
 /**
- * Description of expected behavior.
+ * Hide/show site title.
  *
  * @since 1.0.0
  *
@@ -68,7 +68,7 @@ function display_site_title( $atts ) {
 
 add_filter( 'genesis_attr_site-description', __NAMESPACE__ . '\display_site_tagline' );
 /**
- * Description of expected behavior.
+ * Hide/show site description.
  *
  * @since 1.0.0
  *
@@ -86,15 +86,14 @@ function display_site_tagline( $atts ) {
 
 add_action( 'genesis_site_title', __NAMESPACE__ . '\custom_logo', 5 );
 /**
- * Description of expected behavior.
+ * Display custom logo, sticky logo and transparent logo.
  *
  * @since 1.0.0
  *
  * @return void
  */
 function custom_logo() {
-	$html = has_custom_logo() ? the_custom_logo() : '';
-
+	$html             = has_custom_logo() ? the_custom_logo() : '';
 	$sticky           = _get_value( 'header_sticky_different-logo' );
 	$sticky_logo      = _get_value( 'header_sticky_logo' );
 	$transparent      = _get_value( 'header_transparent_different-logo' );
@@ -141,7 +140,7 @@ function custom_logo() {
 
 add_action( 'genesis_before_header_wrap', __NAMESPACE__ . '\primary_header_open', 100 );
 /**
- * Description of expected behavior.
+ * Opening wrap for primary header.
  *
  * @since 1.0.0
  *
@@ -156,7 +155,7 @@ function primary_header_open() {
 
 add_action( 'genesis_after_header_wrap', __NAMESPACE__ . '\primary_header_close', 5 );
 /**
- * Description of expected behavior.
+ * Closing wrap for primary header.
  *
  * @since 1.0.0
  *
@@ -171,7 +170,7 @@ function primary_header_close() {
 
 add_action( 'genesis_markup_title-area_open', __NAMESPACE__ . '\before_title_area' );
 /**
- * Description of expected behavior.
+ * Add hook location before title area.
  *
  * @since 1.0.0
  *
@@ -191,7 +190,7 @@ function before_title_area( $open_html ) {
 
 add_action( 'genesis_markup_title-area_close', __NAMESPACE__ . '\after_title_area' );
 /**
- * Description of expected behavior.
+ * Add hook location after title area.
  *
  * @since 1.0.0
  *
@@ -211,7 +210,7 @@ function after_title_area( $close_html ) {
 
 add_filter( 'genesis_seo_title', __NAMESPACE__ . '\site_title_link', 10, 3 );
 /**
- * Description of expected behavior.
+ * Add 'site-title-link' class to site title link for better CSS targeting.
  *
  * @since 1.0.0
  *
@@ -234,7 +233,7 @@ function site_title_link( $title, $inside, $wrap ) {
 
 add_action( 'genesis_meta', __NAMESPACE__ . '\hide_site_header' );
 /**
- * Description of expected behavior.
+ * Hide site header if page setting is checked.
  *
  * @since 1.0.0
  *

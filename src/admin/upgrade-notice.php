@@ -4,7 +4,7 @@ namespace GenesisCustomizer;
 
 add_action( 'admin_notices', __NAMESPACE__ . '\upgrade_notice' );
 /**
- * Description of expected behavior.
+ * Displays notice to upgrade to Pro in admin.
  *
  * @since 1.0.0
  *
@@ -25,7 +25,7 @@ function upgrade_notice() {
 		esc_html__( 'Thank you for using Genesis Customizer! Upgrade to', 'genesis-customizer' ),
 		esc_html__( 'Genesis Customizer Pro', 'genesis-customizer' ),
 		esc_html__( 'to access even more features!', 'genesis-customizer' ),
-		_get_upgrade_url(),
+		_get_upgrade_link(),
 		esc_html__( 'Go Pro →', 'genesis-customizer' ),
 		esc_html__( 'Dismiss this notice.', 'genesis-customizer' )
 	);

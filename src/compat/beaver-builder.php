@@ -4,7 +4,7 @@ namespace GenesisCustomizer;
 
 add_filter( 'fl_builder_ui_bar_buttons', __NAMESPACE__ . '\beaver_builder_site_header', 10, 1 );
 /**
- * Description of expected behavior.
+ * Adds a hide/show site header button to Beaver Builder.
  *
  * @since 1.0.0
  *

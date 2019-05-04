@@ -4,7 +4,7 @@ namespace GenesisCustomizer;
 
 add_action( 'enqueue_block_editor_assets', __NAMESPACE__ . '\block_editor_styles' );
 /**
- * Description of expected behavior.
+ * Loads editor styles in admin.
  *
  * @since 1.0.0
  *

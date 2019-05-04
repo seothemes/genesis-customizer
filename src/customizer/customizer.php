@@ -4,9 +4,9 @@ namespace GenesisCustomizer;
 
 add_filter( 'kirki_control_types', __NAMESPACE__ . '\register_controls' );
 /**
- * Registers the control with Kirki.
+ * Registers new Customizer controls with Kirki.
  *
- * @since 1.0
+ * @since 1.0.0
  *
  * @param array $controls An array of controls registered with the Kirki Toolkit.
  *
@@ -21,10 +21,9 @@ function register_controls( $controls ) {
 
 add_action( 'customize_register', __NAMESPACE__ . '\register_control_types' );
 /**
- * Registers the control type and make it eligible for
- * JS templating in the Customizer.
+ * Registers the control type and makes it eligible for JS templating.
  *
- * @since 1.0
+ * @since 1.0.0
  *
  * @param object $wp_customize The Customizer object.
  *
@@ -36,9 +35,9 @@ function register_control_types( $wp_customize ) {
 	require_once _get_path() . 'src/classes/class-select-control.php';
 }
 
-add_action( 'customize_register', __NAMESPACE__ . '\modify_defaults', 100 );
+add_action( 'customize_register', __NAMESPACE__ . '\modify_customizer_defaults', 100 );
 /**
- * Description of expected behavior.
+ * Modify default Customizer controls and sections.
  *
  * @since 1.0.0
  *
@@ -46,7 +45,7 @@ add_action( 'customize_register', __NAMESPACE__ . '\modify_defaults', 100 );
  *
  * @return void
  */
-function modify_defaults( $wp_customize ) {
+function modify_customizer_defaults( $wp_customize ) {
 	$wp_customize->remove_control( 'background_color' );
 	$wp_customize->remove_control( 'header_textcolor' );
 	$wp_customize->remove_control( 'header_text' );
@@ -102,7 +101,7 @@ function customizer_scripts() {
 
 add_action( 'init', __NAMESPACE__ . '\add_default_values_to_db' );
 /**
- * Description of expected behavior.
+ * Adds default settings to database upon activation.
  *
  * @since 1.0.0
  *
@@ -134,7 +133,7 @@ function add_default_values_to_db() {
 
 add_filter( 'genesis_customizer_field', __NAMESPACE__ . '\add_font_choices', 10, 2 );
 /**
- * Description of expected behavior.
+ * Allows custom fonts to be added to typography controls.
  *
  * @since 1.0.0
  *
@@ -154,7 +153,7 @@ function add_font_choices( $field ) {
 
 add_filter( 'genesis_customizer_font_choices', __NAMESPACE__ . '\add_font_group', 20 );
 /**
- * Description of expected behavior.
+ * Adds system fonts to typography controls.
  *
  * @since 1.0.0
  *
@@ -163,44 +162,103 @@ add_filter( 'genesis_customizer_font_choices', __NAMESPACE__ . '\add_font_group'
  * @return mixed
  */
 function add_font_group( $custom ) {
-	$custom['families']['system'] = [
-		'text'     => esc_attr__( 'System', 'genesis-customizer' ),
-		'children' => [
-			[
-				'id'   => 'Helvetica, Arial, sans-serif',
-				'text' => 'Helvetica',
-			],
-			[
-				'id'   => 'Verdana, sans-serif',
-				'text' => 'Verdana',
-			],
-			[
-				'id'   => 'Arial, Helvetica, sans-serif',
-				'text' => 'Arial',
-			],
-			[
-				'id'   => 'Times, Georgia, serif',
-				'text' => 'Times',
-			],
-			[
-				'id'   => 'Georgia, Times, serif',
-				'text' => 'Georgia',
-			],
-			[
-				'id'   => 'Courier, monospace',
-				'text' => 'Courier',
-			],
-		],
+	$fonts = [
+		'Helvetica, Arial, sans-serif',
+		'Verdana, sans-serif',
+		'Arial, Helvetica, sans-serif',
+		'Times, Georgia, serif',
+		'Georgia, Times, serif',
+		'Courier, monospace',
 	];
 
-	$custom['variants'] = [
-		'Helvetica, Arial, sans-serif' => [ '200', '300', '400', '600', '700' ],
-		'Verdana, sans-serif'          => [ '200', '300', '400', '600', '700' ],
-		'Arial, Helvetica, sans-serif' => [ '200', '300', '400', '600', '700' ],
-		'Times, Georgia, serif'        => [ '200', '300', '400', '600', '700' ],
-		'Georgia, Times, serif'        => [ '200', '300', '400', '600', '700' ],
-		'Courier, monospace'           => [ '200', '300', '400', '600', '700' ],
-	];
+	$custom['families']['system']['text'] = esc_attr__( 'System', 'genesis-customizer' );
+
+	foreach ( $fonts as $font ) {
+		$text = explode( ', ', $font );
+
+		$custom['families']['system']['children'][] = [
+			'id'   => $font,
+			'text' => $text[0],
+		];
+
+		$custom['variants'][ $font ] = [ '200', '300', '400', '600', '700' ];
+	}
 
 	return $custom;
+}
+
+
+add_action( 'customize_register', __NAMESPACE__ . '\register_custom_sections' );
+/**
+ * Register custom sections with the Customizer.
+ *
+ * @since 1.0.0
+ *
+ * @param $wp_customize \WP_Customize_Manager
+ *
+ * @return void
+ */
+function register_custom_sections( $wp_customize ) {
+	$handle = _get_handle();
+
+	$wp_customize->register_section_type( __NAMESPACE__ . '\Link_Section' );
+	$wp_customize->register_section_type( __NAMESPACE__ . '\Hidden_Section' );
+
+	$wp_customize->add_section(
+		new Link_Section(
+			$wp_customize,
+			$handle . '_pro',
+			[
+				'title'      => __( 'Upgrade to Genesis Customizer Pro', 'genesis-customizer' ),
+				'priority'   => 0,
+				'type'       => 'genesis-customizer-link',
+				'button_url' => _get_upgrade_link(),
+			]
+		)
+	);
+
+	$wp_customize->add_section(
+		new Hidden_Section(
+			$wp_customize,
+			$handle,
+			[
+				'panel'    => $handle,
+				'title'    => $handle,
+				'priority' => 0,
+				'type'     => 'genesis-customizer-hidden',
+			]
+		)
+	);
+}
+
+add_action( 'genesis_setup', __NAMESPACE__ . '\go_pro_section', 15 );
+/**
+ * Add Pro upgrade link to Customizer.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function go_pro_section() {
+	$handle = _get_handle();
+	$title  = _get_name();
+
+	\Kirki::add_panel( $handle, [
+		'title'    => $title,
+		'priority' => 1,
+	] );
+
+	\Kirki::add_field( $handle, [
+		'section'  => $handle,
+		'settings' => $handle,
+		'type'     => 'hidden',
+	] );
+
+	if ( ! _is_pro_active() ) {
+		\Kirki::add_field( $handle . '_pro', [
+			'section'  => $handle . '_pro',
+			'settings' => $handle . '_pro',
+			'type'     => 'hidden',
+		] );
+	}
 }

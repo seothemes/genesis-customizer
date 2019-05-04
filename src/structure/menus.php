@@ -4,7 +4,7 @@ namespace GenesisCustomizer;
 
 add_filter( 'body_class', __NAMESPACE__ . '\menu_body_classes', 100, 1 );
 /**
- * Description of expected behavior.
+ * Add menu-specific body classes.
  *
  * @since 1.0.0
  *
@@ -20,7 +20,7 @@ function menu_body_classes( $classes ) {
 
 add_action( 'genesis_before', __NAMESPACE__ . '\reposition_menus' );
 /**
- * Description of expected behavior.
+ * Reposition navigation menus.
  *
  * @since 1.0.0
  *
@@ -61,7 +61,7 @@ function reposition_menus() {
 
 add_filter( 'genesis_attr_nav-primary', __NAMESPACE__ . '\menu_alignment' );
 /**
- * Description of expected behavior.
+ * Set the mobile and primary menu alignment.
  *
  * @since 1.0.0
  *
@@ -81,7 +81,7 @@ function menu_alignment( $atts ) {
 }
 
 /**
- * Description of expected behavior.
+ * Display footer menu if set.
  *
  * @since 1.0.0
  *

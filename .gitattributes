@@ -48,4 +48,28 @@ Gulpfile.js export-ignore
 
 /assets/scss/ export-ignore
 /tests/ export-ignore
-/vendor/ export-ignore
+
+/vendor/aristath/kirki/.github/ export-ignore
+/vendor/aristath/kirki/docs/ export-ignore
+/vendor/aristath/kirki/tests/ export-ignore
+/vendor/aristath/kirki/controls/scss/ export-ignore
+/vendor/aristath/kirki/.* export-ignore
+/vendor/aristath/kirki/*.sh export-ignore
+/vendor/aristath/kirki/*.md export-ignore
+/vendor/aristath/kirki/*.txt export-ignore
+/vendor/aristath/kirki/*.xml export-ignore
+/vendor/aristath/kirki/*.dist export-ignore
+/vendor/aristath/kirki/*.yml export-ignore
+/vendor/aristath/kirki/*.json export-ignore
+/vendor/aristath/kirki/LICENSE export-ignore
+/vendor/aristath/kirki/package* export-ignore
+/vendor/aristath/kirki/Gruntfile.js export-ignore
+/vendor/aristath/kirki/example.php export-ignore
+
+/vendor/proteusthemes/wp-content-importer-v2/composer.json export-ignore
+/vendor/proteusthemes/wp-content-importer-v2/README.md export-ignore
+
+/vendor/yahnis-elsts/plugin-update-checker/examples/ export-ignore
+/vendor/yahnis-elsts/plugin-update-checker/.editorconfig export-ignore
+/vendor/yahnis-elsts/plugin-update-checker/license.txt export-ignore
+/vendor/yahnis-elsts/plugin-update-checker/README.md export-ignore

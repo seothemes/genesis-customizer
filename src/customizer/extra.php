@@ -2,90 +2,15 @@
 
 namespace GenesisCustomizer;
 
-add_action( 'customize_register', __NAMESPACE__ . '\custom_sections' );
+add_action( 'genesis_setup', __NAMESPACE__ . '\add_extra_fields', 15 );
 /**
- * Description of expected behavior.
- *
- * @since 1.0.0
- *
- * @param $wp_customize \WP_Customize_Manager
- *
- * @return void
- */
-function custom_sections( $wp_customize ) {
-	$handle = _get_handle();
-
-	$wp_customize->register_section_type( __NAMESPACE__ . '\Link_Section' );
-	$wp_customize->register_section_type( __NAMESPACE__ . '\Hidden_Section' );
-
-	$wp_customize->add_section(
-		new Link_Section(
-			$wp_customize,
-			$handle . '_pro',
-			[
-				'title'      => __( 'Upgrade to Genesis Customizer Pro', 'genesis-customizer' ),
-				'priority'   => 0,
-				'type'       => 'genesis-customizer-link',
-				'button_url' => _get_upgrade_url(),
-			]
-		)
-	);
-
-	$wp_customize->add_section(
-		new Hidden_Section(
-			$wp_customize,
-			$handle,
-			[
-				'panel'    => $handle,
-				'title'    => $handle,
-				'priority' => 0,
-				'type'     => 'genesis-customizer-hidden',
-			]
-		)
-	);
-}
-
-add_action( 'genesis_setup', __NAMESPACE__ . '\go_pro', 15 );
-/**
- * Description of expected behavior.
+ * Add extra fields not specified in config to Customizer.
  *
  * @since 1.0.0
  *
  * @return void
  */
-function go_pro() {
-	$handle = _get_handle();
-	$title  = _get_name();
-
-	\Kirki::add_panel( $handle, [
-		'title'    => $title,
-		'priority' => 1,
-	] );
-
-	\Kirki::add_field( $handle, [
-		'section'  => $handle,
-		'settings' => $handle,
-		'type'     => 'hidden',
-	] );
-
-	if ( ! _is_pro_active() ) {
-		\Kirki::add_field( $handle . '_pro', [
-			'section'  => $handle . '_pro',
-			'settings' => $handle . '_pro',
-			'type'     => 'hidden',
-		] );
-	}
-}
-
-add_action( 'genesis_setup', __NAMESPACE__ . '\add_misc_fields', 15 );
-/**
- * Description of expected behavior.
- *
- * @since 1.0.0
- *
- * @return void
- */
-function add_misc_fields() {
+function add_extra_fields() {
 	$handle = _get_handle();
 
 	\Kirki::add_field( $handle, [
@@ -213,7 +138,7 @@ function add_misc_fields() {
 			esc_html__( 'Responsive logo settings (desktop and mobile width) available in', 'genesis-customizer' ),
 			esc_html__( 'Genesis Customizer Pro', 'genesis-customizer' ),
 			esc_html__( '!', 'genesis-customizer' ),
-			_get_upgrade_url(),
+			_get_upgrade_link(),
 			esc_html__( 'Go Pro →', 'genesis-customizer' )
 		),
 		'active_callback' => function () {

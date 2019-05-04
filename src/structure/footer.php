@@ -4,7 +4,7 @@ namespace GenesisCustomizer;
 
 add_action( 'genesis_meta', __NAMESPACE__ . '\footer_credits', 20 );
 /**
- * Description of expected behavior.
+ * Add footer credits section.
  *
  * @since 1.0.0
  *
@@ -21,7 +21,7 @@ function footer_credits() {
 }
 
 /**
- * Display the Footer Credits widget area.
+ * Display the Footer Credits widget area if enabled.
  *
  * @since 1.1.0
  *
@@ -35,7 +35,7 @@ function display_footer_credits() {
 }
 
 /**
- * Description of expected behavior.
+ * Display footer credits section.
  *
  * @since 1.0.0
  *
@@ -69,7 +69,7 @@ function footer_credits_div() {
 }
 
 /**
- * Description of expected behavior.
+ * Display scroll to top link.
  *
  * @since 1.0.0
  *
@@ -89,7 +89,7 @@ function scroll_to_top_link() {
 		$html  = _get_value( 'footer_scroll-to-top_html' );
 		$text  = _get_value( 'footer_scroll-to-top_text' );
 		$link  = '<a href="#top" rel="nofollow" class="scroll-to-top%s">%s</a>';
-		$icon  = _get_svg('arrow-up');
+		$icon  = _get_svg( 'arrow-up' );
 
 		if ( $style === 'button' ) {
 			$output = sprintf( $link, '-icon', $icon );
@@ -107,9 +107,11 @@ function scroll_to_top_link() {
 
 add_action( 'genesis_footer', __NAMESPACE__ . '\display_footer_widgets', 11 );
 /**
- * Display footer widgets widget areas.
+ * Display footer widget areas in columns.
  *
- * @var $widget_areas Number of footer widget areas.
+ * @since 1.0.0
+ *
+ * @return void
  */
 function display_footer_widgets() {
 	if ( ! is_active_sidebar( 'footer-1' ) ) {
@@ -155,7 +157,7 @@ function display_footer_widgets() {
 
 add_action( 'genesis_meta', __NAMESPACE__ . '\hide_site_footer' );
 /**
- * Description of expected behavior.
+ * Hide site footer if page setting checked.
  *
  * @since 1.0.0
  *

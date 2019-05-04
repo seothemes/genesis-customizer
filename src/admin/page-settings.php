@@ -4,18 +4,25 @@ namespace GenesisCustomizer;
 
 add_action( 'add_meta_boxes', __NAMESPACE__ . '\add_meta_box' );
 /**
- * Adds meta box.
+ * Adds meta box to singular post types.
  *
  * @since 1.0.0
  *
  * @return void
  */
 function add_meta_box() {
+	$post_types = apply_filters( 'genesis_customizer_meta_box_post_types', [
+		'post',
+		'page',
+		'product',
+		'portfolio',
+	] );
+
 	\add_meta_box(
 		_get_handle(),
 		_get_name(),
 		__NAMESPACE__ . '\render_meta_box',
-		[ 'post', 'page', 'product', 'portfolio' ],
+		$post_types,
 		'side',
 		'low'
 	);
@@ -79,8 +86,12 @@ function save_meta_box( $post_id ) {
  */
 function render_meta_box( $post ) {
 	$handle   = _get_handle();
-	$settings = page_settings_defaults();
 	$counter  = 0;
+	$settings = apply_filters( 'genesis_customizer_page_settings', [
+		'site_header' => 'header_disabled',
+		'page_title'  => 'title_disabled',
+		'site_footer' => 'footer_disabled',
+	] );
 
 	foreach ( $settings as $setting => $post_meta_key ) {
 		$disabled = get_post_meta( $post->ID, $post_meta_key, true );
@@ -98,19 +109,4 @@ function render_meta_box( $post ) {
 	}
 
 	wp_nonce_field( $handle . '_meta_box_nonce_action', $handle . '_meta_box_nonce' );
-}
-
-/**
- * Description of expected behavior.
- *
- * @since 1.0.0
- *
- * @return array
- */
-function page_settings_defaults() {
-	return apply_filters( 'genesis_customizer_page_settings', [
-		'site_header' => 'header_disabled',
-		'page_title'  => 'title_disabled',
-		'site_footer' => 'footer_disabled',
-	] );
 }

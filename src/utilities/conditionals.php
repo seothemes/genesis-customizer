@@ -3,7 +3,7 @@
 namespace GenesisCustomizer;
 
 /**
- * Description of expected behavior.
+ * Check if were on any type of singular page.
  *
  * @since 1.0.0
  *
@@ -20,7 +20,7 @@ function _is_single() {
 }
 
 /**
- * Description of expected behavior.
+ * Check if were on any type of archive page.
  *
  * @since 1.0.0
  *
@@ -44,7 +44,7 @@ function _is_archive() {
 }
 
 /**
- * Description of expected behavior.
+ * Check if a given Pro module is enabled.
  *
  * @since 1.0.0
  *
@@ -77,7 +77,7 @@ function _is_module_enabled( $modules ) {
 }
 
 /**
- * Description of expected behavior.
+ * Check if Pro is active.
  *
  * @since 1.0.0
  *
@@ -88,7 +88,7 @@ function _is_pro_active() {
 }
 
 /**
- * Description of expected behavior.
+ * Check if a given plugin is active.
  *
  * @since 1.0.0
  *
@@ -122,7 +122,7 @@ function _is_plugin_active( $plugin ) {
 }
 
 /**
- * Description of expected behavior.
+ * Check if sticky header is enabled.
  *
  * @since 1.0.0
  *
@@ -149,7 +149,7 @@ function _has_sticky_header() {
 }
 
 /**
- * Description of expected behavior.
+ * Check if transparent header is enabled.
  *
  * @since 1.0.0
  *

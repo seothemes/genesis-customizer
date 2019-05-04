@@ -3,7 +3,7 @@
 namespace GenesisCustomizer;
 
 /**
- * Description of expected behavior.
+ * Returns an SVG image in a string.
  *
  * @since 1.0.0
  *

@@ -4,7 +4,7 @@ namespace GenesisCustomizer;
 
 add_action( 'genesis_setup', __NAMESPACE__ . '\unregister_widget_areas', 19 );
 /**
- * Description of expected behavior.
+ * Unregister widget areas (registered manually for custom ordering).
  *
  * @since 1.0.0
  *
@@ -18,7 +18,7 @@ function unregister_widget_areas() {
 
 add_action( 'genesis_setup', __NAMESPACE__ . '\register_widget_areas', 20 );
 /**
- * Description of expected behavior.
+ * Register widget areas.
  *
  * Pro widgets registered here for correct ordering. Can be enabled/disabled
  * with module key.
@@ -58,7 +58,7 @@ function register_widget_areas() {
 			'description' => __( 'This is the Mega Menu widget area.', 'genesis-customizer' ),
 			'module'      => 'mega-menu',
 		],
-		'above-content'        => [
+		'above-content'       => [
 			'name'        => __( 'Above Content', 'genesis-customizer' ),
 			'description' => __( 'This is the Above Content widget area.', 'genesis-customizer' ),
 			'module'      => 'extra-widgets',
@@ -75,7 +75,7 @@ function register_widget_areas() {
 			'name'        => __( 'Secondary Sidebar', 'genesis-customizer' ),
 			'description' => __( 'This is the sidebar widget area if you are using a three column site layout option.', 'genesis-customizer' ),
 		],
-		'below-content'        => [
+		'below-content'       => [
 			'name'        => __( 'Below Content', 'genesis-customizer' ),
 			'description' => __( 'This is the Below Content widget area.', 'genesis-customizer' ),
 			'module'      => 'extra-widgets',
@@ -107,7 +107,7 @@ function register_widget_areas() {
 
 add_action( 'genesis_setup', __NAMESPACE__ . '\register_footer_widgets', 20 );
 /**
- * Description of expected behavior.
+ * Register footer widget areas depending on selected option.
  *
  * @since 1.0.0
  *
@@ -129,7 +129,7 @@ function register_footer_widgets() {
 
 add_action( 'genesis_setup', __NAMESPACE__ . '\register_footer_credits', 20 );
 /**
- * Description of expected behavior.
+ * Display footer credits widget area.
  *
  * @since 1.0.0
  *
@@ -145,4 +145,44 @@ function register_footer_credits() {
 			'description' => __( 'This is the Footer Credits widget area.', 'genesis-customizer' ),
 		] );
 	}
+}
+
+add_action( 'genesis_after_title_area', __NAMESPACE__ . '\header_right', 15 );
+/**
+ * Display Header Right widget area.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function header_right() {
+	$enabled = _get_value( 'header_right_enable' );
+
+	if ( 'hide' === $enabled ) {
+		return;
+	}
+
+	genesis_widget_area( 'header-right-widget', [
+		'before' => '<div class="header-right widget-area ' . $enabled . '">',
+		'after'  => '</div>',
+	] );
+}
+
+add_action( 'genesis_after_entry', __NAMESPACE__ . '\after_entry', 9 );
+/**
+ * Display After Entry widget area.
+ *
+ * @since 1.0.0
+ *
+ * @return void
+ */
+function after_entry() {
+	if ( ! is_single() ) {
+		return;
+	}
+
+	genesis_widget_area( 'after-entry', [
+		'before' => '<div class="after-entry widget-area">',
+		'after'  => '</div>',
+	] );
 }

@@ -11,7 +11,7 @@ return [
 			esc_html__( 'Header Left widget also available in', 'genesis-customizer' ),
 			esc_html__( 'Genesis Customizer Pro', 'genesis-customizer' ),
 			esc_html__( '!', 'genesis-customizer' ),
-			_get_upgrade_url(),
+			_get_upgrade_link(),
 			esc_html__( 'Go Pro →', 'genesis-customizer' )
 		),
 		'active_callback' => function () {

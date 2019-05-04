@@ -4,7 +4,7 @@ namespace GenesisCustomizer;
 
 add_action( 'genesis_setup', __NAMESPACE__ . '\add_theme_supports', 15 );
 /**
- * Description of expected behavior.
+ * Adds theme support.
  *
  * @since 1.0.0
  *

@@ -4,9 +4,18 @@ namespace GenesisCustomizer;
 
 add_action( 'genesis_before', __NAMESPACE__ . '\js_no_js', 0 );
 /**
- * Description of expected behavior.
+ * Echo out the script that changes 'no-js' class to 'js'.
  *
- * @since 1.0.0
+ * Adds a script on the genesis_before hook which immediately changes the
+ * class to js if JavaScript is enabled. This is how WP does things on
+ * the back end, to allow different styles for the same elements
+ * depending if JavaScript is active or not.
+ *
+ * Outputting the script immediately also reduces a flash of incorrectly
+ * styled content, as the page does not load with no-js styles, then
+ * switch to js once everything has finished loading.
+ *
+ * @since  1.0.0
  *
  * @return void
  */
@@ -26,7 +35,7 @@ function js_no_js() {
 
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_scripts' );
 /**
- * Description of expected behavior.
+ * Enqueue main scripts.
  *
  * @since 1.0.0
  *
