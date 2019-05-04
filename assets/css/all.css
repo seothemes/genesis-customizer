@@ -443,6 +443,10 @@ button.ghost:active,
   opacity: 1;
 }
 
+::-moz-placeholder {
+  opacity: 1;
+}
+
 ::-ms-input-placeholder {
   opacity: 1;
 }
@@ -536,7 +540,6 @@ table {
   border-radius: 4px;
   border-spacing: 0;
   border-collapse: collapse;
-  word-break: break-all;
 }
 
 th,
@@ -1209,6 +1212,7 @@ iframe {
   width: 100%;
   margin: 0 0 3rem;
   -webkit-column-span: all;
+  -moz-column-span: all;
   column-span: all;
 }
 
@@ -1221,6 +1225,7 @@ iframe {
 .archive-description {
   width: 100%;
   -webkit-column-span: all;
+  -moz-column-span: all;
   column-span: all;
 }
 
@@ -1272,6 +1277,7 @@ iframe {
 .author-box {
   width: 100%;
   -webkit-column-span: all;
+  -moz-column-span: all;
   column-span: all;
 }
 
@@ -1343,6 +1349,7 @@ iframe {
 .after-entry {
   width: 100%;
   -webkit-column-span: all;
+  -moz-column-span: all;
   column-span: all;
 }
 
@@ -1446,6 +1453,7 @@ iframe {
 .pagination {
   width: 100%;
   -webkit-column-span: all;
+  -moz-column-span: all;
   column-span: all;
 }
 
@@ -1740,6 +1748,7 @@ iframe {
   display: block;
   padding: 0;
   -webkit-columns: 2;
+  -moz-columns: 2;
   columns: 2;
 }
 
