@@ -1,13 +1,13 @@
 
 .components-panel .edit-post-meta-boxes-area #poststuff h2.hndle {
+	border-bottom: 0;
 	color: #23282d;
 	font-size: 13px;
-	border-bottom: 0;
 }
 
 .components-panel .edit-post-meta-boxes-area #poststuff h2.hndle:focus:not(:disabled):not([aria-disabled=true]) {
-	outline-offset: -2px;
 	outline: 1px dotted #555d66;
+	outline-offset: -2px;
 }
 
 .edit-post-meta-boxes-area .postbox > .inside {
@@ -15,11 +15,11 @@
 }
 
 .components-panel .toggle-indicator {
-	background-image: url('../img/arrow.svg');
-	background-position: center;
-	background-repeat: no-repeat;
-	transform: rotate(180deg);
 	display: block;
+	background-image: url("../img/arrow.svg");
+	background-repeat: no-repeat;
+	background-position: center;
+	transform: rotate(180deg);
 }
 
 .components-panel .closed .toggle-indicator {
@@ -27,7 +27,7 @@
 }
 
 .components-panel .toggle-indicator:before {
-	content: '' !important;
+	content: "" !important;
 }
 
 #genesis-customizer-settings form h2 {
@@ -40,22 +40,22 @@
 }
 
 a.button.tooltip-toggle {
-	border: none;
-	box-shadow: none;
-	background: #9ea3a8;
-	color: #fff;
-	height: 16px;
-	width: 16px;
-	padding: 0;
-	border-radius: 16px;
-	line-height: 16px;
 	display: inline-flex;
-	align-items: center;
-	justify-content: center;
+	display: none;
+	width: 16px;
+	height: 16px;
+	margin-left: 10px;
+	padding: 0;
+	border: none;
+	border-radius: 16px;
+	color: #fff;
+	background: #9ea3a8;
+	box-shadow: none;
 	font-size: 10px;
 	font-weight: bold;
-	margin-left: 10px;
-	display: none;
+	line-height: 16px;
+	align-items: center;
+	justify-content: center;
 }
 
 a.button.tooltip-toggle:hover,
@@ -67,13 +67,13 @@ a.button.tooltip-toggle:focus {
 }
 
 .tooltip {
-	margin-top: 6px;
 	display: block;
+	margin-top: 6px;
 }
 
 .about-wrap h1 {
-	margin-bottom: 0.618em;
 	display: flex;
+	margin-bottom: 0.618em;
 	align-items: center;
 }
 
@@ -101,17 +101,17 @@ a.button.tooltip-toggle:focus {
 .elementor-not-active div[data-categories*="elementor"] h4:after,
 .bb-not-active div[data-categories*="beaver-builder"] h4:after,
 .pro-not-active div[data-categories*="pro"] h4:after {
-	content: '(Requires Pro)';
-	font-size: xx-small;
-	font-weight: lighter;
 	margin-left: 0.5em;
 	color: #5e5e5e;
+	font-size: xx-small;
+	font-weight: lighter;
+	content: "(Requires Pro)";
 }
 
 .elementor-not-active div[data-categories*="elementor"] h4:after {
-	content: '(Requires Elementor)';
+	content: "(Requires Elementor)";
 }
 
 .bb-not-active div[data-categories*="beaver-builder"] h4:after {
-	content: '(Req. Beaver Builder)';
+	content: "(Req. Beaver Builder)";
 }

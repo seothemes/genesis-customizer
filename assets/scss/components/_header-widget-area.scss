@@ -42,8 +42,8 @@
 }
 
 .header-right {
-	text-align: right;
 	display: flex;
+	text-align: right;
 	align-items: center;
 
 	@include mq(m) {

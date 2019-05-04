@@ -29,22 +29,22 @@
 }
 
 .customize-control-kirki-box-shadow .preview-object {
-	background: #f2f2f2 !important;
-	color: #333 !important;
-	padding: 10px;
-	width: 50px;
-	height: 50px;
 	position: absolute;
 	top: calc(50% - 25px);
 	left: calc(50% - 25px);
 	-webkit-box-sizing: border-box;
 	box-sizing: border-box;
+	width: 50px;
+	height: 50px;
+	padding: 10px;
+	color: #333 !important;
+	background: #f2f2f2 !important;
 }
 
 .customize-control-kirki-box-shadow .preview-object .dashicons {
-	font-size: 30px;
 	width: 30px;
 	height: 30px;
+	font-size: 30px;
 }
 
 .customize-control-kirki-box-shadow input[type="range"] {
@@ -52,11 +52,11 @@
 }
 
 .customize-control-kirki-box-shadow .coordinates {
-	font-size: 9px;
-	margin-left: -5px;
-	margin-right: -5px;
-	margin-top: -5px;
 	display: block;
+	margin-top: -5px;
+	margin-right: -5px;
+	margin-left: -5px;
+	font-size: 9px;
 	text-align: center;
 }
 
@@ -69,8 +69,8 @@
 }
 
 .customize-control-kirki-radio-image input:checked + label img {
-	box-shadow: none;
 	border: 0;
+	box-shadow: none;
 }
 
 .customize-control-kirki-radio-image input:not(:checked) + label img {
@@ -83,8 +83,8 @@
 
 .customize-control-kirki-dimensions .wrapper,
 .customize-control-kirki-typography .wrapper {
-	border: 0;
 	padding: 0;
+	border: 0;
 }
 
 .customize-control-kirki-dimensions .wrapper .control > div h5 {
@@ -100,12 +100,12 @@
 }
 
 .CodeMirror-sizer {
-	margin-left: 46px !important;
-	margin-bottom: 0px !important;
-	border-right-width: 30px !important;
 	min-height: 62px !important;
-	padding-right: 0px !important;
-	padding-bottom: 0px !important;
+	margin-bottom: 0 !important;
+	margin-left: 46px !important;
+	padding-right: 0 !important;
+	padding-bottom: 0 !important;
+	border-right-width: 30px !important;
 }
 
 .CodeMirror-gutter.CodeMirror-linenumbers {
@@ -128,43 +128,43 @@
 }
 
 #accordion-section-genesis-customizer_pro h3 {
-	cursor: pointer;
-	border: 0;
+	position: relative;
 	margin: 0;
 	padding: 1px 0;
-	position: relative;
+	border: 0;
+	cursor: pointer;
 }
 
 #accordion-section-genesis-customizer_pro a {
-	text-decoration: none;
 	display: block;
-	background: #fff;
 	padding: 11px 10px 12px 14px;
 	border-left: 4px solid #fff;
+	background: #fff;
+	text-decoration: none;
 }
 
 #accordion-section-genesis-customizer_pro a:after {
-	content: "\f345";
 	display: block;
+	float: right;
 	position: absolute;
+	z-index: 1;
 	top: 11px;
 	right: 10px;
-	z-index: 1;
-	float: right;
+	padding: 0;
 	border: none;
 	background: 0 0;
 	font: normal 20px/1 dashicons;
-	speak: none;
-	padding: 0;
-	text-indent: 0;
 	text-align: center;
+	text-indent: 0;
+	content: "\f345";
+	speak: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 
 div.tooltip-wrapper .tooltip-content {
-	background: #0084ba;
 	color: #fff;
+	background: #0084ba;
 }
 
 div.tooltip-wrapper .tooltip-content:after {
@@ -176,8 +176,8 @@ div.tooltip-wrapper .tooltip-content:after {
 }
 
 .customize-control-kirki-radio-buttonset .buttonset .switch-input:checked + .switch-label {
-	background-color: #1e8cbe;
 	color: #fff;
+	background-color: #1e8cbe;
 	text-shadow: 0 1px 3px #069;
 }
 
@@ -187,17 +187,17 @@ div.tooltip-wrapper .tooltip-content:after {
 
 .customize-control-kirki-slider .wrapper input[type="text"] {
 	width: 48px;
-	background: #fff;
-	border: 1px solid #ddd;
 	margin-left: 1em;
 	padding: 0 0.5em;
-	box-shadow: inset 0 1px 2px rgba(0,0,0,.07);
+	border: 1px solid #ddd;
+	background: #fff;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.07);
 }
 
 .customize-control-kirki-slider .wrapper input[type="text"]:focus {
 	border-color: #5b9dd9;
-	box-shadow: 0 0 2px rgba(30,140,190,.8);
 	outline: 2px solid transparent;
+	box-shadow: 0 0 2px rgba(30,140,190,0.8);
 }
 
 .customize-control-kirki-box-shadow .preview-object .dashicons {
@@ -209,19 +209,19 @@ div.tooltip-wrapper .tooltip-content:after {
 }
 
 .customize-control-kirki-radio-buttonset .buttonset .switch-label {
-	background: #dddddd;
+	background: #ddd;
 }
 
 .customize-control-kirki-radio-buttonset .buttonset .switch-input:checked + .switch-label {
-	background-color: #ffffff;
-	text-shadow: none;
 	color: #555d66;
+	background-color: #fff;
+	text-shadow: none;
 }
 
 .customize-control-kirki-radio-buttonset svg {
+	display: block;
 	width: 12px;
 	height: 12px;
-	display: block;
 	margin: 0 auto;
 	-webkit-font-smoothing: antialiased;
 	fill: #555d66;

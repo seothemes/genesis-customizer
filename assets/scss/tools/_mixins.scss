@@ -59,7 +59,7 @@
 
 @mixin overlay($default_color: "") {
 	position: relative;
-	
+
 	> div {
 		position: relative;
 	}
