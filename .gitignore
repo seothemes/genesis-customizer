@@ -10,16 +10,20 @@
 /vendor/antecedent/
 /vendor/brain/
 /vendor/brainmaestro/
+/vendor/dealerdirect/
 /vendor/doctrine/
 /vendor/hamcrest/
 /vendor/mockery/
 /vendor/myclabs/
+/vendor/phpcompatibility/
 /vendor/phpdocumentor/
 /vendor/phpspec/
 /vendor/phpunit/
 /vendor/sebastian/
+/vendor/squizlabs/
 /vendor/symfony/
 /vendor/webmozart/
+/vendor/wp-coding-standards/
 /vendor/wp-phpunit/
 
 !/vendor/aristath/kirki/vendor
