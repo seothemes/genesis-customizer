@@ -1,4 +1,14 @@
 <?php
+/**
+ * Genesis Customizer.
+ *
+ * This file contains template functionality for Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
+ */
 
 namespace GenesisCustomizer;
 
@@ -8,7 +18,7 @@ add_filter( 'theme_page_templates', __NAMESPACE__ . '\register_templates' );
  *
  * @since 1.0.0
  *
- * @param $templates
+ * @param array $templates Array of page templates.
  *
  * @return array
  */
@@ -30,7 +40,7 @@ add_filter( 'template_include', __NAMESPACE__ . '\include_templates' );
  *
  * @since 1.0.0
  *
- * @param $template
+ * @param string $template Page template to override.
  *
  * @return string
  */
@@ -43,7 +53,7 @@ function include_templates( $template ) {
 		'landing.php',
 	];
 
-	if ( ! in_array( $template_name, $custom_templates ) ) {
+	if ( ! in_array( $template_name, $custom_templates, true ) ) {
 		return $template;
 	}
 

@@ -1,8 +1,13 @@
 <?php
 /**
- * This file contains the plugin settings.
+ * Genesis Customizer.
  *
- * @package wordpress
+ * This file contains the admin settings class for Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
  */
 
 namespace GenesisCustomizer;
@@ -31,7 +36,7 @@ class Admin_Settings {
 	public $settings = [];
 
 	/**
-	 * Constructor.
+	 * Admin_Settings constructor.
 	 */
 	public function __construct() {
 		add_action( 'init', [ $this, 'init_settings' ] );
@@ -215,15 +220,17 @@ class Admin_Settings {
 			}
 
 			foreach ( $this->settings as $section => $data ) {
-				if ( $current_section && $current_section != $section ) {
+				if ( $current_section && $current_section !== $section ) {
 					continue;
 				}
 
 				// Add section to page.
-				add_settings_section( $section, $data['title'], [
-					$this,
-					'settings_section',
-				], _get_handle() );
+				add_settings_section( $section,
+					$data['title'], [
+						$this,
+						'settings_section',
+					], _get_handle()
+				);
 
 				foreach ( $data['fields'] as $field ) {
 					$validation = '';
@@ -269,7 +276,7 @@ class Admin_Settings {
 	 * @return void
 	 */
 	public function settings_section( $section ) {
-		echo '<p> ' . $this->settings[ $section['id'] ]['description'] . '</p>' . "\n";
+		echo '<p> ' . esc_html( $this->settings[ $section['id'] ]['description'] ) . '</p>' . "\n";
 	}
 
 	/**
@@ -296,20 +303,21 @@ class Admin_Settings {
 				$class = 'nav-tab';
 
 				if ( ! isset( $_GET['tab'] ) ) {
-					if ( 0 == $c ) {
+					if ( 0 === $c ) {
 						$class .= ' nav-tab-active';
 					}
-
 				} else {
-					if ( isset( $_GET['tab'] ) && $section == $_GET['tab'] ) {
+					if ( isset( $_GET['tab'] ) && $section === $_GET['tab'] ) {
 						$class .= ' nav-tab-active';
 					}
 				}
 
 				// Set tab link.
-				$tab_link = add_query_arg( [
-					'tab' => $section,
-				] );
+				$tab_link = add_query_arg(
+					[
+						'tab' => $section,
+					]
+				);
 
 				if ( isset( $_GET['settings-updated'] ) ) {
 					$tab_link = remove_query_arg( 'settings-updated', $tab_link );
@@ -317,7 +325,7 @@ class Admin_Settings {
 
 				$html .= '<a href="' . $tab_link . '" class="' . esc_attr( $class ) . '">' . esc_html( $data['title'] ) . '</a>' . "\n";
 
-				++ $c;
+				++$c;
 			}
 
 			$html .= '</h2>' . "\n";
@@ -366,7 +374,7 @@ class Admin_Settings {
 	 * @since 1.0.0
 	 */
 	public function __clone() {
-		_doing_it_wrong( __FUNCTION__, __( 'Cheatin&#8217; huh?', 'genesis-customizer' ), _get_version() );
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'genesis-customizer' ), esc_html( _get_version() ) );
 	}
 
 	/**
@@ -375,6 +383,6 @@ class Admin_Settings {
 	 * @since 1.0.0
 	 */
 	public function __wakeup() {
-		_doing_it_wrong( __FUNCTION__, __( 'Cheatin&#8217; huh?', 'genesis-customizer' ), _get_version() );
+		_doing_it_wrong( __FUNCTION__, esc_html__( 'Cheatin&#8217; huh?', 'genesis-customizer' ), esc_html( _get_version() ) );
 	}
 }

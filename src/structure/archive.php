@@ -1,4 +1,14 @@
 <?php
+/**
+ * Genesis Customizer.
+ *
+ * This file contains archive structure functions for Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
+ */
 
 namespace GenesisCustomizer;
 
@@ -32,7 +42,7 @@ function archive_setup() {
  *
  * @since 1.0.0
  *
- * @param $classes
+ * @param array $classes All body classes.
  *
  * @return array
  */
@@ -63,7 +73,8 @@ function read_more_text() {
 	$ellipses = _get_value( 'archive_read-more_ellipses' ) ? '&hellip;&nbsp;' : '';
 	$wrapper  = 'block' === $display ? '<div class="read-more-wrap">%s</div>' : '%s';
 	$classes  = 'button' === $style ? 'button small' : '';
-	$link     = sprintf( '<a href="%s" class="more-link %s">%s</a>',
+	$link     = sprintf(
+		'<a href="%s" class="more-link %s">%s</a>',
 		get_the_permalink(),
 		$classes,
 		genesis_a11y_more_link( $text )
@@ -103,9 +114,9 @@ function archive_post_meta() {
  *
  * @since 1.0.0
  *
- * @param $atts
+ * @param array $atts Pagination attributes.
  *
- * @return mixed
+ * @return array
  */
 function pagination_alignment( $atts ) {
 	$align = _get_value( 'archive_pagination_alignment' );

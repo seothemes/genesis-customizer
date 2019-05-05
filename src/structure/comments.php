@@ -1,4 +1,14 @@
 <?php
+/**
+ * Genesis Customizer.
+ *
+ * This file contains comments structure functions for Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
+ */
 
 namespace GenesisCustomizer;
 
@@ -32,9 +42,9 @@ add_filter( 'comment_form_defaults', __NAMESPACE__ . '\comment_title_reply' );
  *
  * @since 1.0.0
  *
- * @param $defaults
+ * @param array $defaults Comment title default args.
  *
- * @return mixed
+ * @return array
  */
 function comment_title_reply( $defaults ) {
 	$defaults['title_reply'] = _get_value( 'single_comments_reply' );
@@ -48,9 +58,9 @@ add_filter( 'comment_form_defaults', __NAMESPACE__ . '\comment_submit_button' );
  *
  * @since 1.0.0
  *
- * @param $defaults
+ * @param array $defaults Comment form default args.
  *
- * @return mixed
+ * @return array
  */
 function comment_submit_button( $defaults ) {
 	$defaults['label_submit'] = _get_value( 'single_comments_submit' );

@@ -10,21 +10,20 @@
     }
   ],
   "minimum-stability": "dev",
-  "repositories": [
-    {
-      "url": "https://github.com/proteusthemes/one-click-demo-import",
-      "type": "git"
-    }
-  ],
   "require": {
     "php": ">=5.4.0",
+    "alledia/edd-sl-plugin-updater": "dev-master",
     "aristath/kirki": "dev-master",
     "yahnis-elsts/plugin-update-checker": "dev-master"
   },
   "require-dev": {
     "php": "^5.6|^7",
     "brain/monkey": "^2.2",
+    "dealerdirect/phpcodesniffer-composer-installer": "v0.5.0",
+    "phpcompatibility/phpcompatibility-wp": "2.0.0",
     "phpunit/phpunit": "~5.7.9",
+    "squizlabs/php_codesniffer": "^3.4.2",
+    "wp-coding-standards/wpcs": "2.1.0",
     "wp-phpunit/wp-phpunit": "^5.1"
   },
   "autoload": {
@@ -43,6 +42,8 @@
     "sort-packages": true
   },
   "scripts": {
+    "install-codestandards": "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run",
+    "phpcs": "phpcs",
     "test-unit": "composer dump && \"vendor/bin/phpunit\" --testsuite unit --color=always",
     "test-integration": "composer dump && \"vendor/bin/phpunit\" --testsuite integration --configuration tests/phpunit/integration/phpunit.xml.dist --color=always"
   }

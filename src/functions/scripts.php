@@ -1,4 +1,14 @@
 <?php
+/**
+ * Genesis Customizer.
+ *
+ * This file contains script functions for Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
+ */
 
 namespace GenesisCustomizer;
 
@@ -21,15 +31,15 @@ add_action( 'genesis_before', __NAMESPACE__ . '\js_no_js', 0 );
  */
 function js_no_js() {
 	?>
-    <script>
-        //<![CDATA[
-        (function () {
-            var c = document.body.classList;
-            c.remove('no-js');
-            c.add('js');
-        })();
-        //]]>
-    </script>
+	<script>
+		//<![CDATA[
+		(function () {
+			var c = document.body.classList;
+			c.remove('no-js');
+			c.add('js');
+		})();
+		//]]>
+	</script>
 	<?php
 }
 

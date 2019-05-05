@@ -1,4 +1,14 @@
 <?php
+/**
+ * Genesis Customizer.
+ *
+ * This file contains single structure functions for Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
+ */
 
 namespace GenesisCustomizer;
 
@@ -42,20 +52,24 @@ function single_setup() {
  * @return void
  */
 function display_featured_image() {
-	$img = genesis_get_image( [
-		'format'  => 'html',
-		'size'    => _get_value( 'single_featured-image_size' ),
-		'context' => 'single',
-		'attr'    => genesis_parse_attr( 'entry-image', [] ),
-	] );
+	$img = genesis_get_image(
+		[
+			'format'  => 'html',
+			'size'    => _get_value( 'single_featured-image_size' ),
+			'context' => 'single',
+			'attr'    => genesis_parse_attr( 'entry-image', [] ),
+		]
+	);
 
 	if ( ! empty( $img ) ) {
-		genesis_markup( [
-			'open'    => '<figure %s>',
-			'close'   => '</figure>',
-			'content' => wp_make_content_images_responsive( $img ),
-			'context' => 'featured-image',
-		] );
+		genesis_markup(
+			[
+				'open'    => '<figure %s>',
+				'close'   => '</figure>',
+				'content' => wp_make_content_images_responsive( $img ),
+				'context' => 'featured-image',
+			]
+		);
 	}
 }
 
@@ -65,14 +79,14 @@ add_filter( 'genesis_attr_featured-image', __NAMESPACE__ . '\featured_image_alig
  *
  * @since 1.0.0
  *
- * @param $attr
+ * @param array $attr Array of element attributes.
  *
- * @return mixed
+ * @return array
  */
 function featured_image_alignment( $attr ) {
 	$setting = _get_value( 'single_featured-image_alignment' );
 
-	if ( '' === $setting) {
+	if ( '' === $setting ) {
 		return $attr;
 	}
 
@@ -86,8 +100,8 @@ function featured_image_alignment( $attr ) {
  *
  * @since 1.0.0
  *
- * @param $title
- * @param $context
+ * @param string $title   Author box title.
+ * @param string $context Author box context.
  *
  * @return mixed
  */

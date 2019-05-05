@@ -1,4 +1,14 @@
 <?php
+/**
+ * Genesis Customizer.
+ *
+ * This file adds admin scripts and styles to Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
+ */
 
 namespace GenesisCustomizer;
 
@@ -77,8 +87,8 @@ add_filter( 'pand_dismiss_notice_js_url', __NAMESPACE__ . '\dismiss_notice_js_ur
  *
  * @since 1.0.0
  *
- * @param $js_url
- * @param $composer_path
+ * @param string $js_url        URL to JS files.
+ * @param string $composer_path Path to composer directory.
  *
  * @return string
  */

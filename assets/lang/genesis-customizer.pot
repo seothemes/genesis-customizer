@@ -33,7 +33,7 @@ msgstr ""
 msgid "Would you like to move it now?"
 msgstr ""
 
-#: config/archive/description.php:9, config/archive/entry.php:9, config/archive/pagination.php:9, config/archive/post-meta.php:34, config/archive/settings.php:9, config/base/blockquotes.php:9, config/base/body.php:9, config/base/buttons.php:9, config/base/code.php:9, config/base/forms.php:9, config/base/headings.php:9, config/base/links.php:9, config/content/author-box.php:9, config/content/breadcrumbs.php:9, config/footer/credits.php:20, config/footer/widgets.php:31, config/header/primary.php:61, config/header/right.php:48, config/header/title-area.php:9, config/menus/footer.php:37, config/menus/menu-toggle.php:20, config/menus/mobile.php:9, config/menus/primary.php:9, config/menus/secondary.php:20, config/menus/sub-menu-toggle.php:20, config/menus/sub-menu.php:20, config/sidebars/featured-content.php:9, config/sidebars/primary.php:9, config/sidebars/secondary.php:9, config/single/after-entry.php:9, config/single/comments.php:9, config/single/entry.php:9, src/classes/class-admin-settings.php:190
+#: config/archive/description.php:9, config/archive/entry.php:9, config/archive/pagination.php:9, config/archive/post-meta.php:34, config/archive/settings.php:9, config/base/blockquotes.php:9, config/base/body.php:9, config/base/buttons.php:9, config/base/code.php:9, config/base/forms.php:9, config/base/headings.php:9, config/base/links.php:9, config/content/author-box.php:9, config/content/breadcrumbs.php:9, config/footer/credits.php:20, config/footer/widgets.php:31, config/header/primary.php:61, config/header/right.php:48, config/header/title-area.php:9, config/menus/footer.php:37, config/menus/menu-toggle.php:20, config/menus/mobile.php:9, config/menus/primary.php:9, config/menus/secondary.php:20, config/menus/sub-menu-toggle.php:20, config/menus/sub-menu.php:20, config/sidebars/featured-content.php:9, config/sidebars/primary.php:9, config/sidebars/secondary.php:9, config/single/after-entry.php:9, config/single/comments.php:9, config/single/entry.php:9, src/classes/class-admin-settings.php:195
 msgid "Colors"
 msgstr ""
 
@@ -169,7 +169,7 @@ msgstr ""
 msgid "Post Info"
 msgstr ""
 
-#: config/archive/post-meta.php:19, config/single/post-meta.php:19, src/customizer/helpers.php:82, src/customizer/helpers.php:89
+#: config/archive/post-meta.php:19, config/single/post-meta.php:19, src/customizer/helpers.php:92, src/customizer/helpers.php:99
 msgid "Post Meta"
 msgstr ""
 
@@ -229,7 +229,7 @@ msgstr ""
 msgid "Show ellipses"
 msgstr ""
 
-#: config/archive/settings.php:29, config/base/headings.php:104, config/header/title-area.php:43, config/header/title-area.php:100, config/menus/footer.php:28, config/menus/primary.php:47, config/menus/secondary.php:11, config/menus/sub-menu-toggle.php:11, config/menus/sub-menu.php:11, src/customizer/extra.php:194
+#: config/archive/settings.php:29, config/base/headings.php:104, config/header/title-area.php:43, config/header/title-area.php:100, config/menus/footer.php:28, config/menus/primary.php:47, config/menus/secondary.php:11, config/menus/sub-menu-toggle.php:11, config/menus/sub-menu.php:11, src/customizer/extra.php:204
 msgid "Tip: "
 msgstr ""
 
@@ -325,7 +325,7 @@ msgstr ""
 msgid "Shadow Hover"
 msgstr ""
 
-#: config/base/code.php:51, src/customizer/helpers.php:43
+#: config/base/code.php:51, src/customizer/helpers.php:53
 msgid "Code"
 msgstr ""
 
@@ -481,7 +481,7 @@ msgstr ""
 msgid "Title Bottom Spacing"
 msgstr ""
 
-#: config/content/breadcrumbs.php:13, config/footer/credits.php:24, config/footer/widgets.php:36, config/menus/mobile.php:13, config/sidebars/featured-content.php:13, config/sidebars/primary.php:13, config/sidebars/secondary.php:13, src/customizer/helpers.php:39
+#: config/content/breadcrumbs.php:13, config/footer/credits.php:24, config/footer/widgets.php:36, config/menus/mobile.php:13, config/sidebars/featured-content.php:13, config/sidebars/primary.php:13, config/sidebars/secondary.php:13, src/customizer/helpers.php:49
 msgid "Links"
 msgstr ""
 
@@ -593,7 +593,7 @@ msgstr ""
 msgid "Columns"
 msgstr ""
 
-#: config/footer/widgets.php:35, src/customizer/helpers.php:38
+#: config/footer/widgets.php:35, src/customizer/helpers.php:48
 msgid "Headings"
 msgstr ""
 
@@ -617,15 +617,15 @@ msgstr ""
 msgid "Additional desktop and mobile header layouts available in"
 msgstr ""
 
-#: config/header/primary.php:25, config/header/right.php:12, config/menus/mobile.php:117, src/admin/upgrade-notice.php:26, src/customizer/extra.php:139
+#: config/header/primary.php:25, config/header/right.php:12, config/menus/mobile.php:117, src/admin/notices.php:36, src/customizer/extra.php:149
 msgid "Genesis Customizer Pro"
 msgstr ""
 
-#: config/header/primary.php:26, config/header/right.php:13, config/menus/mobile.php:118, src/customizer/extra.php:140
+#: config/header/primary.php:26, config/header/right.php:13, config/menus/mobile.php:118, src/customizer/extra.php:150
 msgid "!"
 msgstr ""
 
-#: config/header/primary.php:28, config/header/right.php:15, config/menus/mobile.php:120, src/admin/upgrade-notice.php:29, src/customizer/extra.php:142
+#: config/header/primary.php:28, config/header/right.php:15, config/menus/mobile.php:120, src/admin/notices.php:39, src/customizer/extra.php:152
 msgid "Go Pro →"
 msgstr ""
 
@@ -873,7 +873,7 @@ msgstr ""
 msgid "These settings are for the default desktop colors only and will be overridden by the "
 msgstr ""
 
-#: config/menus/primary.php:50, src/customizer/helpers.php:55, src/functions/widget-areas.php:52
+#: config/menus/primary.php:50, src/customizer/helpers.php:65, src/functions/widget-areas.php:62
 msgid "Mobile Menu"
 msgstr ""
 
@@ -993,7 +993,7 @@ msgstr ""
 msgid "says"
 msgstr ""
 
-#: config/single/comments.php:75, src/customizer/helpers.php:83
+#: config/single/comments.php:75, src/customizer/helpers.php:93
 msgid "Comments"
 msgstr ""
 
@@ -1053,497 +1053,479 @@ msgstr ""
 msgid "Full"
 msgstr ""
 
-#: src/admin/admin-settings.php:22
-msgid "Go Pro"
-msgstr ""
-
-#: src/admin/child-theme-compat.php:43
+#: src/admin/child-theme-compat.php:53
 msgid " is not supported by the active child theme and may not work as expected. Please install a compatible child theme or refer to the"
 msgstr ""
 
-#: src/admin/child-theme-compat.php:45
+#: src/admin/child-theme-compat.php:55
 msgid "adding theme support guide"
 msgstr ""
 
-#: src/admin/child-theme-compat.php:46
+#: src/admin/child-theme-compat.php:56
 msgid "for instructions on how to declare Genesis Customizer support in your theme."
 msgstr ""
 
-#: src/admin/demo-import.php:27
+#: src/admin/demo-import.php:37
 msgid "Theme Dependency"
 msgstr ""
 
-#: src/admin/demo-import.php:46, src/admin/demo-import.php:47
+#: src/admin/demo-import.php:56, src/admin/demo-import.php:57
 msgid "Demo Import"
 msgstr ""
 
-#: src/admin/demo-import.php:87
-msgstr ""
-
-#: src/admin/demo-import.php:197
+#. translators: 1: Opening div and paragraph tags 2: Line break 3: Opening strong tag 4: Closing strong tag 5: closing div and paragraph tags.
+#: src/admin/demo-import.php:208
 msgid "%1$s%3$sThat's it, all done!%4$s%2$sThe demo import has finished. Please check your page and make sure that everything has imported correctly. "
 msgstr ""
 
-#: src/admin/demo-import.php:197
+#: src/admin/demo-import.php:208
 msgid "View Site"
 msgstr ""
 
-#: src/admin/page-settings.php:105
+#: src/admin/meta-box.php:112
 msgid "Disable "
 msgstr ""
 
-#: src/admin/upgrade-notice.php:25
+#: src/admin/notices.php:35
 msgid "Thank you for using Genesis Customizer! Upgrade to"
 msgstr ""
 
-#: src/admin/upgrade-notice.php:27
+#: src/admin/notices.php:37
 msgid "to access even more features!"
 msgstr ""
 
-#: src/admin/upgrade-notice.php:30
+#: src/admin/notices.php:40
 msgid "Dismiss this notice."
 msgstr ""
 
-#: src/classes/class-admin-api.php:93
+#: src/admin/settings.php:32
+msgid "Go Pro"
+msgstr ""
+
+#: src/classes/class-admin-api.php:98
 msgid "active"
 msgstr ""
 
-#: src/classes/class-admin-api.php:99
+#: src/classes/class-admin-api.php:104
 msgid "Deactivate License"
 msgstr ""
 
-#: src/classes/class-admin-api.php:107
+#: src/classes/class-admin-api.php:112
 msgid "Activate License"
 msgstr ""
 
-#: src/classes/class-admin-settings.php:130
+#: src/classes/class-admin-settings.php:135
 msgid "General"
 msgstr ""
 
-#: src/classes/class-admin-settings.php:131
+#: src/classes/class-admin-settings.php:136
 msgid "Change the default settings for Genesis Customizer."
 msgstr ""
 
-#: src/classes/class-admin-settings.php:136
+#: src/classes/class-admin-settings.php:141
 msgid "Global Breakpoint"
 msgstr ""
 
-#: src/classes/class-admin-settings.php:137
+#: src/classes/class-admin-settings.php:142
 msgid "Select the screen size at which the global media query should change."
 msgstr ""
 
-#: src/classes/class-admin-settings.php:143
+#: src/classes/class-admin-settings.php:148
 msgid "Hide Dependencies"
 msgstr ""
 
-#: src/classes/class-admin-settings.php:144
+#: src/classes/class-admin-settings.php:149
 msgid "If checked, plugin dependencies will be hidden from the admin "
 msgstr ""
 
-#: src/classes/class-admin-settings.php:144
+#: src/classes/class-admin-settings.php:149
 msgid "plugin page"
 msgstr ""
 
-#: src/classes/class-admin-settings.php:150
+#: src/classes/class-admin-settings.php:155
 msgid "Load child theme CSS"
 msgstr ""
 
-#: src/classes/class-admin-settings.php:151
+#: src/classes/class-admin-settings.php:156
 msgid "Load the child theme style.css file on the front end of the site."
 msgstr ""
 
-#: src/classes/class-admin-settings.php:154, src/classes/class-admin-settings.php:165
+#: src/classes/class-admin-settings.php:159, src/classes/class-admin-settings.php:170
 msgid "Enable &nbsp;"
 msgstr ""
 
-#: src/classes/class-admin-settings.php:155, src/classes/class-admin-settings.php:166
+#: src/classes/class-admin-settings.php:160, src/classes/class-admin-settings.php:171
 msgid "Disable"
 msgstr ""
 
-#: src/classes/class-admin-settings.php:161
+#: src/classes/class-admin-settings.php:166
 msgid "Genesis style trump"
 msgstr ""
 
-#: src/classes/class-admin-settings.php:162
+#: src/classes/class-admin-settings.php:167
 msgid "Load the child theme stylesheet at a later priority to override plugin styles."
 msgstr ""
 
-#: src/classes/class-admin-settings.php:191
+#: src/classes/class-admin-settings.php:196
 msgid "Sets the color palette defaults for Customizer color settings."
 msgstr ""
 
-#: src/classes/class-admin-settings.php:282
+#: src/classes/class-admin-settings.php:289
 msgid "Genesis Customizer Settings"
 msgstr ""
 
-#: src/classes/class-admin-settings.php:336
+#: src/classes/class-admin-settings.php:344
 msgid "Save Settings"
 msgstr ""
 
-#: src/classes/class-admin-settings.php:369, src/classes/class-admin-settings.php:378
+#: src/classes/class-admin-settings.php:377, src/classes/class-admin-settings.php:386
 msgid "Cheatin&#8217; huh?"
 msgstr ""
 
-#: src/classes/class-mega-menu-admin.php:31, src/functions/widget-areas.php:57
+#: src/classes/class-mega-menu-admin.php:48, src/functions/widget-areas.php:67
 msgid "Mega Menu"
 msgstr ""
 
-#: src/classes/class-wp-cli-commands.php:20
-msgid "Running "
-msgstr ""
-
-#: src/classes/class-wp-cli-commands.php:22
-msgid " version "
-msgstr ""
-
-#: src/classes/class-wp-cli-commands.php:24
-msgid "."
-msgstr ""
-
-#: src/classes/class-wp-cli-commands.php:40
-msgid " theme mods reset."
-msgstr ""
-
-#: src/compat/beaver-builder.php:17
+#: src/compat/beaver-builder.php:27
 msgid "Toggle Header"
 msgstr ""
 
-#: src/customizer/customizer.php:54
+#: src/customizer/customizer.php:64
 msgid "Default Background"
 msgstr ""
 
-#: src/customizer/customizer.php:174
+#: src/customizer/customizer.php:184
 msgid "System"
 msgstr ""
 
-#: src/customizer/customizer.php:212
+#: src/customizer/customizer.php:222
 msgid "Upgrade to Genesis Customizer Pro"
 msgstr ""
 
-#: src/customizer/extra.php:28
+#: src/customizer/extra.php:38
 msgid "Logo Width"
 msgstr ""
 
-#: src/customizer/extra.php:55
+#: src/customizer/extra.php:65
 msgid "Logo Width Mobile"
 msgstr ""
 
-#: src/customizer/extra.php:78
+#: src/customizer/extra.php:88
 msgid "Logo Width Desktop"
 msgstr ""
 
-#: src/customizer/extra.php:102
+#: src/customizer/extra.php:112
 msgid "Logo Spacing"
 msgstr ""
 
-#: src/customizer/extra.php:138
+#: src/customizer/extra.php:148
 msgid "Responsive logo settings (desktop and mobile width) available in"
 msgstr ""
 
-#: src/customizer/extra.php:164
+#: src/customizer/extra.php:174
 msgid "Display site title?"
 msgstr ""
 
-#: src/customizer/extra.php:173
+#: src/customizer/extra.php:183
 msgid "Display tagline?"
 msgstr ""
 
-#: src/customizer/extra.php:195
+#: src/customizer/extra.php:205
 msgid "Using a transparent header? Set an alternative logo from the  "
 msgstr ""
 
-#: src/customizer/extra.php:197
+#: src/customizer/extra.php:207
 msgid "Transparent Header Logo Setting"
 msgstr ""
 
-#: src/customizer/helpers.php:14
+#: src/customizer/helpers.php:24
 msgid "Base Styles"
 msgstr ""
 
-#: src/customizer/helpers.php:15
+#: src/customizer/helpers.php:25
 msgid "Header"
 msgstr ""
 
-#: src/customizer/helpers.php:16
+#: src/customizer/helpers.php:26
 msgid "Menus"
 msgstr ""
 
-#: src/customizer/helpers.php:17
+#: src/customizer/helpers.php:27
 msgid "Hero Section"
 msgstr ""
 
-#: src/customizer/helpers.php:18
+#: src/customizer/helpers.php:28
 msgid "Content Area"
 msgstr ""
 
-#: src/customizer/helpers.php:19
+#: src/customizer/helpers.php:29
 msgid "Sidebars"
 msgstr ""
 
-#: src/customizer/helpers.php:20
+#: src/customizer/helpers.php:30
 msgid "Single Post / Page"
 msgstr ""
 
-#: src/customizer/helpers.php:21
+#: src/customizer/helpers.php:31
 msgid "Blog / Archive"
 msgstr ""
 
-#: src/customizer/helpers.php:22
+#: src/customizer/helpers.php:32
 msgid "Footer"
 msgstr ""
 
-#: src/customizer/helpers.php:36
+#: src/customizer/helpers.php:46
 msgid "Global"
 msgstr ""
 
-#: src/customizer/helpers.php:37
+#: src/customizer/helpers.php:47
 msgid "Body"
 msgstr ""
 
-#: src/customizer/helpers.php:40
+#: src/customizer/helpers.php:50
 msgid "Buttons"
 msgstr ""
 
-#: src/customizer/helpers.php:41
+#: src/customizer/helpers.php:51
 msgid "Forms / Inputs"
 msgstr ""
 
-#: src/customizer/helpers.php:42
+#: src/customizer/helpers.php:52
 msgid "Blockquotes"
 msgstr ""
 
-#: src/customizer/helpers.php:44
+#: src/customizer/helpers.php:54
 msgid "Lists"
 msgstr ""
 
-#: src/customizer/helpers.php:45
+#: src/customizer/helpers.php:55
 msgid "Tables"
 msgstr ""
 
-#: src/customizer/helpers.php:48
+#: src/customizer/helpers.php:58
 msgid "Primary Header"
 msgstr ""
 
-#: src/customizer/helpers.php:49
+#: src/customizer/helpers.php:59
 msgid "Title Area"
 msgstr ""
 
-#: src/customizer/helpers.php:50, src/functions/widget-areas.php:43
+#: src/customizer/helpers.php:60, src/functions/widget-areas.php:53
 msgid "Header Right"
 msgstr ""
 
-#: src/customizer/helpers.php:53, src/functions/theme-support.php:43
+#: src/customizer/helpers.php:63, src/functions/theme-support.php:53
 msgid "Primary Menu"
 msgstr ""
 
-#: src/customizer/helpers.php:54, src/functions/theme-support.php:44
+#: src/customizer/helpers.php:64, src/functions/theme-support.php:54
 msgid "Secondary Menu"
 msgstr ""
 
-#: src/customizer/helpers.php:56
+#: src/customizer/helpers.php:66
 msgid "Menu Toggle"
 msgstr ""
 
-#: src/customizer/helpers.php:57
+#: src/customizer/helpers.php:67
 msgid "Sub Menu"
 msgstr ""
 
-#: src/customizer/helpers.php:58
+#: src/customizer/helpers.php:68
 msgid "Sub Menu Toggle"
 msgstr ""
 
-#: src/customizer/helpers.php:59, src/functions/theme-support.php:45
+#: src/customizer/helpers.php:69, src/functions/theme-support.php:55
 msgid "Footer Menu"
 msgstr ""
 
-#: src/customizer/helpers.php:60
+#: src/customizer/helpers.php:70
 msgid "Footer Widgets Menu"
 msgstr ""
 
-#: src/customizer/helpers.php:63, src/customizer/helpers.php:86
+#: src/customizer/helpers.php:73, src/customizer/helpers.php:96
 msgid "Settings"
 msgstr ""
 
-#: src/customizer/helpers.php:66
+#: src/customizer/helpers.php:76
 msgid "Main Content"
 msgstr ""
 
-#: src/customizer/helpers.php:67
+#: src/customizer/helpers.php:77
 msgid "Breadcrumbs"
 msgstr ""
 
-#: src/customizer/helpers.php:68
+#: src/customizer/helpers.php:78
 msgid "Author Box"
 msgstr ""
 
-#: src/customizer/helpers.php:69, src/customizer/helpers.php:81
+#: src/customizer/helpers.php:79, src/customizer/helpers.php:91
 msgid "Featured Image"
 msgstr ""
 
-#: src/customizer/helpers.php:70
+#: src/customizer/helpers.php:80
 msgid "Avatar"
 msgstr ""
 
-#: src/customizer/helpers.php:71
+#: src/customizer/helpers.php:81
 msgid "Sidebar"
 msgstr ""
 
-#: src/customizer/helpers.php:74, src/functions/widget-areas.php:71
+#: src/customizer/helpers.php:84, src/functions/widget-areas.php:81
 msgid "Primary Sidebar"
 msgstr ""
 
-#: src/customizer/helpers.php:75, src/functions/widget-areas.php:75
+#: src/customizer/helpers.php:85, src/functions/widget-areas.php:85
 msgid "Secondary Sidebar"
 msgstr ""
 
-#: src/customizer/helpers.php:76
+#: src/customizer/helpers.php:86
 msgid "Featured Content"
 msgstr ""
 
-#: src/customizer/helpers.php:79, src/customizer/helpers.php:87
+#: src/customizer/helpers.php:89, src/customizer/helpers.php:97
 msgid "Entry"
 msgstr ""
 
-#: src/customizer/helpers.php:80, src/functions/widget-areas.php:67
+#: src/customizer/helpers.php:90, src/functions/widget-areas.php:77
 msgid "After Entry"
 msgstr ""
 
-#: src/customizer/helpers.php:88
+#: src/customizer/helpers.php:98
 msgid "Archive Description"
 msgstr ""
 
-#: src/customizer/helpers.php:90
+#: src/customizer/helpers.php:100
 msgid "Read More"
 msgstr ""
 
-#: src/customizer/helpers.php:91
+#: src/customizer/helpers.php:101
 msgid "Pagination"
 msgstr ""
 
-#: src/customizer/helpers.php:94
+#: src/customizer/helpers.php:104
 msgid "Site Footer"
 msgstr ""
 
-#: src/customizer/helpers.php:95
+#: src/customizer/helpers.php:105
 msgid "Footer Widgets"
 msgstr ""
 
-#: src/customizer/helpers.php:96, src/functions/widget-areas.php:144
+#: src/customizer/helpers.php:106, src/functions/widget-areas.php:154
 msgid "Footer Credits"
 msgstr ""
 
-#: src/customizer/output.php:107
+#: src/customizer/output.php:114
 msgid "Invalid nonce."
 msgstr ""
 
-#: src/functions/custom-header.php:10
+#: src/functions/custom-header.php:20
 msgid "Default image"
 msgstr ""
 
-#: src/functions/layouts.php:15
+#: src/functions/layouts.php:25
 msgid "Center Content"
 msgstr ""
 
-#: src/functions/scripts.php:57
+#: src/functions/scripts.php:67
 msgid "Toggle Menu"
 msgstr ""
 
-#: src/functions/scripts.php:68
+#: src/functions/scripts.php:78
 msgid "Toggle Submenu"
 msgstr ""
 
-#: src/functions/widget-areas.php:33
+#: src/functions/widget-areas.php:43
 msgid "Above Header"
 msgstr ""
 
-#: src/functions/widget-areas.php:34
+#: src/functions/widget-areas.php:44
 msgid "This is the Above Header widget area."
 msgstr ""
 
-#: src/functions/widget-areas.php:38
+#: src/functions/widget-areas.php:48
 msgid "Header Left"
 msgstr ""
 
-#: src/functions/widget-areas.php:39
+#: src/functions/widget-areas.php:49
 msgid "This is the Header Left widget area. It typically appears next to the site title or logo. This widget area is not suitable to display every type of widget, and works best with a custom menu, a search form, or possibly a text widget."
 msgstr ""
 
-#: src/functions/widget-areas.php:44
+#: src/functions/widget-areas.php:54
 msgid "This is the Header Right widget area. It typically appears next to the site title or logo. This widget area is not suitable to display every type of widget, and works best with a custom menu, a search form, or possibly a text widget."
 msgstr ""
 
-#: src/functions/widget-areas.php:47
+#: src/functions/widget-areas.php:57
 msgid "Below Header"
 msgstr ""
 
-#: src/functions/widget-areas.php:48
+#: src/functions/widget-areas.php:58
 msgid "This is the Below Header widget area."
 msgstr ""
 
-#: src/functions/widget-areas.php:53
+#: src/functions/widget-areas.php:63
 msgid "This is the Mobile Menu widget area. It is displayed inside the responsive mobile menu on smaller screens."
 msgstr ""
 
-#: src/functions/widget-areas.php:58
+#: src/functions/widget-areas.php:68
 msgid "This is the Mega Menu widget area."
 msgstr ""
 
-#: src/functions/widget-areas.php:62
+#: src/functions/widget-areas.php:72
 msgid "Above Content"
 msgstr ""
 
-#: src/functions/widget-areas.php:63
+#: src/functions/widget-areas.php:73
 msgid "This is the Above Content widget area."
 msgstr ""
 
-#: src/functions/widget-areas.php:68
+#: src/functions/widget-areas.php:78
 msgid "Widgets in this widget area will display after single entries."
 msgstr ""
 
-#: src/functions/widget-areas.php:72
+#: src/functions/widget-areas.php:82
 msgid "This is the sidebar widget area if you are using a two column site layout option."
 msgstr ""
 
-#: src/functions/widget-areas.php:76
+#: src/functions/widget-areas.php:86
 msgid "This is the sidebar widget area if you are using a three column site layout option."
 msgstr ""
 
-#: src/functions/widget-areas.php:79
+#: src/functions/widget-areas.php:89
 msgid "Below Content"
 msgstr ""
 
-#: src/functions/widget-areas.php:80
+#: src/functions/widget-areas.php:90
 msgid "This is the Below Content widget area."
 msgstr ""
 
-#: src/functions/widget-areas.php:84
+#: src/functions/widget-areas.php:94
 msgid "Above Footer"
 msgstr ""
 
-#: src/functions/widget-areas.php:85
+#: src/functions/widget-areas.php:95
 msgid "This is the Above Footer widget area."
 msgstr ""
 
-#: src/functions/widget-areas.php:89
+#: src/functions/widget-areas.php:99
 msgid "Below Footer"
 msgstr ""
 
-#: src/functions/widget-areas.php:90
+#: src/functions/widget-areas.php:100
 msgid "This is the Below Footer widget area."
 msgstr ""
 
-#: src/functions/widget-areas.php:124
+#: src/functions/widget-areas.php:134
 msgid "Footer "
 msgstr ""
 
-#: src/functions/widget-areas.php:125
+#: src/functions/widget-areas.php:135
 msgid "This is the Footer "
 msgstr ""
 
-#: src/functions/widget-areas.php:125
+#: src/functions/widget-areas.php:135
 msgid " widget area."
 msgstr ""
 
-#: src/functions/widget-areas.php:145
+#: src/functions/widget-areas.php:155
 msgid "This is the Footer Credits widget area."
 msgstr ""

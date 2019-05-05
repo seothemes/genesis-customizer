@@ -1,4 +1,14 @@
 <?php
+/**
+ * Genesis Customizer.
+ *
+ * This file contains header structure functions for Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
+ */
 
 namespace GenesisCustomizer;
 
@@ -8,7 +18,7 @@ add_filter( 'body_class', __NAMESPACE__ . '\header_body_classes', 100, 1 );
  *
  * @since 1.0.0
  *
- * @param $classes
+ * @param array $classes All body classes.
  *
  * @return array
  */
@@ -54,6 +64,8 @@ add_filter( 'genesis_attr_site-title', __NAMESPACE__ . '\display_site_title' );
  *
  * @since 1.0.0
  *
+ * @param array $atts Sit title attributes.
+ *
  * @return array
  */
 function display_site_title( $atts ) {
@@ -71,6 +83,8 @@ add_filter( 'genesis_attr_site-description', __NAMESPACE__ . '\display_site_tagl
  * Hide/show site description.
  *
  * @since 1.0.0
+ *
+ * @param array $atts Site description attributes.
  *
  * @return array
  */
@@ -147,10 +161,12 @@ add_action( 'genesis_before_header_wrap', __NAMESPACE__ . '\primary_header_open'
  * @return void
  */
 function primary_header_open() {
-	genesis_markup( [
-		'open'    => '<div %s>',
-		'context' => 'primary-header',
-	] );
+	genesis_markup(
+		[
+			'open'    => '<div %s>',
+			'context' => 'primary-header',
+		]
+	);
 }
 
 add_action( 'genesis_after_header_wrap', __NAMESPACE__ . '\primary_header_close', 5 );
@@ -162,10 +178,12 @@ add_action( 'genesis_after_header_wrap', __NAMESPACE__ . '\primary_header_close'
  * @return void
  */
 function primary_header_close() {
-	genesis_markup( [
-		'close'   => '</div>',
-		'context' => 'primary-header',
-	] );
+	genesis_markup(
+		[
+			'close'   => '</div>',
+			'context' => 'primary-header',
+		]
+	);
 }
 
 add_action( 'genesis_markup_title-area_open', __NAMESPACE__ . '\before_title_area' );
@@ -174,7 +192,7 @@ add_action( 'genesis_markup_title-area_open', __NAMESPACE__ . '\before_title_are
  *
  * @since 1.0.0
  *
- * @param $open_html
+ * @param string $open_html Opening HTML.
  *
  * @return string
  */
@@ -194,7 +212,7 @@ add_action( 'genesis_markup_title-area_close', __NAMESPACE__ . '\after_title_are
  *
  * @since 1.0.0
  *
- * @param $close_html
+ * @param string $close_html Closing HTML.
  *
  * @return string
  */
@@ -214,11 +232,11 @@ add_filter( 'genesis_seo_title', __NAMESPACE__ . '\site_title_link', 10, 3 );
  *
  * @since 1.0.0
  *
- * @param $title
- * @param $inside
- * @param $wrap
+ * @param string $title  Site title text.
+ * @param string $inside Site title inner markup.
+ * @param string $wrap   Site title wrapper.
  *
- * @return mixed
+ * @return string
  */
 function site_title_link( $title, $inside, $wrap ) {
 	$link = sprintf(

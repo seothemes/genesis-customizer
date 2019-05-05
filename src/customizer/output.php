@@ -1,4 +1,14 @@
 <?php
+/**
+ * Genesis Customizer.
+ *
+ * This file adds Customizer CSS output to Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
+ */
 
 namespace GenesisCustomizer;
 
@@ -7,8 +17,9 @@ namespace GenesisCustomizer;
  *
  * @since 1.0.0
  *
- * @param string $color_1 Hex color value
- * @param string $color_2 Hex color value
+ * @param string $angle   Gradient angle.
+ * @param string $color_1 Hex color value.
+ * @param string $color_2 Hex color value.
  *
  * @return string CSS definition
  */
@@ -26,8 +37,6 @@ function build_gradients( $angle, $color_1, $color_2 ) {
  * Build & enqueue the complete CSS for headers.
  *
  * @since 1.0.0
- *
- * @throws \Exception
  *
  * @return string
  */
@@ -67,7 +76,6 @@ add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\gradient_css_output' );
  *
  * @since  1.0.0
  *
- * @throws \Exception
  * @return void
  */
 function gradient_css_output() {
@@ -97,17 +105,16 @@ add_action( 'wp_ajax_nopriv_gradient_css', __NAMESPACE__ . '\gradient_css' );
  *
  * @since 1.0.0
  *
- * @throws \Exception
  * @return void
  */
 function gradient_css() {
 	$nonce = $_REQUEST['wpnonce'];
 
 	if ( ! wp_verify_nonce( $nonce, 'gradient-css-nonce' ) ) {
-		die( __( 'Invalid nonce.', 'genesis-customizer' ) );
+		die( esc_html__( 'Invalid nonce.', 'genesis-customizer' ) );
 
 	} else {
-		header( "Content-type: text/css; charset: UTF-8" );
+		header( 'Content-type: text/css; charset: UTF-8' );
 		echo generate_gradient_css();
 	}
 

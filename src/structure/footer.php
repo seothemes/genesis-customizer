@@ -1,4 +1,14 @@
 <?php
+/**
+ * Genesis Customizer.
+ *
+ * This file contains footer structure functions for Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
+ */
 
 namespace GenesisCustomizer;
 
@@ -28,10 +38,12 @@ function footer_credits() {
  * @return void
  */
 function display_footer_credits() {
-	genesis_widget_area( 'footer-credits', [
-		'before' => '',
-		'after'  => scroll_to_top_link() . '</div></div>',
-	] );
+	genesis_widget_area(
+		'footer-credits', [
+			'before' => '',
+			'after'  => scroll_to_top_link() . '</div></div>',
+		]
+	);
 }
 
 /**
@@ -42,10 +54,12 @@ function display_footer_credits() {
  * @return void
  */
 function footer_credits_div() {
-	genesis_markup( [
-		'open'    => '<div %s>',
-		'context' => 'footer-credits',
-	] );
+	genesis_markup(
+		[
+			'open'    => '<div %s>',
+			'context' => 'footer-credits',
+		]
+	);
 
 	genesis_structural_wrap( 'footer-credits', 'open' );
 
@@ -62,10 +76,12 @@ function footer_credits_div() {
 
 	genesis_structural_wrap( 'footer-credits', 'close' );
 
-	genesis_markup( [
-		'close'   => '</div>',
-		'context' => 'footer-credits',
-	] );
+	genesis_markup(
+		[
+			'close'   => '</div>',
+			'context' => 'footer-credits',
+		]
+	);
 }
 
 /**
@@ -91,10 +107,10 @@ function scroll_to_top_link() {
 		$link  = '<a href="#top" rel="nofollow" class="scroll-to-top%s">%s</a>';
 		$icon  = _get_svg( 'arrow-up' );
 
-		if ( $style === 'button' ) {
+		if ( 'button' === $style ) {
 			$output = sprintf( $link, '-icon', $icon );
 
-		} elseif ( $style === 'html' ) {
+		} elseif ( 'html' === $style ) {
 			$output = sprintf( $html );
 
 		} else {
@@ -124,10 +140,12 @@ function display_footer_widgets() {
 		return;
 	}
 
-	genesis_markup( [
-		'open'    => '<div %s>' . genesis_get_structural_wrap( 'footer-widgets', 'open' ),
-		'context' => 'footer-widgets',
-	] );
+	genesis_markup(
+		[
+			'open'    => '<div %s>' . genesis_get_structural_wrap( 'footer-widgets', 'open' ),
+			'context' => 'footer-widgets',
+		]
+	);
 
 	$widgets = explode( '-', $settings );
 	$count   = 1;
@@ -141,18 +159,22 @@ function display_footer_widgets() {
 	];
 
 	foreach ( $widgets as $widget ) {
-		$first = $count === 1 ? ' first' : '';
-		genesis_widget_area( "footer-$count", [
-			'before' => sprintf( '<div class="footer-widgets-area footer-widgets-%s %s%s">', $count, $width[ $widget ], $first ),
-			'after'  => '</div>',
-		] );
-		$count ++;
+		$first = 1 === $count ? ' first' : '';
+		genesis_widget_area(
+			"footer-$count", [
+				'before' => sprintf( '<div class="footer-widgets-area footer-widgets-%s %s%s">', $count, $width[ $widget ], $first ),
+				'after'  => '</div>',
+			]
+		);
+		$count++;
 	}
 
-	genesis_markup( [
-		'close'   => genesis_get_structural_wrap( 'footer-widgets', 'close' ) . '</div>',
-		'context' => 'footer-widgets',
-	] );
+	genesis_markup(
+		[
+			'close'   => genesis_get_structural_wrap( 'footer-widgets', 'close' ) . '</div>',
+			'context' => 'footer-widgets',
+		]
+	);
 }
 
 add_action( 'genesis_meta', __NAMESPACE__ . '\hide_site_footer' );

@@ -23,3 +23,6 @@ To remove dev dependencies from autoloader.
 
 Run `gulp css` or `gulp js` to minify assets.
 
+##### PHP Code Sniffer
+
+Run `phpcs filename.php`

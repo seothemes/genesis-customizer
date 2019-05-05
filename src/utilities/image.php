@@ -1,4 +1,14 @@
 <?php
+/**
+ * Genesis Customizer.
+ *
+ * This file adds image utility functions to Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
+ */
 
 namespace GenesisCustomizer;
 
@@ -7,7 +17,7 @@ namespace GenesisCustomizer;
  *
  * @since 1.0.0
  *
- * @param string $icon
+ * @param string $icon SVG icon to retrieve.
  *
  * @return bool|string
  */
@@ -24,6 +34,10 @@ function _get_svg( $icon = '' ) {
 ';
 
 	$icons['arrow-up'] = '<svg width="24px" height="24px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" focusable="false"><g><path fill="none" d="M0,0h24v24H0V0z"></path></g><g><path d="M7.41,8.59L12,13.17l4.59-4.58L18,10l-6,6l-6-6L7.41,8.59z"></path></g></svg>';
+
+	$icons['search-button'] = '<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 1006 1010"><path d="M978 880L740 641a400 400 0 1 0-98 98l239 238c27 27 70 27 97 0s27-70 0-97zM200 624a300 300 0 1 1 425 0 300 300 0 0 1-425 0z"/></svg>';
+
+	$icons['close-button'] = '<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 1006 1010"><path d="M603 504l362-362a69 69 0 1 0-98-98L505 406 143 44a69 69 0 1 0-98 98l362 362L45 866a69 69 0 1 0 98 98l362-362 362 362a69 69 0 1 0 98-98L603 504z"/></svg>';
 
 	return $icons[ $icon ];
 }

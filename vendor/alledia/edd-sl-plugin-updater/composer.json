@@ -1,0 +1,29 @@
+{
+  "name": "alledia/edd-sl-plugin-updater",
+  "type": "library",
+  "description": "EDD Updates Handler for WordPress Plugins",
+  "keywords": ["edd", "updates", "wordpress"],
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "EasyDigitalDownloads",
+      "email": "contact@easydigitaldownloads.com"
+    },
+    {
+      "name": "PublishPress",
+      "email": "help@publishpress.com"
+    },
+    {
+      "name": "Alledia",
+      "email": "help@alledia.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "autoload": {
+    "files": [
+      "EDD_SL_Plugin_Updater.php"
+    ]
+  }
+}

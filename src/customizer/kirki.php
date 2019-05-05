@@ -1,4 +1,14 @@
 <?php
+/**
+ * Genesis Customizer.
+ *
+ * This file adds Kirki functionality to Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
+ */
 
 namespace GenesisCustomizer;
 
@@ -51,7 +61,7 @@ add_filter( 'kirki_config', __NAMESPACE__ . '\disable_kirki_loader' );
 /**
  * Remove Kirki loader icon.
  *
- * @param array $config the configuration array
+ * @param array $config The configuration array.
  *
  * @return array
  */
@@ -67,7 +77,7 @@ add_filter( 'kirki/config', __NAMESPACE__ . '\kirki_url' );
  *
  * @since 1.0.0
  *
- * @param $config
+ * @param array $config The configuration array.
  *
  * @return array
  */

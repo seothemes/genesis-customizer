@@ -1,4 +1,14 @@
 <?php
+/**
+ * Genesis Customizer.
+ *
+ * This file adds conditional utility functions to Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
+ */
 
 namespace GenesisCustomizer;
 
@@ -11,12 +21,12 @@ namespace GenesisCustomizer;
  */
 function _is_single() {
 	return ( is_front_page() ||
-	         is_single() ||
-	         is_page() ||
-	         is_404() ||
-	         is_attachment() ||
-	         is_singular() ) &&
-	       ! genesis_is_blog_template();
+			 is_single() ||
+			 is_page() ||
+			 is_404() ||
+			 is_attachment() ||
+			 is_singular() ) &&
+		   ! genesis_is_blog_template();
 }
 
 /**
@@ -28,19 +38,19 @@ function _is_single() {
  */
 function _is_archive() {
 	return is_home() ||
-	       is_post_type_archive() ||
-	       is_category() ||
-	       is_tag() ||
-	       is_tax() ||
-	       is_author() ||
-	       is_date() ||
-	       is_year() ||
-	       is_month() ||
-	       is_day() ||
-	       is_time() ||
-	       is_archive() ||
-	       is_search() ||
-	       genesis_is_blog_template();
+		   is_post_type_archive() ||
+		   is_category() ||
+		   is_tag() ||
+		   is_tax() ||
+		   is_author() ||
+		   is_date() ||
+		   is_year() ||
+		   is_month() ||
+		   is_day() ||
+		   is_time() ||
+		   is_archive() ||
+		   is_search() ||
+		   genesis_is_blog_template();
 }
 
 /**
@@ -48,7 +58,7 @@ function _is_archive() {
  *
  * @since 1.0.0
  *
- * @param mixed $modules
+ * @param mixed $modules String or array of modules to check.
  *
  * @return bool
  */
@@ -68,7 +78,7 @@ function _is_module_enabled( $modules ) {
 	}
 
 	foreach ( $modules as $module ) {
-		if ( ! in_array( $module, $option ) ) {
+		if ( ! in_array( $module, $option, true ) ) {
 			return false;
 		}
 	}
@@ -92,7 +102,7 @@ function _is_pro_active() {
  *
  * @since 1.0.0
  *
- * @param $plugin
+ * @param string $plugin Name of plugin to check.
  *
  * @return bool
  */
@@ -105,16 +115,16 @@ function _is_plugin_active( $plugin ) {
 		'elementor'              => 'Elementor\Plugin',
 		'simple-social-icons'    => 'Simple_Social_Icons_Widget',
 		'kirki'                  => 'Kirki',
-		'one-click-demo-import'  => ''
+		'one-click-demo-import'  => '',
 	];
 
 	if ( class_exists( $plugins[ $plugin ] ) ) {
 		return true;
 
-	} else if ( function_exists( $plugins[ $plugin ] ) ) {
+	} elseif ( function_exists( $plugins[ $plugin ] ) ) {
 		return true;
 
-	} else if ( defined( $plugins[ $plugin ] ) ) {
+	} elseif ( defined( $plugins[ $plugin ] ) ) {
 		return true;
 	}
 

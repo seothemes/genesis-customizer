@@ -1,4 +1,14 @@
 <?php
+/**
+ * Genesis Customizer.
+ *
+ * This file adds debugging utility functions to Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
+ */
 
 namespace GenesisCustomizer;
 
@@ -18,7 +28,7 @@ function _is_debug_mode() {
  *
  * @since 1.0.0
  *
- * @param $value
+ * @param mixed $value Value to debug.
  *
  * @return void
  */
@@ -33,7 +43,7 @@ function _debug( $value ) {
  *
  * @since 1.0.0
  *
- * @param $value
+ * @param mixed $value Value to debug.
  *
  * @return void
  */

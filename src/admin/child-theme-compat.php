@@ -1,4 +1,14 @@
 <?php
+/**
+ * Genesis Customizer.
+ *
+ * This file checks for child theme compatibility with Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
+ */
 
 namespace GenesisCustomizer;
 
@@ -20,7 +30,7 @@ function child_theme_is_compatible() {
 	$tags    = wp_get_theme()->get( 'Tags' ) ?: [];
 	$support = get_theme_support( $handle );
 
-	if ( in_array( $handle, $tags ) || $support ) {
+	if ( in_array( $handle, $tags, true ) || $support ) {
 		return true;
 	}
 
@@ -39,11 +49,11 @@ function child_theme_notice() {
 	if ( ! child_theme_is_compatible() ) {
 		printf(
 			'<div class="notice notice-warning"><p><strong>%s</strong> %s <a href="%s" target="_blank">%s</a> %s </p></div>',
-			_get_name(),
-			__( ' is not supported by the active child theme and may not work as expected. Please install a compatible child theme or refer to the', 'genesis-customizer' ),
+			esc_html( _get_name() ),
+			esc_html__( ' is not supported by the active child theme and may not work as expected. Please install a compatible child theme or refer to the', 'genesis-customizer' ),
 			esc_attr__( 'https://docs.seothemes.com/article/199-how-to-add-theme-support-for-genesis-customizer' ),
-			__( 'adding theme support guide', 'genesis-customizer' ),
-			__( 'for instructions on how to declare Genesis Customizer support in your theme.', 'genesis-customizer' )
+			esc_html__( 'adding theme support guide', 'genesis-customizer' ),
+			esc_html__( 'for instructions on how to declare Genesis Customizer support in your theme.', 'genesis-customizer' )
 		);
 	}
 }

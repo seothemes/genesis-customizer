@@ -1,7 +1,22 @@
 <?php
+/**
+ * Genesis Customizer.
+ *
+ * This file adds the Kirki box shadow control to Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
+ */
 
 namespace GenesisCustomizer;
 
+/**
+ * Class Box_Shadow_Control
+ *
+ * @package GenesisCustomizer
+ */
 class Box_Shadow_Control extends \WP_Customize_Control {
 
 	/**
@@ -70,12 +85,16 @@ class Box_Shadow_Control extends \WP_Customize_Control {
 	public function enqueue() {
 
 		// Enqueue the script and style.
-		wp_enqueue_script( 'kirki_box_shadow_control', apply_filters( 'kirki_box_shadow_control_url', _get_url() . 'assets/js/box-shadow.js', [
-			'jquery',
-			'customize-base',
-			'customize-controls',
-			'jquery-ui-draggable',
-		], '1.0', false ) );
+		wp_enqueue_script(
+			'kirki_box_shadow_control', apply_filters(
+				'kirki_box_shadow_control_url', _get_url() . 'assets/js/box-shadow.js', [
+					'jquery',
+					'customize-base',
+					'customize-controls',
+					'jquery-ui-draggable',
+				], '1.0', false
+			)
+		);
 
 		wp_enqueue_style( 'kirki_box_shadow_control', apply_filters( 'kirki_box_shadow_control_url', _get_url() . 'assets/css/box-shadow.css', [], '1.0' ) );
 	}
@@ -139,52 +158,52 @@ class Box_Shadow_Control extends \WP_Customize_Control {
 	 */
 	protected function content_template() {
 		?>
-        <!-- Label. -->
-        <# if ( data.label ) { #>
-        <label><span class="customize-control-title">{{{ data.label }}}</span></label>
-        <# } #>
-        <!-- Description. -->
-        <# if ( data.description ) { #>
-        <span class="description customize-control-description">{{{ data.description }}}</span>
-        <# } #>
+		<!-- Label. -->
+		<# if ( data.label ) { #>
+		<label><span class="customize-control-title">{{{ data.label }}}</span></label>
+		<# } #>
+		<!-- Description. -->
+		<# if ( data.description ) { #>
+		<span class="description customize-control-description">{{{ data.description }}}</span>
+		<# } #>
 
-        <div class="kirki-input-container">
-            <div class="preview-wrapper">
-                <div class="preview-object">
-                    <span class="dashicons dashicons-move"></span>
-                    <span class="screen-reader-text"><?php esc_html_e( 'Click and drag to adjust horizontal & vertical length', 'kirki-pro' ); ?></span>
-                    <span class="coordinates"></span>
-                </div>
-            </div>
-        </div>
+		<div class="kirki-input-container">
+			<div class="preview-wrapper">
+				<div class="preview-object">
+					<span class="dashicons dashicons-move"></span>
+					<span class="screen-reader-text"><?php esc_html_e( 'Click and drag to adjust horizontal & vertical length', 'kirki-pro' ); ?></span>
+					<span class="coordinates"></span>
+				</div>
+			</div>
+		</div>
 
-        <div class="kirki-input-container">
-            <div class="customize-control-kirki-multicolor">
-                <input id="{{ data.id }}-color" type="text" data-default-color="{{ data.default }}"
-                       value="{{ data.value.color }}" class="kirki-color-control" data-id="{{ data.id }}"
-                       data-alpha="true"/>
-            </div>
-        </div>
+		<div class="kirki-input-container">
+			<div class="customize-control-kirki-multicolor">
+				<input id="{{ data.id }}-color" type="text" data-default-color="{{ data.default }}"
+					   value="{{ data.value.color }}" class="kirki-color-control" data-id="{{ data.id }}"
+					   data-alpha="true"/>
+			</div>
+		</div>
 
-        <div class="customize-control-kirki-slider">
-            <div class="kirki-input-container">
-                <label for="{{ data.id }}-blur-radius"><?php esc_html_e( 'Blur Radius', 'kirki-pro' ); ?></label>
-                <div class="wrapper">
-                    <input class="blur-radius" type="range" min="0" max="50" step="1" value="0"
-                           id="{{ data.id }}-blur-radius"
-                           data-context="blur-radius"/>
-                </div>
-            </div>
-            <div class="kirki-input-container">
-                <label for="{{ data.id }}-spread-radius"><?php esc_html_e( 'Spread Radius', 'kirki-pro' ); ?></label>
-                <div class="wrapper">
-                    <input class="spread-radius" type="range" min="0" max="50" step="1" value="0"
-                           id="{{ data.id }}-spread-radius" data-context="spread-radius"/>
-                </div>
-            </div>
-        </div>
+		<div class="customize-control-kirki-slider">
+			<div class="kirki-input-container">
+				<label for="{{ data.id }}-blur-radius"><?php esc_html_e( 'Blur Radius', 'kirki-pro' ); ?></label>
+				<div class="wrapper">
+					<input class="blur-radius" type="range" min="0" max="50" step="1" value="0"
+						   id="{{ data.id }}-blur-radius"
+						   data-context="blur-radius"/>
+				</div>
+			</div>
+			<div class="kirki-input-container">
+				<label for="{{ data.id }}-spread-radius"><?php esc_html_e( 'Spread Radius', 'kirki-pro' ); ?></label>
+				<div class="wrapper">
+					<input class="spread-radius" type="range" min="0" max="50" step="1" value="0"
+						   id="{{ data.id }}-spread-radius" data-context="spread-radius"/>
+				</div>
+			</div>
+		</div>
 
-        <input class="hidden-value" type="hidden" {{{ data.link }}}/>
+		<input class="hidden-value" type="hidden" {{{ data.link }}}/>
 
 		<?php
 	}

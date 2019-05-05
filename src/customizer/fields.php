@@ -1,4 +1,14 @@
 <?php
+/**
+ * Genesis Customizer.
+ *
+ * This file adds Customizer fields to Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
+ */
 
 namespace GenesisCustomizer;
 
@@ -36,9 +46,7 @@ function add_fields() {
 				}
 
 				foreach ( $fields as $field ) {
-					$counter = $counter + 1;
-
-					\Kirki::add_field( $handle, apply_filters( 'genesis_customizer_field', $field, $panel, $section, $prefix, $counter ) );
+					\Kirki::add_field( $handle, apply_filters( 'genesis_customizer_field', $field, $panel, $section, $prefix, $counter++ ) );
 				}
 			}
 		}
@@ -53,11 +61,11 @@ add_filter( 'genesis_customizer_field', __NAMESPACE__ . '\format_field', 10, 5 )
  *
  * @since 1.0.0
  *
- * @param $field
- * @param $panel
- * @param $section
- * @param $prefix
- * @param $counter
+ * @param array  $field   Field array values.
+ * @param string $panel   Field panel string.
+ * @param string $section Fields section string.
+ * @param string $prefix  Genesis Customizer option prefix.
+ * @param int    $counter Counter for unique IDs.
  *
  * @return array
  */
@@ -87,7 +95,7 @@ function format_field( $field, $panel, $section, $prefix, $counter ) {
 			}
 		}
 
-		// Set transport for fields with output
+		// Set transport for fields with output.
 		if ( ! isset( $field['transport'] ) ) {
 			$field['transport'] = 'auto';
 		}

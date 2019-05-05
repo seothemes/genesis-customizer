@@ -1,6 +1,32 @@
 <?php
+/**
+ * Genesis Customizer.
+ *
+ * This file contains content structure functions for Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
+ */
 
 namespace GenesisCustomizer;
+
+add_filter( 'genesis_attr_site-container', __NAMESPACE__ . '\site_container_id' );
+/**
+ * Add scroll to to anchor ID to site container.
+ *
+ * @since 1.0.0
+ *
+ * @param array $atts Site container attributes.
+ *
+ * @return array
+ */
+function site_container_id( $atts ) {
+	$atts['id'] = 'top';
+
+	return $atts;
+}
 
 add_filter( 'genesis_breadcrumb_args', __NAMESPACE__ . '\breadcrumb_args' );
 /**
@@ -8,9 +34,9 @@ add_filter( 'genesis_breadcrumb_args', __NAMESPACE__ . '\breadcrumb_args' );
  *
  * @since 1.0.0
  *
- * @param $args
+ * @param array $args Breadcrumb arguments.
  *
- * @return mixed
+ * @return array
  */
 function breadcrumb_args( $args ) {
 	$args['home']                = _get_value( 'content_breadcrumbs_label-home' );
@@ -33,7 +59,7 @@ add_filter( 'genesis_404_entry_title', __NAMESPACE__ . '\error_404_entry_title',
  *
  * @since 1.0.0
  *
- * @param $default
+ * @param string $default Default 404 page title.
  *
  * @return string
  */
@@ -54,7 +80,7 @@ add_filter( 'genesis_404_entry_content', __NAMESPACE__ . '\error_404_entry_conte
  *
  * @since 1.0.0
  *
- * @param $default
+ * @param string $default Default 404 page content.
  *
  * @return string
  */

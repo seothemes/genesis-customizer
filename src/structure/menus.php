@@ -1,4 +1,14 @@
 <?php
+/**
+ * Genesis Customizer.
+ *
+ * This file contains navigation structure functions for Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
+ */
 
 namespace GenesisCustomizer;
 
@@ -8,7 +18,7 @@ add_filter( 'body_class', __NAMESPACE__ . '\menu_body_classes', 100, 1 );
  *
  * @since 1.0.0
  *
- * @param $classes
+ * @param array $classes All body classes.
  *
  * @return array
  */
@@ -48,15 +58,15 @@ function reposition_menus() {
 	add_action( 'genesis_after_header_wrap', 'genesis_do_subnav' );
 
 	// Nav footer.
-	$value = _get_value( 'menus_footer_position' );
-	$position  = [
+	$value    = _get_value( 'menus_footer_position' );
+	$position = [
 		'above-footer'  => [ 'genesis_footer', 9 ],
 		'above-widgets' => [ 'genesis_footer', 10 ],
 		'above-credits' => [ 'genesis_footer', 12 ],
 		'below-credits' => [ 'genesis_footer', 14 ],
 	];
 
-	add_action( $position[$value][0], __NAMESPACE__ . '\add_footer_menu', $position[$value][1] );
+	add_action( $position[ $value ][0], __NAMESPACE__ . '\add_footer_menu', $position[ $value ][1] );
 }
 
 add_filter( 'genesis_attr_nav-primary', __NAMESPACE__ . '\menu_alignment' );
@@ -65,7 +75,7 @@ add_filter( 'genesis_attr_nav-primary', __NAMESPACE__ . '\menu_alignment' );
  *
  * @since 1.0.0
  *
- * @param $atts
+ * @param array $atts Primary nav attributes.
  *
  * @return array
  */
@@ -88,8 +98,10 @@ function menu_alignment( $atts ) {
  * @return void
  */
 function add_footer_menu() {
-	genesis_nav_menu( [
-		'theme_location' => 'footer',
-		'depth'          => 1,
-	] );
+	genesis_nav_menu(
+		[
+			'theme_location' => 'footer',
+			'depth'          => 1,
+		]
+	);
 }

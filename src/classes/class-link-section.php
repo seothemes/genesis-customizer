@@ -1,4 +1,14 @@
 <?php
+/**
+ * Genesis Customizer.
+ *
+ * This file adds the link Customizer section to Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
+ */
 
 namespace GenesisCustomizer;
 
@@ -59,14 +69,14 @@ class Link_Section extends \WP_Customize_Section {
 	 */
 	protected function render_template() {
 		?>
-        <li id="accordion-section-{{ data.id }}"
-            class="accordion-section control-section control-section-{{ data.type }} cannot-expand">
-            <h3 class="wp-ui-highlight">
-                <a href="{{ data.button_url }}" class="wp-ui-text-highlight" target="_blank" rel="nofollow">
-                    {{ data.title }}
-                </a>
-            </h3>
-        </li>
+		<li id="accordion-section-{{ data.id }}"
+			class="accordion-section control-section control-section-{{ data.type }} cannot-expand">
+			<h3 class="wp-ui-highlight">
+				<a href="{{ data.button_url }}" class="wp-ui-text-highlight" target="_blank" rel="nofollow">
+					{{ data.title }}
+				</a>
+			</h3>
+		</li>
 		<?php
 	}
 }

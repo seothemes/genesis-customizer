@@ -1,4 +1,14 @@
 <?php
+/**
+ * Genesis Customizer.
+ *
+ * This file adds general Customizer functionality to Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
+ */
 
 namespace GenesisCustomizer;
 
@@ -25,7 +35,7 @@ add_action( 'customize_register', __NAMESPACE__ . '\register_control_types' );
  *
  * @since 1.0.0
  *
- * @param object $wp_customize The Customizer object.
+ * @param \WP_Customize_Manager $wp_customize The Customizer object.
  *
  * @return void
  */
@@ -41,7 +51,7 @@ add_action( 'customize_register', __NAMESPACE__ . '\modify_customizer_defaults',
  *
  * @since 1.0.0
  *
- * @param $wp_customize \WP_Customize_Manager
+ * @param \WP_Customize_Manager $wp_customize WordPress Customizer object.
  *
  * @return void
  */
@@ -121,7 +131,7 @@ function add_default_values_to_db() {
 	$settings = \Kirki::$fields;
 
 	foreach ( $settings as $setting => $args ) {
-		$name = str_replace( [ $handle, '[', ']', ], '', $setting );
+		$name = str_replace( [ $handle, '[', ']' ], '', $setting );
 
 		if ( ! isset( $options[ $name ] ) ) {
 			$options[ $name ] = _get_default( $name );
@@ -137,12 +147,12 @@ add_filter( 'genesis_customizer_field', __NAMESPACE__ . '\add_font_choices', 10,
  *
  * @since 1.0.0
  *
- * @param $field
+ * @param array $field Field settings.
  *
  * @return mixed
  */
 function add_font_choices( $field ) {
-	if ( $field['type'] === 'typography' ) {
+	if ( 'typography' === $field['type'] ) {
 		$field['choices'] = [
 			'fonts' => apply_filters( 'genesis_customizer_font_choices', [] ),
 		];
@@ -157,7 +167,7 @@ add_filter( 'genesis_customizer_font_choices', __NAMESPACE__ . '\add_font_group'
  *
  * @since 1.0.0
  *
- * @param $custom
+ * @param array $custom Array of custom fonts.
  *
  * @return mixed
  */
@@ -194,7 +204,7 @@ add_action( 'customize_register', __NAMESPACE__ . '\register_custom_sections' );
  *
  * @since 1.0.0
  *
- * @param $wp_customize \WP_Customize_Manager
+ * @param \WP_Customize_Manager $wp_customize The Customizer object.
  *
  * @return void
  */

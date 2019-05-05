@@ -1,4 +1,14 @@
 <?php
+/**
+ * Genesis Customizer.
+ *
+ * This file adds helper utility functions to Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
+ */
 
 namespace GenesisCustomizer;
 
@@ -7,7 +17,9 @@ namespace GenesisCustomizer;
  *
  * @since 1.0.0
  *
- * @param $header
+ * @param string $header File header meta information to retrieve.
+ *
+ * @link  https://codex.wordpress.org/File_Header
  *
  * @return array|string|null
  */
@@ -117,7 +129,7 @@ function _get_version() {
  *
  * @since 1.0.0
  *
- * @param $file
+ * @param string $file File to check.
  *
  * @return string
  */
@@ -146,12 +158,12 @@ function _get_breakpoint() {
  *
  * @param string $query Defaults to mobile-first.
  *
- * @return mixed
+ * @return string
  */
 function _get_media_query( $query = 'min' ) {
 	$breakpoint = _get_option( 'breakpoint', _get_breakpoint() );
 
-	return sprintf( "@media (%s-width:%spx)", $query, $breakpoint );
+	return sprintf( '@media (%s-width:%spx)', $query, $breakpoint );
 }
 
 /**
@@ -159,8 +171,8 @@ function _get_media_query( $query = 'min' ) {
  *
  * @since 1.0.0
  *
- * @param $option
- * @param $default
+ * @param string $option  Option to retrieve.
+ * @param bool   $default Default value.
  *
  * @return mixed
  */
@@ -193,7 +205,7 @@ function _get_setting( $setting ) {
  *
  * @since 1.0.0
  *
- * @param $field
+ * @param string $field Field ID.
  *
  * @return string
  */
@@ -240,9 +252,11 @@ function _get_value( $field, $default = null ) {
  */
 function _get_image_sizes( $additional = [ 'full' ] ) {
 	$image_names  = array_merge( get_intermediate_image_sizes(), $additional );
-	$image_labels = array_map( function ( $string ) {
-		return ucwords( str_replace( '_', ' ', $string ) );
-	}, $image_names );
+	$image_labels = array_map(
+		function ( $string ) {
+			return ucwords( str_replace( '_', ' ', $string ) );
+		}, $image_names
+	);
 
 	return array_combine( $image_names, $image_labels );
 }
@@ -257,21 +271,23 @@ function _get_image_sizes( $additional = [ 'full' ] ) {
  * @return mixed
  */
 function _get_color( $color = 'accent' ) {
-	$colors = apply_filters( 'genesis_customizer_colors', [
-		'black'       => '#22292f',
-		'heading'     => '#606f7b',
-		'text'        => '#8795a1',
-		'border'      => '#dae1e7',
-		'background'  => '#f5f8fa',
-		'white'       => '#ffffff',
-		'accent'      => '#3490dc',
-		'overlay'     => 'rgba(52,144,220,0.95)',
-		'success'     => '#38c172',
-		'warning'     => '#ffed4a',
-		'error'       => '#e3342f',
-		'shadow'      => 'rgba(96,111,123,0.05)',
-		'transparent' => 'rgba(0,0,0,0)',
-	] );
+	$colors = apply_filters(
+		'genesis_customizer_colors', [
+			'black'       => '#22292f',
+			'heading'     => '#606f7b',
+			'text'        => '#8795a1',
+			'border'      => '#dae1e7',
+			'background'  => '#f5f8fa',
+			'white'       => '#ffffff',
+			'accent'      => '#3490dc',
+			'overlay'     => 'rgba(52,144,220,0.95)',
+			'success'     => '#38c172',
+			'warning'     => '#ffed4a',
+			'error'       => '#e3342f',
+			'shadow'      => 'rgba(96,111,123,0.05)',
+			'transparent' => 'rgba(0,0,0,0)',
+		]
+	);
 
 	if ( 'default' === $color ) {
 		return array_slice( $colors, 0, 11 );
@@ -294,31 +310,33 @@ function _get_color( $color = 'accent' ) {
  *
  * @since 1.0.0
  *
- * @param string $size
- * @param string $suffix
+ * @param string $size   Name of size.
+ * @param string $suffix Units, leave empty for none.
  *
  * @return mixed
  */
 function _get_size( $size = 'm', $suffix = 'px' ) {
-	$spacing = apply_filters( 'genesis_customizer_spacing', [
+	$spacing = apply_filters(
+		'genesis_customizer_spacing', [
 
-		// Scale.
-		'xxs' => '8',
-		'xs'  => '10',
-		's'   => '14',
-		'm'   => '16',
-		'l'   => '18',
-		'xl'  => '32',
-		'xxl' => '48',
+			// Scale.
+			'xxs' => '8',
+			'xs'  => '10',
+			's'   => '14',
+			'm'   => '16',
+			'l'   => '18',
+			'xl'  => '32',
+			'xxl' => '48',
 
-		// Headings.
-		'h1'  => '36',
-		'h2'  => '28',
-		'h3'  => '24',
-		'h4'  => '22',
-		'h5'  => '20',
-		'h6'  => '18',
-	] );
+			// Headings.
+			'h1'  => '36',
+			'h2'  => '28',
+			'h3'  => '24',
+			'h4'  => '22',
+			'h5'  => '20',
+			'h6'  => '18',
+		]
+	);
 
 	return $spacing[ $size ] . $suffix;
 }
@@ -329,34 +347,36 @@ function _get_size( $size = 'm', $suffix = 'px' ) {
  * @since 1.0.0
  *
  * @param string $element Elements to return (button, input, heading).
- * @param bool   $hover
- * @param bool   $array
+ * @param bool   $hover   Append hover and focus states.
+ * @param bool   $array   Return array or string.
  *
  * @return array|string
  */
 function _get_elements( $element, $hover = false, $array = false ) {
-	$elements = apply_filters( 'genesis_customizer_elements', [
-		'button'  => [
-			'.button',
-			'button',
-			'input[type="submit"]',
-			'.wp-block-button__link',
-		],
-		'input'   => [
-			'input',
-			'select',
-			'textarea',
-		],
-		'heading' => [
-			'h1',
-			'h2',
-			'h3',
-			'h4',
-			'h5',
-			'h6',
-			'legend',
-		],
-	] );
+	$elements = apply_filters(
+		'genesis_customizer_elements', [
+			'button'  => [
+				'.button',
+				'button',
+				'input[type="submit"]',
+				'.wp-block-button__link',
+			],
+			'input'   => [
+				'input',
+				'select',
+				'textarea',
+			],
+			'heading' => [
+				'h1',
+				'h2',
+				'h3',
+				'h4',
+				'h5',
+				'h6',
+				'legend',
+			],
+		]
+	);
 
 	if ( $hover ) {
 		$elements_hover = [];

@@ -1,4 +1,14 @@
 <?php
+/**
+ * Genesis Customizer.
+ *
+ * This file adds the mega menu walker to Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
+ */
 
 namespace GenesisCustomizer;
 
@@ -34,7 +44,7 @@ class Menu_Fields_Walker extends \Walker_Nav_Menu_Edit {
 		$item_output = '';
 		parent::start_el( $item_output, $item, $depth, $args, $id );
 		$output .= preg_replace(
-		// NOTE: Check this regex from time to time!
+			// NOTE: Check this regex from time to time!
 			'/(?=<(fieldset|p)[^>]+class="[^"]*field-move)/',
 			$this->get_fields( $item, $depth, $args ),
 			$item_output

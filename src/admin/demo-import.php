@@ -1,4 +1,14 @@
 <?php
+/**
+ * Genesis Customizer.
+ *
+ * This file adds demo import functionality to Genesis Customizer.
+ *
+ * @package   GenesisCustomizer
+ * @author    SEO Themes
+ * @copyright 2019 SEO Themes
+ * @license   GPL-3.0-or-later
+ */
 
 namespace GenesisCustomizer;
 
@@ -17,7 +27,7 @@ add_filter( 'plugin_action_links_one-click-demo-import/one-click-demo-import.php
  *
  * @since 1.0.0
  *
- * @param $actions
+ * @param array $actions Plugin action links.
  *
  * @return array
  */
@@ -36,7 +46,7 @@ add_filter( 'pt-ocdi/plugin_page_setup', __NAMESPACE__ . '\demo_import_plugin_pa
  *
  * @since 1.0.0
  *
- * @param $defaults
+ * @param array $defaults Default settings to override.
  *
  * @return array
  */
@@ -84,7 +94,7 @@ function demo_import_files() {
 			'local_import_widget_file'     => "$assets/$slug/widgets.wie",
 			'local_import_customizer_file' => "$assets/$slug/customizer.dat",
 			'import_preview_image_url'     => "https://genesiscustomizer.com/wp-content/uploads/$slug-768x576.png",
-			'import_notice'                => __( '', 'genesis-customizer' ),
+			'import_notice'                => '',
 			'preview_url'                  => "https://demo.genesiscustomizer.com/$slug/",
 		];
 	}
@@ -152,7 +162,7 @@ add_filter( 'all_plugins', __NAMESPACE__ . '\hide_dependencies' );
  *
  * @since 1.0.0
  *
- * @param $plugins
+ * @param array $plugins List of all installed plugins.
  *
  * @return mixed
  */
@@ -184,9 +194,9 @@ add_filter( 'gettext', __NAMESPACE__ . '\modify_ocdi_strings', 20, 3 );
  *
  * @since 1.0.0
  *
- * @param $translated_text
- * @param $untranslated_text
- * @param $domain
+ * @param string $translated_text   Translated text string.
+ * @param string $untranslated_text Untranslated text string.
+ * @param string $domain            Text domain.
  *
  * @return string
  */
@@ -194,6 +204,7 @@ function modify_ocdi_strings( $translated_text, $untranslated_text, $domain ) {
 	$custom_field_text = '%1$s%3$sThat\'s it, all done!%4$s%2$sThe demo import has finished. Please check your page and make sure that everything has imported correctly. If it did, you can deactivate the %3$sOne Click Demo Import%4$s plugin, because it has done its job.%5$s';
 
 	if ( is_admin() && $untranslated_text === $custom_field_text ) {
+		// Translators: 1: Opening div and paragraph tags 2: Line break 3: Opening strong tag 4: Closing strong tag 5: closing div and paragraph tags.
 		return __( '%1$s%3$sThat\'s it, all done!%4$s%2$sThe demo import has finished. Please check your page and make sure that everything has imported correctly. ', 'genesis-customizer' ) . sprintf( '<a href="%s" target="_blank">%s</a>', home_url(), __( 'View Site', 'genesis-customizer' ) );
 	}
 
