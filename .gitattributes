@@ -49,6 +49,10 @@ Gulpfile.js export-ignore
 /assets/scss/ export-ignore
 /tests/ export-ignore
 
+/vendor/alledia/edd-sl-plugin-updater/.gitignore export-ignore
+/vendor/alledia/edd-sl-plugin-updater/README.md export-ignore
+/vendor/alledia/edd-sl-plugin-updater/composer.json export-ignore
+
 /vendor/aristath/kirki/.github/ export-ignore
 /vendor/aristath/kirki/docs/ export-ignore
 /vendor/aristath/kirki/tests/ export-ignore
