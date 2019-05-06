@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-	<!-- generator="WordPress/5.1.1" created="2019-04-24 04:07" -->
+	<!-- generator="WordPress/5.1.1" created="2019-05-06 02:21" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -27,13 +27,13 @@
 
 <channel>
 	<title>Genesis Customizer</title>
-	<link>https://demo.test/genesis-sample</link>
+	<link>https://demo.genesiscustomizer.com/genesis-sample</link>
 	<description>Just another Genesis Customizer Demos site</description>
-	<pubDate>Wed, 24 Apr 2019 04:07:13 +0000</pubDate>
+	<pubDate>Mon, 06 May 2019 02:21:44 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
-	<wp:base_site_url>http://demo.test/</wp:base_site_url>
-	<wp:base_blog_url>https://demo.test/genesis-sample</wp:base_blog_url>
+	<wp:base_site_url>http://demo.genesiscustomizer.com/</wp:base_site_url>
+	<wp:base_blog_url>https://demo.genesiscustomizer.com/genesis-sample</wp:base_blog_url>
 
 		<wp:author><wp:author_id>1</wp:author_id><wp:author_login><![CDATA[admin]]></wp:author_login><wp:author_email><![CDATA[admin@demo.test]]></wp:author_email><wp:author_display_name><![CDATA[admin]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
 
@@ -162,14 +162,14 @@
 		<item>
 		<title>
 				Home		</title>
-		<link>https://demo.test/genesis-sample/</link>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/</link>
 		<pubDate>Sun, 07 Apr 2019 00:24:15 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://demo.test/genesis-sample/homepage/</guid>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/homepage/</guid>
 		<description></description>
 		<content:encoded>
 				<![CDATA[<!-- wp:media-text {"align":"full","mediaId":1477,"mediaType":"image","isStackedOnMobile":true} -->
-<div class="wp-block-media-text alignfull is-stacked-on-mobile"><figure class="wp-block-media-text__media"><img src="https://demo.test/genesis-sample/wp-content/themes/genesis-sample/config/import/images/mountain-bw.jpg" alt="" class="wp-image-1477"/></figure><div class="wp-block-media-text__content"><!-- wp:heading {"level":1} -->
+<div class="wp-block-media-text alignfull is-stacked-on-mobile"><figure class="wp-block-media-text__media"><img src="https://demo.genesiscustomizer.com/genesis-sample/wp-content/themes/genesis-sample/config/import/images/mountain-bw.jpg" alt="" class="wp-image-1477"/></figure><div class="wp-block-media-text__content"><!-- wp:heading {"level":1} -->
 <h1>We'll teach you how to build and grow an online business.</h1>
 <!-- /wp:heading -->
 
@@ -267,7 +267,7 @@
 
 <!-- wp:column -->
 <div class="wp-block-column"><!-- wp:image {"id":308} -->
-<figure class="wp-block-image"><img src="https://demo.test/genesis-sample/wp-content/themes/genesis-sample/config/import/images/home-about.jpg" alt="" class="wp-image-308"/><figcaption>Photo by&nbsp;<a href="https://unsplash.com/photos/rjhvXX7JBPc">Haley Powers</a>&nbsp;on&nbsp;<a href="https://unsplash.com/">Unsplash</a></figcaption></figure>
+<figure class="wp-block-image"><img src="https://demo.genesiscustomizer.com/genesis-sample/wp-content/themes/genesis-sample/config/import/images/home-about.jpg" alt="" class="wp-image-308"/><figcaption>Photo by&nbsp;<a href="https://unsplash.com/photos/rjhvXX7JBPc">Haley Powers</a>&nbsp;on&nbsp;<a href="https://unsplash.com/">Unsplash</a></figcaption></figure>
 <!-- /wp:image --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
@@ -309,10 +309,10 @@
 					<item>
 		<title>
 				Blog		</title>
-		<link>https://demo.test/genesis-sample/blog/</link>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/blog/</link>
 		<pubDate>Sun, 07 Apr 2019 00:24:15 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://demo.test/genesis-sample/block-content-examples/</guid>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/block-content-examples/</guid>
 		<description></description>
 		<content:encoded>
 				<![CDATA[<!-- wp:atomic-blocks/ab-spacer {"spacerHeight":70} -->
@@ -435,14 +435,14 @@ This is an example of a WordPress post, you could edit this to put information a
 					<item>
 		<title>
 				About Us		</title>
-		<link>https://demo.test/genesis-sample/about-us/</link>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/about-us/</link>
 		<pubDate>Sun, 07 Apr 2019 00:24:15 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://demo.test/genesis-sample/about-us/</guid>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/about-us/</guid>
 		<description></description>
 		<content:encoded>
 				<![CDATA[<!-- wp:image {"id":2141,"align":"center"} -->
-<div class="wp-block-image"><figure class="aligncenter"><img src="https://demo.test/genesis-sample/wp-content/themes/genesis-sample/config/import/images/about.jpg" alt="" class="wp-image-2141"/></figure></div>
+<div class="wp-block-image"><figure class="aligncenter"><img src="https://demo.genesiscustomizer.com/genesis-sample/wp-content/themes/genesis-sample/config/import/images/about.jpg" alt="" class="wp-image-2141"/></figure></div>
 <!-- /wp:image -->
 
 <!-- wp:atomic-blocks/ab-spacer {"spacerHeight":29} -->
@@ -507,10 +507,10 @@ This is an example of a WordPress post, you could edit this to put information a
 					<item>
 		<title>
 				Contact Us		</title>
-		<link>https://demo.test/genesis-sample/contact-us/</link>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/contact-us/</link>
 		<pubDate>Sun, 07 Apr 2019 00:24:16 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://demo.test/genesis-sample/contact-us/</guid>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/contact-us/</guid>
 		<description></description>
 		<content:encoded>
 				<![CDATA[<!-- wp:html -->
@@ -550,14 +550,14 @@ This is an example of a WordPress post, you could edit this to put information a
 					<item>
 		<title>
 				Landing Page		</title>
-		<link>https://demo.test/genesis-sample/landing-page/</link>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/landing-page/</link>
 		<pubDate>Sun, 07 Apr 2019 00:24:16 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://demo.test/genesis-sample/landing-page/</guid>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/landing-page/</guid>
 		<description></description>
 		<content:encoded>
 				<![CDATA[<!-- wp:image {"id":1377} -->
-<figure class="wp-block-image"><img src="https://demo.test/genesis-sample/wp-content/themes/genesis-sample/config/import/images/landing.jpg" alt="Paris" class="wp-image-1377"/><figcaption> Photo by <a href="https://unsplash.com/photos/Pi3YUQivm6o" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">Felipe Dolce</a> on <a href="https://unsplash.com/">Unsplash</a> </figcaption></figure>
+<figure class="wp-block-image"><img src="https://demo.genesiscustomizer.com/genesis-sample/wp-content/themes/genesis-sample/config/import/images/landing.jpg" alt="Paris" class="wp-image-1377"/><figcaption> Photo by <a href="https://unsplash.com/photos/Pi3YUQivm6o" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">Felipe Dolce</a> on <a href="https://unsplash.com/">Unsplash</a> </figcaption></figure>
 <!-- /wp:image -->
 
 <!-- wp:paragraph -->
@@ -617,10 +617,10 @@ This is an example of a WordPress post, you could edit this to put information a
 					<item>
 		<title>
 						</title>
-		<link>https://demo.test/genesis-sample/home/</link>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/home/</link>
 		<pubDate>Sun, 07 Apr 2019 00:26:40 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://demo.test/genesis-sample/?p=31</guid>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/?p=31</guid>
 		<description></description>
 		<content:encoded>
 				<![CDATA[ ]]>		</content:encoded>
@@ -675,10 +675,10 @@ This is an example of a WordPress post, you could edit this to put information a
 					<item>
 		<title>
 						</title>
-		<link>https://demo.test/genesis-sample/32/</link>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/32/</link>
 		<pubDate>Sun, 07 Apr 2019 00:26:40 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://demo.test/genesis-sample/?p=32</guid>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/?p=32</guid>
 		<description></description>
 		<content:encoded>
 				<![CDATA[ ]]>		</content:encoded>
@@ -733,10 +733,10 @@ This is an example of a WordPress post, you could edit this to put information a
 					<item>
 		<title>
 						</title>
-		<link>https://demo.test/genesis-sample/34/</link>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/34/</link>
 		<pubDate>Sun, 07 Apr 2019 00:26:40 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://demo.test/genesis-sample/?p=34</guid>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/?p=34</guid>
 		<description></description>
 		<content:encoded>
 				<![CDATA[ ]]>		</content:encoded>
@@ -791,10 +791,10 @@ This is an example of a WordPress post, you could edit this to put information a
 					<item>
 		<title>
 				Facebook		</title>
-		<link>https://demo.test/genesis-sample/facebook/</link>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/facebook/</link>
 		<pubDate>Sun, 07 Apr 2019 00:52:58 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://demo.test/genesis-sample/?p=38</guid>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/?p=38</guid>
 		<description></description>
 		<content:encoded>
 				<![CDATA[]]>		</content:encoded>
@@ -849,10 +849,10 @@ This is an example of a WordPress post, you could edit this to put information a
 					<item>
 		<title>
 				Instagram		</title>
-		<link>https://demo.test/genesis-sample/instagram/</link>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/instagram/</link>
 		<pubDate>Sun, 07 Apr 2019 00:52:58 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://demo.test/genesis-sample/?p=39</guid>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/?p=39</guid>
 		<description></description>
 		<content:encoded>
 				<![CDATA[]]>		</content:encoded>
@@ -907,10 +907,10 @@ This is an example of a WordPress post, you could edit this to put information a
 					<item>
 		<title>
 				Twitter		</title>
-		<link>https://demo.test/genesis-sample/twitter/</link>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/twitter/</link>
 		<pubDate>Sun, 07 Apr 2019 00:52:58 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://demo.test/genesis-sample/?p=40</guid>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/?p=40</guid>
 		<description></description>
 		<content:encoded>
 				<![CDATA[]]>		</content:encoded>
@@ -965,10 +965,10 @@ This is an example of a WordPress post, you could edit this to put information a
 					<item>
 		<title>
 				Pinterest		</title>
-		<link>https://demo.test/genesis-sample/pinterest/</link>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/pinterest/</link>
 		<pubDate>Sun, 07 Apr 2019 00:52:58 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://demo.test/genesis-sample/?p=41</guid>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/?p=41</guid>
 		<description></description>
 		<content:encoded>
 				<![CDATA[]]>		</content:encoded>
@@ -1023,10 +1023,10 @@ This is an example of a WordPress post, you could edit this to put information a
 					<item>
 		<title>
 				LinkedIn		</title>
-		<link>https://demo.test/genesis-sample/linkedin/</link>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/linkedin/</link>
 		<pubDate>Sun, 07 Apr 2019 00:52:58 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://demo.test/genesis-sample/?p=42</guid>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/?p=42</guid>
 		<description></description>
 		<content:encoded>
 				<![CDATA[]]>		</content:encoded>
@@ -1081,10 +1081,10 @@ This is an example of a WordPress post, you could edit this to put information a
 					<item>
 		<title>
 				Download		</title>
-		<link>https://demo.test/genesis-sample/?p=70</link>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/?p=70</link>
 		<pubDate>Mon, 30 Nov -0001 00:00:00 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://demo.test/genesis-sample/?p=70</guid>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/?p=70</guid>
 		<description></description>
 		<content:encoded>
 				<![CDATA[]]>		</content:encoded>
@@ -1142,10 +1142,10 @@ This is an example of a WordPress post, you could edit this to put information a
 					<item>
 		<title>
 				Download		</title>
-		<link>https://demo.test/genesis-sample/download/</link>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/download/</link>
 		<pubDate>Mon, 22 Apr 2019 02:30:36 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://demo.test/genesis-sample/?p=71</guid>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/?p=71</guid>
 		<description></description>
 		<content:encoded>
 				<![CDATA[]]>		</content:encoded>
@@ -1200,10 +1200,10 @@ This is an example of a WordPress post, you could edit this to put information a
 					<item>
 		<title>
 						</title>
-		<link>https://demo.test/genesis-sample/72/</link>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/72/</link>
 		<pubDate>Mon, 22 Apr 2019 02:31:10 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://demo.test/genesis-sample/?p=72</guid>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/?p=72</guid>
 		<description></description>
 		<content:encoded>
 				<![CDATA[ ]]>		</content:encoded>

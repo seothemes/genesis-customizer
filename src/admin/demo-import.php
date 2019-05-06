@@ -167,7 +167,7 @@ add_filter( 'all_plugins', __NAMESPACE__ . '\hide_dependencies' );
  * @return mixed
  */
 function hide_dependencies( $plugins ) {
-	if ( ! _get_option( 'dependencies', true ) ) {
+	if ( is_network_admin() || ! _get_option( 'dependencies', true ) ) {
 		return $plugins;
 	}
 
