@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-	<!-- generator="WordPress/5.1.1" created="2019-05-06 02:21" -->
+	<!-- generator="WordPress/5.1.1" created="2019-05-06 04:58" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,7 +29,7 @@
 	<title>Genesis Customizer</title>
 	<link>https://demo.genesiscustomizer.com/genesis-sample</link>
 	<description>Just another Genesis Customizer Demos site</description>
-	<pubDate>Mon, 06 May 2019 02:21:44 +0000</pubDate>
+	<pubDate>Mon, 06 May 2019 04:58:17 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>http://demo.genesiscustomizer.com/</wp:base_site_url>
@@ -168,8 +168,8 @@
 		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/homepage/</guid>
 		<description></description>
 		<content:encoded>
-				<![CDATA[<!-- wp:media-text {"align":"full","mediaId":1477,"mediaType":"image","isStackedOnMobile":true} -->
-<div class="wp-block-media-text alignfull is-stacked-on-mobile"><figure class="wp-block-media-text__media"><img src="https://demo.genesiscustomizer.com/genesis-sample/wp-content/themes/genesis-sample/config/import/images/mountain-bw.jpg" alt="" class="wp-image-1477"/></figure><div class="wp-block-media-text__content"><!-- wp:heading {"level":1} -->
+				<![CDATA[<!-- wp:media-text {"align":"full","mediaId":106,"mediaType":"image"} -->
+<div class="wp-block-media-text alignfull"><figure class="wp-block-media-text__media"><img src="https://demo.genesiscustomizer.com/genesis-sample/wp-content/uploads/sites/3/2019/05/sample.jpg" alt="" class="wp-image-106"/></figure><div class="wp-block-media-text__content"><!-- wp:heading {"level":1} -->
 <h1>We'll teach you how to build and grow an online business.</h1>
 <!-- /wp:heading -->
 
@@ -177,98 +177,38 @@
 <p>All the resources, training, and support you need to run your dream online business! </p>
 <!-- /wp:paragraph -->
 
-<!-- wp:button {"textColor":"light-gray","className":"is-style-default"} -->
-<div class="wp-block-button is-style-default"><a class="wp-block-button__link has-text-color has-light-gray-color" href="#">Learn More<br></a></div>
+<!-- wp:button {"backgroundColor":"vivid-cyan-blue"} -->
+<div class="wp-block-button"><a class="wp-block-button__link has-background has-vivid-cyan-blue-background-color" href="#">Learn More</a></div>
 <!-- /wp:button --></div></div>
 <!-- /wp:media-text -->
 
-<!-- wp:atomic-blocks/ab-container {"containerPaddingTop":4.5,"containerPaddingRight":0,"containerPaddingBottom":0,"containerPaddingLeft":0,"containerMarginTop":0,"containerMarginBottom":0,"containerWidth":"full","containerBackgroundColor":"#333"} -->
-<div style="background-color:#333;padding-top:4.5%" class="wp-block-atomic-blocks-ab-container ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1600px"><!-- wp:atomic-blocks/ab-cta {"buttonText":"Get Started Today","buttonBackgroundColor":"#0072e5","ctaBackgroundColor":"#333333","ctaTextColor":"#f5f5f5"} -->
-<div style="background-color:#333333;text-align:center" class="wp-block-atomic-blocks-ab-cta ab-block-cta"><div class="ab-cta-content"><h2 class="ab-cta-title ab-font-size-32" style="color:#f5f5f5">Ready to take your next step?</h2><div class="ab-cta-text ab-font-size-32" style="color:#f5f5f5"><p>Grow your audience and build a profitable online business.</p></div></div><div class="ab-cta-button"><a href="#" target="_self" rel="noopener noreferrer" class="ab-button ab-button-shape-rounded ab-button-size-medium" style="color:#ffffff;background-color:#0072e5">Get Started Today</a></div></div>
-<!-- /wp:atomic-blocks/ab-cta --></div></div></div>
-<!-- /wp:atomic-blocks/ab-container -->
+<!-- wp:cover {"url":"https://demo.genesiscustomizer.com/genesis-sample/wp-content/uploads/sites/3/2019/05/sample.jpg","align":"full","id":106,"dimRatio":100,"overlayColor":"very-dark-gray"} -->
+<div class="wp-block-cover has-background-dim-100 has-very-dark-gray-background-color has-background-dim alignfull" style="background-image:url(https://demo.genesiscustomizer.com/genesis-sample/wp-content/uploads/sites/3/2019/05/sample.jpg)"><p class="wp-block-cover-text">Ready to take your next step?<br></p></div>
+<!-- /wp:cover -->
 
-<!-- wp:atomic-blocks/ab-spacer {"spacerHeight":60} -->
-<div style="color:#ddd" class="wp-block-atomic-blocks-ab-spacer ab-block-spacer ab-divider-solid ab-divider-size-1"><hr style="height:60px"/></div>
-<!-- /wp:atomic-blocks/ab-spacer -->
+<!-- wp:spacer {"height":50} -->
+<div style="height:50px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
 
 <!-- wp:heading {"align":"center"} -->
 <h2 style="text-align:center">What people are saying</h2>
 <!-- /wp:heading -->
 
-<!-- wp:atomic-blocks/ab-spacer {"spacerHeight":25} -->
-<div style="color:#ddd" class="wp-block-atomic-blocks-ab-spacer ab-block-spacer ab-divider-solid ab-divider-size-1"><hr style="height:25px"/></div>
-<!-- /wp:atomic-blocks/ab-spacer -->
+<!-- wp:spacer {"height":40} -->
+<div style="height:40px" aria-hidden="true" class="wp-block-spacer"></div>
+<!-- /wp:spacer -->
 
-<!-- wp:columns {"columns":3,"align":"wide"} -->
-<div class="wp-block-columns alignwide has-3-columns"><!-- wp:column -->
-<div class="wp-block-column"><!-- wp:atomic-blocks/ab-testimonial -->
-<div style="background-color:#f2f2f2;color:#32373c" class="wp-block-atomic-blocks-ab-testimonial left-aligned ab-font-size-18 ab-block-testimonial"><div class="ab-testimonial-text"><p>Your course helped me to grow my email list from 500 to over 10,000 subscribers—all within 3 months! </p></div><div class="ab-testimonial-info"><h2 class="ab-testimonial-name" style="color:#32373c">Jane</h2><small class="ab-testimonial-title" style="color:#32373c">Food Blogger</small></div></div>
-<!-- /wp:atomic-blocks/ab-testimonial --></div>
-<!-- /wp:column -->
-
-<!-- wp:column -->
-<div class="wp-block-column"><!-- wp:atomic-blocks/ab-testimonial -->
-<div style="background-color:#f2f2f2;color:#32373c" class="wp-block-atomic-blocks-ab-testimonial left-aligned ab-font-size-18 ab-block-testimonial"><div class="ab-testimonial-text"><p>I started using your email marketing technique and it helped me to make $5,000 more a month without any extra work! </p></div><div class="ab-testimonial-info"><h2 class="ab-testimonial-name" style="color:#32373c">Rob</h2><small class="ab-testimonial-title" style="color:#32373c">Copywriter</small></div></div>
-<!-- /wp:atomic-blocks/ab-testimonial --></div>
-<!-- /wp:column -->
-
-<!-- wp:column -->
-<div class="wp-block-column"><!-- wp:atomic-blocks/ab-testimonial -->
-<div style="background-color:#f2f2f2;color:#32373c" class="wp-block-atomic-blocks-ab-testimonial left-aligned ab-font-size-18 ab-block-testimonial"><div class="ab-testimonial-text"><p>I was skeptical but I found that your system had multiplied my revenue by 40% after just the first quarter! </p></div><div class="ab-testimonial-info"><h2 class="ab-testimonial-name" style="color:#32373c">Susan</h2><small class="ab-testimonial-title" style="color:#32373c">Entrepreneur</small></div></div>
-<!-- /wp:atomic-blocks/ab-testimonial --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns -->
-
-<!-- wp:atomic-blocks/ab-spacer -->
-<div style="color:#ddd" class="wp-block-atomic-blocks-ab-spacer ab-block-spacer ab-divider-solid ab-divider-size-1"><hr style="height:30px"/></div>
-<!-- /wp:atomic-blocks/ab-spacer -->
-
-<!-- wp:atomic-blocks/ab-container {"containerPaddingTop":12,"containerPaddingRight":5,"containerPaddingBottom":12,"containerPaddingLeft":5,"containerMarginTop":6,"containerMarginBottom":5,"containerWidth":"full","containerMaxWidth":1062,"containerBackgroundColor":"#333"} -->
-<div style="background-color:#333;padding-left:5%;padding-right:5%;padding-bottom:12%;padding-top:12%;margin-top:6%;margin-bottom:5%" class="wp-block-atomic-blocks-ab-container ab-block-container alignfull"><div class="ab-container-inside"><div class="ab-container-content" style="max-width:1062px"><!-- wp:columns -->
-<div class="wp-block-columns has-2-columns"><!-- wp:column -->
-<div class="wp-block-column"><!-- wp:paragraph {"align":"left","customTextColor":"#f5f5f5","customFontSize":40} -->
-<p style="color:#f5f5f5;font-size:40px;text-align:left" class="has-text-color">Contact us today</p>
+<!-- wp:columns {"align":"wide"} -->
+<div class="wp-block-columns alignwide has-2-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:paragraph {"backgroundColor":"very-light-gray"} -->
+<p class="has-background has-very-light-gray-background-color">Your course helped me to grow my email list from 500 to over 10,000 subscribers—all within 3 months!<br><br><strong>Jane</strong></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column -->
 
 <!-- wp:column -->
-<div class="wp-block-column"><!-- wp:button {"customTextColor":"#f5f5f5","align":"right","className":"is-style-outline"} -->
-<div class="wp-block-button alignright is-style-outline"><a class="wp-block-button__link has-text-color" href="#" style="color:#f5f5f5">Get in touch</a></div>
-<!-- /wp:button --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns --></div></div></div>
-<!-- /wp:atomic-blocks/ab-container -->
-
-<!-- wp:atomic-blocks/ab-spacer {"spacerHeight":60} -->
-<div style="color:#ddd" class="wp-block-atomic-blocks-ab-spacer ab-block-spacer ab-divider-solid ab-divider-size-1"><hr style="height:60px"/></div>
-<!-- /wp:atomic-blocks/ab-spacer -->
-
-<!-- wp:columns {"align":"wide"} -->
-<div class="wp-block-columns alignwide has-2-columns"><!-- wp:column -->
-<div class="wp-block-column"><!-- wp:atomic-blocks/ab-accordion {"accordionOpen":true} -->
-<div class="wp-block-atomic-blocks-ab-accordion ab-block-accordion ab-font-size-18"><details open><summary class="ab-accordion-title">Can I phone or email you?</summary><div class="ab-accordion-text"><!-- wp:paragraph -->
-<p>You can reach us on our <a href="#">contact page</a> or by calling us at 1.123.456.7891</p>
-<!-- /wp:paragraph --></div></details></div>
-<!-- /wp:atomic-blocks/ab-accordion -->
-
-<!-- wp:atomic-blocks/ab-accordion -->
-<div class="wp-block-atomic-blocks-ab-accordion ab-block-accordion ab-font-size-18"><details><summary class="ab-accordion-title">How long have you been in business?</summary><div class="ab-accordion-text"><!-- wp:paragraph -->
-<p>Our team has a combined experience of over 60 years.</p>
-<!-- /wp:paragraph --></div></details></div>
-<!-- /wp:atomic-blocks/ab-accordion -->
-
-<!-- wp:atomic-blocks/ab-accordion -->
-<div class="wp-block-atomic-blocks-ab-accordion ab-block-accordion ab-font-size-18"><details><summary class="ab-accordion-title">What is your return policy?</summary><div class="ab-accordion-text"><!-- wp:paragraph -->
-<p>We offer a 30-day return policy for all unused items. For more information, please view our terms of service.</p>
-<!-- /wp:paragraph --></div></details></div>
-<!-- /wp:atomic-blocks/ab-accordion --></div>
-<!-- /wp:column -->
-
-<!-- wp:column -->
-<div class="wp-block-column"><!-- wp:image {"id":308} -->
-<figure class="wp-block-image"><img src="https://demo.genesiscustomizer.com/genesis-sample/wp-content/themes/genesis-sample/config/import/images/home-about.jpg" alt="" class="wp-image-308"/><figcaption>Photo by&nbsp;<a href="https://unsplash.com/photos/rjhvXX7JBPc">Haley Powers</a>&nbsp;on&nbsp;<a href="https://unsplash.com/">Unsplash</a></figcaption></figure>
-<!-- /wp:image --></div>
+<div class="wp-block-column"><!-- wp:paragraph {"backgroundColor":"very-light-gray"} -->
+<p class="has-background has-very-light-gray-background-color">I started using your email marketing technique and it helped me to make $5,000 more a month without any extra work!<br><br><strong>Rob</strong></p>
+<!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns -->
 
@@ -304,6 +244,18 @@
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_genesis_layout]]></wp:meta_key>
 		<wp:meta_value><![CDATA[center-content]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[header_disabled]]></wp:meta_key>
+		<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[title_disabled]]></wp:meta_key>
+		<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[footer_disabled]]></wp:meta_key>
+		<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
 							</item>
 					<item>
@@ -426,188 +378,6 @@ This is an example of a WordPress post, you could edit this to put information a
 														<wp:postmeta>
 		<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
 		<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
-		<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-							</item>
-					<item>
-		<title>
-				About Us		</title>
-		<link>https://demo.genesiscustomizer.com/genesis-sample/about-us/</link>
-		<pubDate>Sun, 07 Apr 2019 00:24:15 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/about-us/</guid>
-		<description></description>
-		<content:encoded>
-				<![CDATA[<!-- wp:image {"id":2141,"align":"center"} -->
-<div class="wp-block-image"><figure class="aligncenter"><img src="https://demo.genesiscustomizer.com/genesis-sample/wp-content/themes/genesis-sample/config/import/images/about.jpg" alt="" class="wp-image-2141"/></figure></div>
-<!-- /wp:image -->
-
-<!-- wp:atomic-blocks/ab-spacer {"spacerHeight":29} -->
-<div style="color:#ddd" class="wp-block-atomic-blocks-ab-spacer ab-block-spacer ab-divider-solid ab-divider-size-1"><hr style="height:29px"/></div>
-<!-- /wp:atomic-blocks/ab-spacer -->
-
-<!-- wp:columns -->
-<div class="wp-block-columns has-2-columns"><!-- wp:column -->
-<div class="wp-block-column"><!-- wp:heading {"level":1} -->
-<h1>About Us</h1>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>Hello! We are StudioPress, and  we build themes with an emphasis on typography, white space, and   mobile-optimized design to make your website look absolutely   breathtaking.  </p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:column -->
-
-<!-- wp:column -->
-<div class="wp-block-column"><!-- wp:heading {"align":"right"} -->
-<h2 style="text-align:right" id="mce_9">Contact Us</h2>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph {"align":"right"} -->
-<p style="text-align:right"> 555.555.5555</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"align":"right"} -->
-<p style="text-align:right">
-1234 Block Blvd.<br>San Francisco, CA 94120 
-
-</p>
-<!-- /wp:paragraph --></div>
-<!-- /wp:column --></div>
-<!-- /wp:columns -->]]>		</content:encoded>
-		<excerpt:encoded>
-				<![CDATA[]]>		</excerpt:encoded>
-		<wp:post_id>21</wp:post_id>
-		<wp:post_date><![CDATA[2019-04-07 00:24:15]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2019-04-07 00:24:15]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[about-us]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[page]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-														<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
-		<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
-		<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_genesis_scripts_body_position]]></wp:meta_key>
-		<wp:meta_value><![CDATA[bottom]]></wp:meta_value>
-		</wp:postmeta>
-							</item>
-					<item>
-		<title>
-				Contact Us		</title>
-		<link>https://demo.genesiscustomizer.com/genesis-sample/contact-us/</link>
-		<pubDate>Sun, 07 Apr 2019 00:24:16 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/contact-us/</guid>
-		<description></description>
-		<content:encoded>
-				<![CDATA[<!-- wp:html -->
-<form>
-<label>Name</label>
-<input type="text" placeholder="">
-<label>Email</label>
-<input type="email" placeholder="">
-<label>Message</label>
-<textarea placeholder="" rows="6"></textarea>
-<button>Submit
-</button></form>
-<!-- /wp:html -->]]>		</content:encoded>
-		<excerpt:encoded>
-				<![CDATA[]]>		</excerpt:encoded>
-		<wp:post_id>22</wp:post_id>
-		<wp:post_date><![CDATA[2019-04-07 00:24:16]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2019-04-07 00:24:16]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[contact-us]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[page]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-														<wp:postmeta>
-		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
-		<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-							<wp:postmeta>
-		<wp:meta_key><![CDATA[_genesis_scripts_body_position]]></wp:meta_key>
-		<wp:meta_value><![CDATA[bottom]]></wp:meta_value>
-		</wp:postmeta>
-							</item>
-					<item>
-		<title>
-				Landing Page		</title>
-		<link>https://demo.genesiscustomizer.com/genesis-sample/landing-page/</link>
-		<pubDate>Sun, 07 Apr 2019 00:24:16 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/landing-page/</guid>
-		<description></description>
-		<content:encoded>
-				<![CDATA[<!-- wp:image {"id":1377} -->
-<figure class="wp-block-image"><img src="https://demo.genesiscustomizer.com/genesis-sample/wp-content/themes/genesis-sample/config/import/images/landing.jpg" alt="Paris" class="wp-image-1377"/><figcaption> Photo by <a href="https://unsplash.com/photos/Pi3YUQivm6o" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">Felipe Dolce</a> on <a href="https://unsplash.com/">Unsplash</a> </figcaption></figure>
-<!-- /wp:image -->
-
-<!-- wp:paragraph -->
-<p>This is an example of a WordPress post, you could edit this to put information about yourself so readers know where you are coming from. You can create as many posts as you like in order to share with them what is on your mind.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:quote -->
-<blockquote class="wp-block-quote"><p>“There are only two places in the world where we can live happy: at home and in Paris.”<br></p><cite>— Ernest Hemingway</cite></blockquote>
-<!-- /wp:quote -->
-
-<!-- wp:paragraph -->
-<p>This is an example of a WordPress post, you could edit this to put information about yourself so readers know where you are coming from. You can create as many posts as you like in order to share with them what is on your mind.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:heading {"level":4} -->
-<h4>This is a Sample Heading</h4>
-<!-- /wp:heading -->
-
-<!-- wp:paragraph -->
-<p>This is an example of a WordPress post, you could edit this to put information about yourself so readers know where you are coming from. You can create as many posts as you like in order to share with them what is on your mind.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p>Here’s a sample paragraph with a custom background color:</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph {"customBackgroundColor":"#f5f5f5"} -->
-<p style="background-color:#f5f5f5" class="has-background">This is an example of a WordPress post, you could edit this to put information about yourself so readers know where you are coming from. You can create as many posts as you like in order to share with them what is on your mind.</p>
-<!-- /wp:paragraph -->
-
-<!-- wp:paragraph -->
-<p>This is an example of a WordPress post, you could edit this to put information about yourself so readers know where you are coming from. You can create as many posts as you like in order to share with them what is on your mind. This is an example of a WordPress post, you could edit this to put information about yourself so readers know where you are coming from. You can create as many posts as you like in order to share with them what is on your mind.</p>
-<!-- /wp:paragraph -->]]>		</content:encoded>
-		<excerpt:encoded>
-				<![CDATA[]]>		</excerpt:encoded>
-		<wp:post_id>23</wp:post_id>
-		<wp:post_date><![CDATA[2019-04-07 00:24:16]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2019-04-07 00:24:16]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[landing-page]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[page]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-														<wp:postmeta>
-		<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
-		<wp:meta_value><![CDATA[landing.php]]></wp:meta_value>
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
@@ -1252,6 +1022,534 @@ This is an example of a WordPress post, you could edit this to put information a
 		</wp:postmeta>
 							<wp:postmeta>
 		<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
+		<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title>
+				april-in-paris		</title>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/home/april-in-paris/</link>
+		<pubDate>Mon, 06 May 2019 02:25:54 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/wp-content/uploads/sites/3/2019/05/april-in-paris.jpg</guid>
+		<description></description>
+		<content:encoded>
+				<![CDATA[]]>		</content:encoded>
+		<excerpt:encoded>
+				<![CDATA[]]>		</excerpt:encoded>
+		<wp:post_id>103</wp:post_id>
+		<wp:post_date><![CDATA[2019-05-06 02:25:54]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2019-05-06 02:25:54]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[april-in-paris]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>19</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+						<wp:attachment_url><![CDATA[https://demo.genesiscustomizer.com/genesis-sample/wp-content/uploads/sites/3/2019/05/april-in-paris.jpg]]></wp:attachment_url>
+											<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+		<wp:meta_value><![CDATA[2019/05/april-in-paris.jpg]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+		<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1400;s:6:"height";i:800;s:4:"file";s:26:"2019/05/april-in-paris.jpg";s:5:"sizes";a:4:{s:9:"thumbnail";a:4:{s:4:"file";s:26:"april-in-paris-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:26:"april-in-paris-300x171.jpg";s:5:"width";i:300;s:6:"height";i:171;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:26:"april-in-paris-768x439.jpg";s:5:"width";i:768;s:6:"height";i:439;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:27:"april-in-paris-1024x585.jpg";s:5:"width";i:1024;s:6:"height";i:585;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title>
+				november-rain		</title>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/home/november-rain/</link>
+		<pubDate>Mon, 06 May 2019 02:25:56 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/wp-content/uploads/sites/3/2019/05/november-rain.jpg</guid>
+		<description></description>
+		<content:encoded>
+				<![CDATA[]]>		</content:encoded>
+		<excerpt:encoded>
+				<![CDATA[]]>		</excerpt:encoded>
+		<wp:post_id>104</wp:post_id>
+		<wp:post_date><![CDATA[2019-05-06 02:25:56]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2019-05-06 02:25:56]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[november-rain]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>19</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+						<wp:attachment_url><![CDATA[https://demo.genesiscustomizer.com/genesis-sample/wp-content/uploads/sites/3/2019/05/november-rain.jpg]]></wp:attachment_url>
+											<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+		<wp:meta_value><![CDATA[2019/05/november-rain.jpg]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+		<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1400;s:6:"height";i:800;s:4:"file";s:25:"2019/05/november-rain.jpg";s:5:"sizes";a:4:{s:9:"thumbnail";a:4:{s:4:"file";s:25:"november-rain-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:25:"november-rain-300x171.jpg";s:5:"width";i:300;s:6:"height";i:171;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:25:"november-rain-768x439.jpg";s:5:"width";i:768;s:6:"height";i:439;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:26:"november-rain-1024x585.jpg";s:5:"width";i:1024;s:6:"height";i:585;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title>
+				ode-to-my-family		</title>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/home/ode-to-my-family/</link>
+		<pubDate>Mon, 06 May 2019 02:25:58 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/wp-content/uploads/sites/3/2019/05/ode-to-my-family.jpg</guid>
+		<description></description>
+		<content:encoded>
+				<![CDATA[]]>		</content:encoded>
+		<excerpt:encoded>
+				<![CDATA[]]>		</excerpt:encoded>
+		<wp:post_id>105</wp:post_id>
+		<wp:post_date><![CDATA[2019-05-06 02:25:58]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2019-05-06 02:25:58]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[ode-to-my-family]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>19</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+						<wp:attachment_url><![CDATA[https://demo.genesiscustomizer.com/genesis-sample/wp-content/uploads/sites/3/2019/05/ode-to-my-family.jpg]]></wp:attachment_url>
+											<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+		<wp:meta_value><![CDATA[2019/05/ode-to-my-family.jpg]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+		<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1400;s:6:"height";i:800;s:4:"file";s:28:"2019/05/ode-to-my-family.jpg";s:5:"sizes";a:4:{s:9:"thumbnail";a:4:{s:4:"file";s:28:"ode-to-my-family-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:28:"ode-to-my-family-300x171.jpg";s:5:"width";i:300;s:6:"height";i:171;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:28:"ode-to-my-family-768x439.jpg";s:5:"width";i:768;s:6:"height";i:439;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:29:"ode-to-my-family-1024x585.jpg";s:5:"width";i:1024;s:6:"height";i:585;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title>
+				sample		</title>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/home/sample/</link>
+		<pubDate>Mon, 06 May 2019 02:25:59 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/wp-content/uploads/sites/3/2019/05/sample.jpg</guid>
+		<description></description>
+		<content:encoded>
+				<![CDATA[]]>		</content:encoded>
+		<excerpt:encoded>
+				<![CDATA[]]>		</excerpt:encoded>
+		<wp:post_id>106</wp:post_id>
+		<wp:post_date><![CDATA[2019-05-06 02:25:59]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2019-05-06 02:25:59]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[sample]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>19</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+						<wp:attachment_url><![CDATA[https://demo.genesiscustomizer.com/genesis-sample/wp-content/uploads/sites/3/2019/05/sample.jpg]]></wp:attachment_url>
+											<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+		<wp:meta_value><![CDATA[2019/05/sample.jpg]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+		<wp:meta_value><![CDATA[a:5:{s:5:"width";i:800;s:6:"height";i:900;s:4:"file";s:18:"2019/05/sample.jpg";s:5:"sizes";a:3:{s:9:"thumbnail";a:4:{s:4:"file";s:18:"sample-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:18:"sample-267x300.jpg";s:5:"width";i:267;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:18:"sample-768x864.jpg";s:5:"width";i:768;s:6:"height";i:864;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title>
+				spirit-of-the-radio		</title>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/home/spirit-of-the-radio/</link>
+		<pubDate>Mon, 06 May 2019 02:26:01 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/wp-content/uploads/sites/3/2019/05/spirit-of-the-radio.jpg</guid>
+		<description></description>
+		<content:encoded>
+				<![CDATA[]]>		</content:encoded>
+		<excerpt:encoded>
+				<![CDATA[]]>		</excerpt:encoded>
+		<wp:post_id>107</wp:post_id>
+		<wp:post_date><![CDATA[2019-05-06 02:26:01]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2019-05-06 02:26:01]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[spirit-of-the-radio]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>19</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+						<wp:attachment_url><![CDATA[https://demo.genesiscustomizer.com/genesis-sample/wp-content/uploads/sites/3/2019/05/spirit-of-the-radio.jpg]]></wp:attachment_url>
+											<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+		<wp:meta_value><![CDATA[2019/05/spirit-of-the-radio.jpg]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+		<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1400;s:6:"height";i:800;s:4:"file";s:31:"2019/05/spirit-of-the-radio.jpg";s:5:"sizes";a:4:{s:9:"thumbnail";a:4:{s:4:"file";s:31:"spirit-of-the-radio-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:31:"spirit-of-the-radio-300x171.jpg";s:5:"width";i:300;s:6:"height";i:171;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:31:"spirit-of-the-radio-768x439.jpg";s:5:"width";i:768;s:6:"height";i:439;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:32:"spirit-of-the-radio-1024x585.jpg";s:5:"width";i:1024;s:6:"height";i:585;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title>
+				top-of-the-world		</title>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/home/top-of-the-world/</link>
+		<pubDate>Mon, 06 May 2019 02:26:03 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/wp-content/uploads/sites/3/2019/05/top-of-the-world.jpg</guid>
+		<description></description>
+		<content:encoded>
+				<![CDATA[]]>		</content:encoded>
+		<excerpt:encoded>
+				<![CDATA[]]>		</excerpt:encoded>
+		<wp:post_id>108</wp:post_id>
+		<wp:post_date><![CDATA[2019-05-06 02:26:03]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2019-05-06 02:26:03]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[top-of-the-world]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>19</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+						<wp:attachment_url><![CDATA[https://demo.genesiscustomizer.com/genesis-sample/wp-content/uploads/sites/3/2019/05/top-of-the-world.jpg]]></wp:attachment_url>
+											<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+		<wp:meta_value><![CDATA[2019/05/top-of-the-world.jpg]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+		<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1400;s:6:"height";i:800;s:4:"file";s:28:"2019/05/top-of-the-world.jpg";s:5:"sizes";a:4:{s:9:"thumbnail";a:4:{s:4:"file";s:28:"top-of-the-world-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:28:"top-of-the-world-300x171.jpg";s:5:"width";i:300;s:6:"height";i:171;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:28:"top-of-the-world-768x439.jpg";s:5:"width";i:768;s:6:"height";i:439;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:29:"top-of-the-world-1024x585.jpg";s:5:"width";i:1024;s:6:"height";i:585;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title>
+				uninvited		</title>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/home/uninvited/</link>
+		<pubDate>Mon, 06 May 2019 02:26:05 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/wp-content/uploads/sites/3/2019/05/uninvited.jpg</guid>
+		<description></description>
+		<content:encoded>
+				<![CDATA[]]>		</content:encoded>
+		<excerpt:encoded>
+				<![CDATA[]]>		</excerpt:encoded>
+		<wp:post_id>109</wp:post_id>
+		<wp:post_date><![CDATA[2019-05-06 02:26:05]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2019-05-06 02:26:05]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[uninvited]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>19</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+						<wp:attachment_url><![CDATA[https://demo.genesiscustomizer.com/genesis-sample/wp-content/uploads/sites/3/2019/05/uninvited.jpg]]></wp:attachment_url>
+											<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+		<wp:meta_value><![CDATA[2019/05/uninvited.jpg]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+		<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1400;s:6:"height";i:800;s:4:"file";s:21:"2019/05/uninvited.jpg";s:5:"sizes";a:4:{s:9:"thumbnail";a:4:{s:4:"file";s:21:"uninvited-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:21:"uninvited-300x171.jpg";s:5:"width";i:300;s:6:"height";i:171;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:21:"uninvited-768x439.jpg";s:5:"width";i:768;s:6:"height";i:439;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:22:"uninvited-1024x585.jpg";s:5:"width";i:1024;s:6:"height";i:585;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";s:1:"0";s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";s:1:"0";s:9:"copyright";s:0:"";s:12:"focal_length";s:1:"0";s:3:"iso";s:1:"0";s:13:"shutter_speed";s:1:"0";s:5:"title";s:0:"";s:11:"orientation";s:1:"0";s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title>
+				About Us		</title>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/about-us/</link>
+		<pubDate>Sun, 07 Apr 2019 00:24:15 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/about-us/</guid>
+		<description></description>
+		<content:encoded>
+				<![CDATA[<!-- wp:image {"id":2141,"align":"center"} -->
+<div class="wp-block-image"><figure class="aligncenter"><img src="https://demo.genesiscustomizer.com/genesis-sample/wp-content/themes/genesis-sample/config/import/images/about.jpg" alt="" class="wp-image-2141"/></figure></div>
+<!-- /wp:image -->
+
+<!-- wp:atomic-blocks/ab-spacer {"spacerHeight":29} -->
+<div style="color:#ddd" class="wp-block-atomic-blocks-ab-spacer ab-block-spacer ab-divider-solid ab-divider-size-1"><hr style="height:29px"/></div>
+<!-- /wp:atomic-blocks/ab-spacer -->
+
+<!-- wp:columns -->
+<div class="wp-block-columns has-2-columns"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading {"level":1} -->
+<h1>About Us</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Hello! We are StudioPress, and  we build themes with an emphasis on typography, white space, and   mobile-optimized design to make your website look absolutely   breathtaking.  </p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column -->
+
+<!-- wp:column -->
+<div class="wp-block-column"><!-- wp:heading {"align":"right"} -->
+<h2 style="text-align:right" id="mce_9">Contact Us</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"align":"right"} -->
+<p style="text-align:right"> 555.555.5555</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"align":"right"} -->
+<p style="text-align:right">
+1234 Block Blvd.<br>San Francisco, CA 94120 
+
+</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns -->]]>		</content:encoded>
+		<excerpt:encoded>
+				<![CDATA[]]>		</excerpt:encoded>
+		<wp:post_id>21</wp:post_id>
+		<wp:post_date><![CDATA[2019-04-07 00:24:15]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2019-04-07 00:24:15]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[about-us]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+														<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+		<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+		<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_genesis_scripts_body_position]]></wp:meta_key>
+		<wp:meta_value><![CDATA[bottom]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title>
+				Contact Us		</title>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/contact-us/</link>
+		<pubDate>Sun, 07 Apr 2019 00:24:16 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/contact-us/</guid>
+		<description></description>
+		<content:encoded>
+				<![CDATA[<!-- wp:html -->
+<form>
+<label>Name</label>
+<input type="text" placeholder="">
+<label>Email</label>
+<input type="email" placeholder="">
+<label>Message</label>
+<textarea placeholder="" rows="6"></textarea>
+<button>Submit
+</button></form>
+<!-- /wp:html -->]]>		</content:encoded>
+		<excerpt:encoded>
+				<![CDATA[]]>		</excerpt:encoded>
+		<wp:post_id>22</wp:post_id>
+		<wp:post_date><![CDATA[2019-04-07 00:24:16]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2019-04-07 00:24:16]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[contact-us]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+														<wp:postmeta>
+		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+		<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_genesis_scripts_body_position]]></wp:meta_key>
+		<wp:meta_value><![CDATA[bottom]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title>
+				Landing Page		</title>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/landing-page/</link>
+		<pubDate>Sun, 07 Apr 2019 00:24:16 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/landing-page/</guid>
+		<description></description>
+		<content:encoded>
+				<![CDATA[<!-- wp:image {"id":1377} -->
+<figure class="wp-block-image"><img src="https://demo.genesiscustomizer.com/genesis-sample/wp-content/themes/genesis-sample/config/import/images/landing.jpg" alt="Paris" class="wp-image-1377"/><figcaption> Photo by <a href="https://unsplash.com/photos/Pi3YUQivm6o" target="_blank" rel="noreferrer noopener" aria-label=" (opens in a new tab)">Felipe Dolce</a> on <a href="https://unsplash.com/">Unsplash</a> </figcaption></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>This is an example of a WordPress post, you could edit this to put information about yourself so readers know where you are coming from. You can create as many posts as you like in order to share with them what is on your mind.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:quote -->
+<blockquote class="wp-block-quote"><p>“There are only two places in the world where we can live happy: at home and in Paris.”<br></p><cite>— Ernest Hemingway</cite></blockquote>
+<!-- /wp:quote -->
+
+<!-- wp:paragraph -->
+<p>This is an example of a WordPress post, you could edit this to put information about yourself so readers know where you are coming from. You can create as many posts as you like in order to share with them what is on your mind.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":4} -->
+<h4>This is a Sample Heading</h4>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>This is an example of a WordPress post, you could edit this to put information about yourself so readers know where you are coming from. You can create as many posts as you like in order to share with them what is on your mind.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Here’s a sample paragraph with a custom background color:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"customBackgroundColor":"#f5f5f5"} -->
+<p style="background-color:#f5f5f5" class="has-background">This is an example of a WordPress post, you could edit this to put information about yourself so readers know where you are coming from. You can create as many posts as you like in order to share with them what is on your mind.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This is an example of a WordPress post, you could edit this to put information about yourself so readers know where you are coming from. You can create as many posts as you like in order to share with them what is on your mind. This is an example of a WordPress post, you could edit this to put information about yourself so readers know where you are coming from. You can create as many posts as you like in order to share with them what is on your mind.</p>
+<!-- /wp:paragraph -->]]>		</content:encoded>
+		<excerpt:encoded>
+				<![CDATA[]]>		</excerpt:encoded>
+		<wp:post_id>23</wp:post_id>
+		<wp:post_date><![CDATA[2019-04-07 00:24:16]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2019-04-07 00:24:16]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[landing-page]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+														<wp:postmeta>
+		<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+		<wp:meta_value><![CDATA[landing.php]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+		<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title>
+				April in Paris		</title>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/april-in-paris/</link>
+		<pubDate>Mon, 06 May 2019 02:44:42 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/?p=128</guid>
+		<description></description>
+		<content:encoded>
+				<![CDATA[<!-- wp:paragraph -->
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque venenatis augue eget lacinia.<br></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Suspendisse eros dui, fringilla sit amet ante et, fringilla tristique justo. In interdum vitae metus ut feugiat. Nulla id bibendum enim. Nulla fringilla metus eget sapien iaculis vulputate.<br><br>Maecenas euismod lacinia turpis placerat gravida. Integer quis diam a diam vulputate mattis in sit amet justo. Aenean ornare iaculis libero, eu laoreet neque auctor a. Vestibulum interdum diam eu lacus pretium dignissim. Quisque lacus dui, maximus a blandit sed, faucibus at urna. Sed aliquam neque bibendum sapien vestibulum varius. Etiam semper bibendum turpis at vehicula. Etiam pretium vel augue quis laoreet. Sed at condimentum felis.<br><br>Sed at volutpat eros. Cras pellentesque dignissim lobortis. Nulla accumsan ex ligula, sed vestibulum ligula bibendum eu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque quis ipsum et ante imperdiet euismod vel ut nunc. Morbi faucibus metus vel dolor laoreet porta. <br><br>Ut consectetur venenatis libero sed tempus. Morbi accumsan nunc id tincidunt varius. Proin auctor felis vitae ligula scelerisque aliquam. Morbi ornare lacus ex, id aliquet tellus dignissim in. Suspendisse nisl sem, pretium nec ultrices id, pulvinar eget sapien.<br></p>
+<!-- /wp:paragraph -->]]>		</content:encoded>
+		<excerpt:encoded>
+				<![CDATA[]]>		</excerpt:encoded>
+		<wp:post_id>128</wp:post_id>
+		<wp:post_date><![CDATA[2019-05-06 02:44:42]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2019-05-06 02:44:42]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[open]]></wp:ping_status>
+		<wp:post_name><![CDATA[april-in-paris]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+										<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+						<wp:postmeta>
+		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+		<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_genesis_scripts_body_position]]></wp:meta_key>
+		<wp:meta_value><![CDATA[bottom]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[header_disabled]]></wp:meta_key>
+		<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[title_disabled]]></wp:meta_key>
+		<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[footer_disabled]]></wp:meta_key>
+		<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+		<wp:meta_value><![CDATA[103]]></wp:meta_value>
+		</wp:postmeta>
+							</item>
+					<item>
+		<title>
+				The Spirit of Radio		</title>
+		<link>https://demo.genesiscustomizer.com/genesis-sample/the-spirit-of-radio/</link>
+		<pubDate>Mon, 06 May 2019 02:45:26 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">https://demo.genesiscustomizer.com/genesis-sample/?p=130</guid>
+		<description></description>
+		<content:encoded>
+				<![CDATA[<!-- wp:paragraph -->
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam scelerisque venenatis augue eget lacinia. <br>Suspendisse eros dui, fringilla sit amet ante et, fringilla tristique justo. In interdum vitae metus ut feugiat. Nulla id bibendum enim. Nulla fringilla metus eget sapien iaculis vulputate. <br>Maecenas euismod lacinia turpis placerat gravida. Integer quis diam a diam vulputate mattis in sit amet justo. Aenean ornare iaculis libero, eu laoreet neque auctor a. Vestibulum interdum diam eu lacus pretium dignissim. Quisque lacus dui, maximus a blandit sed, faucibus at urna. Sed aliquam neque bibendum sapien vestibulum varius. Etiam semper bibendum turpis at vehicula. Etiam pretium vel augue quis laoreet. Sed at condimentum felis.<br>Sed at volutpat eros. Cras pellentesque dignissim lobortis. Nulla accumsan ex ligula, sed vestibulum ligula bibendum eu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Pellentesque quis ipsum et ante imperdiet euismod vel ut nunc. Morbi faucibus metus vel dolor laoreet porta. <br>Ut consectetur venenatis libero sed tempus. Morbi accumsan nunc id tincidunt varius. Proin auctor felis vitae ligula scelerisque aliquam. Morbi ornare lacus ex, id aliquet tellus dignissim in. Suspendisse nisl sem, pretium nec ultrices id, pulvinar eget sapien.<br></p>
+<!-- /wp:paragraph -->]]>		</content:encoded>
+		<excerpt:encoded>
+				<![CDATA[]]>		</excerpt:encoded>
+		<wp:post_id>130</wp:post_id>
+		<wp:post_date><![CDATA[2019-05-06 02:45:26]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2019-05-06 02:45:26]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[open]]></wp:ping_status>
+		<wp:post_name><![CDATA[the-spirit-of-radio]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+										<category domain="category" nicename="uncategorized"><![CDATA[Uncategorized]]></category>
+						<wp:postmeta>
+		<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+		<wp:meta_value><![CDATA[107]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+		<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[_genesis_scripts_body_position]]></wp:meta_key>
+		<wp:meta_value><![CDATA[bottom]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[header_disabled]]></wp:meta_key>
+		<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[title_disabled]]></wp:meta_key>
+		<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+							<wp:postmeta>
+		<wp:meta_key><![CDATA[footer_disabled]]></wp:meta_key>
 		<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
 							</item>
