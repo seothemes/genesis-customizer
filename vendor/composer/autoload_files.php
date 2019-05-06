@@ -6,11 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    '320cde22f66dd4f5d3fd621d3e88b98f' => $vendorDir . '/symfony/polyfill-ctype/bootstrap.php',
-    '6124b4c8570aa390c21fafd04a26c69f' => $vendorDir . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
     'c92bf23a32412037ecdc51806b458c36' => $vendorDir . '/alledia/edd-sl-plugin-updater/EDD_SL_Plugin_Updater.php',
-    '051bafe20e2674435a162870efa2d2a7' => $vendorDir . '/brain/monkey/inc/api.php',
-    '38fbb71d514eee25044aa9d94851ee76' => $vendorDir . '/wp-phpunit/wp-phpunit/__loaded.php',
     '89ff252b349d4d088742a09c25f5dd74' => $vendorDir . '/yahnis-elsts/plugin-update-checker/plugin-update-checker.php',
     'a0c43c4da349ad36234823ab067125b5' => $vendorDir . '/aristath/kirki/kirki.php',
     'cd687daee92ab44e083eb4f832f9f903' => $baseDir . '/src/autoload.php',
