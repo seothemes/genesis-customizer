@@ -4,7 +4,7 @@
  *
  * Plugin Name:  Genesis Customizer
  * Author:       SEO Themes
- * Version:      0.3.3
+ * Version:      0.3.2
  * Text Domain:  genesis-customizer
  * Plugin URI:   https://genesiscustomizer.com/
  * Description:  Core functionality plugin for the Genesis Customizer theme.
