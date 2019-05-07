@@ -10,10 +10,17 @@
     }
   ],
   "minimum-stability": "dev",
+  "repositories": [
+    {
+      "url": "https://github.com/proteusthemes/one-click-demo-import.git",
+      "type": "git"
+    }
+  ],
   "require": {
     "php": ">=5.4.0",
     "alledia/edd-sl-plugin-updater": "dev-master",
     "aristath/kirki": "dev-master",
+    "proteusthemes/one-click-demo-import": "dev-master",
     "yahnis-elsts/plugin-update-checker": "dev-master"
   },
   "require-dev": {
@@ -31,8 +38,7 @@
       "src/classes"
     ],
     "files": [
-      "vendor/aristath/kirki/kirki.php",
-      "src/autoload.php"
+      "vendor/aristath/kirki/kirki.php"
     ]
   },
   "config": {
@@ -45,6 +51,9 @@
     "install-codestandards": "Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run",
     "phpcs": "phpcs",
     "test-unit": "composer dump && \"vendor/bin/phpunit\" --testsuite unit --color=always",
-    "test-integration": "composer dump && \"vendor/bin/phpunit\" --testsuite integration --configuration tests/phpunit/integration/phpunit.xml.dist --color=always"
+    "test-integration": "composer dump && \"vendor/bin/phpunit\" --testsuite integration --configuration tests/phpunit/integration/phpunit.xml.dist --color=always",
+    "post-update-cmd": [
+      "rm -Rf vendor/aristath/kirki/.gitignore"
+    ]
   }
 }

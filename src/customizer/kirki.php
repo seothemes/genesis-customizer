@@ -15,7 +15,7 @@ namespace GenesisCustomizer;
 // Disable kirki telemetry.
 add_filter( 'kirki_telemetry', '__return_false' );
 
-add_action( 'genesis_setup', __NAMESPACE__ . '\kirki_setup' );
+add_action( 'genesis_setup', __NAMESPACE__ . '\kirki_filters' );
 /**
  * Add miscellaneous Kirki filters after setup.
  *
@@ -23,8 +23,7 @@ add_action( 'genesis_setup', __NAMESPACE__ . '\kirki_setup' );
  *
  * @return void
  */
-function kirki_setup() {
-	add_filter( 'kirki_telemetry', '__return_false' );
+function kirki_filters() {
 	add_filter( 'kirki/dynamic_css/method', '__return_true' );
 	add_filter( 'kirki_gutenberg_' . _get_handle() . '_dynamic_css', function () {
 		return home_url( '?action=kirki-styles' );

@@ -70,6 +70,10 @@ Gulpfile.js export-ignore
 /vendor/aristath/kirki/Gruntfile.js export-ignore
 /vendor/aristath/kirki/example.php export-ignore
 
+/vendor/proteusthemes/one-click-demo-import/readme.md export-ignore
+
+/vendor/proteusthemes/wp-content-importer-v2/README.md export-ignore
+
 /vendor/yahnis-elsts/plugin-update-checker/examples/ export-ignore
 /vendor/yahnis-elsts/plugin-update-checker/.editorconfig export-ignore
 /vendor/yahnis-elsts/plugin-update-checker/license.txt export-ignore

@@ -10,7 +10,28 @@ class ComposerStaticInit13174642eae61c3118a83d91f4ca9697
         'c92bf23a32412037ecdc51806b458c36' => __DIR__ . '/..' . '/alledia/edd-sl-plugin-updater/EDD_SL_Plugin_Updater.php',
         '89ff252b349d4d088742a09c25f5dd74' => __DIR__ . '/..' . '/yahnis-elsts/plugin-update-checker/plugin-update-checker.php',
         'a0c43c4da349ad36234823ab067125b5' => __DIR__ . '/..' . '/aristath/kirki/kirki.php',
-        'cd687daee92ab44e083eb4f832f9f903' => __DIR__ . '/../..' . '/src/autoload.php',
+    );
+
+    public static $prefixLengthsPsr4 = array (
+        'P' => 
+        array (
+            'ProteusThemes\\WPContentImporter2\\' => 33,
+        ),
+        'O' => 
+        array (
+            'OCDI\\' => 5,
+        ),
+    );
+
+    public static $prefixDirsPsr4 = array (
+        'ProteusThemes\\WPContentImporter2\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/proteusthemes/wp-content-importer-v2/src',
+        ),
+        'OCDI\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/proteusthemes/one-click-demo-import/inc',
+        ),
     );
 
     public static $classMap = array (
@@ -27,6 +48,8 @@ class ComposerStaticInit13174642eae61c3118a83d91f4ca9697
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
+            $loader->prefixLengthsPsr4 = ComposerStaticInit13174642eae61c3118a83d91f4ca9697::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit13174642eae61c3118a83d91f4ca9697::$prefixDirsPsr4;
             $loader->classMap = ComposerStaticInit13174642eae61c3118a83d91f4ca9697::$classMap;
 
         }, null, ClassLoader::class);

@@ -22,4 +22,14 @@
  * @license   GPL-3.0-or-later
  */
 
-require_once __DIR__ . '/vendor/autoload.php';
+// Check compatibility.
+require_once __DIR__ . '/src/bootstrap/compat.php';
+
+// Load helper functions.
+require_once __DIR__ . '/src/bootstrap/helpers.php';
+
+// Do plugin setup.
+require_once __DIR__ . '/src/bootstrap/setup.php';
+
+// Load plugin files.
+require_once __DIR__ . '/src/bootstrap/autoload.php';

@@ -1298,6 +1298,74 @@
         "abandoned": true
     },
     {
+        "name": "proteusthemes/one-click-demo-import",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/proteusthemes/one-click-demo-import.git",
+            "reference": "e0f2abcf6276f15d1055605454236c765de7017e"
+        },
+        "require": {
+            "proteusthemes/wp-content-importer-v2": "^0.4.7"
+        },
+        "time": "2018-10-25T07:13:38+00:00",
+        "type": "project",
+        "installation-source": "source",
+        "autoload": {
+            "psr-4": {
+                "OCDI\\": "inc/"
+            }
+        },
+        "license": [
+            "GPL-3.0+"
+        ],
+        "description": "One Click Demo Import plugin by ProteusThemes."
+    },
+    {
+        "name": "proteusthemes/wp-content-importer-v2",
+        "version": "v0.4.7",
+        "version_normalized": "0.4.7.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/proteusthemes/WordPress-Importer.git",
+            "reference": "ec052cc8fdcde29b47b69599b2b430e7fb423c22"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/proteusthemes/WordPress-Importer/zipball/ec052cc8fdcde29b47b69599b2b430e7fb423c22",
+            "reference": "ec052cc8fdcde29b47b69599b2b430e7fb423c22",
+            "shasum": ""
+        },
+        "time": "2017-05-02T11:07:20+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "ProteusThemes\\WPContentImporter2\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "GPL-2.0+"
+        ],
+        "authors": [
+            {
+                "name": "Contributors",
+                "homepage": "https://github.com/humanmade/WordPress-Importer/graphs/contributors"
+            }
+        ],
+        "description": "WP content importer v2 forked from humanmade/wordpress-importer.",
+        "keywords": [
+            "content",
+            "import",
+            "proteusthemes",
+            "theme",
+            "wordpress",
+            "wp"
+        ]
+    },
+    {
         "name": "sebastian/code-unit-reverse-lookup",
         "version": "dev-master",
         "version_normalized": "9999999-dev",

@@ -9,5 +9,4 @@ return array(
     'c92bf23a32412037ecdc51806b458c36' => $vendorDir . '/alledia/edd-sl-plugin-updater/EDD_SL_Plugin_Updater.php',
     '89ff252b349d4d088742a09c25f5dd74' => $vendorDir . '/yahnis-elsts/plugin-update-checker/plugin-update-checker.php',
     'a0c43c4da349ad36234823ab067125b5' => $vendorDir . '/aristath/kirki/kirki.php',
-    'cd687daee92ab44e083eb4f832f9f903' => $baseDir . '/src/autoload.php',
 );

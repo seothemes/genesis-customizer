@@ -20,8 +20,6 @@ add_filter( 'pt-ocdi/plugin_intro_text', '__return_empty_string' );
 
 add_filter( 'network_admin_plugin_action_links_genesis-customizer/genesis-customizer.php', __NAMESPACE__ . '\change_plugin_dependency_text', 100 );
 add_filter( 'plugin_action_links_genesis-customizer/genesis-customizer.php', __NAMESPACE__ . '\change_plugin_dependency_text', 100 );
-add_filter( 'network_admin_plugin_action_links_one-click-demo-import/one-click-demo-import.php', __NAMESPACE__ . '\change_plugin_dependency_text', 100 );
-add_filter( 'plugin_action_links_one-click-demo-import/one-click-demo-import.php', __NAMESPACE__ . '\change_plugin_dependency_text', 100 );
 /**
  * Change plugin dependency text.
  *
@@ -154,38 +152,6 @@ function after_demo_import() {
 	global $wp_rewrite;
 	$wp_rewrite->set_permalink_structure( '/%postname%/' );
 	$wp_rewrite->flush_rules();
-}
-
-add_filter( 'all_plugins', __NAMESPACE__ . '\hide_dependencies' );
-/**
- * Hide dependencies from plugins list in admin.
- *
- * @since 1.0.0
- *
- * @param array $plugins List of all installed plugins.
- *
- * @return mixed
- */
-function hide_dependencies( $plugins ) {
-	if ( is_network_admin() || ! _get_option( 'dependencies', true ) ) {
-		return $plugins;
-	}
-
-	$dependencies = [
-		'genesis-customizer',
-		'kirki',
-		'one-click-demo-import',
-	];
-
-	foreach ( $dependencies as $dependency ) {
-		$plugin = "$dependency/$dependency.php";
-
-		if ( is_plugin_active( $plugin ) ) {
-			unset( $plugins[ $plugin ] );
-		}
-	}
-
-	return $plugins;
 }
 
 add_filter( 'gettext', __NAMESPACE__ . '\modify_ocdi_strings', 20, 3 );
