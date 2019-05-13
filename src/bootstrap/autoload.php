@@ -12,7 +12,7 @@
 
 namespace GenesisCustomizer;
 
-add_action( 'plugins_loaded', __NAMESPACE__ . '\autoload_dependencies' );
+add_action( 'plugins_loaded', __NAMESPACE__ . '\autoload_dependencies', 15 );
 /**
  * Load Composer Autoloader file.
  *

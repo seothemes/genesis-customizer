@@ -12,58 +12,60 @@
 
 namespace GenesisCustomizer;
 
-add_action( 'plugins_loaded', __NAMESPACE__ . '\compat' );
-/**
- * Check compatibility.
- *
- * @since 1.0.0
- *
- * @return void
- */
-function compat() {
-	if ( ! is_compatible() ) {
-		if ( ! function_exists( 'deactivate_plugins' ) ) {
-			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+$parent_theme = wp_get_theme()->parent();
+
+if ( ! $parent_theme || 'Genesis' !== $parent_theme->get( 'Name' ) ) {
+
+	add_action( 'plugins_loaded', __NAMESPACE__ . '\init_deactivation' );
+	/**
+	 * Initialize deactivation functions.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return void
+	 */
+	function init_deactivation() {
+		if ( current_user_can( 'activate_plugins' ) ) {
+			add_action( 'admin_init', __NAMESPACE__ . '\deactivate' );
+			add_action( 'admin_notices', __NAMESPACE__ . '\deactivation_notice' );
 		}
-
-		deactivate_plugins( plugin_dir_path( dirname( __DIR__ ) ) . 'genesis-customizer.php' );
 	}
-}
 
-add_action( 'admin_notices', __NAMESPACE__ . '\deactivation_notice' );
-/**
- * Display deactivation notice.
- *
- * @since 1.0.0
- *
- * @return string
- */
-function deactivation_notice() {
-	if ( ! is_compatible() ) {
+	/**
+	 * Deactivate the plugin.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return void
+	 */
+	function deactivate() {
+		$file = 'genesis-customizer/genesis-customizer.php';
+
+		deactivate_plugins( plugin_basename( $file ) );
+	}
+
+	/**
+	 * Show deactivation admin notice.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @return void
+	 */
+	function deactivation_notice() {
+		printf(
+			'<div class="notice notice-error"><p><b>%s</b> %s</p></div>',
+			esc_html__( 'Genesis Customizer', 'genesis-customizer' ),
+			esc_html__( 'requires the Genesis Framework to run and has been deactivated.', 'genesis-customizer' )
+		);
+
+		// phpcs:ignore WordPress.Security.NonceVerification.Recommended
 		if ( isset( $_GET['activate'] ) ) {
 			unset( $_GET['activate'] );
 		}
-
-		return printf(
-			'<div class="notice notice-error"><p><b>%s</b> %s</p></div>',
-			esc_html( _get_name() ),
-			esc_html__( 'requires the Genesis Framework parent theme to run and has been deactivated.', 'genesis-customizer' )
-		);
-
-	} else {
-		return '';
 	}
+
+	return false;
 }
 
-/**
- * Check if plugin is compatible.
- *
- * @since 1.0.0
- *
- * @return bool
- */
-function is_compatible() {
-	$parent_theme = wp_get_theme()->parent();
-
-	return $parent_theme && 'Genesis' === $parent_theme->get( 'Name' );
-}
+// Return true if checks passed.
+return true;
