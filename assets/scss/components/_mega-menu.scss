@@ -1,3 +1,11 @@
+////
+/// Mega menu component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://genesiscustomizer.com/
+////
+
 .mega-menu {
 	display: flex;
 	position: absolute;
@@ -12,11 +20,14 @@
 
 	.wrap {
 		align-items: flex-start;
+
+		@include overlay();
 	}
 
 	.widget {
 		padding-right: 2em;
 		flex: 1;
+		position: relative;
 
 		&:last-of-type {
 			padding-right: 0;

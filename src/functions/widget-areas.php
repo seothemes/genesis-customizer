@@ -53,11 +53,6 @@ function register_widget_areas() {
 			'name'        => __( 'Header Right', 'genesis-customizer' ),
 			'description' => __( 'This is the Header Right widget area. It typically appears next to the site title or logo. This widget area is not suitable to display every type of widget, and works best with a custom menu, a search form, or possibly a text widget.', 'genesis-customizer' ),
 		],
-		'below-header'        => [
-			'name'        => __( 'Below Header', 'genesis-customizer' ),
-			'description' => __( 'This is the Below Header widget area.', 'genesis-customizer' ),
-			'module'      => 'extra-widgets',
-		],
 		'mobile-menu'         => [
 			'name'        => __( 'Mobile Menu', 'genesis-customizer' ),
 			'description' => __( 'This is the Mobile Menu widget area. It is displayed inside the responsive mobile menu on smaller screens.', 'genesis-customizer' ),
@@ -67,6 +62,11 @@ function register_widget_areas() {
 			'name'        => __( 'Mega Menu', 'genesis-customizer' ),
 			'description' => __( 'This is the Mega Menu widget area.', 'genesis-customizer' ),
 			'module'      => 'mega-menu',
+		],
+		'below-header'        => [
+			'name'        => __( 'Below Header', 'genesis-customizer' ),
+			'description' => __( 'This is the Below Header widget area.', 'genesis-customizer' ),
+			'module'      => 'extra-widgets',
 		],
 		'above-content'       => [
 			'name'        => __( 'Above Content', 'genesis-customizer' ),
@@ -128,7 +128,7 @@ function register_footer_widgets() {
 	$columns = count( explode( '-', $setting ) );
 	$count   = is_customize_preview() ? 4 : $columns;
 
-	for ( $i = 1; $i <= $count; $i ++ ) {
+	for ( $i = 1; $i <= $count; $i++ ) {
 		genesis_register_sidebar( [
 			'id'          => 'footer-' . $i,
 			'name'        => __( 'Footer ', 'genesis-customizer' ) . $i,

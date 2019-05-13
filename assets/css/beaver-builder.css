@@ -3,7 +3,6 @@
 }
 
 @media (min-width: 896px) {
-
 	.fl-builder-edit.admin-bar.has-sticky-header .site-header,
 	.fl-builder-edit.admin-bar.has-sticky-header-desktop .site-header {
 		top: 45px !important;

@@ -4,6 +4,18 @@ namespace GenesisCustomizer;
 
 return [
 	[
+		'type'     => 'custom',
+		'settings' => 'tip',
+		'default'  => sprintf(
+			'<p><strong>%s</strong> %s <a href="%s" target="_blank">%s</a> %s</p><hr>',
+			esc_html__( 'Tip: ', 'genesis-customizer' ),
+			esc_html__( 'For a list of available post shortcodes, please see the ', 'genesis-customizer' ),
+			esc_attr( 'https://my.studiopress.com/documentation/customization/shortcodes-reference/post-shortcode-reference/' ),
+			esc_html__( 'Post Shortcode Reference', 'genesis-customizer' ),
+			esc_html__( 'provided by StudioPress.', 'genesis-customizer' )
+		),
+	],
+	[
 		'type'     => 'generic',
 		'settings' => 'post-info',
 		'label'    => __( 'Post Info', 'genesis-customizer' ),
@@ -67,8 +79,8 @@ return [
 	],
 	[
 		'type'     => 'typography',
-		'settings' => 'entry-meta-typography',
-		'label'    => __( 'Entry Meta Typography', 'genesis-customizer' ),
+		'settings' => 'typography',
+		'label'    => __( 'Typography', 'genesis-customizer' ),
 		'default'  => [
 			'font-family'    => '',
 			'font-size'      => '',

@@ -132,4 +132,28 @@ return [
 			],
 		],
 	],
+	[
+		'type'     => 'slider',
+		'settings' => 'border-width',
+		'label'    => __( 'Border Width', 'genesis-customizer' ),
+		'default'  => '0',
+		'choices'  => [
+			'min'  => 0,
+			'max'  => 10,
+			'step' => 1,
+		],
+		'output'   => [
+			[
+				'element'  => '.sub-menu-toggle',
+				'property' => 'border-width',
+				'units'    => 'px',
+			],
+			[
+				'element'       => '.sub-menu-toggle',
+				'property'      => 'border-style',
+				'value_pattern' => 'solid',
+				'exclude'       => [ '0' ],
+			],
+		],
+	],
 ];

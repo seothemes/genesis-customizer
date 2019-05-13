@@ -85,17 +85,6 @@ return [
 		],
 	],
 	[
-		'type'     => 'slider',
-		'settings' => 'angle',
-		'label'    => __( 'Gradient Angle', 'genesis-customizer' ),
-		'default'  => 135,
-		'choices'  => [
-			'min'  => 0,
-			'max'  => 360,
-			'step' => 1,
-		],
-	],
-	[
 		'type'     => 'custom',
 		'settings' => 'divider',
 		'default'  => '<hr>',

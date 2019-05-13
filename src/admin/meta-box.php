@@ -96,11 +96,7 @@ function save_meta_box( $post_id ) {
 function render_meta_box( $post ) {
 	$handle   = _get_handle();
 	$counter  = 0;
-	$settings = apply_filters( 'genesis_customizer_page_settings', [
-		'site_header' => 'header_disabled',
-		'page_title'  => 'title_disabled',
-		'site_footer' => 'footer_disabled',
-	] );
+	$settings = page_settings_defaults();
 
 	foreach ( $settings as $setting => $post_meta_key ) {
 		$disabled = get_post_meta( $post->ID, $post_meta_key, true );
@@ -115,4 +111,19 @@ function render_meta_box( $post ) {
 	}
 
 	wp_nonce_field( $handle . '_meta_box_nonce_action', $handle . '_meta_box_nonce' );
+}
+
+/**
+ * Return page settings. Used in multiple places.
+ *
+ * @since 1.0.0
+ *
+ * @return array
+ */
+function page_settings_defaults() {
+	return apply_filters( 'genesis_customizer_page_settings', [
+		'site_header' => 'header_disabled',
+		'page_title'  => 'title_disabled',
+		'site_footer' => 'footer_disabled',
+	] );
 }

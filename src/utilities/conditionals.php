@@ -21,12 +21,12 @@ namespace GenesisCustomizer;
  */
 function _is_single() {
 	return ( is_front_page() ||
-			 is_single() ||
-			 is_page() ||
-			 is_404() ||
-			 is_attachment() ||
-			 is_singular() ) &&
-		   ! genesis_is_blog_template();
+	         is_single() ||
+	         is_page() ||
+	         is_404() ||
+	         is_attachment() ||
+	         is_singular() ) &&
+	       ! genesis_is_blog_template();
 }
 
 /**
@@ -38,19 +38,19 @@ function _is_single() {
  */
 function _is_archive() {
 	return is_home() ||
-		   is_post_type_archive() ||
-		   is_category() ||
-		   is_tag() ||
-		   is_tax() ||
-		   is_author() ||
-		   is_date() ||
-		   is_year() ||
-		   is_month() ||
-		   is_day() ||
-		   is_time() ||
-		   is_archive() ||
-		   is_search() ||
-		   genesis_is_blog_template();
+	       is_post_type_archive() ||
+	       is_category() ||
+	       is_tag() ||
+	       is_tax() ||
+	       is_author() ||
+	       is_date() ||
+	       is_year() ||
+	       is_month() ||
+	       is_day() ||
+	       is_time() ||
+	       is_archive() ||
+	       is_search() ||
+	       genesis_is_blog_template();
 }
 
 /**
@@ -149,7 +149,13 @@ function _has_sticky_header() {
 		return false;
 	}
 
-	$disabled = get_post_meta( get_the_ID(), 'sticky_disabled', true );
+	if ( is_home() ) {
+		$id = get_option( 'page_for_posts' );
+	} else {
+		$id = get_the_ID();
+	}
+
+	$disabled = get_post_meta( $id, 'sticky_disabled', true );
 
 	if ( $disabled ) {
 		return false;
@@ -166,7 +172,7 @@ function _has_sticky_header() {
  * @return bool
  */
 function _has_transparent_header() {
-	if ( ! _is_module_enabled( [ 'hero-section', 'transparent-header' ] ) ) {
+	if ( ! _is_module_enabled( [ 'transparent-header' ] ) ) {
 		return false;
 	}
 
@@ -176,7 +182,13 @@ function _has_transparent_header() {
 		return false;
 	}
 
-	$disabled = get_post_meta( get_the_ID(), 'transparent_disabled', true );
+	if ( is_home() ) {
+		$id = get_option( 'page_for_posts' );
+	} else {
+		$id = get_the_ID();
+	}
+
+	$disabled = get_post_meta( $id, 'transparent_disabled', true );
 
 	if ( $disabled ) {
 		return false;

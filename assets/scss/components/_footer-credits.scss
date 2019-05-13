@@ -1,16 +1,16 @@
-// Footer credits layout.
+////
+/// Footer credits component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://genesiscustomizer.com/
+////
+
 .footer-credits {
 	position: relative;
 
 	p {
 		width: 100%;
 		margin-bottom: 0;
-	}
-}
-
-.scroll-to-top {
-
-	@include mq(m) {
-		float: right;
 	}
 }

@@ -114,7 +114,7 @@ function add_extra_fields() {
 		'priority'  => 8,
 		'default'   => '16',
 		'choices'   => [
-			'min'  => - 20,
+			'min'  => -20,
 			'max'  => 100,
 			'step' => 1,
 		],
@@ -140,7 +140,7 @@ function add_extra_fields() {
 
 	\Kirki::add_field( $handle, [
 		'type'            => 'custom',
-		'settings'        => 'tip',
+		'settings'        => 'logo-tip-329888298',
 		'section'         => 'title_tagline',
 		'priority'        => 8,
 		'default'         => sprintf(
@@ -197,14 +197,17 @@ function add_extra_fields() {
 		\Kirki::add_field( $handle, [
 			'type'     => 'custom',
 			'section'  => 'title_tagline',
-			'settings' => 'tip',
+			'settings' => 'tip-38739',
 			'priority' => 7,
 			'default'  => sprintf(
-				'<p><strong>%s</strong> %s <a href="javascript:wp.customize.control( %s ).focus();">%s</a></p><hr>',
+				'<p><strong>%s</strong> %s <a href="javascript:wp.customize.control( %s ).focus();">%s</a> %s <a href="javascript:wp.customize.control( %s ).focus();">%s</a></p><hr>',
 				esc_html__( 'Tip: ', 'genesis-customizer' ),
-				esc_html__( 'Using a transparent header? Set an alternative logo from the  ', 'genesis-customizer' ),
+				esc_html__( 'Using a transparent or sticky header? Set an alternative logo from the ', 'genesis-customizer' ),
 				esc_attr( '"genesis-customizer_header_transparent_different-logo"' ),
-				esc_html__( 'Transparent Header Logo Setting', 'genesis-customizer' )
+				esc_html__( 'Transparent Header Logo Setting', 'genesis-customizer' ),
+				esc_html__( 'or the', 'genesis-customizer' ),
+				esc_attr( '"genesis-customizer_header_sticky_different-logo"' ),
+				esc_html__( 'Sticky Header Logo Setting', 'genesis-customizer' )
 			),
 		] );
 	}

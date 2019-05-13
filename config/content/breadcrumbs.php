@@ -48,9 +48,26 @@ $fields = [
 		'default'  => '<hr>',
 	],
 	[
-		'type'     => 'dimensions',
+		'type'     => 'typography',
 		'settings' => 'typography',
 		'label'    => __( 'Typography', 'genesis-customizer' ),
+		'default'  => [
+			'font-family'    => '',
+			'variant'        => '',
+			'line-height'    => '',
+			'letter-spacing' => '',
+			'text-transform' => '',
+		],
+		'output'   => [
+			[
+				'element' => '.breadcrumb',
+			],
+		],
+	],
+	[
+		'type'     => 'dimensions',
+		'settings' => 'font-size',
+		'label'    => __( 'Font Size', 'genesis-customizer' ),
 		'default'  => [
 			'mobile'  => _get_size( 's' ),
 			'desktop' => '',

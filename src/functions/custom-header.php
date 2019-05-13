@@ -21,7 +21,6 @@ register_default_headers( [
 	],
 ] );
 
-add_filter( 'theme_mod_header_image', __NAMESPACE__ . '\custom_header', 25 );
 /**
  * Custom header image callback.
  *
@@ -34,13 +33,10 @@ add_filter( 'theme_mod_header_image', __NAMESPACE__ . '\custom_header', 25 );
  * @return string
  */
 function custom_header() {
-	$id        = '';
-	$url       = '';
-	$default   = get_theme_support( 'custom-header' )[0]['default_image'];
-	$thememods = get_theme_mods();
-	$thememod  = isset( $thememods['header_image'] ) ? $thememods['header_image'] : '';
-	$default   = $thememod ? $thememod : $default;
-	$feature   = _get_value( 'hero_settings_featured-image', true );
+	$id      = '';
+	$url     = '';
+	$default = get_header_image();
+	$feature = _get_value( 'hero_settings_featured-image', true );
 
 	// TODO: Add rules for every conditional in template-loader.php.
 	if ( _is_plugin_active( 'woocommerce' ) && \is_shop() ) {
@@ -53,16 +49,16 @@ function custom_header() {
 		$id = get_option( 'page_for_posts' );
 
 	} elseif ( is_post_type_archive() ) {
-		$url = get_theme_mod( get_query_var( 'post_type' ) . '-image', $default );
+		$url = _get_value( get_query_var( 'post_type' ) . '-image', $default );
 
 	} elseif ( is_category() ) {
-		$url = get_theme_mod( 'term-' . get_the_category()[0]->cat_ID, $default );
+		$url = _get_value( 'term-' . get_the_category()[0]->cat_ID, $default );
 
 	} elseif ( is_tag() ) {
-		$url = get_theme_mod( 'term-' . get_the_category()[0]->cat_ID, $default );
+		$url = _get_value( 'term-' . get_the_category()[0]->cat_ID, $default );
 
 	} elseif ( is_tax() ) {
-		$url = get_theme_mod( 'term-' . get_the_category()[0]->cat_ID, $default );
+		$url = _get_value( 'term-' . get_the_category()[0]->cat_ID, $default );
 
 	} elseif ( is_search() ) {
 		$id = get_page_by_path( 'search' );
@@ -88,5 +84,7 @@ function custom_header() {
 		$url = $default;
 	}
 
-	return esc_url_raw( set_url_scheme( $url ) );
+	$selector = get_theme_support( 'custom-header', 'header-selector' );
+
+	return printf( '<style type="text/css">' . esc_attr( $selector ) . '{background-image:url(%s)}</style>' . "\n", esc_url( $url ) );
 }

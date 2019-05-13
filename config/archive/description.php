@@ -114,7 +114,7 @@ return [
 	[
 		'type'     => 'slider',
 		'settings' => 'spacing',
-		'label'    => __( 'Archive Description Spacing', 'genesis-customizer' ),
+		'label'    => __( 'Spacing', 'genesis-customizer' ),
 		'default'  => _get_size( 'xl', '' ),
 		'choices'  => [
 			'min'  => 0,

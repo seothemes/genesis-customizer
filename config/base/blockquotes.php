@@ -67,6 +67,11 @@ return [
 		],
 	],
 	[
+		'type'     => 'custom',
+		'settings' => 'divider',
+		'default'  => '<hr>',
+	],
+	[
 		'type'     => 'dimensions',
 		'settings' => 'border-width',
 		'label'    => __( 'Border', 'genesis-customizer' ),

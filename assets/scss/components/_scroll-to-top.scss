@@ -1,10 +1,26 @@
-.scroll-to-top-icon {
-	display: flex;
-	position: fixed;
-	right: $spacing--xl;
-	bottom: $spacing--l;
-	line-height: 1;
-	transform: rotate(180deg);
-	align-items: center;
-	justify-content: center;
+////
+/// Scroll to top component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://genesiscustomizer.com/
+////
+
+.scroll-to-top {
+
+	@include mq(m) {
+		float: right;
+	}
+
+	// Scroll to Top Icon.
+	&-icon {
+		display: flex;
+		position: fixed;
+		right: $spacing--xl;
+		bottom: $spacing--l;
+		line-height: 1;
+		transform: rotate(180deg);
+		align-items: center;
+		justify-content: center;
+	}
 }

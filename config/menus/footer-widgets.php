@@ -4,17 +4,18 @@ namespace GenesisCustomizer;
 
 return [
 	[
-		'type'     => 'select',
-		'settings' => 'widgets-columns',
-		'label'    => __( 'Footer Widgets Menu Columns', 'genesis-customizer' ),
-		'default'  => '2',
-		'choices'  => [
+		'type'        => 'select',
+		'settings'    => 'widgets-columns',
+		'label'       => __( 'Footer Widgets Menu Columns', 'genesis-customizer' ),
+		'description' => __( 'Changes the number of columns for menu items in Navigation Menu widgets.', 'genesis-customizer' ),
+		'default'     => '2',
+		'choices'     => [
 			'1' => __( '1 Column', 'genesis-customizer' ),
 			'2' => __( '2 Column', 'genesis-customizer' ),
 			'3' => __( '3 Column', 'genesis-customizer' ),
 			'4' => __( '4 Column', 'genesis-customizer' ),
 		],
-		'output'   => [
+		'output'      => [
 			[
 				'element'  => '.footer-widgets .menu',
 				'property' => 'columns',

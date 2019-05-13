@@ -48,7 +48,7 @@ return [
 	[
 		'type'     => 'typography',
 		'settings' => 'typography',
-		'label'    => __( 'Code', 'genesis-customizer' ),
+		'label'    => __( 'Typography', 'genesis-customizer' ),
 		'default'  => [
 			'font-family' => '',
 			'font-size'   => _get_size( 's' ),

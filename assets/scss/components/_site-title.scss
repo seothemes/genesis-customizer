@@ -1,6 +1,19 @@
+////
+/// Site title component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://genesiscustomizer.com/
+////
 
-// Site title.
-.title-area .site-title {
-	margin: 0;
-	font-weight: $font-weight--bold;
+.site-title {
+
+	.title-area & {
+		margin: 0;
+		font-weight: $font-weight--bold;
+	}
+
+	&-link {
+		display: block;
+	}
 }

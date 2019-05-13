@@ -40,8 +40,8 @@ return [
 		'default'  => [
 			'background-image'      => '',
 			'background-repeat'     => '',
-			'background-position'   => '',
-			'background-size'       => '',
+			'background-position'   => 'center center',
+			'background-size'       => 'cover',
 			'background-attachment' => '',
 		],
 		'output'   => [
@@ -60,7 +60,6 @@ return [
 		'settings' => 'wrap-width',
 		'label'    => __( 'Container Width', 'genesis-customizer' ),
 		'default'  => '1152',
-		'priority' => 4,
 		'choices'  => [
 			'min'  => 256,
 			'max'  => 1920,

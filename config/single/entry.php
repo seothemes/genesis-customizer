@@ -58,7 +58,7 @@ return [
 	[
 		'type'     => 'radio-buttonset',
 		'settings' => 'text-align',
-		'label'    => __( 'Text Alignment', 'genesis-customizer' ),
+		'label'    => __( 'Title Text Alignment', 'genesis-customizer' ),
 		'default'  => 'left',
 		'choices'  => [
 			'left'   => _get_svg( 'alignleft' ),

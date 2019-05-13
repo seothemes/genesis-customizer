@@ -91,6 +91,7 @@ class Admin_API {
 
 				$handle = _get_handle();
 				$status = _get_license( 'status' );
+				$key    = _get_license( 'key' );
 
 				if ( 'valid' === $status ) {
 					$html .= sprintf(
@@ -103,6 +104,9 @@ class Admin_API {
 						$handle,
 						__( 'Deactivate License', 'genesis-customizer' )
 					);
+
+				} else if ( '' === $key ) {
+					$html .= '';
 
 				} else {
 					$html .= wp_nonce_field( $handle, $handle );
