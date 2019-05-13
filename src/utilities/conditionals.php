@@ -108,7 +108,7 @@ function _is_pro_active() {
  */
 function _is_plugin_active( $plugin ) {
 	$plugins = [
-		'genesis-customizer-pro' => __NAMESPACE__ . '\init_deactivation',
+		'genesis-customizer-pro' => __NAMESPACE__ . '\_get_pro_data',
 		'easy-digital-downloads' => 'Easy_Digital_Downloads',
 		'beaver-builder'         => 'FLBuilderLoader',
 		'woocommerce'            => 'WooCommerce',
