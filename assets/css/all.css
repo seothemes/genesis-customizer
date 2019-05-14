@@ -1627,14 +1627,12 @@ iframe {
   justify-content: center;
 }
 
-.page-template-blocks .content,
-.page-template-beaver-builder .content {
+.page-template-blocks .content {
   width: 100%;
   margin: 0 auto;
 }
 
-.page-template-blocks .content > .entry,
-.page-template-beaver-builder .content > .entry {
+.page-template-blocks .content > .entry {
   padding: 0;
 }
 

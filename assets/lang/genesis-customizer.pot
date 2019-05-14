@@ -1106,8 +1106,12 @@ msgstr ""
 msgid "Go Pro"
 msgstr ""
 
-#: src/bootstrap/compat.php:50
-msgid "requires the Genesis Framework parent theme to run and has been deactivated."
+#: src/bootstrap/compat.php:57
+msgid "Genesis Customizer"
+msgstr ""
+
+#: src/bootstrap/compat.php:58
+msgid "requires the Genesis Framework to run and has been deactivated."
 msgstr ""
 
 #: src/classes/class-admin-api.php:99

@@ -17,3 +17,22 @@
 		}
 	}
 }
+
+
+.page-template.page-template-beaver-builder {
+
+	.site-container {
+		position: relative;
+	}
+
+	.content {
+		width: 100%;
+		max-width: 100%;
+		margin: 0;
+
+		.entry {
+			padding: 0;
+			margin: 0;
+		}
+	}
+}

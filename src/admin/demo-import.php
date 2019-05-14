@@ -80,6 +80,7 @@ function demo_import_files() {
 		'business-pro'   => [ 'Pro', 'Elementor' ],
 		'contrast'       => [ 'Pro', 'Elementor' ],
 		'fitness'        => [ 'Pro', 'Elementor' ],
+		'fashion'        => [ 'Pro', 'Beaver Builder' ],
 	];
 
 	foreach ( $custom as $slug => $categories ) {

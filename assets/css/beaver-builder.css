@@ -2,6 +2,21 @@
 	z-index: 999999;
 }
 
+.page-template.page-template-beaver-builder .site-container {
+	position: relative;
+}
+
+.page-template.page-template-beaver-builder .content {
+	width: 100%;
+	max-width: 100%;
+	margin: 0;
+}
+
+.page-template.page-template-beaver-builder .content .entry {
+	padding: 0;
+	margin: 0;
+}
+
 @media (min-width: 896px) {
 	.fl-builder-edit.admin-bar.has-sticky-header .site-header,
 	.fl-builder-edit.admin-bar.has-sticky-header-desktop .site-header {

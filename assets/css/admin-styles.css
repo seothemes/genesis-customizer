@@ -87,19 +87,19 @@ a.button.tooltip-toggle:focus {
 }
 
 .elementor-not-active div[data-categories*="elementor"] .button-primary,
-.bb-not-active div[data-categories*="beaver-builder"] .button-primary,
+.bb-not-active div[data-categories*="beaverbuilder"] .button-primary,
 .pro-not-active div[data-categories*="pro"] .button-primary {
 	display: none;
 }
 
 .elementor-not-active div[data-categories*="elementor"] h4,
-.bb-not-active div[data-categories*="beaver-builder"] h4,
+.bb-not-active div[data-categories*="beaverbuilder"] h4,
 .pro-not-active div[data-categories*="pro"] h4 {
 	width: calc(100% - 100px);
 }
 
 .elementor-not-active div[data-categories*="elementor"] h4:after,
-.bb-not-active div[data-categories*="beaver-builder"] h4:after,
+.bb-not-active div[data-categories*="beaverbuilder"] h4:after,
 .pro-not-active div[data-categories*="pro"] h4:after {
 	margin-left: 0.5em;
 	color: #5e5e5e;
@@ -112,6 +112,6 @@ a.button.tooltip-toggle:focus {
 	content: "(Requires Elementor)";
 }
 
-.bb-not-active div[data-categories*="beaver-builder"] h4:after {
-	content: "(Req. Beaver Builder)";
+.bb-not-active div[data-categories*="beaverbuilder"] h4:after {
+	content: "(Requires Beaver Builder)";
 }
