@@ -1,5 +1,8 @@
 # Genesis Customizer Changelog
 
+## [1.0.3] - 2019-05-19
+* Added: Kitchen starter site
+
 ## [1.0.2] - 2019-05-19
 * Added: Social menu
 * Added: Search form settings
