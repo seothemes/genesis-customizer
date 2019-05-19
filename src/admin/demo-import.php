@@ -71,14 +71,14 @@ add_filter( 'pt-ocdi/import_files', __NAMESPACE__ . '\demo_import_files' );
 function demo_import_files() {
 	$assets = _get_path() . 'assets/demo';
 	$custom = [
-		'default'        => [ 'Free' ],
-		'ghost'          => [ 'Pro' ],
-		'landscaper'     => [ 'Pro' ],
-		'portfolio'      => [ 'Pro' ],
-		'business-pro'   => [ 'Pro', 'Elementor' ],
-		'contrast'       => [ 'Pro', 'Elementor' ],
-		'fitness'        => [ 'Pro', 'Elementor' ],
-		'fashion'        => [ 'Pro', 'Beaver Builder' ],
+		'default'      => [ 'Free' ],
+		'ghost'        => [ 'Pro' ],
+		'landscaper'   => [ 'Pro' ],
+		'portfolio'    => [ 'Pro' ],
+		'business-pro' => [ 'Pro', 'Elementor' ],
+		'contrast'     => [ 'Pro', 'Elementor' ],
+		'fitness'      => [ 'Pro', 'Elementor' ],
+		'fashion'      => [ 'Pro', 'Beaver Builder' ],
 	];
 
 	foreach ( $custom as $slug => $categories ) {
