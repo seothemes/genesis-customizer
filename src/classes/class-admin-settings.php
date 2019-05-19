@@ -165,6 +165,17 @@ class Admin_Settings {
 					],
 					'default'     => 'enable',
 				],
+				[
+					'id'          => 'font-awesome',
+					'label'       => __( 'Load FontAwesome', 'genesis-customizer' ),
+					'description' => __( 'Load FontAwesome CSS for use throughout your site. Visit ', 'genesis-customizer' ) . sprintf( '<a href="%s" target="_blank">%s</a>', 'https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use', 'FontAwesome' ) . __( ' for basic usage instructions.', 'genesis-customizer' ),
+					'type'        => 'radio',
+					'options'     => [
+						'enable'  => __( 'Enable &nbsp;', 'genesis-customizer' ),
+						'disable' => __( 'Disable', 'genesis-customizer' ),
+					],
+					'default'     => 'disable',
+				],
 			],
 		];
 

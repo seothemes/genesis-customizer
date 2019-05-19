@@ -52,7 +52,11 @@ blockquote {
 	border-left-style: $base--border--style;
 
 	@include margin($spacing--m auto);
-	@include padding($spacing--m);
+
+	&:before {
+		content: '\201C';
+		display: inline-block;
+	}
 
 	p {
 
@@ -60,6 +64,12 @@ blockquote {
 			margin-bottom: 0;
 		}
 	}
+}
+
+cite {
+	display: block;
+	font-style: normal;
+	padding: 1em;
 }
 
 code,

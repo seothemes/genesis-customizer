@@ -115,3 +115,7 @@ a.button.tooltip-toggle:focus {
 .bb-not-active div[data-categories*="beaverbuilder"] h4:after {
 	content: "(Requires Beaver Builder)";
 }
+
+.ocdi.about-wrap p {
+	font-size: 13px;
+}

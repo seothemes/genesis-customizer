@@ -16,6 +16,7 @@
   "devDependencies": {
     "bourbon": "^5.1.0",
     "bourbon-bitters": "^1.2.1",
+    "gridkit": "^1.0.3",
     "gulp": "^3.9.1",
     "gulp-clean-css": "^4.0.0",
     "gulp-extract-media-queries": "^1.1.0",

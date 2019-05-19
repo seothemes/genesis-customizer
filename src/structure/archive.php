@@ -91,7 +91,7 @@ function read_more_text() {
  * @return string
  */
 function archive_post_info() {
-	$text = _get_value( 'archive_post-meta_post-info' );
+	$text = _get_value( 'archive_post-info_post-info' );
 
 	return do_shortcode( $text );
 }
@@ -104,7 +104,7 @@ function archive_post_info() {
  * @return string
  */
 function archive_post_meta() {
-	$text = _get_value( 'archive_post-meta_post-meta' );
+	$text = _get_value( 'archive_post-info_post-meta' );
 
 	return do_shortcode( $text );
 }

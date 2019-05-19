@@ -15,6 +15,78 @@
 		width: calc(50% - 1em);
 		margin-bottom: 1em;
 		margin-left: 1em;
+		flex-grow: 1;
+
+		@include mq(m) {
+
+			.gallery-columns-1 & {
+				margin-left: 0;
+			}
+
+			.gallery-columns-2 & {
+				width: calc((100% - 1em) / 2);
+
+				&:nth-of-type(2n + 1) {
+					margin-left: 0;
+				}
+			}
+
+			.gallery-columns-3 & {
+				width: calc((100% - 2em) / 3);
+
+				&:nth-of-type(3n + 1) {
+					margin-left: 0;
+				}
+			}
+
+			.gallery-columns-4 & {
+				width: calc((100% - 3em) / 4);
+
+				&:nth-of-type(4n + 1) {
+					margin-left: 0;
+				}
+			}
+
+			.gallery-columns-5 & {
+				width: calc((100% - 4em) / 5);
+
+				&:nth-of-type(5n + 1) {
+					margin-left: 0;
+				}
+			}
+
+			.gallery-columns-6 & {
+				width: calc((100% - 5em) / 6);
+
+				&:nth-of-type(6n + 1) {
+					margin-left: 0;
+				}
+			}
+
+			.gallery-columns-7 & {
+				width: calc((100% - 6em) / 7);
+
+				&:nth-of-type(7n + 1) {
+					margin-left: 0;
+				}
+			}
+
+			.gallery-columns-8 & {
+				width: calc((100% - 7em) / 8);
+
+				&:nth-of-type(8n + 1) {
+					margin-left: 0;
+				}
+			}
+
+			.gallery-columns-9 & {
+				width: calc((100% - 8em) / 9);
+
+				&:nth-of-type(9n + 1) {
+					margin-left: 0;
+				}
+			}
+		}
 
 		&:nth-of-type(2n + 1) {
 

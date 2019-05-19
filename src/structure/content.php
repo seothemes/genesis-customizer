@@ -93,3 +93,31 @@ function error_404_entry_content( $default ) {
 
 	return $default;
 }
+
+add_filter( 'genesis_search_text', __NAMESPACE__ . '\search_input_text' );
+/**
+ * Modify the search input text.
+ *
+ * @since 1.0.2
+ *
+ * @return string
+ */
+function search_input_text() {
+	return _get_value( 'content_search-form_input-text' );
+}
+
+add_filter( 'genesis_search_button_text', __NAMESPACE__ . '\search_button_text' );
+/**
+ * Modify the search button text.
+ *
+ * @since 1.0.2
+ *
+ * @return string
+ */
+function search_button_text() {
+	if ( true === _get_value( 'content_search-form_icon' ) ) {
+		return 'icon';
+	}
+
+	return _get_value( 'content_search-form_button-text' );
+}

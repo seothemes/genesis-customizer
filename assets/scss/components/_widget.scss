@@ -17,14 +17,18 @@
 	// Featured content widget.
 	&.featured-content {
 
+		img {
+			max-width: 100%;
+		}
+
 		.entry {
 
 			@include clearfix;
 		}
 
-		.entry-title {
-			margin-bottom: $spacing--xxs;
-			font-size: $base--font-size;
+		.more-link {
+			display: block;
+			line-height: 2;
 		}
 	}
 

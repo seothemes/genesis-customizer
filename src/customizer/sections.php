@@ -47,6 +47,7 @@ function _get_default_sections() {
 			'sub-menu-toggle' => __( 'Sub Menu Toggle', 'genesis-customizer' ),
 			'footer'          => __( 'Footer Menu', 'genesis-customizer' ),
 			'footer-widgets'  => __( 'Footer Widgets Menu', 'genesis-customizer' ),
+			'social'          => __( 'Social Menu', 'genesis-customizer' ),
 		],
 		'hero'     => [
 			'settings' => __( 'Settings', 'genesis-customizer' ),
@@ -58,6 +59,7 @@ function _get_default_sections() {
 			'featured-image' => __( 'Featured Image', 'genesis-customizer' ),
 			'avatar'         => __( 'Avatar', 'genesis-customizer' ),
 			'sidebar'        => __( 'Sidebar', 'genesis-customizer' ),
+			'search-form'    => __( 'Search Form', 'genesis-customizer' ),
 		],
 		'sidebars' => [
 			'primary'          => __( 'Primary Sidebar', 'genesis-customizer' ),

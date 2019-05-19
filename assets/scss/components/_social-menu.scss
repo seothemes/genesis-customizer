@@ -1,0 +1,359 @@
+#menu-social li {
+	width: auto;
+
+	span {
+
+		@include hide-visually();
+	}
+
+	a:before {
+		content: '';
+		font-family: 'Font Awesome 5 Brands', sans-serif;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		@include size(1em);
+
+		.social-menu-brand-background & {
+			color: $color--white;
+			border-color: $color--white;
+		}
+	}
+
+	a[href*="codepen.io"] {
+		&:before {
+			content: '\f1cb';
+		}
+
+		.social-menu-brand-icon & {
+			color: $color--codepen;
+			border-color: $color--codepen;
+		}
+
+		.social-menu-brand-background & {
+			background: $color--codepen;
+			border-color: $color--codepen;
+		}
+	}
+
+	a[href*="digg.com"] {
+		&:before {
+			content: '\f1a6';
+		}
+
+		.social-menu-brand-icon & {
+			color: $color--digg;
+			border-color: $color--digg;
+		}
+
+		.social-menu-brand-background & {
+			background: $color--digg;
+			border-color: $color--digg;
+		}
+	}
+
+	a[href*="dribbble.com"] {
+		&:before {
+			content: '\f17d';
+		}
+
+		.social-menu-brand-icon & {
+			color: $color--dribbble;
+			border-color: $color--dribbble;
+		}
+
+		.social-menu-brand-background & {
+			background: $color--dribbble;
+			border-color: $color--dribbble;
+		}
+	}
+
+	a[href*="dropbox.com"] {
+		&:before {
+			content: '\f16b';
+		}
+
+		.social-menu-brand-icon & {
+			color: $color--dropbox;
+			border-color: $color--dropbox;
+		}
+
+		.social-menu-brand-background & {
+			background: $color--dropbox;
+			border-color: $color--dropbox;
+		}
+	}
+
+	a[href*="facebook.com"] {
+		&:before {
+			content: '\f39e';
+		}
+
+		.social-menu-brand-icon & {
+			color: $color--facebook;
+			border-color: $color--facebook;
+		}
+
+		.social-menu-brand-background & {
+			background: $color--facebook;
+			border-color: $color--facebook;
+		}
+	}
+
+	a[href*="/feed"] {
+		&:before {
+			content: '\f09e';
+		}
+
+		.social-menu-brand-icon & {
+			color: $color--rss;
+			border-color: $color--rss;
+		}
+
+		.social-menu-brand-background & {
+			background: $color--rss;
+			border-color: $color--rss;
+		}
+	}
+
+	a[href*="flickr.com"] {
+		&:before {
+			content: '\f16e';
+		}
+
+		.social-menu-brand-icon & {
+			color: $color--flickr;
+			border-color: $color--flickr;
+		}
+
+		.social-menu-brand-background & {
+			background: $color--flickr;
+			border-color: $color--flickr;
+		}
+	}
+
+	a[href*="plus.google.com"] {
+		&:before {
+			content: '\f0d5';
+		}
+
+		.social-menu-brand-icon & {
+			color: $color--gplus;
+			border-color: $color--gplus;
+		}
+
+		.social-menu-brand-background & {
+			background: $color--gplus;
+			border-color: $color--gplus;
+		}
+	}
+
+	a[href*="github.com"] {
+		&:before {
+			content: '\f09b';
+		}
+
+		.social-menu-brand-icon & {
+			color: $color--github;
+			border-color: $color--github;
+		}
+
+		.social-menu-brand-background & {
+			background: $color--github;
+			border-color: $color--github;
+		}
+	}
+
+	a[href*="instagram.com"] {
+		&:before {
+			content: '\f16d';
+		}
+
+		.social-menu-brand-icon & {
+			color: $color--instagram;
+			border-color: $color--instagram;
+		}
+
+		.social-menu-brand-background & {
+			background: $color--instagram;
+			border-color: $color--instagram;
+		}
+	}
+
+	a[href*="linkedin.com"] {
+		&:before {
+			content: '\f0e1';
+		}
+
+		.social-menu-brand-icon & {
+			color: $color--linkedin;
+			border-color: $color--linkedin;
+		}
+
+		.social-menu-brand-background & {
+			background: $color--linkedin;
+			border-color: $color--linkedin;
+		}
+	}
+
+	a[href*="pinterest.com"] {
+		&:before {
+			content: '\f231';
+		}
+
+		.social-menu-brand-icon & {
+			color: $color--pinterest;
+			border-color: $color--pinterest;
+		}
+
+		.social-menu-brand-background & {
+			background: $color--pinterest;
+			border-color: $color--pinterest;
+		}
+	}
+
+	a[href*="reddit.com"] {
+		&:before {
+			content: '\f1a1';
+		}
+
+		.social-menu-brand-icon & {
+			color: $color--reddit;
+			border-color: $color--reddit;
+		}
+
+		.social-menu-brand-background & {
+			background: $color--reddit;
+			border-color: $color--reddit;
+		}
+	}
+
+	a[href*="skype.com"] {
+		&:before {
+			content: '\f17e';
+		}
+
+		.social-menu-brand-icon & {
+			color: $color--skype;
+			border-color: $color--skype;
+		}
+
+		.social-menu-brand-background & {
+			background: $color--skype;
+			border-color: $color--skype;
+		}
+	}
+
+	a[href*="slack.com"] {
+		&:before {
+			content: '\f198';
+		}
+
+		.social-menu-brand-icon & {
+			color: $color--slack;
+			border-color: $color--slack;
+		}
+
+		.social-menu-brand-background & {
+			background: $color--slack;
+			border-color: $color--slack;
+		}
+	}
+
+	a[href*="stumbleupon.com"] {
+		&:before {
+			content: '\f1a4';
+		}
+
+		.social-menu-brand-icon & {
+			color: $color--stumbleupon;
+			border-color: $color--stumbleupon;
+		}
+
+		.social-menu-brand-background & {
+			background: $color--stumbleupon;
+			border-color: $color--stumbleupon;
+		}
+	}
+
+	a[href*="tumblr.com"] {
+		&:before {
+			content: '\f173';
+		}
+
+		.social-menu-brand-icon & {
+			color: $color--tumblr;
+			border-color: $color--tumblr;
+		}
+
+		.social-menu-brand-background & {
+			background: $color--tumblr;
+			border-color: $color--tumblr;
+		}
+	}
+
+	a[href*="twitter.com"] {
+		&:before {
+			content: '\f099';
+		}
+
+		.social-menu-brand-icon & {
+			color: $color--twitter;
+			border-color: $color--twitter;
+		}
+
+		.social-menu-brand-background & {
+			background: $color--twitter;
+			border-color: $color--twitter;
+		}
+	}
+
+	a[href*="vimeo.com"] {
+		&:before {
+			content: '\f27d';
+		}
+
+		.social-menu-brand-icon & {
+			color: $color--vimeo;
+			border-color: $color--vimeo;
+		}
+
+		.social-menu-brand-background & {
+			background: $color--vimeo;
+			border-color: $color--vimeo;
+		}
+	}
+
+	a[href*="wordpress."] {
+		&:before {
+			content: '\f411';
+		}
+
+		.social-menu-brand-icon & {
+			color: $color--wordpress;
+			border-color: $color--wordpress;
+		}
+
+		.social-menu-brand-background & {
+			background: $color--wordpress;
+			border-color: $color--wordpress;
+		}
+	}
+
+	a[href*="youtube.com"] {
+		&:before {
+			content: '\f167';
+		}
+
+		.social-menu-brand-icon & {
+			color: $color--youtube;
+			border-color: $color--youtube;
+		}
+
+		.social-menu-brand-background & {
+			background: $color--youtube;
+			border-color: $color--youtube;
+		}
+	}
+}

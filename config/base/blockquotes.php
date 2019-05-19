@@ -11,11 +11,15 @@ return [
 			'border'     => __( 'Border', 'genesis-customizer' ),
 			'text'       => __( 'Text', 'genesis-customizer' ),
 			'background' => __( 'Background', 'genesis-customizer' ),
+			'quote'      => __( 'Quotation Mark', 'genesis-customizer' ),
+			'cite'       => __( 'Citation', 'genesis-customizer' ),
 		],
 		'default'  => [
 			'border'     => _get_color( 'text' ),
 			'text'       => '',
 			'background' => _get_color( 'white' ),
+			'quote'      => _get_color( 'transparent' ),
+			'cite'       => '',
 		],
 		'output'   => [
 			[
@@ -35,6 +39,16 @@ return [
 				'choice'   => 'background',
 				'element'  => 'blockquote',
 				'property' => 'background-color',
+			],
+			[
+				'choice'   => 'quote',
+				'element'  => 'blockquote:before',
+				'property' => 'color',
+			],
+			[
+				'choice'   => 'cite',
+				'element'  => 'cite',
+				'property' => 'color',
 			],
 		],
 	],
@@ -121,6 +135,101 @@ return [
 					'blockquote',
 					'.wp-block-quote:not(.is-large):not(.is-style-large), blockquote',
 				],
+			],
+		],
+	],
+	[
+		'type'     => 'custom',
+		'settings' => 'divider',
+		'default'  => '<hr>',
+	],
+	[
+		'type'     => 'slider',
+		'settings' => 'spacing',
+		'label'    => __( 'Spacing', 'genesis-customizer' ),
+		'default'  => _get_size( 'm', '' ),
+		'choices'  => [
+			'min'  => 0,
+			'max'  => 100,
+			'step' => 1,
+		],
+		'output'   => [
+			[
+				'element'  => 'blockquote',
+				'property' => 'padding',
+				'units'    => 'px',
+			],
+		],
+	],
+	[
+		'type'     => 'custom',
+		'settings' => 'divider',
+		'default'  => '<hr>',
+	],
+	[
+		'type'     => 'typography',
+		'settings' => 'quote-typography',
+		'label'    => __( 'Quotation Mark Typography', 'genesis-customizer' ),
+		'default'  => [
+			'font-family' => '',
+			'font-size'   => '2em',
+			'variant'     => '',
+			'line-height' => '1',
+		],
+		'output'   => [
+			[
+				'element' => 'blockquote:before',
+			],
+		],
+	],
+	[
+		'type'     => 'custom',
+		'settings' => 'divider',
+		'default'  => '<hr>',
+	],
+	[
+		'type'     => 'radio-buttonset',
+		'settings' => 'text-align',
+		'label'    => __( 'Text Alignment', 'genesis-customizer' ),
+		'default'  => 'left',
+		'choices'  => [
+			'left'   => _get_svg( 'alignleft' ),
+			'center' => _get_svg( 'aligncenter' ),
+			'right'  => _get_svg( 'alignright' ),
+		],
+		'output'   => [
+			[
+				'element'  => 'blockquote',
+				'property' => 'text-align',
+			],
+			[
+				'choice'        => 'center',
+				'element'       => 'blockquote:before',
+				'property'      => 'display',
+				'value_pattern' => 'block',
+				'exclude'       => [ 'left', 'right' ],
+			],
+		],
+	],
+	[
+		'type'     => 'custom',
+		'settings' => 'divider',
+		'default'  => '<hr>',
+	],
+	[
+		'type'     => 'typography',
+		'settings' => 'cite-typography',
+		'label'    => __( 'Citation Typography', 'genesis-customizer' ),
+		'default'  => [
+			'font-family'    => '',
+			'font-size'      => '',
+			'variant'        => 'regular',
+			'line-height'    => '',
+			'text-transform' => '',
+		],
+		'output'   => [
+			[
+				'element' => 'cite',
 			],
 		],
 	],

@@ -96,8 +96,8 @@ return [
 		'output'   => [
 			[
 				'element'       => '.sidebar .entry-title',
-				'property'      => 'padding',
-				'value_pattern' => '$px 0',
+				'property'      => 'padding-top',
+				'value_pattern' => '$px',
 			],
 		],
 	],
@@ -114,8 +114,30 @@ return [
 		'output'   => [
 			[
 				'element'  => '.sidebar .entry-image',
-				'property' => 'max-width',
+				'property' => 'width',
 				'units'    => 'px',
+			],
+		],
+	],
+	[
+		'type'     => 'custom',
+		'settings' => 'divider',
+		'default'  => '<hr>',
+	],
+	[
+		'type'     => 'typography',
+		'settings' => 'title-typography',
+		'label'    => __( 'Title Typography', 'genesis-customizer' ),
+		'default'  => [
+			'font-family'    => '',
+			'font-size'      => '',
+			'variant'        => '',
+			'line-height'    => '',
+			'text-transform' => '',
+		],
+		'output'   => [
+			[
+				'element' => '.featured-content .entry-title',
 			],
 		],
 	],

@@ -24,6 +24,7 @@ add_filter( 'body_class', __NAMESPACE__ . '\menu_body_classes', 100, 1 );
  */
 function menu_body_classes( $classes ) {
 	$classes[] = _get_value( 'menus_mobile_animation', 'has-mobile-menu-top' );
+	$classes[] = 'social-menu-' . _get_value( 'menus_social_color-style', '' );
 
 	return $classes;
 }
@@ -104,4 +105,35 @@ function add_footer_menu() {
 			'depth'          => 1,
 		]
 	);
+}
+
+add_filter( 'widget_nav_menu_args', __NAMESPACE__ . '\nav_menu_widget' );
+/**
+ * Wrap nav menu widget links in span tags.
+ *
+ * @since 1.0.2
+ *
+ * @param array $nav_menu_args Nav menu widget args (wp_nav_menu).
+ *
+ * @return array
+ */
+function nav_menu_widget( $nav_menu_args ) {
+	$custom = [
+		'link_before' => genesis_markup(
+			[
+				'open'    => '<span %s>',
+				'context' => 'nav-link-wrap',
+				'echo'    => false,
+			]
+		),
+		'link_after'  => genesis_markup(
+			[
+				'close'   => '</span>',
+				'context' => 'nav-link-wrap',
+				'echo'    => false,
+			]
+		),
+	];
+
+	return array_merge_recursive( $nav_menu_args, $custom );
 }

@@ -49,9 +49,19 @@ function enqueue_main_styles() {
 		'(min-width:' . $breakpoint . 'px)'
 	);
 
+	wp_register_style(
+		$handle . '-fontawesome',
+		'//use.fontawesome.com/releases/v5.2.0/css/all.css',
+		[]
+	);
+
 	wp_enqueue_style( $handle . '-all' );
 	wp_enqueue_style( $handle . '-mobile' );
 	wp_enqueue_style( $handle . '-desktop' );
+
+	if ( 'enable' === _get_option( 'font-awesome' ) ) {
+		wp_enqueue_style( $handle . '-fontawesome' );
+	}
 }
 
 add_action( 'wp_enqueue_scripts', __NAMESPACE__ . '\enqueue_vendor_styles' );
