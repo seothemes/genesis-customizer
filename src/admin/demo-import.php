@@ -72,6 +72,7 @@ function demo_import_files() {
 	$assets = _get_path() . 'assets/demo';
 	$custom = [
 		'default'      => [ 'Free' ],
+		'kitchen'      => [ 'Free' ],
 		'ghost'        => [ 'Pro' ],
 		'landscaper'   => [ 'Pro' ],
 		'portfolio'    => [ 'Pro' ],
