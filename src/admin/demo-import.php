@@ -72,8 +72,6 @@ function demo_import_files() {
 	$assets = _get_path() . 'assets/demo';
 	$custom = [
 		'default'        => [ 'Free' ],
-		'foodie-pro'     => [ 'Free' ],
-		'genesis-sample' => [ 'Free' ],
 		'ghost'          => [ 'Pro' ],
 		'landscaper'     => [ 'Pro' ],
 		'portfolio'      => [ 'Pro' ],
