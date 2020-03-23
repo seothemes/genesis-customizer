@@ -1,5 +1,8 @@
 # Genesis Customizer Changelog
 
+## [1.0.4] - 2020-3-23
+* Removed: Loading non-existent WooCommerce stylesheet
+
 ## [1.0.3] - 2019-05-19
 * Added: Kitchen starter site
 

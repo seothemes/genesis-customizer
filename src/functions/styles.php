@@ -76,9 +76,7 @@ function enqueue_vendor_styles() {
 	$handle  = _get_handle();
 	$plugins = apply_filters( 'genesis_customizer_stylesheets', [
 		'beaver-builder',
-		'woocommerce',
 		'elementor',
-		// 'simple-social-icons',
 	] );
 
 	foreach ( $plugins as $plugin ) {
